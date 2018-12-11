@@ -1,7 +1,10 @@
 ---
+key: cyrcus
 name: Cyrcus
 excerpt: Some String maybe containing HTML <b>right?</b>
 logo: http://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicon-cyrcus.png
+technologies: ["vuejs", "wordpress"]
+clients: ["bitmade"]
 ---
 
 # Cyrcus
