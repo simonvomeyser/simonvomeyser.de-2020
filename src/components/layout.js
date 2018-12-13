@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import LangSwitch from '../components/langSwitch';
 import { StaticQuery, graphql } from 'gatsby'
 
 import './layout.css'
+import { Link } from '@reach/router';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -35,6 +37,12 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+          <h1>
+            <Link to="/">Simon vom Eyser</Link> 
+          </h1>
+          <LangSwitch />
+          <br/>
+          <br/>
           {children}
         </div>
       </>
