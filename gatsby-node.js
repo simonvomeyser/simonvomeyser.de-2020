@@ -38,7 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
           component: projectPageTemplate,
           context: {
             html: node.html,
-            name: node.frontmatter.name
+            frontmatter: node.frontmatter
           }, // additional data can be passed via context
         })
       })
