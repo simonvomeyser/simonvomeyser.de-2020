@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import { withIntl, Link } from '../i18n'
 
 import Layout from '../components/layout'
 
 class SecondPage extends React.Component {
   render() {
     const projects = this.props.data.allMarkdownRemark.edges;
-    console.log(projects)
     return (
       <Layout>
         <h1>Projects</h1>
@@ -23,7 +23,7 @@ class SecondPage extends React.Component {
   }
 }
 
-export default SecondPage
+export default withIntl(SecondPage);
 
 export const query = graphql`
 {

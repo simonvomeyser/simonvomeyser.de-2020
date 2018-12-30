@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { withIntl, Link } from '../i18n'
 
 import Layout from '../components/layout'
 
-const imprint = () => (
+const Imprint = () => (
   <Layout>
     <h1>Imprint</h1>
     <p>
@@ -13,4 +13,4 @@ const imprint = () => (
   </Layout>
 )
 
-export default imprint
+export default withIntl(Imprint);
