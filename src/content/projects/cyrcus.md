@@ -11,6 +11,8 @@ clients: ["bitmade"]
 
 Eines meiner dickeren Wordpress Projekte war die Umsetzung der Seite meiner eigenen Band Cyrcus. Das grundlegende Design gab es bereits in Form einer Typo3 Installation und wurde bis dahin von meinem Kollegen und Spezi Simon Köhler (LINK) entwickelt.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ZG6ZZY5I3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Da ich einige Funktionen wie einen Shop hinzufügen wollte habe ich die Webseite Anfang 2017 nach in ein Wordpress Theme (LINK) umgewandet. Die Seite enthält nun viele interessante "Features" wie einen Shop, Tourdaten, eine mit Facebook verknüpfte Bildergalerie uvm.
 
