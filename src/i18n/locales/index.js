@@ -9,6 +9,6 @@ module.exports = {
   localeData,
   languages: [
     { value: 'en', text: 'English' },
-    { value: 'de', text: 'Deutsch' },
-  ],
+    { value: 'de', text: 'Deutsch' }
+  ]
 }
