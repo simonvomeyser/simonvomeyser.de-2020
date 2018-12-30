@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withIntl, Link } from '../i18n'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -13,7 +14,7 @@ class ProjectPage extends Component {
         <ul>
           {this.getFilteredTechnologies().map(({ node }) => {
             return (
-              <li key={node.frontmatter.key}><a href={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name }</a></li>
+              <li key={node.frontmatter.key}><Link to={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name }</Link></li>
             )
           })}
         </ul>

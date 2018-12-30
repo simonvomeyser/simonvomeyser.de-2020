@@ -1,8 +1,8 @@
 const path = require('path');
 const { languages } = require('../i18n/locales')
 
-module.exports = ({ page, boundActionCreators }) => {
-    const { createPage, deletePage } = boundActionCreators
+module.exports = ({ page, actions }) => {
+    const { createPage, deletePage } = actions
   
     if (page.path.includes('404')) {
       return Promise.resolve()
