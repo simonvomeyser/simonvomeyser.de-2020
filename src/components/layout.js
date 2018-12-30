@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import LangSwitch from '../components/langSwitch';
+import Language from '../components/language';
 import { injectIntl } from 'react-intl'
 
 import './layout.css'
@@ -35,7 +35,7 @@ const Layout = ({ children, data, intl }) => (
       <h2>
         Webentwicklung
       </h2>
-      <LangSwitch />
+      <Language/>
       <br/>
       <br/>
       {children}
