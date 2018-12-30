@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { withIntl, Link } from '../i18n'
 
 import Layout from '../components/layout'
 
-export default class ProjectPage extends Component {
+class ProjectPage extends Component {
   render() {
     return (
       <Layout>
@@ -27,6 +28,8 @@ export default class ProjectPage extends Component {
     })
   }
 }
+
+export default withIntl(ProjectPage);
 
 export const query = graphql`
 {

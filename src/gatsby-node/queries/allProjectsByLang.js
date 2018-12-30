@@ -17,7 +17,12 @@ const projectFields =  `
 
 module.exports = `
 {
-    allMarkdownRemark( 
+    en: allMarkdownRemark( 
+        filter: {fileAbsolutePath: {regex: "/(content/projects).*/"}})
+    {
+        ${projectFields}
+    }
+    de: allMarkdownRemark( 
         filter: {fileAbsolutePath: {regex: "/(content/projects).*/"}})
     {
         ${projectFields}
