@@ -18,7 +18,17 @@ module.exports = ({ actions, graphql }) => {
             const englishProjects = result.data.en.edges; // english used as default
             const germanProjects = result.data.de.edges;
             
-            englishProjects.forEach(({ node }) => {
+            englishProjects.forEach(({ node }, index) => {
+                const germanProject = germanProjects[index].node;
+                const pageParams =  {
+                    component: projectPageTemplate,
+                    context: {
+                        html: node.html,
+                        frontmatter: node.frontmatter
+                    }
+                }
+                
+                // Redirect on URL withoug lang key
                 createPage({
                     path: '/projects/' + node.frontmatter.key,
                     component: redirect,
@@ -28,15 +38,15 @@ module.exports = ({ actions, graphql }) => {
                         routed: false
                     }
                 })
-                
-                // todo: loop over languages, create both actual pages
+                // English page
                 createPage({
                     path: '/en/projects/' + node.frontmatter.key,
-                    component: projectPageTemplate,
-                    context: {
-                        html: node.html,
-                        frontmatter: node.frontmatter
-                    }, // additional data can be passed via context
+                    ...pageParams
+                })
+                // German Page
+                createPage({
+                    path: '/de/projects/' + germanProject.frontmatter.key,
+                    ...pageParams
                 })
             })
         })
