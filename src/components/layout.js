@@ -12,11 +12,11 @@ const Layout = ({ children, data, intl }) => (
     <Helmet
       title={intl.formatMessage({ id: 'title' })}
       meta={[
-        { name: 'description', content: intl.formatMessage({ id: 'welcome' }) },
+        { name: 'description', content: intl.formatMessage({ id: 'description' }) },
         {
           name: 'keywords',
-          content: 'gatsby, i18n, react-intl, multi language, localization',
-        },
+          content: intl.formatMessage({ id: 'keywords' })
+        }
       ]}
     >
       <html lang="en" />
@@ -30,10 +30,10 @@ const Layout = ({ children, data, intl }) => (
       }}
     >
       <h1>
-        <Link to="/">Simon vom Eyser</Link> 
+        <Link to="/">{intl.formatMessage({id: 'landingTitle1'})}</Link> 
       </h1>
       <h2>
-        Webentwicklung
+        {intl.formatMessage({id: 'landingTitle2'})}
       </h2>
       <Language/>
       <br/>

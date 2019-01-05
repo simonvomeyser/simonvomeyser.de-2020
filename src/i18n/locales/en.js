@@ -1,9 +1,7 @@
 module.exports = {
-  title: 'Gatsby English',
-  hello: 'Hi people',
-  welcome: 'Welcome to your new Gatsby site.',
-  gopage2: 'Go to page 2',
-  build: 'Now go build something great.',
-  welcome2: 'Welcome to page 2',
-  goback: 'Go back to the homepage',
+  title: 'Simon vom Eyser - web development',
+  description: 'Freelancing webworker based in NRW, Deutschland. I do magic with Wordpress, Laravel, React and Vue.js',
+  keywords: 'web, development, freelancer, NRW, Germany, Wordpress, Laravel, React, Vue, projectmanagement, consulting, training',
+  landingTitle1: 'Simon vom Eyser',
+  landingTitle2: 'web development'
 }
