@@ -1,13 +1,11 @@
 ---
 key: elements
 name: Elements
-excerpt: Elements is really good
+excerpt: Elements ist sehr gut
 logo: http://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicon-cyrcus.png
 technologies: ["wordpress"]
 clients: ["magma"]
 ---
 
-# Elements
-
-Some text about elements
+Etwas text über elements
 

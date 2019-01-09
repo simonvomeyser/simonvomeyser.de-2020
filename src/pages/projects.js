@@ -5,15 +5,22 @@ import { withIntl, Link } from '../i18n'
 import Layout from '../components/layout'
 
 class SecondPage extends React.Component {
+  getLocalizedProjects = () => {
+    const {locale} = this.props.pageContext;
+    const allLangProjects = this.props.data.allMarkdownRemark.edges;
+    return allLangProjects.filter((project) => {
+      return project.node.fileAbsolutePath.includes(`projects/${locale}`);
+    }) 
+  }
   render() {
-    const projects = this.props.data.allMarkdownRemark.edges;
+    const projects = this.getLocalizedProjects();
     return (
       <Layout>
         <h1>Projects</h1>
         <ul>
           {projects.map(({ node }) => {
             return (
-              <li key={node.frontmatter.key}><Link to={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name }</Link></li>
+              <li key={node.frontmatter.key}><Link to={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name } ({ node.frontmatter.excerpt })</Link></li>
             )
           })}
         </ul>

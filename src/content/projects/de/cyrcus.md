@@ -1,13 +1,11 @@
 ---
 key: cyrcus
 name: Cyrcus
-excerpt: Some String maybe containing HTML <b>right?</b>
+excerpt: Etwas text mit evtl <b>HTML</b>?
 logo: http://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicon-cyrcus.png
 technologies: ["vuejs", "wordpress"]
 clients: ["bitmade"]
 ---
-
-# Cyrcus
 
 Eines meiner dickeren Wordpress Projekte war die Umsetzung der Seite meiner eigenen Band Cyrcus. Das grundlegende Design gab es bereits in Form einer Typo3 Installation und wurde bis dahin von meinem Kollegen und Spezi Simon Köhler (LINK) entwickelt.
 
