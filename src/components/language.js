@@ -31,12 +31,17 @@ class Language extends Component {
       window.location.href = `/${value}${originalPath}`
     })
   }
-
+  
   render() {
     const { language } = this.context
     const { languages } = language
     const { value } = this.state
+    
+    const { originalPath } = language
 
+    console.log('in language chooser');
+    console.log(originalPath);
+    
     if (!value) {
       return null
     }

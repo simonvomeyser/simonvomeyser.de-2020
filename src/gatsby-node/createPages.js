@@ -43,7 +43,8 @@ module.exports = ({ actions, graphql }) => {
                         locale: 'en',
                         html: englishProject.html,
                         frontmatter: englishProject.frontmatter,
-                        languages
+                        languages,
+                        originalPath: '/projects/' + englishProject.frontmatter.key
                     },
                     component: projectPageTemplate
                 })
@@ -54,7 +55,8 @@ module.exports = ({ actions, graphql }) => {
                         locale: 'de',
                         html: germanProject.html,
                         frontmatter: germanProject.frontmatter,
-                        languages
+                        languages,
+                        originalPath: '/projects/' + englishProject.frontmatter.key
                     },
                     component: projectPageTemplate
                 })
