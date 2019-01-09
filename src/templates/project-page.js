@@ -12,16 +12,7 @@ class ProjectPage extends Component {
     console.log(this.props.pageContext);
     return (
       <Layout>
-        <h1>hello</h1>
-        {/* <div dangerouslySetInnerHTML={{__html: html}} />.
-        <h2>Technologies</h2>
-        <ul>
-          {this.getFilteredTechnologies().map(({ node }) => {
-            return (
-              <li key={node.frontmatter.key}><Link to={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name }</Link></li>
-            )
-          })}
-        </ul> */}
+        <h1>hello test</h1>
       </Layout>
     )
   }
