@@ -6,21 +6,37 @@ import Layout from '../components/layout'
 
 class ProjectPage extends Component {
   render() {
-    // const frontmatter = this.props.pageContext.frontmatter[this.props.pageContext.locale];
-    // const html = this.props.pageContext.html[this.props.pageContext.locale];
-    console.log("in project page");
-    console.log(this.props.pageContext);
+    const frontmatter = this.props.pageContext.frontmatter;
+    const html = this.props.pageContext.html;
     return (
       <Layout>
-        <h1>hello test</h1>
+        <h1>{ frontmatter.name }</h1>
+        <p dangerouslySetInnerHTML={{ __html: html }}></p>
+        <ul>
+         {this.getFilteredTechnologies().map(({ node }) => {
+           return (
+             <li key={node.frontmatter.key}>
+              <Link href={ '/projects/' + node.frontmatter.key }>{ node.frontmatter.name } ({node.html})</Link>
+             </li>
+           )
+         })}
+       </ul>
       </Layout>
     )
   }
+  /**
+   * Filters out technologies not belonging to project and those that don't have the right locale
+   */
   getFilteredTechnologies = () => {
     const allTechnologies = this.props.data.allMarkdownRemark.edges;
-    const technologiesOfProject = this.props.pageContext.frontmatter[this.props.pageContext.locale].technologies;
+    const technologiesOfProject = this.props.pageContext.frontmatter.technologies;
     return allTechnologies.filter(({node}) => {
-      return !!technologiesOfProject.indexOf(node.frontmatter.key);
+
+      const hasRightLocale = node.fileAbsolutePath.includes('technologies/'+ this.props.pageContext.locale)
+      const belongsToProject = technologiesOfProject.includes(node.frontmatter.key);
+
+      return hasRightLocale && belongsToProject;
+      
     })
   }
 }
@@ -35,6 +51,7 @@ export const query = graphql`
     totalCount,
     edges {
       node {
+        fileAbsolutePath
         frontmatter {
           key
           name
