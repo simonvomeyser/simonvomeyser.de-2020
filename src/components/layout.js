@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Language from '../components/language';
 import { injectIntl } from 'react-intl'
+import Container from '../styled-components/container';
+import styled from 'styled-components';
 
 import './layout.css'
 import { Link } from '@reach/router';
@@ -21,27 +23,27 @@ const Layout = ({ children, data, intl }) => (
     >
       <html lang="en" />
     </Helmet>
-    <div
-      style={{
-        margin: '60px auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      <h1>
-        <Link to="/">{intl.formatMessage({id: 'landingTitle1'})}</Link> 
-      </h1>
-      <h2>
-        {intl.formatMessage({id: 'landingTitle2'})}
-      </h2>
-      <Language/>
-      <br/>
-      <br/>
-      {children}
-    </div>
+    <PageWrapper>
+      <Container >
+        <h1>
+          test
+          <Link to="/">{intl.formatMessage({id: 'landingTitle1'})}</Link> 
+        </h1>
+        <h2>
+          {intl.formatMessage({id: 'landingTitle2'})}
+        </h2>
+        <Language/>
+        <br/>
+        <br/>
+        {children}
+      </Container>
+    </PageWrapper>
   </div>
 )
+
+const PageWrapper = styled.div`
+  margin-top: 30px;
+`;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
