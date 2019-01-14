@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Language extends Component {
+class LanguageChooser extends Component {
   static contextTypes = {
     language: PropTypes.object,
   }
@@ -12,9 +12,7 @@ class Language extends Component {
 
   componentDidMount() {
     const { language } = this.context
-    this.setState({
-      value: language.locale || language.detected,
-    })
+    this.setState({ value: language.locale || language.detected, })
   }
 
   handleChange = event => {
@@ -58,4 +56,4 @@ class Language extends Component {
   }
 }
 
-export default Language
+export default LanguageChooser
