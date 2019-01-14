@@ -4,10 +4,10 @@ import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h2>Hello</h2>
-    <p>Now go build something great.</p>
-    <Link to="/projects/">Show Projects</Link><br/>
-    <Link to="/imprint/">Show Imprint</Link>
+    <h1>test</h1>
+    <h2>test</h2>
+    <h3>test</h3>
+    test
   </Layout>
 )
 

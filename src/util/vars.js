@@ -1,5 +1,8 @@
 export const vars = {
     styles: {
+        sizes: {
+            sidebarWidth: '5vw'
+        },
         colors: {
             white1: '#FFF',
             white2: '#F7F7F7',
