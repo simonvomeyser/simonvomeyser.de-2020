@@ -17,6 +17,6 @@ const Wrapper = styled.div`
   background-color: ${vars.styles.colors.grey1};
   left: 0;
   top: 0;
-  width: ${vars.styles.sizes.sidebarWidth};
+  width: ${vars.styles.sizes.navigationWidth};
   height: 100%;
 `

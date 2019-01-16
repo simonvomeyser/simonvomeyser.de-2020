@@ -1,7 +1,7 @@
 export const vars = {
     styles: {
         sizes: {
-            sidebarWidth: '5vw'
+            navigationWidth: '5vw'
         },
         colors: {
             white1: '#FFF',

@@ -30,7 +30,7 @@ const Layout = ({ children, data, intl }) => (
 )
 
 const Wrapper = styled.div`
-  padding-left: ${vars.styles.sizes.sidebarWidth};
+  padding-left: ${vars.styles.sizes.navigationWidth};
 `
 
 Layout.propTypes = {
