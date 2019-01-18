@@ -3,9 +3,17 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
-   {
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -48,6 +56,5 @@ module.exports = {
         path: `${__dirname}/src/content/technologies`,
       },
     },
-
   ],
 }
