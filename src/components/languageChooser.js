@@ -37,9 +37,6 @@ class LanguageChooser extends Component {
     
     const { originalPath } = language
 
-    console.log('in language chooser');
-    console.log(originalPath);
-    
     if (!value) {
       return null
     }

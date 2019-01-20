@@ -3,7 +3,6 @@ import styled  from 'styled-components';
 import {vars} from '../util/vars'
 import Link  from '../i18n/Link'
 import LogoNavigation from '../svg/logo-navigation.svg';
-import Logo from '../svg/logo-navigation.svg';
 import User from '../svg/user.svg';
 import Projects from '../svg/projects.svg';
 import Write from '../svg/write.svg';
@@ -11,7 +10,6 @@ import PaperPlane from '../svg/paper-plane.svg';
 
 export default class Navigation extends Component {
   render() {
-    console.log(Logo);
     return (
       <Wrapper>
         <NavigationTop>
