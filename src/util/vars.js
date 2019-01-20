@@ -1,7 +1,7 @@
 export const vars = {
     styles: {
         sizes: {
-            navigationWidth: '5vw'
+            navigationWidth: '4rem'
         },
         colors: {
             white1: '#FFF',
