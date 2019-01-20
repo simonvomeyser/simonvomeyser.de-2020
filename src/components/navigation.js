@@ -17,9 +17,9 @@ export default class Navigation extends Component {
             <ul>
               <li>
                 <Link to="/">
-                  <NavigationIcon>
+                  <NavigationIconLogo>
                     <LogoNavigation></LogoNavigation>
-                  </NavigationIcon>
+                  </NavigationIconLogo>
                 </Link>
               </li>
               <li>
@@ -92,20 +92,26 @@ const NavigationTop = styled.div`
   }
 `;
 
+// todo: animation
 const NavigationText = styled.div`
   text-align: center;
+  transform: translateX(-5rem); 
   font-weight: bold;
   margin-bottom: 1rem;
-  font-size: .75rem;
+  font-size: .6rem;
   color: ${vars.styles.colors.lightGrey1};
 `;
 
 const NavigationIcon = styled.div`
   svg {
     display: block;
-    max-width: 60%;
+    width: 2rem;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 15px;
   }
+  margin-bottom: .5rem;
+`
+
+const NavigationIconLogo = styled(NavigationIcon)`
+  margin-bottom: 1.5rem;
 `
