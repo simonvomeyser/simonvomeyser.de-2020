@@ -1,13 +1,12 @@
 import React from 'react'
-import { withIntl, Link } from '../i18n'
+import { withIntl } from '../i18n'
+import {FormattedMessage} from 'react-intl';
 import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h1>test</h1>
-    <h2>test</h2>
-    <h3>test</h3>
-    test
+    <h1> <FormattedMessage id="landingTitle1"/> </h1>
+    <h2> <FormattedMessage id="landingTitle2"/> </h2>
   </Layout>
 )
 
