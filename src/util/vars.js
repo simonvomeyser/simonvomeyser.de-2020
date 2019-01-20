@@ -11,7 +11,8 @@ export const vars = {
             lightGrey1:  '#999DA1',
             lightGrey2:  '#DDDDDD',
             grey1: '#3F474F',
-            grey2: '#60676C'
+            grey2: '#60676C',
+            grey3: '#A7ABAF'
         }
     }
 }
