@@ -7,6 +7,7 @@ import User from '../svg/user.svg';
 import Projects from '../svg/projects.svg';
 import Write from '../svg/write.svg';
 import PaperPlane from '../svg/paper-plane.svg';
+import LegalIcon from '../svg/legal.svg';
 
 export default class Navigation extends Component {
   render() {
@@ -24,9 +25,9 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <Link to="/">
-                  <NavigationIcon>
+                  <NavigationIconLink>
                     <User></User>
-                  </NavigationIcon>
+                  </NavigationIconLink>
                   <NavigationText>
                     About me
                   </NavigationText>
@@ -34,9 +35,9 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <Link to="/">
-                  <NavigationIcon>
+                  <NavigationIconLink>
                     <Projects></Projects>
-                  </NavigationIcon>
+                  </NavigationIconLink>
                   <NavigationText>
                     Projects
                   </NavigationText>
@@ -44,9 +45,9 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <Link to="/">
-                  <NavigationIcon>
+                  <NavigationIconLink>
                     <PaperPlane></PaperPlane>
-                  </NavigationIcon>
+                  </NavigationIconLink>
                   <NavigationText>
                     Contact
                   </NavigationText>
@@ -54,9 +55,9 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <Link to="/">
-                  <NavigationIcon>
+                  <NavigationIconLink>
                     <Write></Write>
-                  </NavigationIcon>
+                  </NavigationIconLink>
                   <NavigationText>
                     Blog
                   </NavigationText>
@@ -65,6 +66,15 @@ export default class Navigation extends Component {
             </ul>
           </nav>
         </NavigationTop>
+        <NavigationBottom>
+        <Link to="/">
+
+          <NavigationIconLink>
+            <LegalIcon/>
+          </NavigationIconLink>
+
+        </Link>
+        </NavigationBottom>
       </Wrapper>
     )
   }
@@ -77,6 +87,9 @@ const Wrapper = styled.div`
   top: 0;
   width: ${vars.styles.sizes.navigationWidth};
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const NavigationTop = styled.div`
@@ -92,12 +105,17 @@ const NavigationTop = styled.div`
   }
 `;
 
+const NavigationBottom = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 // todo: animation
 const NavigationText = styled.div`
   text-align: center;
-  transform: translateX(-5rem); 
+  /* transform: translateX(-5rem);  */
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: .6rem;
   color: ${vars.styles.colors.lightGrey1};
 `;
@@ -110,6 +128,14 @@ const NavigationIcon = styled.div`
     margin: 0 auto;
   }
   margin-bottom: .5rem;
+`
+
+const NavigationIconLink = styled(NavigationIcon)`
+  svg {
+    path {
+      fill: ${vars.styles.colors.grey2};
+    }
+  }
 `
 
 const NavigationIconLogo = styled(NavigationIcon)`
