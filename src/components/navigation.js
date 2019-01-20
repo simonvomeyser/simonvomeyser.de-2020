@@ -99,7 +99,7 @@ const NavigationText = styled.div`
   font-weight: bold;
   margin-bottom: 1rem;
   font-size: .75rem;
-  color: ${vars.styles.colors.lightGrey1}
+  color: ${vars.styles.colors.lightGrey1};
 `;
 
 const NavigationIcon = styled.div`
