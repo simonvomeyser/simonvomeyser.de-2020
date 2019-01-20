@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import styled  from 'styled-components';
-import {vars} from '../util/vars'
-import Link  from '../i18n/Link'
-import LogoNavigation from '../svg/logo-navigation.svg';
-import User from '../svg/user.svg';
-import Projects from '../svg/projects.svg';
-import Write from '../svg/write.svg';
-import PaperPlane from '../svg/paper-plane.svg';
-import LegalIcon from '../svg/legal.svg';
+import styled from 'styled-components'
+import { vars } from '../util/vars'
+import Link from '../i18n/Link'
+import LogoNavigation from '../svg/logo-navigation.svg'
+import User from '../svg/user.svg'
+import Projects from '../svg/projects.svg'
+import Write from '../svg/write.svg'
+import PaperPlane from '../svg/paper-plane.svg'
+import LegalIcon from '../svg/legal.svg'
 
 export default class Navigation extends Component {
   render() {
@@ -19,61 +19,51 @@ export default class Navigation extends Component {
               <li>
                 <Link to="/">
                   <NavigationIconLogo>
-                    <LogoNavigation></LogoNavigation>
+                    <LogoNavigation />
                   </NavigationIconLogo>
                 </Link>
               </li>
               <li>
                 <Link to="/">
                   <NavigationIconLink>
-                    <User></User>
+                    <User />
                   </NavigationIconLink>
-                  <NavigationText>
-                    About me
-                  </NavigationText>
+                  <NavigationText>About me</NavigationText>
                 </Link>
               </li>
               <li>
                 <Link to="/">
                   <NavigationIconLink>
-                    <Projects></Projects>
+                    <Projects />
                   </NavigationIconLink>
-                  <NavigationText>
-                    Projects
-                  </NavigationText>
+                  <NavigationText>Projects</NavigationText>
                 </Link>
               </li>
               <li>
                 <Link to="/">
                   <NavigationIconLink>
-                    <PaperPlane></PaperPlane>
+                    <PaperPlane />
                   </NavigationIconLink>
-                  <NavigationText>
-                    Contact
-                  </NavigationText>
+                  <NavigationText>Contact</NavigationText>
                 </Link>
               </li>
               <li>
                 <Link to="/">
                   <NavigationIconLink>
-                    <Write></Write>
+                    <Write />
                   </NavigationIconLink>
-                  <NavigationText>
-                    Blog
-                  </NavigationText>
+                  <NavigationText>Blog</NavigationText>
                 </Link>
               </li>
             </ul>
           </nav>
         </NavigationTop>
         <NavigationBottom>
-        <Link to="/">
-
-          <NavigationIconLink>
-            <LegalIcon/>
-          </NavigationIconLink>
-
-        </Link>
+          <Link to="/">
+            <NavigationIconLink>
+              <LegalIcon />
+            </NavigationIconLink>
+          </Link>
         </NavigationBottom>
       </Wrapper>
     )
@@ -90,7 +80,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
+`
 
 const NavigationTop = styled.div`
   padding-top: 1rem;
@@ -103,12 +93,12 @@ const NavigationTop = styled.div`
   li {
     text-align: center;
   }
-`;
+`
 
 const NavigationBottom = styled.div`
   display: flex;
   justify-content: center;
-`;
+`
 
 // todo: animation
 const NavigationText = styled.div`
@@ -116,9 +106,9 @@ const NavigationText = styled.div`
   /* transform: translateX(-5rem);  */
   font-weight: bold;
   margin-bottom: 1.5rem;
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: ${vars.styles.colors.lightGrey1};
-`;
+`
 
 const NavigationIcon = styled.div`
   svg {
@@ -127,7 +117,7 @@ const NavigationIcon = styled.div`
     height: auto;
     margin: 0 auto;
   }
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 `
 
 const NavigationIconLink = styled(NavigationIcon)`
