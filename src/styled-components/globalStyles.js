@@ -6,7 +6,7 @@ export default createGlobalStyle`
     ${reset}
     html {
         font-size: 20px;
-        font-family: sans-serif;
+        font-family: futura, sans-serif;
     }
     body {
         margin: 0;
