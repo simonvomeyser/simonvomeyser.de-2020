@@ -13,12 +13,10 @@ const IndexPage = () => (
         <LogoIcon />
       </LogoWrapper>
       <SuperHeading>
-        {' '}
-        <FormattedMessage id="landingTitle2" />{' '}
+        <FormattedMessage id="landingTitle2" />
       </SuperHeading>
       <Heading>
-        {' '}
-        <FormattedMessage id="landingTitle1" />{' '}
+        <FormattedMessage id="landingTitle1" />
       </Heading>
     </Wrapper>
   </Layout>
