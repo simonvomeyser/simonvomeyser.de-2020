@@ -72,7 +72,7 @@ export default class Navigation extends Component {
 
 const Wrapper = styled.div`
   position: fixed;
-  background-color: ${vars.styles.colors.grey1};
+  background-color: ${vars.styles.colors.neutral6};
   left: 0;
   top: 0;
   width: ${vars.styles.sizes.navigationWidth};
@@ -106,14 +106,14 @@ const NavigationText = styled.div`
   /* transform: translateX(-5rem);  */
   font-weight: bold;
   margin-bottom: 1.5rem;
-  font-size: 0.6rem;
-  color: ${vars.styles.colors.lightGrey1};
-`
+  font-size: ${vars.styles.fontSizes.size1};
+  color: ${vars.styles.colors.neutral4};
+`;
 
 const NavigationIcon = styled.div`
   svg {
     display: block;
-    width: 2rem;
+    width: 1.8rem;
     height: auto;
     margin: 0 auto;
   }
@@ -123,11 +123,14 @@ const NavigationIcon = styled.div`
 const NavigationIconLink = styled(NavigationIcon)`
   svg {
     path {
-      fill: ${vars.styles.colors.grey2};
+      fill: ${vars.styles.colors.neutral4};
     }
   }
 `
 
 const NavigationIconLogo = styled(NavigationIcon)`
   margin-bottom: 1.5rem;
+  svg {
+    width: 2.2rem;
+  }
 `
