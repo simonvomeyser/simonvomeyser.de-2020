@@ -8,6 +8,7 @@ import Projects from '../svg/projects.svg'
 import Write from '../svg/write.svg'
 import PaperPlane from '../svg/paper-plane.svg'
 import LegalIcon from '../svg/legal.svg'
+import { FormattedMessage } from 'react-intl'
 
 export default class Navigation extends Component {
   render() {
@@ -28,7 +29,9 @@ export default class Navigation extends Component {
                   <NavigationIconLink>
                     <User />
                   </NavigationIconLink>
-                  <NavigationText>About me</NavigationText>
+                  <NavigationText>
+                    <FormattedMessage id="navigationAboutMe" />
+                  </NavigationText>
                 </Link>
               </li>
               <li>
@@ -36,7 +39,9 @@ export default class Navigation extends Component {
                   <NavigationIconLink>
                     <Projects />
                   </NavigationIconLink>
-                  <NavigationText>Projects</NavigationText>
+                  <NavigationText>
+                    <FormattedMessage id="navigationProjects" />
+                  </NavigationText>
                 </Link>
               </li>
               <li>
@@ -44,7 +49,9 @@ export default class Navigation extends Component {
                   <NavigationIconLink>
                     <PaperPlane />
                   </NavigationIconLink>
-                  <NavigationText>Contact</NavigationText>
+                  <NavigationText>
+                    <FormattedMessage id="navigationContact" />
+                  </NavigationText>
                 </Link>
               </li>
               <li>
@@ -52,7 +59,9 @@ export default class Navigation extends Component {
                   <NavigationIconLink>
                     <Write />
                   </NavigationIconLink>
-                  <NavigationText>Blog</NavigationText>
+                  <NavigationText>
+                    <FormattedMessage id="navigationBlog" />
+                  </NavigationText>
                 </Link>
               </li>
             </ul>
