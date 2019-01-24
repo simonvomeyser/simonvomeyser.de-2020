@@ -9,4 +9,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default withIntl(NotFoundPage);
+export default withIntl(NotFoundPage)

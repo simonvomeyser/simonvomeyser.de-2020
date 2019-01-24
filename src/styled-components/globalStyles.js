@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
-import {vars} from '../util/vars'
+import { vars } from '../util/vars'
 
 export default createGlobalStyle`
     ${reset}
@@ -16,4 +16,4 @@ export default createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
-`;
+`

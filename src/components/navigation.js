@@ -108,7 +108,7 @@ const NavigationText = styled.div`
   margin-bottom: 1.5rem;
   font-size: ${vars.styles.fontSizes.size1};
   color: ${vars.styles.colors.neutral4};
-`;
+`
 
 const NavigationIcon = styled.div`
   svg {
