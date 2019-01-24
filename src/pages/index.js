@@ -32,22 +32,23 @@ const Wrapper = styled.div`
 
 const LogoWrapper = styled.div`
   svg {
-    width: 25vw;
+    width: 220px;
+    height: auto;
   }
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 `
 
 const Heading = styled.h1`
-  font-size: ${vars.styles.fontSizes.size11};
+  font-size: ${vars.styles.fontSizes.size10};
   margin-bottom: 1rem;
-  color: ${vars.styles.colors.neutral6};
+  color: ${vars.styles.colors.neutral5};
   text-align: center;
 `
 
 const SuperHeading = styled.div`
   font-size: ${vars.styles.fontSizes.size8};
-  color: ${vars.styles.colors.neutral4};
-  margin-bottom: 1rem;
+  color: ${vars.styles.colors.neutral3};
+  margin-bottom: 0.5rem;
   text-align: center;
 `
 
