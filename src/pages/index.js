@@ -40,13 +40,13 @@ const LogoWrapper = styled.div`
 const Heading = styled.h1`
   font-size: ${vars.styles.fontSizes.size11};
   margin-bottom: 1rem;
-color: ${vars.styles.colors.neutral6};
+  color: ${vars.styles.colors.neutral6};
   text-align: center;
 `
 
 const SuperHeading = styled.div`
   font-size: ${vars.styles.fontSizes.size8};
-color: ${vars.styles.colors.neutral4};
+  color: ${vars.styles.colors.neutral4};
   margin-bottom: 1rem;
   text-align: center;
 `
