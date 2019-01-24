@@ -105,15 +105,15 @@ const NavigationText = styled.div`
   text-align: center;
   /* transform: translateX(-5rem);  */
   font-weight: bold;
-  margin-bottom: 1.5rem;
-  font-size: ${vars.styles.fontSizes.size1};
+  margin-bottom: 1rem;
+  font-size: ${vars.styles.fontSizes.size0};
   color: ${vars.styles.colors.neutral4};
 `
 
 const NavigationIcon = styled.div`
   svg {
     display: block;
-    width: 1.8rem;
+    width: 1.5rem;
     height: auto;
     margin: 0 auto;
   }
@@ -131,6 +131,6 @@ const NavigationIconLink = styled(NavigationIcon)`
 const NavigationIconLogo = styled(NavigationIcon)`
   margin-bottom: 1.5rem;
   svg {
-    width: 2.2rem;
+    width: 2rem;
   }
 `
