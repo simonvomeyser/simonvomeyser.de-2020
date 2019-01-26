@@ -1,85 +1,65 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
-import Link from '../i18n/Link'
-import LogoNavigation from '../svg/logo-navigation.svg'
-import User from '../svg/user.svg'
-import Projects from '../svg/projects.svg'
-import Write from '../svg/write.svg'
-import PaperPlane from '../svg/paper-plane.svg'
-import LegalIcon from '../svg/legal.svg'
-import { FormattedMessage } from 'react-intl'
+import LogoSvg from '../svg/logo-navigation.svg'
+import UserSvg from '../svg/user.svg'
+import ProjectsSvg from '../svg/projects.svg'
+import WriteSvg from '../svg/write.svg'
+import PaperPlaneSvg from '../svg/paper-plane.svg'
+import LegalSvg from '../svg/legal.svg'
+import NavigationLink from '../components/navigatonLink'
 
 export default class Navigation extends Component {
   render() {
     return (
-      <Wrapper>
-        <NavigationTop>
+      <StyledWrapper>
+        <StyledNavigationTop>
           <nav>
             <ul>
               <li>
-                <Link to="/">
-                  <NavigationIconLogo>
-                    <LogoNavigation />
-                  </NavigationIconLogo>
-                </Link>
+                <NavigationLink to="/" isPageLogo icon={<LogoSvg />} />
               </li>
               <li>
-                <Link to="/">
-                  <NavigationIconLink>
-                    <User />
-                  </NavigationIconLink>
-                  <NavigationText>
-                    <FormattedMessage id="navigationAboutMe" />
-                  </NavigationText>
-                </Link>
+                <NavigationLink
+                  to="/"
+                  logo
+                  icon={<UserSvg />}
+                  idOfText="navigationBlog"
+                />
               </li>
               <li>
-                <Link to="/">
-                  <NavigationIconLink>
-                    <Projects />
-                  </NavigationIconLink>
-                  <NavigationText>
-                    <FormattedMessage id="navigationProjects" />
-                  </NavigationText>
-                </Link>
+                <NavigationLink
+                  to="/"
+                  icon={<ProjectsSvg />}
+                  idOfText="navigationBlog"
+                />
               </li>
               <li>
-                <Link to="/">
-                  <NavigationIconLink>
-                    <PaperPlane />
-                  </NavigationIconLink>
-                  <NavigationText>
-                    <FormattedMessage id="navigationContact" />
-                  </NavigationText>
-                </Link>
+                <NavigationLink
+                  to="/"
+                  icon={<PaperPlaneSvg />}
+                  idOfText="navigationBlog"
+                />
               </li>
               <li>
-                <Link to="/">
-                  <NavigationIconLink>
-                    <Write />
-                  </NavigationIconLink>
-                  <NavigationText>
-                    <FormattedMessage id="navigationBlog" />
-                  </NavigationText>
-                </Link>
+                <NavigationLink
+                  to="/"
+                  icon={<WriteSvg />}
+                  idOfText="navigationBlog"
+                />
               </li>
             </ul>
           </nav>
-        </NavigationTop>
-        <NavigationBottom>
-          <Link to="/">
-            <NavigationIconLink>
-              <LegalIcon />
-            </NavigationIconLink>
-          </Link>
-        </NavigationBottom>
-      </Wrapper>
+        </StyledNavigationTop>
+        <StyledNavigationBottom>
+          <NavigationLink to="/" icon={<LegalSvg />} />
+        </StyledNavigationBottom>
+      </StyledWrapper>
     )
   }
 }
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   position: fixed;
   background-color: ${vars.styles.colors.neutral6};
   left: 0;
@@ -91,7 +71,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 
-const NavigationTop = styled.div`
+const StyledNavigationTop = styled.div`
   padding-top: 1rem;
   display: flex;
   width: 100%;
@@ -104,42 +84,7 @@ const NavigationTop = styled.div`
   }
 `
 
-const NavigationBottom = styled.div`
+const StyledNavigationBottom = styled.div`
   display: flex;
   justify-content: center;
-`
-
-// todo: animation
-const NavigationText = styled.div`
-  text-align: center;
-  /* transform: translateX(-5rem);  */
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: ${vars.styles.fontSizes.size0};
-  color: ${vars.styles.colors.neutral4};
-`
-
-const NavigationIcon = styled.div`
-  svg {
-    display: block;
-    width: 1.5rem;
-    height: auto;
-    margin: 0 auto;
-  }
-  margin-bottom: 0.5rem;
-`
-
-const NavigationIconLink = styled(NavigationIcon)`
-  svg {
-    path {
-      fill: ${vars.styles.colors.neutral4};
-    }
-  }
-`
-
-const NavigationIconLogo = styled(NavigationIcon)`
-  margin-bottom: 1.5rem;
-  svg {
-    width: 2rem;
-  }
 `
