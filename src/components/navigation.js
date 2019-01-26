@@ -21,7 +21,7 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <NavigationLink
-                  to="/"
+                  to="/about-me"
                   logo
                   icon={<UserSvg />}
                   idOfText="navigationBlog"
@@ -29,21 +29,21 @@ export default class Navigation extends Component {
               </li>
               <li>
                 <NavigationLink
-                  to="/"
+                  to="/projects"
                   icon={<ProjectsSvg />}
                   idOfText="navigationBlog"
                 />
               </li>
               <li>
                 <NavigationLink
-                  to="/"
+                  to="/contact"
                   icon={<PaperPlaneSvg />}
                   idOfText="navigationBlog"
                 />
               </li>
               <li>
                 <NavigationLink
-                  to="/"
+                  to="/blog"
                   icon={<WriteSvg />}
                   idOfText="navigationBlog"
                 />
@@ -52,7 +52,7 @@ export default class Navigation extends Component {
           </nav>
         </StyledNavigationTop>
         <StyledNavigationBottom>
-          <NavigationLink to="/" icon={<LegalSvg />} />
+          <NavigationLink to="/legal" icon={<LegalSvg />} />
         </StyledNavigationBottom>
       </StyledWrapper>
     )

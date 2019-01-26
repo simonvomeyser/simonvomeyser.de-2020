@@ -8,14 +8,14 @@ export default class NavigatonLink extends Component {
   render() {
     const { idOfText, to, icon, isPageLogo } = this.props
     return (
-      <Link activeClassName="active" to={to}>
+      <StyledLink activeClassName="active" to={to}>
         {this.renderIcon({ icon, isPageLogo })}
         {idOfText && (
           <StyledText>
             <FormattedMessage id={idOfText} />
           </StyledText>
         )}
-      </Link>
+      </StyledLink>
     )
   }
   renderIcon({ icon, isPageLogo }) {
@@ -25,6 +25,19 @@ export default class NavigatonLink extends Component {
     return <StyledIconPage>{icon}</StyledIconPage>
   }
 }
+
+const StyledLink = styled(Link)`
+  &.active {
+    > * {
+      color: ${vars.styles.colors.neutral1};
+    }
+    .page-link-icon {
+      path {
+        fill: ${vars.styles.colors.neutral1};
+      }
+    }
+  }
+`
 
 // todo: animation
 const StyledText = styled.div`
