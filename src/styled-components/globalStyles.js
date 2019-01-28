@@ -7,6 +7,7 @@ export default createGlobalStyle`
     html {
         font-size: ${vars.styles.fontSizes.base};
         font-family: futura, sans-serif;
+        color: ${vars.styles.colors.black}
     }
     body {
         margin: 0;
