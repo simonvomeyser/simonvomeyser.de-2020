@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
+import LanguageChooser from './languageChooser'
+import NameAndProfession from './nameAndProfession'
 
 export default class PageLayout extends Component {
   render() {
     return (
       <StyledWrapper>
         <StyledPageHeader>
-          <div>Simon vom Eyser - web development</div>
-          <div>lang</div>
+          <NameAndProfession />
+          <LanguageChooser />
         </StyledPageHeader>
         <StyledPageBody>{this.props.children}</StyledPageBody>
         <StyledPageFooter>footer</StyledPageFooter>
@@ -20,7 +22,7 @@ export default class PageLayout extends Component {
 const StyledWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
 `
 
 const StyledPageHeader = styled.div`
