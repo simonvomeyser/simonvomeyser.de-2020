@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from '../util/vars'
-import { on } from '../util/breakpoint'
-import LogoSvg from '../svg/logo-navigation.svg'
-import UserSvg from '../svg/user.svg'
-import ProjectsSvg from '../svg/projects.svg'
-import WriteSvg from '../svg/write.svg'
-import PaperPlaneSvg from '../svg/paper-plane.svg'
-import LegalSvg from '../svg/legal.svg'
-import NavigationLink from '../components/navigatonLink'
+import { vars } from 'util/vars'
+import { on } from 'util/breakpoint'
+import LogoSvg from 'svg/logo-navigation.svg'
+import UserSvg from 'svg/user.svg'
+import ProjectsSvg from 'svg/projects.svg'
+import WriteSvg from 'svg/write.svg'
+import PaperPlaneSvg from 'svg/paper-plane.svg'
+import LegalSvg from 'svg/legal.svg'
+import NavigationLink from 'components/navigatonLink'
 
 export default class Navigation extends Component {
   render() {

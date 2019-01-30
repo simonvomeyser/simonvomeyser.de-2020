@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectIntl } from 'react-intl'
-import Navigation from '../components/navigation'
-import GlobalStyles from '../styled-components/globalStyles'
+import Navigation from 'components/navigation'
+import GlobalStyles from 'styled-components/globalStyles'
 import styled from 'styled-components'
-import { vars } from '../util/vars'
+import { vars } from 'util/vars'
 
 const Layout = ({ children, data, intl }) => (
   <Fragment>

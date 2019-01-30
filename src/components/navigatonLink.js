@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Link from '../i18n/Link'
+import Link from 'i18n/Link'
 import styled from 'styled-components'
-import { vars } from '../util/vars'
+import { vars } from 'util/vars'
 import { FormattedMessage } from 'react-intl'
 
 export default class NavigatonLink extends Component {

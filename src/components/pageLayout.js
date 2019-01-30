@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from '../util/vars'
+import { vars } from 'util/vars'
 import LanguageChooser from './languageChooser'
 import NameAndProfession from './nameAndProfession'
 

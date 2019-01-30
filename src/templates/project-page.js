@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withIntl, Link } from '../i18n'
+import { withIntl, Link } from 'i18n'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from 'components/layout'
 
 class ProjectPage extends Component {
   render() {

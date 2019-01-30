@@ -1,10 +1,10 @@
 import React from 'react'
-import { withIntl } from '../i18n'
+import { withIntl } from 'i18n'
 import { FormattedMessage } from 'react-intl'
-import Layout from '../components/layout'
+import Layout from 'components/layout'
 import styled from 'styled-components'
-import { vars } from '../util/vars'
-import LogoIcon from '../svg/logo.svg'
+import { vars } from 'util/vars'
+import LogoIcon from 'svg/logo.svg'
 
 const IndexPage = () => (
   <Layout>
