@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
+import { on } from '../util/breakpoint'
 import LogoSvg from '../svg/logo-navigation.svg'
 import UserSvg from '../svg/user.svg'
 import ProjectsSvg from '../svg/projects.svg'
@@ -69,6 +70,10 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ${on('onlyMobile')} {
+    display: none;
+  }
 `
 
 const StyledNavigationTop = styled.div`

@@ -1,4 +1,7 @@
 export const vars = {
+  breakpoints: {
+    onlyMobile: 'max-width: 786px',
+  },
   styles: {
     sizes: {
       navigationWidth: '3.5rem',
