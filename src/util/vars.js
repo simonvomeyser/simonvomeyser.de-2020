@@ -5,6 +5,7 @@ export const vars = {
   styles: {
     sizes: {
       navigationWidth: '3.5rem',
+      navigationMobileHeight: '3rem',
     },
     fontSizes: {
       size0: '10px',

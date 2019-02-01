@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import Navigation from 'components/navigation'
+import NavigationMobile from 'components/navigationMobile'
 import GlobalStyles from 'styled-components/globalStyles'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
+import { on } from 'util/breakpoint'
 
 const Layout = ({ children, data, intl }) => (
   <Fragment>
@@ -26,12 +28,20 @@ const Layout = ({ children, data, intl }) => (
       <html lang="en" />
     </Helmet>
     <Navigation />
+    <NavigationMobile />
     <StyledWrapper>{children}</StyledWrapper>
   </Fragment>
 )
 
 const StyledWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
+  min-height: 100vh;
+
+  ${on('onlyMobile')} {
+    padding-left: 0;
+    min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
+    padding-top: ${vars.styles.sizes.navigationMobileHeight};
+  }
 `
 
 Layout.propTypes = {
