@@ -2,29 +2,49 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
-import { LogoSvg, UserSvg, ProjectsSvg, WriteSvg, PaperPlaneSvg, LegalSvg} from 'svg';
+import {
+  LogoNavigationSvg,
+  UserSvg,
+  ProjectsSvg,
+  WriteSvg,
+  PaperPlaneSvg,
+  LegalSvg,
+} from 'svg'
 import NavigationLink from 'components/navigatonLink'
 
-export default class Navigation extends Component {
+export default class NavigationMobile extends Component {
   render() {
     return (
       <StyledWrapper>
-        Mobile
+        <span>burg</span>
+        <LogoWrapper>
+          <LogoNavigationSvg />
+        </LogoWrapper>
+        <span>lang</span>
       </StyledWrapper>
     )
   }
 }
 
+const LogoWrapper = styled.div`
+  svg {
+    height: 40px;
+    width: auto;
+  }
+`
+
 const StyledWrapper = styled.div`
-  display:none;
+  display: none;
   position: fixed;
   background-color: ${vars.styles.colors.neutral6};
   left: 0;
   top: 0;
   width: 100%;
-  height: ${ vars.styles.sizes.navigationMobileHeight };
+  height: ${vars.styles.sizes.navigationMobileHeight};
   justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
 
   ${on('onlyMobile')} {
     display: flex;
