@@ -6,6 +6,7 @@ import {
   LogoNavigationSvg,
   UserSvg,
   ProjectsSvg,
+  BurgerSvg,
   WriteSvg,
   PaperPlaneSvg,
   LegalSvg,
@@ -16,7 +17,9 @@ export default class NavigationMobile extends Component {
   render() {
     return (
       <StyledWrapper>
-        <span>burg</span>
+        <BurgerWrapper>
+          <BurgerSvg />
+        </BurgerWrapper>
         <LogoWrapper>
           <LogoNavigationSvg />
         </LogoWrapper>
@@ -26,13 +29,19 @@ export default class NavigationMobile extends Component {
   }
 }
 
+const BurgerWrapper = styled.div`
+  svg {
+    width: 1.5rem;
+  }
+`
+
 const LogoWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   svg {
-    height: 40px;
+    height: 2rem;
     width: auto;
   }
 `
