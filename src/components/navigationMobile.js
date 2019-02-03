@@ -7,6 +7,8 @@ import {
   UserSvg,
   ProjectsSvg,
   BurgerSvg,
+  GermanySvg,
+  UnitedStatesSvg,
   WriteSvg,
   PaperPlaneSvg,
   LegalSvg,
@@ -23,7 +25,9 @@ export default class NavigationMobile extends Component {
         <LogoWrapper>
           <LogoNavigationSvg />
         </LogoWrapper>
-        <span>lang</span>
+        <FlagWrapper>
+          <GermanySvg />
+        </FlagWrapper>
       </StyledWrapper>
     )
   }
@@ -32,6 +36,11 @@ export default class NavigationMobile extends Component {
 const BurgerWrapper = styled.div`
   svg {
     width: 1.5rem;
+  }
+`
+const FlagWrapper = styled.div`
+  svg {
+    width: 1.25rem;
   }
 `
 

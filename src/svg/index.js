@@ -5,6 +5,8 @@ import Write from 'svg/write.svg'
 import PaperPlane from 'svg/paper-plane.svg'
 import Legal from 'svg/legal.svg'
 import Burger from 'svg/burger.svg'
+import UnitedStates from 'svg/united-states.svg'
+import Germany from 'svg/germany.svg'
 
 export const LogoNavigationSvg = LogoNavigation
 export const UserSvg = User
@@ -13,3 +15,5 @@ export const WriteSvg = Write
 export const PaperPlaneSvg = PaperPlane
 export const LegalSvg = Legal
 export const BurgerSvg = Burger
+export const UnitedStatesSvg = UnitedStates
+export const GermanySvg = Germany
