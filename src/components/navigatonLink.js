@@ -3,6 +3,8 @@ import Link from 'i18n/Link'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { FormattedMessage } from 'react-intl'
+import { on } from 'util/breakpoint'
+import { rgba } from 'util/mixins'
 
 export default class NavigatonLink extends Component {
   render() {
@@ -36,6 +38,13 @@ const StyledLink = styled(Link)`
         fill: ${vars.styles.colors.neutral1};
       }
     }
+    ${on('onlyMobile')} {
+      background: ${rgba(vars.styles.colors.white, 0.2)};
+      border-bottom: none;
+    }
+  }
+  ${on('onlyMobile')} {
+    border-bottom: 1px solid ${vars.styles.colors.neutral4};
   }
 `
 
@@ -47,6 +56,13 @@ const StyledText = styled.div`
   margin-bottom: 1rem;
   font-size: ${vars.styles.fontSizes.size0};
   color: ${vars.styles.colors.neutral4};
+
+  ${on('onlyMobile')} {
+    font-size: ${vars.styles.fontSizes.size3};
+    margin-bottom: 0;
+    display: flex;
+    color: ${vars.styles.colors.neutral1};
+  }
 `
 
 const StyledIcon = styled.div`
@@ -57,12 +73,26 @@ const StyledIcon = styled.div`
     margin: 0 auto;
   }
   margin-bottom: 0.5rem;
+
+  ${on('onlyMobile')} {
+    svg {
+      width: 2rem;
+    }
+    margin-bottom: 1rem;
+  }
 `
 
 const StyledIconPage = styled(StyledIcon)`
   svg {
     path {
       fill: ${vars.styles.colors.neutral4};
+    }
+  }
+  ${on('onlyMobile')} {
+    svg {
+      path {
+        fill: ${vars.styles.colors.neutral2};
+      }
     }
   }
 `

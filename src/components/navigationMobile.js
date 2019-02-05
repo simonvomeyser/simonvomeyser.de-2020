@@ -31,7 +31,41 @@ export default class NavigationMobile extends Component {
             <GermanySvg />
           </FlagWrapper>
         </NavigationMobileBar>
-        <NavigationMobileList>test</NavigationMobileList>
+        <NavigationMobileList>
+          <nav>
+            <ul>
+              <li>
+                <NavigationLink
+                  to="/about-me"
+                  logo
+                  icon={<UserSvg />}
+                  idOfText="navigationBlog"
+                />
+              </li>
+              <li>
+                <NavigationLink
+                  to="/projects"
+                  icon={<ProjectsSvg />}
+                  idOfText="navigationBlog"
+                />
+              </li>
+              <li>
+                <NavigationLink
+                  to="/contact"
+                  icon={<PaperPlaneSvg />}
+                  idOfText="navigationBlog"
+                />
+              </li>
+              <li>
+                <NavigationLink
+                  to="/blog"
+                  icon={<WriteSvg />}
+                  idOfText="navigationBlog"
+                />
+              </li>
+            </ul>
+          </nav>
+        </NavigationMobileList>
       </Fragment>
     )
   }
@@ -66,6 +100,27 @@ const NavigationMobileList = styled.div`
   width: 100%;
   height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   background: ${rgba(vars.styles.colors.neutral6, 0.9)};
+
+  nav {
+    height: 100%;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  li {
+    flex: 1;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
 `
 
 const NavigationMobileBar = styled.div`
