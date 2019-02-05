@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
+import { rgba } from 'util/mixins'
 import {
   LogoNavigationSvg,
   UserSvg,
@@ -18,17 +19,20 @@ import NavigationLink from 'components/navigatonLink'
 export default class NavigationMobile extends Component {
   render() {
     return (
-      <StyledWrapper>
-        <BurgerWrapper>
-          <BurgerSvg />
-        </BurgerWrapper>
-        <LogoWrapper>
-          <LogoNavigationSvg />
-        </LogoWrapper>
-        <FlagWrapper>
-          <GermanySvg />
-        </FlagWrapper>
-      </StyledWrapper>
+      <Fragment>
+        <NavigationMobileBar>
+          <BurgerWrapper>
+            <BurgerSvg />
+          </BurgerWrapper>
+          <LogoWrapper>
+            <LogoNavigationSvg />
+          </LogoWrapper>
+          <FlagWrapper>
+            <GermanySvg />
+          </FlagWrapper>
+        </NavigationMobileBar>
+        <NavigationMobileList>test</NavigationMobileList>
+      </Fragment>
     )
   }
 }
@@ -55,7 +59,16 @@ const LogoWrapper = styled.div`
   }
 `
 
-const StyledWrapper = styled.div`
+const NavigationMobileList = styled.div`
+  position: fixed;
+  top: ${vars.styles.sizes.navigationMobileHeight};
+  left: 0;
+  width: 100%;
+  height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
+  background: ${rgba(vars.styles.colors.neutral6, 0.9)};
+`
+
+const NavigationMobileBar = styled.div`
   display: none;
   position: fixed;
   background-color: ${vars.styles.colors.neutral6};
