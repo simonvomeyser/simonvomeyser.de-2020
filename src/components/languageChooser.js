@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { GermanySvg, UnitedStatesSvg } from 'svg'
+import { on } from 'util/breakpoint'
 
 class LanguageChooser extends Component {
   static contextTypes = {
@@ -63,6 +64,10 @@ const LanguageButton = styled.button`
     height: 25px;
   }
   opacity: ${props => (props.active ? '1' : '0.5')};
+
+  ${on('onlyMobile')} {
+    display: ${props => (props.active ? 'inline-block' : 'none')};
+  }
 `
 
 export default styled(LanguageChooser)``

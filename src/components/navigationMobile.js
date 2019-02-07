@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import { rgba } from 'util/mixins'
+import LanguageChooser from 'components/languageChooser'
+
 import {
   LogoNavigationSvg,
   UserSvg,
@@ -27,9 +29,7 @@ export default class NavigationMobile extends Component {
           <LogoWrapper>
             <LogoNavigationSvg />
           </LogoWrapper>
-          <FlagWrapper>
-            <GermanySvg />
-          </FlagWrapper>
+          <LanguageChooser />
         </NavigationMobileBar>
         <NavigationMobileList>
           <nav>
@@ -76,12 +76,6 @@ const BurgerWrapper = styled.div`
     width: 1.5rem;
   }
 `
-const FlagWrapper = styled.div`
-  svg {
-    width: 1.25rem;
-  }
-`
-
 const LogoWrapper = styled.div`
   position: absolute;
   top: 50%;
