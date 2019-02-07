@@ -18,16 +18,27 @@ class LanguageChooser extends Component {
     this.setState({
       value: language.locale || language.detected,
       language,
+      options: ['de', 'en'],
     })
   }
 
-  selectLanguage = langCode => {
+  selectLanguage = selectedLangCode => {
     const { originalPath } = this.state.language
 
-    this.setState({ langCode }, () => {
-      localStorage.setItem('language', langCode)
-      // use router to redirect
-      window.location.href = `/${langCode}${originalPath}`
+    // Clicking the already active flag changes language to other language
+    // Implemented because mobile there is only one flag
+    const userClickedOnActiveFlag = selectedLangCode === this.state.value
+    const otherLangCode = this.state.options.filter(
+      langCodeOption => langCodeOption !== selectedLangCode
+    )[0]
+    const langCodeToChangeTo = userClickedOnActiveFlag
+      ? otherLangCode
+      : selectedLangCode
+
+    this.setState({ langCodeToChangeTo }, () => {
+      localStorage.setItem('language', langCodeToChangeTo)
+      // todo use router to redirect
+      window.location.href = `/${langCodeToChangeTo}${originalPath}`
     })
   }
 
