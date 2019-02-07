@@ -94,6 +94,7 @@ const LogoWrapper = styled.div`
 `
 
 const NavigationMobileList = styled.div`
+  display: none;
   position: fixed;
   top: ${vars.styles.sizes.navigationMobileHeight};
   left: 0;
@@ -120,6 +121,9 @@ const NavigationMobileList = styled.div`
     align-items: center;
     height: 100%;
     width: 100%;
+  }
+  ${on('onlyMobile')} {
+    display: block;
   }
 `
 
