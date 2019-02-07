@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { GermanySvg, UnitedStatesSvg } from 'svg'
 
 class LanguageChooser extends Component {
   static contextTypes = {
@@ -12,45 +14,55 @@ class LanguageChooser extends Component {
 
   componentDidMount() {
     const { language } = this.context
-    this.setState({ value: language.locale || language.detected, })
-  }
-
-  handleChange = event => {
-    const { language } = this.context
-    const { originalPath } = language
-    const { value } = event.target
-
-    if (value === this.state.value) {
-      return
-    }
-
-    this.setState({ value }, () => {
-      localStorage.setItem('language', value)
-      window.location.href = `/${value}${originalPath}`
+    this.setState({
+      value: language.locale || language.detected,
+      language,
     })
   }
-  
-  render() {
-    const { language } = this.context
-    const { languages } = language
-    const { value } = this.state
-    
-    const { originalPath } = language
 
-    if (!value) {
+  selectLanguage = langCode => {
+    const { originalPath } = this.state.language
+
+    this.setState({ langCode }, () => {
+      localStorage.setItem('language', langCode)
+      // use router to redirect
+      window.location.href = `/${langCode}${originalPath}`
+    })
+  }
+
+  render() {
+    if (!this.state.value) {
       return null
     }
 
     return (
-      <select value={value} onChange={this.handleChange}>
-        {languages.map(({ value, text }) => (
-          <option key={value} value={value}>
-            {text}
-          </option>
-        ))}
-      </select>
+      <div>
+        <LanguageButton
+          active={this.state.value === 'en'}
+          onClick={() => this.selectLanguage('en')}
+        >
+          <UnitedStatesSvg />
+        </LanguageButton>
+        <LanguageButton
+          active={this.state.value === 'de'}
+          onClick={() => this.selectLanguage('de')}
+        >
+          <GermanySvg />
+        </LanguageButton>
+      </div>
     )
   }
 }
 
-export default LanguageChooser
+const LanguageButton = styled.button`
+  border: 0;
+  background: none;
+  cursor: pointer;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+  opacity: ${props => (props.active ? '1' : '0.5')};
+`
+
+export default styled(LanguageChooser)``

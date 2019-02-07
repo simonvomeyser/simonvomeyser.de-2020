@@ -19,6 +19,8 @@ export default class NameAndBrand extends Component {
 const StyledWrapper = styled.div`
   font-family: 'Open Sans', sans-serif;
   font-size: ${vars.styles.fontSizes.size3};
+  display: flex;
+  align-items: center;
 `
 const StyledName = styled.span`
   color: ${vars.styles.colors.neutral5};
