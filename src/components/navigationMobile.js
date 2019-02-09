@@ -19,12 +19,24 @@ import {
 import NavigationLink from 'components/navigatonLink'
 
 export default class NavigationMobile extends Component {
+  constructor(params) {
+    super()
+    this.state = {
+      menuOpen: false,
+      test: 'test',
+    }
+  }
+  toggleMenu = () => {
+    this.setState(state => {
+      return { menuOpen: !state.menuOpen }
+    })
+  }
   render() {
     return (
       <Fragment>
         <StyledNavigationMobileBar>
           <StyledBurgerWrapper>
-            <BurgerSvg />
+            <BurgerSvg onClick={this.toggleMenu} />
           </StyledBurgerWrapper>
           <StyledLogoWrapper>
             <LogoNavigationSvg />
