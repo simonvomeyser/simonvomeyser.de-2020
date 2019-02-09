@@ -22,16 +22,16 @@ export default class NavigationMobile extends Component {
   render() {
     return (
       <Fragment>
-        <NavigationMobileBar>
-          <BurgerWrapper>
+        <StyledNavigationMobileBar>
+          <StyledBurgerWrapper>
             <BurgerSvg />
-          </BurgerWrapper>
-          <LogoWrapper>
+          </StyledBurgerWrapper>
+          <StyledLogoWrapper>
             <LogoNavigationSvg />
-          </LogoWrapper>
+          </StyledLogoWrapper>
           <LanguageChooser />
-        </NavigationMobileBar>
-        <NavigationMobileList>
+        </StyledNavigationMobileBar>
+        <StyledNavigationMobileList>
           <nav>
             <ul>
               <li>
@@ -65,18 +65,18 @@ export default class NavigationMobile extends Component {
               </li>
             </ul>
           </nav>
-        </NavigationMobileList>
+        </StyledNavigationMobileList>
       </Fragment>
     )
   }
 }
 
-const BurgerWrapper = styled.div`
+const StyledBurgerWrapper = styled.div`
   svg {
     width: 1.5rem;
   }
 `
-const LogoWrapper = styled.div`
+const StyledLogoWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,7 +87,7 @@ const LogoWrapper = styled.div`
   }
 `
 
-const NavigationMobileList = styled.div`
+const StyledNavigationMobileList = styled.div`
   display: none;
   position: fixed;
   top: ${vars.styles.sizes.navigationMobileHeight};
@@ -121,7 +121,7 @@ const NavigationMobileList = styled.div`
   }
 `
 
-const NavigationMobileBar = styled.div`
+const StyledNavigationMobileBar = styled.div`
   display: none;
   position: fixed;
   background-color: ${vars.styles.colors.neutral6};
