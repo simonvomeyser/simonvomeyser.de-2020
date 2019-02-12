@@ -7,6 +7,10 @@ export const vars = {
       navigationWidth: '3.5rem',
       navigationMobileHeight: '3rem',
     },
+    zIndices: {
+      mobileNavigationList: 10,
+      mobileNavigationBar: 20,
+    },
     fontSizes: {
       size0: '10px',
       size1: '12px',
