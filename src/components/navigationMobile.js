@@ -5,6 +5,7 @@ import { on } from 'util/breakpoint'
 import { rgba, anim } from 'util/mixins'
 import LanguageChooser from 'components/languageChooser'
 import Link from 'i18n/Link'
+import { navigate } from 'i18n/navigate'
 
 import {
   LogoNavigationSvg,
@@ -31,6 +32,17 @@ export default class NavigationMobile extends Component {
       return { menuOpen: !state.menuOpen }
     })
   }
+  setMenu = (event, { open = false }) => {
+    // event.stopPropagation()
+    this.setState(
+      state => {
+        return { menuOpen: open }
+      },
+      () => {
+        navigate('/')
+      }
+    )
+  }
   render() {
     return (
       <Fragment>
@@ -39,9 +51,9 @@ export default class NavigationMobile extends Component {
             <BurgerSvg onClick={this.toggleMenu} />
           </StyledBurgerWrapper>{' '}
           <StyledLogoWrapper>
-            <Link to="/">
-              <LogoNavigationSvg />
-            </Link>
+            <LogoNavigationSvg
+              onClick={event => this.setMenu(event, { open: false })}
+            />
           </StyledLogoWrapper>
           <LanguageChooser />
         </StyledNavigationMobileBar>
