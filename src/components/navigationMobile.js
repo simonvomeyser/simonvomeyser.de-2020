@@ -4,6 +4,7 @@ import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import { rgba, anim } from 'util/mixins'
 import LanguageChooser from 'components/languageChooser'
+import Link from 'i18n/Link'
 
 import {
   LogoNavigationSvg,
@@ -38,8 +39,9 @@ export default class NavigationMobile extends Component {
             <BurgerSvg onClick={this.toggleMenu} />
           </StyledBurgerWrapper>{' '}
           <StyledLogoWrapper>
-            {' '}
-            <LogoNavigationSvg />
+            <Link to="/">
+              <LogoNavigationSvg />
+            </Link>
           </StyledLogoWrapper>
           <LanguageChooser />
         </StyledNavigationMobileBar>
@@ -86,6 +88,7 @@ export default class NavigationMobile extends Component {
 const StyledBurgerWrapper = styled.div`
   svg {
     width: 1.5rem;
+    cursor: pointer;
   }
 `
 const StyledLogoWrapper = styled.div`
