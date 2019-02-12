@@ -17,3 +17,7 @@ export const rgba = (hex, alpha) => {
   const color = hexToRgb(hex)
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`
 }
+
+export const anim = () => {
+  return 'transition: all .3s ease-in-out'
+}

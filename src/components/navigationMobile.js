@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
-import { rgba } from 'util/mixins'
+import { rgba, anim } from 'util/mixins'
 import LanguageChooser from 'components/languageChooser'
 
 import {
@@ -36,8 +36,9 @@ export default class NavigationMobile extends Component {
         <StyledNavigationMobileBar>
           <StyledBurgerWrapper>
             <BurgerSvg onClick={this.toggleMenu} />
-          </StyledBurgerWrapper>
+          </StyledBurgerWrapper>{' '}
           <StyledLogoWrapper>
+            {' '}
             <LogoNavigationSvg />
           </StyledLogoWrapper>
           <LanguageChooser />
@@ -108,6 +109,7 @@ const StyledNavigationMobileList = styled.div`
   width: 100%;
   height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   background: ${rgba(vars.styles.colors.neutral6, 0.9)};
+  ${anim()};
 
   nav {
     height: 100%;
