@@ -23,7 +23,6 @@ export default class NavigationMobile extends Component {
     super()
     this.state = {
       menuOpen: false,
-      test: 'test',
     }
   }
   toggleMenu = () => {
@@ -43,7 +42,7 @@ export default class NavigationMobile extends Component {
           </StyledLogoWrapper>
           <LanguageChooser />
         </StyledNavigationMobileBar>
-        <StyledNavigationMobileList>
+        <StyledNavigationMobileList menuOpen={this.state.menuOpen}>
           <nav>
             <ul>
               <li>
@@ -102,8 +101,10 @@ const StyledLogoWrapper = styled.div`
 const StyledNavigationMobileList = styled.div`
   display: none;
   position: fixed;
-  top: ${vars.styles.sizes.navigationMobileHeight};
   left: 0;
+  z-index: ${vars.styles.zIndices.mobileNavigationList};
+  top: ${props =>
+    props.menuOpen ? vars.styles.sizes.navigationMobileHeight : '-100vh'};
   width: 100%;
   height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   background: ${rgba(vars.styles.colors.neutral6, 0.9)};
@@ -135,6 +136,7 @@ const StyledNavigationMobileList = styled.div`
 
 const StyledNavigationMobileBar = styled.div`
   display: none;
+  z-index: ${vars.styles.zIndices.mobileNavigationBar};
   position: fixed;
   background-color: ${vars.styles.colors.neutral6};
   left: 0;
