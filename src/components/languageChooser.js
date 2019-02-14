@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { GermanySvg, UnitedStatesSvg } from 'svg'
 import { on } from 'util/breakpoint'
+import { navigate } from '../i18n/navigate'
 
 class LanguageChooser extends Component {
   static contextTypes = {
@@ -38,7 +39,7 @@ class LanguageChooser extends Component {
     this.setState({ langCodeToChangeTo }, () => {
       localStorage.setItem('language', langCodeToChangeTo)
       // todo use router to redirect
-      window.location.href = `/${langCodeToChangeTo}${originalPath}`
+      navigate(originalPath, langCodeToChangeTo)
     })
   }
 
