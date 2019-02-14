@@ -4,7 +4,6 @@ import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import { rgba, anim } from 'util/mixins'
 import LanguageChooser from 'components/languageChooser'
-import Link from 'i18n/Link'
 import { navigate } from 'i18n/navigate'
 
 import {
@@ -12,11 +11,8 @@ import {
   UserSvg,
   ProjectsSvg,
   BurgerSvg,
-  GermanySvg,
-  UnitedStatesSvg,
   WriteSvg,
   PaperPlaneSvg,
-  LegalSvg,
 } from 'svg'
 import NavigationLink from 'components/navigatonLink'
 
