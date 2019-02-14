@@ -14,5 +14,6 @@ module.exports = {
   navigationProjects: 'Projects',
   navigationContact: 'Contact',
   navigationBlog: 'Blog',
+  navigationLegal: 'Imprint & Data',
   myProfession: 'web development',
 }
