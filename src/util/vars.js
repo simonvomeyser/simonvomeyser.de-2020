@@ -6,8 +6,10 @@ export const vars = {
     sizes: {
       navigationWidth: '3.5rem',
       navigationMobileHeight: '3rem',
+      footerRevealHeight: '5rem',
     },
     zIndices: {
+      revealFooter: -10,
       mobileNavigationList: 10,
       mobileNavigationBar: 20,
     },
