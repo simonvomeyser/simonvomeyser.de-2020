@@ -1,7 +1,7 @@
 import React from 'react'
 import { withIntl, Link } from 'i18n'
 
-import Layout from 'components/layout'
+import Layout from 'components/Layout'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 const Imprint = () => (

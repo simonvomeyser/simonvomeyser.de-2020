@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { withIntl, Link } from 'i18n'
 
-import Layout from 'components/layout'
+import Layout from 'components/Layout'
 
 class SecondPage extends React.Component {
   getLocalizedProjects = () => {

@@ -10,7 +10,7 @@ import {
   PaperPlaneSvg,
   LegalSvg,
 } from 'svg'
-import NavigationLink from 'components/navigatonLink'
+import NavigationLink from 'components/NavigatonLink'
 
 export default class Navigation extends Component {
   render() {

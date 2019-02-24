@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
-import LanguageChooser from './languageChooser'
-import NameAndProfession from './nameAndProfession'
-import RevealFooter from './revealfooter'
+import LanguageChooser from './LanguageChooser'
+import NameAndProfession from './NameAndProfession'
+import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
 
 export default class PageLayout extends Component {

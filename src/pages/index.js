@@ -1,7 +1,7 @@
 import React from 'react'
 import { withIntl } from 'i18n'
 import { FormattedMessage } from 'react-intl'
-import Layout from 'components/layout'
+import Layout from 'components/Layout'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'

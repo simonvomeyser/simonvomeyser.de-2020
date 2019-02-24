@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import { LegalSvg } from 'svg'
 import { on } from 'util/breakpoint'
 
-export default class revealFooter extends Component {
+export default class RevealFooter extends Component {
   render() {
     return (
       <StyledWrapper>

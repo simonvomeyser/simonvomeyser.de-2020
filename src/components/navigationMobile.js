@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import { rgba, anim } from 'util/mixins'
-import LanguageChooser from 'components/languageChooser'
+import LanguageChooser from 'components/LanguageChooser'
 import { navigate } from 'i18n/navigate'
 
 import {
@@ -14,7 +14,7 @@ import {
   WriteSvg,
   PaperPlaneSvg,
 } from 'svg'
-import NavigationLink from 'components/navigatonLink'
+import NavigationLink from 'components/NavigatonLink'
 
 export default class NavigationMobile extends Component {
   constructor(params) {
