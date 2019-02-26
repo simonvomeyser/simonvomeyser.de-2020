@@ -26,4 +26,7 @@ export default createGlobalStyle`
       max-width: 100%;
       height: auto;
     }
+    p + p {
+      margin-top: 1rem;
+    }
 `
