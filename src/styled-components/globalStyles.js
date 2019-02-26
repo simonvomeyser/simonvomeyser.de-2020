@@ -6,9 +6,9 @@ export default createGlobalStyle`
     ${reset}
     html {
       box-sizing: border-box;
-        font-size: ${vars.styles.fontSizes.base};
-        font-family: futura, sans-serif;
-        color: ${vars.styles.colors.black}
+      font-size: ${vars.styles.fontSizes.base};
+      font-family: futura, sans-serif;
+      color: ${vars.styles.colors.black}
     }
     *, *:before, *:after {
       box-sizing: inherit;
