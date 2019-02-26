@@ -21,4 +21,9 @@ export default createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 `
