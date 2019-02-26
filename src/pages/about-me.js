@@ -2,24 +2,79 @@ import React from 'react'
 import { withIntl } from 'i18n'
 import Layout from 'components/Layout'
 import PageLayout from 'components/PageLayout'
+import styled from 'styled-components'
+import { vars } from '../util/vars'
+
+const StyledTextHeading = styled.h2`
+  font-size: ${vars.styles.fontSizes.size5};
+  margin-bottom: 1rem;
+`
+
+const StyledPageHeading = styled.h1`
+  font-size: ${vars.styles.fontSizes.size7};
+  display: flex;
+  justify-content: center;
+  color: ${vars.styles.colors.accent4};
+  align-items: center;
+  margin-bottom: 2rem;
+`
+
+const StyledSpeachBubble = styled.div`
+  color: ${vars.styles.colors.white};
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  background-color: ${vars.styles.colors.accent4};
+  display: inline-block;
+  margin-right: 1rem;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 20%;
+    border-top: 20px solid ${vars.styles.colors.accent4};
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;
+  }
+`
+
+const StyledIntro = styled.div`
+  display: flex;
+`
+
+StyledIntro.Image = styled.div`
+  padding-right: 1rem;
+  flex: 1;
+`
+
+StyledIntro.Text = styled.div`
+  flex: 1;
+`
 
 const IndexPage = () => (
   <Layout>
     <PageLayout>
-      <h1>About me</h1>
-      <p>Per platea est ut nibh a habitant</p>
-      <p>
-        Mattis rutrum nostra curae scelerisque varius purus quam taciti risus
-        aenean tristique praesent quisque placerat, bibendum velit primis
-        euismod lacus integer mauris dolor ornare mollis ad pellentesque cras.
-        Cras mauris platea massa eu magna tellus venenatis nam molestie bibendum
-        lorem facilisis, auctor potenti luctus viverra congue mus erat inceptos
-        dolor lectus ornare nec, tincidunt varius vestibulum ridiculus purus
-        parturient vel dis orci sagittis aliquet. Ridiculus pretium lectus
-        consectetur dis inceptos quisque eleifend eu imperdiet, hendrerit semper
-        praesent gravida viverra blandit dolor magna, diam euismod sapien luctus
-        torquent lorem mollis tincidunt.
-      </p>
+      <StyledPageHeading>
+        <StyledSpeachBubble>Hey!</StyledSpeachBubble>
+        <span>Schön dich zu treffen :)</span>
+      </StyledPageHeading>
+      <StyledIntro>
+        <StyledIntro.Image>
+          <img src="https://placehold.it/786x786" alt="" />
+        </StyledIntro.Image>
+        <StyledIntro.Text>
+          <h2>Ich bin Simon und ich mache irgendwas mit Webseiten</h2>
+          <p>
+            Etwas genauer genommen plane, leite und entwickele ich seit 8 Jahren
+            Webanwendungen mit JavaScript und PHP .. und das echt mit viel Spaß.
+          </p>
+
+          <p>
+            Ich bin davon überzeugt, dass man nur wirklich gut in Dingen ist,
+            die man gerne tut.
+          </p>
+        </StyledIntro.Text>
+      </StyledIntro>
     </PageLayout>
   </Layout>
 )
