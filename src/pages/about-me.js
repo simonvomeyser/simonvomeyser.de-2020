@@ -14,13 +14,13 @@ const StyledSubHeading = styled.h2`
 `
 
 const StyledPageHeading = styled.h1`
-  font-size: ${vars.styles.fontSizes.size7};
+  font-size: ${vars.styles.fontSizes.size8};
   font-family: ${vars.styles.fontFamilies.special};
   display: flex;
   justify-content: center;
   color: ${vars.styles.colors.accent4};
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 `
 
 const StyledSpeachBubble = styled.span`
