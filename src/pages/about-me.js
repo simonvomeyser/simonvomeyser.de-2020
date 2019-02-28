@@ -5,22 +5,27 @@ import PageLayout from 'components/PageLayout'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
 
-const StyledTextHeading = styled.h2`
-  font-size: ${vars.styles.fontSizes.size5};
+const StyledSubHeading = styled.h2`
+  color: ${vars.styles.colors.neutral6};
+  font-size: ${vars.styles.fontSizes.size6};
+  line-height: 1.2;
+  font-weight: 600;
   margin-bottom: 1rem;
 `
 
 const StyledPageHeading = styled.h1`
   font-size: ${vars.styles.fontSizes.size7};
+  font-family: ${vars.styles.fontFamilies.special};
   display: flex;
   justify-content: center;
   color: ${vars.styles.colors.accent4};
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 `
 
-const StyledSpeachBubble = styled.div`
+const StyledSpeachBubble = styled.span`
   color: ${vars.styles.colors.white};
+  font-family: ${vars.styles.fontFamilies.normal};
   position: relative;
   padding: 0.75rem 1.5rem;
   background-color: ${vars.styles.colors.accent4};
@@ -63,7 +68,9 @@ const IndexPage = () => (
           <img src="https://placehold.it/786x786" alt="" />
         </StyledIntro.Image>
         <StyledIntro.Text>
-          <h2>Ich bin Simon und ich mache irgendwas mit Webseiten</h2>
+          <StyledSubHeading>
+            Ich bin Simon und ich mache "irgendwas mit Webseiten"
+          </StyledSubHeading>
           <p>
             Etwas genauer genommen plane, leite und entwickele ich seit 8 Jahren
             Webanwendungen mit JavaScript und PHP .. und das echt mit viel Spaß.

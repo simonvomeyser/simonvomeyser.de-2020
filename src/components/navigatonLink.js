@@ -59,6 +59,7 @@ const StyledText = styled.div`
 
   ${on('onlyMobile')} {
     font-size: ${vars.styles.fontSizes.size3};
+    font-weight: normal;
     margin-bottom: 0;
     display: flex;
     color: ${vars.styles.colors.neutral1};

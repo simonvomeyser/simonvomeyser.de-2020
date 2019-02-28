@@ -45,5 +45,9 @@ export const vars = {
       accent5: '#32B0A6',
       accent6: '#048C81',
     },
+    fontFamilies: {
+      default: "'Open Sans', sans-serif",
+      special: 'Futura, sans-serif',
+    },
   },
 }

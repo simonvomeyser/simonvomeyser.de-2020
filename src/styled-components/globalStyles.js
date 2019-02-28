@@ -7,8 +7,8 @@ export default createGlobalStyle`
     html {
       box-sizing: border-box;
       font-size: ${vars.styles.fontSizes.base};
-      font-family: futura, sans-serif;
-      color: ${vars.styles.colors.black}
+      font-family: ${vars.styles.fontFamilies.default};
+      color: ${vars.styles.colors.black};
     }
     *, *:before, *:after {
       box-sizing: inherit;
@@ -25,6 +25,11 @@ export default createGlobalStyle`
       display: block;
       max-width: 100%;
       height: auto;
+    }
+    p {
+      font-weight: 400;
+      line-height: 1.3;
+      color: ${vars.styles.colors.neutral4};
     }
     p + p {
       margin-top: 1rem;
