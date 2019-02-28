@@ -4,6 +4,7 @@ import Layout from 'components/Layout'
 import PageLayout from 'components/PageLayout'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
+import PolaroidStack from '../components/PolaroidStack'
 
 const StyledSubHeading = styled.h2`
   color: ${vars.styles.colors.neutral6};
@@ -65,7 +66,12 @@ const IndexPage = () => (
       </StyledPageHeading>
       <StyledIntro>
         <StyledIntro.Image>
-          <img src="https://placehold.it/786x786" alt="" />
+          <PolaroidStack
+            images={[
+              'https://placehold.it/1024x768',
+              'https://placehold.it/1024x768',
+            ]}
+          />
         </StyledIntro.Image>
         <StyledIntro.Text>
           <StyledSubHeading>
