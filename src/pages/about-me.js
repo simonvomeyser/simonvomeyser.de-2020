@@ -68,9 +68,9 @@ const IndexPage = () => (
         <StyledIntro.Image>
           <PolaroidStack
             images={[
-              'https://placehold.it/1024x768',
-              'https://placehold.it/1024x768',
-              'https://placehold.it/1024x768',
+              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
+              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
+              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
             ]}
           />
         </StyledIntro.Image>
