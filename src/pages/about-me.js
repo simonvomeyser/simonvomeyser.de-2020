@@ -70,6 +70,7 @@ const IndexPage = () => (
             images={[
               'https://placehold.it/1024x768',
               'https://placehold.it/1024x768',
+              'https://placehold.it/1024x768',
             ]}
           />
         </StyledIntro.Image>

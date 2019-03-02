@@ -10,11 +10,9 @@ export default class Polaroid extends Component {
   }
   render() {
     return (
-      <div>
-        <StyledImageWrapper>
-          <img src={this.props.image} alt={this.props.alt} />
-        </StyledImageWrapper>
-      </div>
+      <StyledImageWrapper>
+        <img src={this.props.image} alt={this.props.alt} />
+      </StyledImageWrapper>
     )
   }
 }
