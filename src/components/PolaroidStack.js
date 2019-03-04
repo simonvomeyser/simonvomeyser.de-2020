@@ -13,12 +13,8 @@ export default class PolaroidStack extends Component {
     return (
       <StyledWrapper imagesLength={this.props.images.length}>
         {this.props.images.reverse().map((image, index) => (
-          <StyledPolaroidWrapper index={index}>
-            <Polaroid
-              image={image}
-              alt={'Polaroid-' + index}
-              key={'Polaroid-' + index}
-            />
+          <StyledPolaroidWrapper key={'Polaroid-' + index} index={index}>
+            <Polaroid image={image} alt={'Polaroid-' + index} />
           </StyledPolaroidWrapper>
         ))}
       </StyledWrapper>
