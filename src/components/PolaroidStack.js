@@ -11,7 +11,7 @@ export default class PolaroidStack extends Component {
 
   render() {
     return (
-      <StyledWrapper>
+      <StyledWrapper imagesLength={this.props.images.length}>
         {this.props.images.reverse().map((image, index) => (
           <StyledPolaroidWrapper index={index}>
             <Polaroid
@@ -29,7 +29,8 @@ export default class PolaroidStack extends Component {
 const StyledWrapper = styled.div`
   position: relative;
   height: 100%;
-  width: 90%;
+  width: 75%;
+  margin: 0 auto;
 `
 
 const StyledPolaroidWrapper = styled.div`
@@ -37,9 +38,13 @@ const StyledPolaroidWrapper = styled.div`
   top: 0;
   left: 0;
   transform: ${({ index }) => {
-    const px = (index - 1) * 10
-    const turn = index * 0.025
+    const px = -1 * index * 15
+    const turn = index * -0.005
     const translate = `translate(${px}px, ${px}px)`
     return translate + ' rotate(' + turn + 'turn)'
   }};
+  &:hover {
+    z-index: 1;
+    zoom: 1.2;
+  }
 `
