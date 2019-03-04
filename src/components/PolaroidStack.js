@@ -37,6 +37,7 @@ const StyledPolaroidWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.2s all ease-in-out;
   transform: ${({ index }) => {
     const px = -1 * index * 15
     const turn = index * -0.005
@@ -45,6 +46,6 @@ const StyledPolaroidWrapper = styled.div`
   }};
   &:hover {
     z-index: 1;
-    zoom: 1.2;
+    transform: scale(1.05);
   }
 `
