@@ -29,6 +29,7 @@ export default createGlobalStyle`
     p {
       font-weight: 400;
       line-height: 1.3;
+      font-size: ${vars.styles.fontSizes.size4};
       color: ${vars.styles.colors.neutral4};
     }
     p + p {
