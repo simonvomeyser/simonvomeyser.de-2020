@@ -69,8 +69,7 @@ const IndexPage = () => (
           <PolaroidStack
             images={[
               'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
-              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
-              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
+              'https://res.cloudinary.com/simonvomeyser/image/upload/v1551691377/simonvomeyser.de/about-me-2.jpg',
             ]}
           />
         </StyledIntro.Image>
