@@ -7,6 +7,7 @@ import { vars } from '../util/vars'
 import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { on } from 'util/breakpoint'
 
 const StyledSubHeading = styled.h2`
   color: ${vars.styles.colors.neutral6};
@@ -44,15 +45,21 @@ const StyledSpeachBubble = styled.span`
     width: 0;
     height: 0;
   }
+  ${on('onlyMobile')} {
+    display: none;
+  }
 `
 
 const StyledIntro = styled.div`
   display: flex;
-  min-height: 350px;
+  ${on('onlyMobile')} {
+    display: block;
+  }
 `
 
 StyledIntro.Image = styled.div`
   padding-right: 1rem;
+  min-height: 350px;
   flex: 1;
 `
 
