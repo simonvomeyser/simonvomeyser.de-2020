@@ -35,4 +35,7 @@ export default createGlobalStyle`
     p + p {
       margin-top: 1rem;
     }
+    i {
+      font-style: italic;
+    }
 `
