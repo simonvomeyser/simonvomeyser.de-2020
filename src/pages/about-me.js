@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { vars } from '../util/vars'
 import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 const StyledSubHeading = styled.h2`
   color: ${vars.styles.colors.neutral6};
@@ -96,7 +96,7 @@ const IndexPage = () => (
             </StyledIntro.Image>
             <StyledIntro.Text>
               <StyledSubHeading>
-                Ich bin Simon und ich mache "irgendwas mit Webseiten"
+                <FormattedHTMLMessage id="aboutMeOpener" />
               </StyledSubHeading>
               <p>
                 Etwas genauer genommen plane, leite und entwickele ich seit 8
