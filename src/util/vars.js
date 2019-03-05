@@ -10,6 +10,7 @@ export const vars = {
     },
     zIndices: {
       revealFooter: -10,
+      base: 1,
       mobileNavigationList: 10,
       mobileNavigationBar: 20,
     },
