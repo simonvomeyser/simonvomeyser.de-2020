@@ -31,21 +31,21 @@ export default class Navigation extends Component {
                   to="/about-me"
                   logo
                   icon={<UserSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationAboutMe"
                 />
               </li>
               <li>
                 <NavigationLink
                   to="/projects"
                   icon={<ProjectsSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationProjects"
                 />
               </li>
               <li>
                 <NavigationLink
                   to="/contact"
                   icon={<PaperPlaneSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationContact"
                 />
               </li>
               <li>
