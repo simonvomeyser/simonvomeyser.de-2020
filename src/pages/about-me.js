@@ -29,7 +29,7 @@ const StyledSpeachBubble = styled.span`
   color: ${vars.styles.colors.white};
   font-family: ${vars.styles.fontFamilies.normal};
   position: relative;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   background-color: ${vars.styles.colors.accent4};
   display: inline-block;
   margin-right: 1rem;
@@ -81,8 +81,7 @@ const IndexPage = () => (
         <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
         <StyledBackgroundWrapper.Content>
           <StyledPageHeading>
-            {' '}
-            <StyledSpeachBubble>Hey!</StyledSpeachBubble>
+            <StyledSpeachBubble>Heyo!</StyledSpeachBubble>
             <span>Schön dich zu treffen :)</span>
           </StyledPageHeading>
           <StyledIntro>
