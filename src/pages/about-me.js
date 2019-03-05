@@ -46,6 +46,7 @@ const StyledSpeachBubble = styled.span`
 
 const StyledIntro = styled.div`
   display: flex;
+  min-height: 350px;
 `
 
 StyledIntro.Image = styled.div`
@@ -88,6 +89,13 @@ const IndexPage = () => (
           </p>
         </StyledIntro.Text>
       </StyledIntro>
+      <StyledSubHeading>Und sonst so?</StyledSubHeading>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic
+        reprehenderit autem, ipsa, amet consequatur, facere molestias nulla
+        alias quidem id labore sequi! Quae explicabo ullam voluptatum quia fugit
+        fuga.
+      </p>
     </PageLayout>
   </Layout>
 )
