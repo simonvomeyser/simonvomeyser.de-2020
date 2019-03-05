@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { vars } from '../util/vars'
 import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
+import { FormattedMessage } from 'react-intl'
 
 const StyledSubHeading = styled.h2`
   color: ${vars.styles.colors.neutral6};
@@ -82,7 +83,7 @@ const IndexPage = () => (
         <StyledBackgroundWrapper.Content>
           <StyledPageHeading>
             <StyledSpeachBubble>Heyo!</StyledSpeachBubble>
-            <span>Schön dich zu treffen :)</span>
+            <FormattedMessage id="niceToMeetYou" />
           </StyledPageHeading>
           <StyledIntro>
             <StyledIntro.Image>

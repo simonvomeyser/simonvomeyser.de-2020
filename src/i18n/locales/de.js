@@ -16,4 +16,5 @@ module.exports = {
   navigationBlog: 'Blog',
   navigationLegal: 'Impressum & Datenschutz',
   myProfession: 'Webentwicklung',
+  niceToMeetYou: 'Cool dass du hier bist! :)',
 }
