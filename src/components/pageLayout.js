@@ -28,11 +28,11 @@ const StyledWrapper = styled.div`
   padding: 1rem 2rem;
   background-color: ${vars.styles.colors.neutral1};
   min-height: 100vh;
-  margin-bottom: ${vars.styles.sizes.footerRevealHeight};
 
   ${on('onlyMobile')} {
     min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
     padding: 1rem;
+    margin-bottom: ${vars.styles.sizes.footerRevealHeight};
   }
 `
 
