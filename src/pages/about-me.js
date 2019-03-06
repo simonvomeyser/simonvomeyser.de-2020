@@ -7,7 +7,57 @@ import { vars } from '../util/vars'
 import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import Helmet from 'react-helmet'
 import { on } from 'util/breakpoint'
+
+const AboutMePage = () => (
+  <Layout>
+    <PageLayout>
+      <StyledBackgroundWrapper>
+        <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
+        <StyledBackgroundWrapper.Content>
+          <StyledPageHeading>
+            <StyledSpeachBubble>Heyo!</StyledSpeachBubble>
+            <FormattedMessage id="niceToMeetYou" />
+          </StyledPageHeading>
+          <StyledIntro>
+            <StyledIntro.Image>
+              <PolaroidStack
+                images={[
+                  'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
+                  'https://res.cloudinary.com/simonvomeyser/image/upload/v1551691377/simonvomeyser.de/about-me-2.jpg',
+                ]}
+              />
+            </StyledIntro.Image>
+            <StyledIntro.Text>
+              <StyledSubHeading>
+                <FormattedHTMLMessage id="aboutMeOpener" />
+              </StyledSubHeading>
+              <p>
+                Etwas genauer genommen plane, leite und entwickele ich seit 8
+                Jahren Webanwendungen mit JavaScript und PHP .. und das echt mit
+                viel Spaß.
+              </p>
+
+              <p>
+                Ich bin davon überzeugt, dass man nur wirklich gut in Dingen
+                ist, die man gerne tut.
+              </p>
+            </StyledIntro.Text>
+          </StyledIntro>
+          <StyledSubHeading>Und sonst so?</StyledSubHeading>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            hic reprehenderit autem, ipsa, amet consequatur, facere molestias
+            nulla alias quidem id labore sequi! Quae explicabo ullam voluptatum
+            quia fugit fuga.
+          </p>
+        </StyledBackgroundWrapper.Content>
+      </StyledBackgroundWrapper>
+    </PageLayout>
+  </Layout>
+)
+export default withIntl(AboutMePage)
 
 const StyledSubHeading = styled.h2`
   color: ${vars.styles.colors.neutral6};
@@ -81,53 +131,3 @@ StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
 StyledBackgroundWrapper.Content = styled.div`
   z-index: 1;
 `
-
-const IndexPage = () => (
-  <Layout>
-    <PageLayout>
-      <StyledBackgroundWrapper>
-        <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
-        <StyledBackgroundWrapper.Content>
-          <StyledPageHeading>
-            <StyledSpeachBubble>Heyo!</StyledSpeachBubble>
-            <FormattedMessage id="niceToMeetYou" />
-          </StyledPageHeading>
-          <StyledIntro>
-            <StyledIntro.Image>
-              <PolaroidStack
-                images={[
-                  'https://res.cloudinary.com/simonvomeyser/image/upload/v1551546212/simonvomeyser.de/about-me-1.png',
-                  'https://res.cloudinary.com/simonvomeyser/image/upload/v1551691377/simonvomeyser.de/about-me-2.jpg',
-                ]}
-              />
-            </StyledIntro.Image>
-            <StyledIntro.Text>
-              <StyledSubHeading>
-                <FormattedHTMLMessage id="aboutMeOpener" />
-              </StyledSubHeading>
-              <p>
-                Etwas genauer genommen plane, leite und entwickele ich seit 8
-                Jahren Webanwendungen mit JavaScript und PHP .. und das echt mit
-                viel Spaß.
-              </p>
-
-              <p>
-                Ich bin davon überzeugt, dass man nur wirklich gut in Dingen
-                ist, die man gerne tut.
-              </p>
-            </StyledIntro.Text>
-          </StyledIntro>
-          <StyledSubHeading>Und sonst so?</StyledSubHeading>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            hic reprehenderit autem, ipsa, amet consequatur, facere molestias
-            nulla alias quidem id labore sequi! Quae explicabo ullam voluptatum
-            quia fugit fuga.
-          </p>
-        </StyledBackgroundWrapper.Content>
-      </StyledBackgroundWrapper>
-    </PageLayout>
-  </Layout>
-)
-
-export default withIntl(IndexPage)
