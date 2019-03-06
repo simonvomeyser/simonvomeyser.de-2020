@@ -1,5 +1,6 @@
 module.exports = {
-  title: 'Simon vom Eyser - Webentwicklung',
+  title: 'Simon vom Eyser',
+  titleAddtionOnIndex: 'Webentwicklung',
   description:
     'Freiberuflicher Webentwickler aus NRW, Deutschland. Ich zaubere mit Wordpress, Laravel, React und Vue.js',
   keywords:

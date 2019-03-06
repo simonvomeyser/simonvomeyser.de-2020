@@ -13,7 +13,11 @@ const Layout = ({ children, data, intl }) => (
   <Fragment>
     <GlobalStyles />
     <Helmet
-      title={intl.formatMessage({ id: 'title' })}
+      title={
+        intl.formatMessage({ id: 'title' }) +
+        ' - ' +
+        intl.formatMessage({ id: 'titleAddtionOnIndex' })
+      }
       meta={[
         {
           name: 'description',
@@ -25,7 +29,7 @@ const Layout = ({ children, data, intl }) => (
         },
       ]}
     >
-      <html lang="en" />
+      <html lang={intl.locale} />
     </Helmet>
     <Navigation />
     <NavigationMobile />
