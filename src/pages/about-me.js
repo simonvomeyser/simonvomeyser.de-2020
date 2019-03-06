@@ -7,11 +7,12 @@ import { vars } from '../util/vars'
 import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
-import Helmet from 'react-helmet'
 import { on } from 'util/breakpoint'
+import ChangeTitle from '../components/ChangeTitle'
 
 const AboutMePage = () => (
   <Layout>
+    <ChangeTitle additionalText="navigationAboutMe" />
     <PageLayout>
       <StyledBackgroundWrapper>
         <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>

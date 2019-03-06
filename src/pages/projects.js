@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { withIntl, Link } from 'i18n'
-
 import Layout from 'components/Layout'
+import ChangeTitle from '../components/ChangeTitle'
 
 class SecondPage extends React.Component {
   getLocalizedProjects = () => {
@@ -16,6 +16,7 @@ class SecondPage extends React.Component {
     const projects = this.getLocalizedProjects()
     return (
       <Layout>
+        <ChangeTitle additionalText="navigationProjects" />
         <h1>Projects</h1>
         <ul>
           {projects.map(({ node }) => {
