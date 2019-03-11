@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
+import posed from 'react-pose'
 import {
   LogoNavigationSvg,
   UserSvg,
@@ -13,51 +14,61 @@ import {
 import NavigationLink from 'components/NavigatonLink'
 
 export default class Navigation extends Component {
+  state = { isOpen: false }
+
+  componentDidMount() {
+    setTimeout(this.toggleAnimation, 1000)
+  }
+
+  toggleAnimation = () => this.setState({ isOpen: !this.state.isOpen })
+
   render() {
+    const { isOpen } = this.state
+
     return (
       <StyledWrapper>
-        <StyledNavigationTop>
+        <PosedNavigationTop pose={isOpen ? 'open' : 'closed'}>
           <nav>
             <ul>
-              <li>
+              <PosedLogoLi>
                 <NavigationLink
                   to="/"
                   isPageLogo
                   icon={<LogoNavigationSvg />}
                 />
-              </li>
-              <li>
+              </PosedLogoLi>
+              <PosedLi>
                 <NavigationLink
                   to="/about-me"
                   logo
                   icon={<UserSvg />}
                   idOfText="navigationAboutMe"
                 />
-              </li>
-              <li>
+              </PosedLi>
+              <PosedLi>
                 <NavigationLink
                   to="/projects"
                   icon={<ProjectsSvg />}
                   idOfText="navigationProjects"
                 />
-              </li>
-              <li>
+              </PosedLi>
+              <PosedLi>
                 <NavigationLink
                   to="/contact"
                   icon={<PaperPlaneSvg />}
                   idOfText="navigationContact"
                 />
-              </li>
-              <li>
+              </PosedLi>
+              <PosedLi>
                 <NavigationLink
                   to="/blog"
                   icon={<WriteSvg />}
                   idOfText="navigationBlog"
                 />
-              </li>
+              </PosedLi>
             </ul>
           </nav>
-        </StyledNavigationTop>
+        </PosedNavigationTop>
         <StyledNavigationBottom>
           <NavigationLink to="/legal" icon={<LegalSvg />} />
         </StyledNavigationBottom>
@@ -94,8 +105,29 @@ const StyledNavigationTop = styled.div`
     text-align: center;
   }
 `
-
 const StyledNavigationBottom = styled.div`
   display: flex;
   justify-content: center;
 `
+
+const PosedNavigationTop = posed(StyledNavigationTop)({
+  open: { x: '0%', staggerChildren: 100, delayChildren: 500 },
+  closed: { x: '-100%' },
+})
+
+const PosedLogoLi = posed.li({
+  open: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      scale: { type: 'spring', stiffness: 300, duration: 800 },
+      default: { ease: 'linear', duration: 400 },
+    },
+  },
+  closed: { scale: 0.2, opacity: 0 },
+})
+
+const PosedLi = posed.li({
+  open: { x: '0%', opacity: 1 },
+  closed: { x: '-100%', opacity: 0 },
+})
