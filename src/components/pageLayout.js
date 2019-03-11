@@ -5,6 +5,18 @@ import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
 import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
+import posed from 'react-pose'
+
+const Transition = posed.div({
+  enter: {
+    x: 0,
+    opacity: 1,
+  },
+  exit: {
+    x: 30,
+    opacity: 0,
+  },
+})
 
 export default class PageLayout extends Component {
   render() {
@@ -14,8 +26,10 @@ export default class PageLayout extends Component {
           <NameAndProfession />
           <LanguageChooser />
         </StyledPageHeader>
-        <StyledPageBody>{this.props.children}</StyledPageBody>
-        <StyledPageFooter>footer</StyledPageFooter>
+        <Transition>
+          <StyledPageBody>{this.props.children}</StyledPageBody>
+          <StyledPageFooter>footer</StyledPageFooter>
+        </Transition>
         <RevealFooter />
       </StyledWrapper>
     )
