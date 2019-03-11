@@ -26,8 +26,8 @@ export default class Navigation extends Component {
     const { isOpen } = this.state
 
     return (
-      <StyledWrapper>
-        <PosedNavigationTop pose={isOpen ? 'open' : 'closed'}>
+      <PosedWrapper pose={isOpen ? 'open' : 'closed'}>
+        <StyledNavigationTop>
           <nav>
             <ul>
               <PosedLogoLi>
@@ -68,11 +68,15 @@ export default class Navigation extends Component {
               </PosedLi>
             </ul>
           </nav>
-        </PosedNavigationTop>
+        </StyledNavigationTop>
         <StyledNavigationBottom>
-          <NavigationLink to="/legal" icon={<LegalSvg />} />
+          <ul>
+            <PosedLi>
+              <NavigationLink to="/legal" icon={<LegalSvg />} />
+            </PosedLi>
+          </ul>
         </StyledNavigationBottom>
-      </StyledWrapper>
+      </PosedWrapper>
     )
   }
 }
@@ -110,9 +114,15 @@ const StyledNavigationBottom = styled.div`
   justify-content: center;
 `
 
-const PosedNavigationTop = posed(StyledNavigationTop)({
-  open: { x: '0%', staggerChildren: 100, delayChildren: 500 },
-  closed: { x: '-100%' },
+const PosedWrapper = posed(StyledWrapper)({
+  open: {
+    opacity: 1,
+    x: '0%',
+    staggerChildren: 250,
+    delayChildren: 300,
+    transition: { type: 'spring', damping: 20 },
+  },
+  closed: { opacity: 0, x: '-100%' },
 })
 
 const PosedLogoLi = posed.li({
@@ -128,6 +138,12 @@ const PosedLogoLi = posed.li({
 })
 
 const PosedLi = posed.li({
-  open: { x: '0%', opacity: 1 },
+  open: {
+    x: '0%',
+    opacity: 1,
+    transition: {
+      default: { type: 'spring', stiffness: 150, duration: 400, damping: 13 },
+    },
+  },
   closed: { x: '-100%', opacity: 0 },
 })
