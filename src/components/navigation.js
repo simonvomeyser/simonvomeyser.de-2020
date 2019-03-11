@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
+import PropTypes from 'prop-types'
 import posed from 'react-pose'
 import {
   LogoNavigationSvg,
@@ -14,10 +15,19 @@ import {
 import NavigationLink from 'components/NavigatonLink'
 
 export default class Navigation extends Component {
-  state = { isOpen: false }
+  static propTypes = {
+    animate: PropTypes.bool,
+  }
+  static defaultProps = {
+    animate: false,
+  }
+
+  state = { isOpen: !this.props.animate }
 
   componentDidMount() {
-    setTimeout(this.toggleAnimation, 1000)
+    if (this.props.animate) {
+      setTimeout(this.toggleAnimation, 1000)
+    }
   }
 
   toggleAnimation = () => this.setState({ isOpen: !this.state.isOpen })

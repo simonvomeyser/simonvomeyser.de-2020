@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 
-const Layout = ({ children, data, intl }) => (
+const Layout = ({ animate, children, data, intl }) => (
   <Fragment>
     <GlobalStyles />
     <Helmet
@@ -31,7 +31,7 @@ const Layout = ({ children, data, intl }) => (
     >
       <html lang={intl.locale} />
     </Helmet>
-    <Navigation />
+    <Navigation animate={animate} />
     <NavigationMobile />
     <StyledWrapper>{children}</StyledWrapper>
   </Fragment>
@@ -50,6 +50,11 @@ const StyledWrapper = styled.div`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  animate: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  animate: false,
 }
 
 export default injectIntl(Layout)

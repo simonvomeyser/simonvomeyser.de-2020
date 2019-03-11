@@ -8,7 +8,7 @@ import { on } from 'util/breakpoint'
 import LogoIcon from 'svg/logo.svg'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout animate>
     <Wrapper>
       <LogoWrapper>
         <LogoIcon />
