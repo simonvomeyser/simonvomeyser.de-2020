@@ -10,17 +10,16 @@ class LanguageChooser extends Component {
     language: PropTypes.object,
   }
 
-  state = {
-    value: '',
-  }
+  constructor(props, context) {
+    super()
 
-  componentDidMount() {
-    const { language } = this.context
-    this.setState({
+    const { language } = context
+
+    this.state = {
       value: language.locale || language.detected,
       language,
       options: ['de', 'en'],
-    })
+    }
   }
 
   selectLanguage = selectedLangCode => {
@@ -36,7 +35,7 @@ class LanguageChooser extends Component {
       ? otherLangCode
       : selectedLangCode
 
-    this.setState({ langCodeToChangeTo }, () => {
+    this.setState({ value: langCodeToChangeTo }, () => {
       localStorage.setItem('language', langCodeToChangeTo)
       // todo use router to redirect
       navigate(originalPath, langCodeToChangeTo)
@@ -76,6 +75,7 @@ const LanguageButton = styled.button`
     height: 25px;
   }
   opacity: ${props => (props.active ? '1' : '0.5')};
+  transition: opacity 0.3s ease-in-out;
 
   ${on('onlyMobile')} {
     display: ${props => (props.active ? 'inline-block' : 'none')};
