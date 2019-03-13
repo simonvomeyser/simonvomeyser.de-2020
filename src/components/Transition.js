@@ -6,7 +6,11 @@ class Transition extends React.PureComponent {
     const PosedRoutesContainer = posed.div({})
 
     return (
-      <PoseGroup>
+      <PoseGroup
+        enterPose="onRouteEnter"
+        preEnterPose="preRouteEnter"
+        exitPose="onRouteExit"
+      >
         <PosedRoutesContainer key={this.props.location.key}>
           {this.props.children}
         </PosedRoutesContainer>

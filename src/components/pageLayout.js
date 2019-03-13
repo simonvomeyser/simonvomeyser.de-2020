@@ -7,14 +7,21 @@ import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
 import posed from 'react-pose'
 
-const Transition = posed.div({
-  enter: {
-    x: 0,
+const PosedPageTransition = posed.div({
+  onRouteEnter: {
     opacity: 1,
+    rotateY: 0,
+    transition: { duration: 1500 },
   },
-  exit: {
-    x: 30,
-    opacity: 0,
+  preRouteEnter: {
+    opacity: 1,
+    rotateY: '180deg',
+    transition: { duration: 1500 },
+  },
+  onRouteExit: {
+    opacity: 1,
+    rotateY: '-180deg',
+    transition: { duration: 1500 },
   },
 })
 
@@ -26,10 +33,10 @@ export default class PageLayout extends Component {
           <NameAndProfession />
           <LanguageChooser />
         </StyledPageHeader>
-        <Transition>
+        <PosedPageTransition>
           <StyledPageBody>{this.props.children}</StyledPageBody>
           <StyledPageFooter>footer</StyledPageFooter>
-        </Transition>
+        </PosedPageTransition>
         <RevealFooter />
       </StyledWrapper>
     )
@@ -65,6 +72,7 @@ const StyledPageBody = styled.div`
   background: ${vars.styles.colors.white};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   min-height: 100vh;
+  backface-visibility: none;
 
   ${on('onlyMobile')} {
     margin-bottom: 0;
