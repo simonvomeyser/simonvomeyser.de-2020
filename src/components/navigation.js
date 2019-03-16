@@ -22,21 +22,12 @@ export default class Navigation extends Component {
     animate: false,
   }
 
-  state = { isOpen: !this.props.animate }
-
-  componentDidMount() {
-    if (this.props.animate) {
-      setTimeout(this.toggleAnimation, 1000)
-    }
-  }
-
-  toggleAnimation = () => this.setState({ isOpen: !this.state.isOpen })
-
   render() {
-    const { isOpen } = this.state
-
     return (
-      <PosedWrapper pose={isOpen ? 'open' : 'closed'}>
+      <PosedWrapper
+        initialPose={this.props.animate ? 'hidden' : 'visible'}
+        pose="visible"
+      >
         <StyledNavigationTop>
           <nav>
             <ul>
@@ -125,18 +116,18 @@ const StyledNavigationBottom = styled.div`
 `
 
 const PosedWrapper = posed(StyledWrapper)({
-  open: {
+  visible: {
     opacity: 1,
     x: '0%',
     staggerChildren: 250,
     delayChildren: 300,
     transition: { type: 'spring', damping: 20 },
   },
-  closed: { opacity: 0, x: '-100%' },
+  hidden: { opacity: 0, x: '-100%' },
 })
 
 const PosedLogoLi = posed.li({
-  open: {
+  visible: {
     scale: 1,
     opacity: 1,
     transition: {
@@ -144,16 +135,16 @@ const PosedLogoLi = posed.li({
       default: { ease: 'linear', duration: 400 },
     },
   },
-  closed: { scale: 0.2, opacity: 0 },
+  hidden: { scale: 0.2, opacity: 0 },
 })
 
 const PosedLi = posed.li({
-  open: {
+  visible: {
     x: '0%',
     opacity: 1,
     transition: {
       default: { type: 'spring', stiffness: 150, duration: 400, damping: 13 },
     },
   },
-  closed: { x: '-100%', opacity: 0 },
+  hidden: { x: '-100%', opacity: 0 },
 })
