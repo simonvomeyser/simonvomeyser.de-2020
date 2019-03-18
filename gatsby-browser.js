@@ -16,3 +16,8 @@ export const replaceComponentRenderer = ({ props, ...other }) => {
     </PoseGroup>
   )
 }
+
+export const onClientEntry = () => {
+  localStorage.setItem('startedAt', Date.now())
+  localStorage.setItem('hasNavigationAnimationRun', false)
+}

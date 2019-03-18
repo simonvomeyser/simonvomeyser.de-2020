@@ -22,10 +22,21 @@ export default class Navigation extends Component {
     animate: false,
   }
 
+  shouldAnimate() {
+    const shouldAnimate =
+      localStorage.getItem('hasNavigationAnimationRun') === 'false'
+
+    if (shouldAnimate) {
+      localStorage.setItem('hasNavigationAnimationRun', 'true')
+    }
+
+    return shouldAnimate
+  }
+
   render() {
     return (
       <PosedWrapper
-        initialPose={this.props.animate ? 'hidden' : 'visible'}
+        initialPose={this.shouldAnimate() ? 'hidden' : 'visible'}
         pose="visible"
       >
         <StyledNavigationTop>
