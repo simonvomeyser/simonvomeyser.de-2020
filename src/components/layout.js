@@ -35,16 +35,11 @@ class Layout extends Component {
         >
           <html lang={intl.locale} />
         </Helmet>
-        <PosedContentWrapper
-          initialPose={animate ? 'start' : 'fadedIn'}
-          pose="fadedIn"
-        >
-          <Navigation animate={animate} key="navigation" />
-          <NavigationMobile key="navigationMobile" />
-          <StyledWrapper animate={animate} key="styledWrapper">
-            {children}
-          </StyledWrapper>
-        </PosedContentWrapper>
+        <Navigation animate={animate} key="navigation" />
+        <NavigationMobile key="navigationMobile" />
+        <StyledWrapper animate={animate} key="styledWrapper">
+          {children}
+        </StyledWrapper>
       </Fragment>
     )
   }
@@ -60,11 +55,6 @@ const StyledWrapper = styled.div`
     padding-top: ${vars.styles.sizes.navigationMobileHeight};
   }
 `
-
-const PosedContentWrapper = posed.div({
-  fadedIn: { opacity: 1, transition: { duration: 500 } },
-  start: { opacity: 0, delayChildren: 500 },
-})
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

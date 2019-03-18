@@ -1,13 +1,18 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
 import React from 'react'
-import Transition from './src/components/transition'
+import posed, { PoseGroup } from 'react-pose'
 
-export const wrapPageElement = ({ element, props }) => {
-  return <Transition {...props}>{element}</Transition>
+const Transition = posed.div({
+  enter: { opacity: 1, beforeChildren: true },
+  exit: { opacity: 0 },
+})
+
+export const replaceComponentRenderer = ({ props, ...other }) => {
+  const { component } = props.pageResources
+  return (
+    <PoseGroup>
+      <Transition key={props.location.key}>
+        {React.createElement(component, props)}
+      </Transition>
+    </PoseGroup>
+  )
 }

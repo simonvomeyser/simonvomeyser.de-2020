@@ -8,21 +8,11 @@ import { on } from 'util/breakpoint'
 import posed from 'react-pose'
 
 const PosedPageTransition = posed.div({
-  onRouteEnter: {
+  enter: {
+    y: 0,
     opacity: 1,
-    rotateY: 0,
-    transition: { duration: 1500 },
   },
-  preRouteEnter: {
-    opacity: 1,
-    rotateY: '180deg',
-    transition: { duration: 1500 },
-  },
-  onRouteExit: {
-    opacity: 1,
-    rotateY: '-180deg',
-    transition: { duration: 1500 },
-  },
+  exit: { y: -10, opacity: 0 },
 })
 
 export default class PageLayout extends Component {
