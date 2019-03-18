@@ -12,6 +12,10 @@ const PosedPageTransition = posed.div({
     y: 0,
     opacity: 1,
   },
+  preEnter: {
+    y: 10,
+    opacity: 0,
+  },
   exit: { y: -10, opacity: 0 },
 })
 

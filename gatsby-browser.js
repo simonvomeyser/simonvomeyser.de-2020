@@ -9,7 +9,7 @@ const Transition = posed.div({
 export const replaceComponentRenderer = ({ props, ...other }) => {
   const { component } = props.pageResources
   return (
-    <PoseGroup>
+    <PoseGroup preEnterPose="preEnter">
       <Transition key={props.location.key}>
         {React.createElement(component, props)}
       </Transition>
