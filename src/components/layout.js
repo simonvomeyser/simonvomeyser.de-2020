@@ -35,11 +35,9 @@ class Layout extends Component {
         >
           <html lang={intl.locale} />
         </Helmet>
-        <Navigation animate={animate} key="navigation" />
-        <NavigationMobile key="navigationMobile" />
-        <StyledWrapper animate={animate} key="styledWrapper">
-          {children}
-        </StyledWrapper>
+        <Navigation />
+        <NavigationMobile />
+        <StyledWrapper>{children}</StyledWrapper>
       </Fragment>
     )
   }
