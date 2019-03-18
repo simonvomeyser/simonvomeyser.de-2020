@@ -1,27 +1,43 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withIntl } from 'i18n'
 import { FormattedMessage } from 'react-intl'
 import Layout from 'components/Layout'
+import BigFrontpageLogo from 'components/BigFrontpageLogo'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
-import LogoIcon from 'svg/logo.svg'
 
-const IndexPage = () => (
-  <Layout animate>
-    <Wrapper>
-      <LogoWrapper>
-        <LogoIcon />
-      </LogoWrapper>
-      <SuperHeading>
-        <FormattedMessage id="landingTitle2" />
-      </SuperHeading>
-      <Heading>
-        <FormattedMessage id="landingTitle1" />
-      </Heading>
-    </Wrapper>
-  </Layout>
-)
+class IndexPage extends Component {
+  render() {
+    const shouldAnimate = this.shouldAnimate()
+
+    return (
+      <Layout delayInitalAnimation>
+        <Wrapper>
+          <LogoWrapper>
+            <BigFrontpageLogo shouldAnimate={shouldAnimate} />
+          </LogoWrapper>
+          <SuperHeading>
+            <FormattedMessage id="landingTitle2" />
+          </SuperHeading>
+          <Heading>
+            <FormattedMessage id="landingTitle1" />
+          </Heading>
+        </Wrapper>
+      </Layout>
+    )
+  }
+  shouldAnimate() {
+    const shouldAnimate =
+      localStorage.getItem('hasLogoAnimationRun') === 'false'
+
+    if (shouldAnimate) {
+      localStorage.setItem('hasLogoAnimationRun', 'true')
+    }
+
+    return shouldAnimate
+  }
+}
 
 const Wrapper = styled.div`
   min-height: 100vh;
