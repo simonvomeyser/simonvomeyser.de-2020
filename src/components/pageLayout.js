@@ -9,14 +9,12 @@ import posed from 'react-pose'
 
 const PosedPageTransition = posed.div({
   enter: {
-    y: 0,
     opacity: 1,
   },
   preEnter: {
-    y: 10,
     opacity: 0,
   },
-  exit: { y: -10, opacity: 0 },
+  exit: { opacity: 0 },
 })
 
 export default class PageLayout extends Component {
