@@ -6,6 +6,7 @@ import BigFrontpageLogo from 'components/BigFrontpageLogo'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
+import SplitText from 'react-pose-text'
 
 class IndexPage extends Component {
   render() {
@@ -15,13 +16,17 @@ class IndexPage extends Component {
       <Layout delayInitalAnimation>
         <Wrapper>
           <LogoWrapper>
-            <BigFrontpageLogo shouldAnimate={shouldAnimate} />
+            <BigFrontpageLogo />
           </LogoWrapper>
           <SuperHeading>
-            <FormattedMessage id="landingTitle2" />
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              web development
+            </SplitText>
           </SuperHeading>
           <Heading>
-            <FormattedMessage id="landingTitle1" />
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              Simon vom Eyser
+            </SplitText>
           </Heading>
         </Wrapper>
       </Layout>
@@ -89,5 +94,14 @@ const SuperHeading = styled.div`
     font-size: ${vars.styles.fontSizes.size7};
   }
 `
+
+// Animating in chars
+const charPoses = {
+  enter: {
+    opacity: 1,
+    delay: ({ charIndex }) => 2000 + charIndex * 50,
+  },
+  exit: { opacity: 0 },
+}
 
 export default withIntl(IndexPage)
