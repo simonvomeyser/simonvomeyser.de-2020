@@ -10,20 +10,27 @@ export default class Polaroid extends Component {
   }
   render() {
     return (
-      <svg
-        width="296"
-        height="345"
-        viewBox="0 0 296 345"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <PosedTriangle1 initialPose="hidden" pose="shown" />
-        <path d="M139.71 314L280 32H16L139.71 314Z" fill="#60676C" />
-        <PosedTriangle3 initialPose="hidden" pose="shown" />
-      </svg>
+      <PosedSvg initialPose="hidden" pose="shown">
+        <PosedTriangle1 />
+        <PosedTriangle2 />
+        <PosedTriangle3 />
+      </PosedSvg>
     )
   }
 }
+
+const Svg = React.forwardRef((props, ref) => {
+  return (
+    <svg
+      ref={ref}
+      viewBox="0 0 296 345"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {props.children}
+    </svg>
+  )
+})
 
 const Triangle1 = React.forwardRef((props, ref) => {
   return (
@@ -35,14 +42,10 @@ const Triangle1 = React.forwardRef((props, ref) => {
   )
 })
 
-const PosedTriangle1 = posed(Triangle1)({
-  hidden: {
-    scale: 0,
-  },
-  shown: {
-    scale: 1,
-  },
+const Triangle2 = React.forwardRef((props, ref) => {
+  return <path ref={ref} d="M139.71 314L280 32H16L139.71 314Z" fill="#60676C" />
 })
+
 const Triangle3 = React.forwardRef((props, ref) => {
   return (
     <path
@@ -53,11 +56,29 @@ const Triangle3 = React.forwardRef((props, ref) => {
   )
 })
 
-const PosedTriangle3 = posed(Triangle3)({
+const basicPoseAnimation = {
   hidden: {
     scale: 0,
+    transition: { duration: 1000 },
   },
   shown: {
     scale: 1,
+    transition: { duration: 1000 },
+  },
+}
+
+const PosedSvg = posed(Svg)({
+  hidden: {
+    rotate: 45,
+  },
+  shown: {
+    rotate: 0,
+    transition: { duration: 1000 },
+    staggerChildren: 500,
+    delayChildren: 250,
   },
 })
+
+const PosedTriangle1 = posed(Triangle1)(basicPoseAnimation)
+const PosedTriangle2 = posed(Triangle2)(basicPoseAnimation)
+const PosedTriangle3 = posed(Triangle3)(basicPoseAnimation)
