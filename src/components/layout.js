@@ -13,6 +13,8 @@ import posed, { PoseGroup } from 'react-pose'
 class Layout extends Component {
   render() {
     const { animate, children, data, intl } = this.props
+    const shouldAnimate = this.shouldAnimate()
+
     return (
       <Fragment>
         <GlobalStyles />
@@ -37,11 +39,30 @@ class Layout extends Component {
           <html lang={intl.locale} />
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
         </Helmet>
-        <Navigation delayInitialAnimation={this.props.delayInitialAnimation} />
+        <Navigation
+          shouldAnimate={shouldAnimate}
+          delayInitialAnimation={this.props.delayInitialAnimation}
+        />
         <NavigationMobile />
-        <StyledWrapper>{children}</StyledWrapper>
+        <PosedWrapper
+          delayInitialAnimation={this.props.delayInitialAnimation}
+          initialPose={shouldAnimate ? 'hidden' : 'visible'}
+          pose="visible"
+        >
+          {children}
+        </PosedWrapper>
       </Fragment>
     )
+  }
+  shouldAnimate() {
+    const shouldAnimate =
+      localStorage.getItem('hasNavigationAnimationRun') === 'false'
+
+    if (shouldAnimate) {
+      localStorage.setItem('hasNavigationAnimationRun', 'true')
+    }
+
+    return shouldAnimate
   }
 }
 
@@ -55,6 +76,19 @@ const StyledWrapper = styled.div`
     padding-top: ${vars.styles.sizes.navigationMobileHeight};
   }
 `
+
+const PosedWrapper = posed(StyledWrapper)({
+  visible: {
+    paddingLeft: 70,
+    delay: ({ delayInitialAnimation }) => {
+      return delayInitialAnimation ? 3000 : 500
+    },
+    transition: { type: 'spring', damping: 20 },
+  },
+  hidden: {
+    paddingLeft: 0,
+  },
+})
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

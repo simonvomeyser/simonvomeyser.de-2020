@@ -22,21 +22,10 @@ class Navigation extends Component {
     animate: false,
   }
 
-  shouldAnimate() {
-    const shouldAnimate =
-      localStorage.getItem('hasNavigationAnimationRun') === 'false'
-
-    if (shouldAnimate) {
-      localStorage.setItem('hasNavigationAnimationRun', 'true')
-    }
-
-    return shouldAnimate
-  }
-
   render() {
     return (
       <PosedWrapper
-        initialPose={this.shouldAnimate() ? 'hidden' : 'visible'}
+        initialPose={this.props.shouldAnimate ? 'hidden' : 'visible'}
         pose="visible"
         delayInitialAnimation={this.props.delayInitialAnimation}
       >
@@ -131,9 +120,9 @@ const PosedWrapper = posed(StyledWrapper)({
   visible: {
     opacity: 1,
     x: '0%',
-    staggerChildren: 250,
+    staggerChildren: 100,
     delay: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3000 : 0
+      return delayInitialAnimation ? 3000 : 500
     },
     delayChildren: ({ delayInitialAnimation }) => {
       return delayInitialAnimation ? 3300 : 300
