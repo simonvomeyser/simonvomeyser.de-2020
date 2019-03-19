@@ -37,7 +37,7 @@ class Layout extends Component {
           <html lang={intl.locale} />
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
         </Helmet>
-        <Navigation />
+        <Navigation delayInitialAnimation={this.props.delayInitialAnimation} />
         <NavigationMobile />
         <StyledWrapper>{children}</StyledWrapper>
       </Fragment>
@@ -58,11 +58,11 @@ const StyledWrapper = styled.div`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  animate: PropTypes.bool,
+  delayInitialAnimation: PropTypes.bool,
 }
 
 Layout.defaultProps = {
-  animate: false,
+  delayInitialAnimation: false,
 }
 
 export default injectIntl(Layout)

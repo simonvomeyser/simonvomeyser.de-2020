@@ -13,7 +13,7 @@ class IndexPage extends Component {
     const shouldAnimate = this.shouldAnimate()
 
     return (
-      <Layout delayInitalAnimation>
+      <Layout delayInitialAnimation>
         <Wrapper>
           <LogoWrapper>
             <BigFrontpageLogo />

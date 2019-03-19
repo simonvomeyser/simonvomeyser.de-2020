@@ -14,7 +14,7 @@ import {
 } from 'svg'
 import NavigationLink from 'components/NavigatonLink'
 
-export default class Navigation extends Component {
+class Navigation extends Component {
   static propTypes = {
     animate: PropTypes.bool,
   }
@@ -38,6 +38,7 @@ export default class Navigation extends Component {
       <PosedWrapper
         initialPose={this.shouldAnimate() ? 'hidden' : 'visible'}
         pose="visible"
+        delayInitialAnimation={this.props.delayInitialAnimation}
       >
         <StyledNavigationTop>
           <nav>
@@ -131,8 +132,12 @@ const PosedWrapper = posed(StyledWrapper)({
     opacity: 1,
     x: '0%',
     staggerChildren: 250,
-    delayChildren: 2300,
-    delay: 2000,
+    delay: ({ delayInitialAnimation }) => {
+      return delayInitialAnimation ? 3000 : 0
+    },
+    delayChildren: ({ delayInitialAnimation }) => {
+      return delayInitialAnimation ? 3300 : 300
+    },
     transition: { type: 'spring', damping: 20 },
   },
   hidden: { opacity: 0, x: '-100%' },
@@ -160,3 +165,13 @@ const PosedLi = posed.li({
   },
   hidden: { x: '-100%', opacity: 0 },
 })
+
+Navigation.propTypes = {
+  delayInitialAnimation: PropTypes.bool,
+}
+
+Navigation.defaultProps = {
+  delayInitialAnimation: false,
+}
+
+export default Navigation
