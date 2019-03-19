@@ -66,7 +66,6 @@ const StyledPageBody = styled.div`
   background: ${vars.styles.colors.white};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   min-height: 100vh;
-  backface-visibility: none;
 
   ${on('onlyMobile')} {
     margin-bottom: 0;
