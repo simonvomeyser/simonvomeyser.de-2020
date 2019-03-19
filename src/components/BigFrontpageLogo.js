@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { vars } from '../util/vars'
 import posed from 'react-pose'
 
-export default class Polaroid extends Component {
+export default class BigFrontpageLogo extends Component {
   static propTypes = {
     shouldAnimate: PropTypes.bool,
   }
