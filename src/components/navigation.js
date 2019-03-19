@@ -122,10 +122,10 @@ const PosedWrapper = posed(StyledWrapper)({
     x: '0%',
     staggerChildren: 100,
     delay: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3000 : 500
+      return delayInitialAnimation ? 3500 : 500
     },
     delayChildren: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3300 : 300
+      return delayInitialAnimation ? 3800 : 800
     },
     transition: { type: 'spring', damping: 20 },
   },

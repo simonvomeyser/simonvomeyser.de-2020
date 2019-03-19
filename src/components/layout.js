@@ -81,7 +81,7 @@ const PosedWrapper = posed(StyledWrapper)({
   visible: {
     paddingLeft: 70,
     delay: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3000 : 500
+      return delayInitialAnimation ? 3500 : 500
     },
     transition: { type: 'spring', damping: 20 },
   },
