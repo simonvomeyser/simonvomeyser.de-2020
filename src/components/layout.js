@@ -23,6 +23,7 @@ class Layout extends Component {
             intl.formatMessage({ id: 'titleAddtionOnIndex' })
           }
           meta={[
+            {},
             {
               name: 'description',
               content: intl.formatMessage({ id: 'description' }),
@@ -34,6 +35,7 @@ class Layout extends Component {
           ]}
         >
           <html lang={intl.locale} />
+          <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
         </Helmet>
         <Navigation />
         <NavigationMobile />

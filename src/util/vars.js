@@ -48,7 +48,7 @@ export const vars = {
     },
     fontFamilies: {
       default: "'Open Sans', sans-serif",
-      special: 'Futura, sans-serif',
+      special: 'futura-pt, sans-serif',
     },
   },
 }
