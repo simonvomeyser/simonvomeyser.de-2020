@@ -7,42 +7,38 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import SplitText from 'react-pose-text'
+import posed from 'react-pose'
 
 class IndexPage extends Component {
   render() {
-    const shouldAnimate = this.shouldAnimate()
-
     return (
       <Layout delayInitialAnimation>
-        <Wrapper>
-          <LogoWrapper>
-            <BigFrontpageLogo />
-          </LogoWrapper>
-          <SuperHeading>
-            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-              web development
-            </SplitText>
-          </SuperHeading>
-          <Heading>
-            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-              Simon vom Eyser
-            </SplitText>
-          </Heading>
-        </Wrapper>
+        <PageTransition>
+          <Wrapper>
+            <LogoWrapper>
+              <BigFrontpageLogo />
+            </LogoWrapper>
+            <SuperHeading>
+              <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                web development
+              </SplitText>
+            </SuperHeading>
+            <Heading>
+              <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                Simon vom Eyser
+              </SplitText>
+            </Heading>
+          </Wrapper>
+        </PageTransition>
       </Layout>
     )
   }
-  shouldAnimate() {
-    const shouldAnimate =
-      localStorage.getItem('hasLogoAnimationRun') === 'false'
-
-    if (shouldAnimate) {
-      localStorage.setItem('hasLogoAnimationRun', 'true')
-    }
-
-    return shouldAnimate
-  }
 }
+
+const PageTransition = posed.div({
+  enter: { opacity: 1, beforeChildren: true },
+  exit: { opacity: 0, beforeChildren: true },
+})
 
 const Wrapper = styled.div`
   min-height: 100vh;
