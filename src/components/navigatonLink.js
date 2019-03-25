@@ -29,8 +29,11 @@ export default class NavigatonLink extends Component {
 }
 
 const StyledLink = styled(Link)`
-  &.active {
+  &.active,
+  &:focus,
+  &:hover {
     > * {
+      opacity: 1;
       color: ${vars.styles.colors.neutral1};
     }
     .page-link-icon {
@@ -48,14 +51,14 @@ const StyledLink = styled(Link)`
   }
 `
 
-// todo: animation
 const StyledText = styled.div`
   text-align: center;
-  /* transform: translateX(-5rem);  */
   font-weight: bold;
   margin-bottom: 1rem;
   font-size: ${vars.styles.fontSizes.size0};
   color: ${vars.styles.colors.neutral4};
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
 
   ${on('onlyMobile')} {
     font-size: ${vars.styles.fontSizes.size3};
@@ -86,6 +89,7 @@ const StyledIcon = styled.div`
 const StyledIconPage = styled(StyledIcon)`
   svg {
     path {
+      transition: 0.3s fill ease-in-out;
       fill: ${vars.styles.colors.neutral4};
     }
   }
