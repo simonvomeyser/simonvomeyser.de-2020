@@ -1,10 +1,7 @@
 import React from 'react'
 import posed, { PoseGroup } from 'react-pose'
 
-const Transition = posed.div({
-  enter: { opacity: 1, beforeChildren: true },
-  exit: { opacity: 0 },
-})
+const Transition = posed.div({})
 
 export const replaceComponentRenderer = ({ props, ...other }) => {
   const { component } = props.pageResources

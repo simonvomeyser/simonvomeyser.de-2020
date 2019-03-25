@@ -25,10 +25,8 @@ export default class PageLayout extends Component {
           <NameAndProfession />
           <LanguageChooser />
         </StyledPageHeader>
-        <PosedPageTransition>
-          <StyledPageBody>{this.props.children}</StyledPageBody>
-          <StyledPageFooter>footer</StyledPageFooter>
-        </PosedPageTransition>
+        <StyledPageBody>{this.props.children}</StyledPageBody>
+        <StyledPageFooter>footer</StyledPageFooter>
         <RevealFooter />
       </StyledWrapper>
     )
