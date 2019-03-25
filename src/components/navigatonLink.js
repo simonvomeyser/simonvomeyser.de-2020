@@ -58,7 +58,6 @@ const StyledText = styled.div`
   font-size: ${vars.styles.fontSizes.size0};
   color: ${vars.styles.colors.neutral4};
   transition: 0.3s all ease-in-out;
-  opacity: 0;
 
   ${on('onlyMobile')} {
     font-size: ${vars.styles.fontSizes.size3};
