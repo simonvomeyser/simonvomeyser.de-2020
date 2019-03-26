@@ -19,4 +19,6 @@ module.exports = {
   myProfession: 'web development',
   niceToMeetYou: 'Awesome to meet you!',
   aboutMeOpener: 'I am Simon and I do development stuff in the interwebs!',
+  aboutMeFirstText:
+    '.... etwas genauer genommen arbeite ich mit JavaScript, PHP und einer Menge Kaffe ☕️. Als Frameworks mag ich React, Vue, Laravel und Wordpress.',
 }
