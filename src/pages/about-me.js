@@ -43,8 +43,8 @@ const AboutMePage = ({ data }) => (
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
           <StyledButtonWrapper>
-            <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
             <StyledSecondaryButton>kontaktier mich</StyledSecondaryButton>
+            <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
           </StyledButtonWrapper>
         </StyledBackgroundWrapper.Left>
         <StyledBackgroundWrapper.Right>
@@ -65,8 +65,8 @@ const StyledButton = styled.button`
   font-size: ${vars.styles.fontSizes.size6};
   font-family: ${vars.styles.fontFamilies.special};
   border: 3px solid ${vars.styles.colors.accent4};
-  font-weight: 300;
-  padding: 0.5rem;
+  font-weight: 400;
+  padding: 8px 5px;
   min-width: 200px;
 `
 
