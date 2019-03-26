@@ -18,7 +18,7 @@ module.exports = {
   navigationLegal: 'Impressum & Datenschutz',
   myProfession: 'Webentwicklung',
   niceToMeetYou: 'Cool dass du hier bist! :)',
-  aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas mit Weseiten</i>',
+  aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas mit Webseiten</i>',
   aboutMeFirstText:
     '.... etwas genauer genommen arbeite ich mit JavaScript, PHP und einer Menge Kaffe ☕️. Als Frameworks mag ich React, Vue, Laravel und Wordpress.',
 }
