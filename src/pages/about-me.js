@@ -65,7 +65,7 @@ const StyledButton = styled.button`
   font-size: ${vars.styles.fontSizes.size6};
   font-family: ${vars.styles.fontFamilies.special};
   border: 3px solid ${vars.styles.colors.accent4};
-  font-weight: 400;
+  font-weight: 500;
   padding: 8px 5px;
   min-width: 200px;
 `
@@ -82,6 +82,7 @@ const StyledSecondaryButton = styled(StyledButton)`
 
 const StyledPageHeading = styled.h1`
   font-size: ${vars.styles.fontSizes.size9};
+  font-weight: 500;
   font-family: ${vars.styles.fontFamilies.special};
   color: ${vars.styles.colors.accent4};
   margin-bottom: 3.5rem;
