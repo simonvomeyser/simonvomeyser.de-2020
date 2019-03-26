@@ -24,7 +24,7 @@ export const vars = {
       size6: '24px',
       size7: '30px',
       size8: '36px',
-      size9: '48px',
+      size9: '44px',
       size10: '60px',
       size11: '72px',
       base: '20px',

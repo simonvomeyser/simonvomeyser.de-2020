@@ -36,6 +36,12 @@ const AboutMePage = ({ data }) => (
           <StyledPageHeading>
             <FormattedMessage id="niceToMeetYou" />
           </StyledPageHeading>
+          <StyledHeadingQuote>
+            <FormattedHTMLMessage id="aboutMeOpener" />
+          </StyledHeadingQuote>
+          <StyledAboutMeFirstText>
+            <FormattedMessage id="aboutMeFirstText" />
+          </StyledAboutMeFirstText>
         </StyledBackgroundWrapper.Left>
         <StyledBackgroundWrapper.Right>
           <Img fluid={data.file.childImageSharp.fluid} />
@@ -47,24 +53,36 @@ const AboutMePage = ({ data }) => (
 export default withIntl(AboutMePage)
 
 const StyledPageHeading = styled.h1`
-  font-size: ${vars.styles.fontSizes.size7};
+  font-size: ${vars.styles.fontSizes.size9};
   font-family: ${vars.styles.fontFamilies.special};
   color: ${vars.styles.colors.accent4};
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   text-align: center;
+`
+const StyledHeadingQuote = styled.h2`
+  font-size: ${vars.styles.fontSizes.size7};
+  font-family: ${vars.styles.fontFamilies.special};
+  color: ${vars.styles.colors.neutral5};
+  text-align: center;
+  margin-bottom: 3rem;
+`
+const StyledAboutMeFirstText = styled.p`
+  line-height: 1.5;
+  padding: 0 1rem;
 `
 
 const StyledBackgroundWrapper = styled.div`
   position: relative;
-  margin-top: 3rem;
+  margin-top: 2rem;
   z-index: ${vars.styles.zIndices.base};
   display: flex;
 `
 
 StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
   position: absolute;
-  top: -3rem;
+  top: -4rem;
   z-index: -1;
+  width: 300px;
   left: 0;
 `
 
