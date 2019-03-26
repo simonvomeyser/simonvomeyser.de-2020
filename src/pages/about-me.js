@@ -42,8 +42,10 @@ const AboutMePage = ({ data }) => (
           <StyledAboutMeFirstText>
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
-          <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
-          <StyledSecondaryButton>kontaktier mich</StyledSecondaryButton>
+          <StyledButtonWrapper>
+            <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
+            <StyledSecondaryButton>kontaktier mich</StyledSecondaryButton>
+          </StyledButtonWrapper>
         </StyledBackgroundWrapper.Left>
         <StyledBackgroundWrapper.Right>
           <Img fluid={data.file.childImageSharp.fluid} />
@@ -53,6 +55,11 @@ const AboutMePage = ({ data }) => (
   </Layout>
 )
 export default withIntl(AboutMePage)
+
+const StyledButtonWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
 
 const StyledButton = styled.button`
   font-size: ${vars.styles.fontSizes.size6};
@@ -90,6 +97,7 @@ const StyledHeadingQuote = styled.h2`
 const StyledAboutMeFirstText = styled.p`
   line-height: 1.5;
   padding: 0 1rem;
+  margin-bottom: 3rem;
 `
 
 const StyledBackgroundWrapper = styled.div`
