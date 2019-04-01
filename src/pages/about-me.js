@@ -36,13 +36,9 @@ const AboutMePage = ({ data }) => (
           <StyledPageHeading>
             <FormattedMessage id="niceToMeetYou" />
           </StyledPageHeading>
-          <StyledMobileImage>
-            <Img fluid={data.file.childImageSharp.fluid} />
-          </StyledMobileImage>
           <StyledHeadingQuote>
             <FormattedHTMLMessage id="aboutMeOpener" />
           </StyledHeadingQuote>
-
           <StyledAboutMeFirstText>
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
@@ -67,6 +63,9 @@ const StyledBackgroundWrapper = styled.div`
   margin-top: 2rem;
   z-index: ${vars.styles.zIndices.base};
   display: flex;
+  ${on('onlyMobile')} {
+    margin-top: 0;
+  }
 `
 
 StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
@@ -120,30 +119,28 @@ const StyledHeadingQuote = styled.h2`
   color: ${vars.styles.colors.neutral5};
   text-align: center;
   margin-bottom: 3rem;
+
+  ${on('onlyMobile')} {
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledAboutMeFirstText = styled.p`
   line-height: 1.5;
   padding: 0 1rem;
   margin-bottom: 3rem;
+
+  ${on('onlyMobile')} {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  ${on('onlyMobile')} {
-    > * {
-      margin-bottom: 1rem;
-    }
-  }
-`
-
-const StyledMobileImage = styled.div`
-  display: none;
-
-  ${on('onlyMobile')} {
-    display: block;
-    margin-bottom: 2rem;
+  > * {
+    margin-bottom: 1rem;
   }
 `
