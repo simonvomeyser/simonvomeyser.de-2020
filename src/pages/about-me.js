@@ -4,12 +4,13 @@ import Layout from 'components/Layout'
 import PageLayout from 'components/PageLayout'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
-import PolaroidStack from '../components/PolaroidStack'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
-import { on } from 'util/breakpoint'
 import ChangeTitle from '../components/ChangeTitle'
-
+import {
+  StyledPrimaryButton,
+  StyledSecondaryButtonLink,
+} from '../styled-components'
 import Img from 'gatsby-image'
 
 export const query = graphql`
@@ -43,7 +44,9 @@ const AboutMePage = ({ data }) => (
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
           <StyledButtonWrapper>
-            <StyledSecondaryButton>kontaktier mich</StyledSecondaryButton>
+            <StyledSecondaryButtonLink to="/contact">
+              kontaktier mich
+            </StyledSecondaryButtonLink>
             <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
           </StyledButtonWrapper>
         </StyledBackgroundWrapper.Left>
@@ -59,34 +62,6 @@ export default withIntl(AboutMePage)
 const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-`
-
-const buttonStyles = `
-  font-size: ${vars.styles.fontSizes.size6};
-  font-family: ${vars.styles.fontFamilies.special};
-  border: 3px solid ${vars.styles.colors.accent4};
-  font-weight: 500;
-  padding: 8px 5px;
-  min-width: 200px;
-  transition: all 0.3s ease-in-out;
-  :hover {
-    opacity: 0.8;
-  }
-`
-
-const StyledPrimaryButton = styled.button`
-  ${buttonStyles}
-  background-color: ${vars.styles.colors.accent4};
-  color: ${vars.styles.colors.white};
-`
-
-const StyledSecondaryButton = styled.a`
-  ${buttonStyles}
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid ${vars.styles.colors.accent4};
-  color: ${vars.styles.colors.accent4};
 `
 
 const StyledPageHeading = styled.h1`
