@@ -104,6 +104,9 @@ StyledBackgroundWrapper.Left = styled.div`
   z-index: 1;
   width: 60%;
   padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 StyledBackgroundWrapper.Right = styled.div`
   z-index: 1;
