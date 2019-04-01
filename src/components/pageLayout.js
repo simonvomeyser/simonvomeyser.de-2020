@@ -38,10 +38,8 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   padding: 1rem 2rem;
   background-color: ${vars.styles.colors.neutral1};
-  min-height: 100vh;
 
   ${on('onlyMobile')} {
-    min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
     padding: 1rem;
     margin-bottom: ${vars.styles.sizes.footerRevealHeight};
   }
@@ -61,13 +59,9 @@ const StyledPageBody = styled.div`
   margin-bottom: 1rem;
   background: ${vars.styles.colors.white};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  min-height: 100vh;
 
   ${on('onlyMobile')} {
     margin-bottom: 0;
-    min-height: calc(
-      100vh - ${vars.styles.sizes.navigationMobileHeight} - 2rem
-    );
   }
 `
 
