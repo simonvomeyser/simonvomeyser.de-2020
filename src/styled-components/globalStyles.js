@@ -19,7 +19,6 @@ export default createGlobalStyle`
     }
     a, a:hover, a:focus, a:visited, a:active {
         text-decoration: none;
-        color: inherit;
     }
     img {
       display: block;
@@ -37,5 +36,8 @@ export default createGlobalStyle`
     }
     i {
       font-style: italic;
+    }
+    a, button {
+      cursor: pointer;
     }
 `

@@ -61,21 +61,30 @@ const StyledButtonWrapper = styled.div`
   justify-content: space-around;
 `
 
-const StyledButton = styled.button`
+const buttonStyles = `
   font-size: ${vars.styles.fontSizes.size6};
   font-family: ${vars.styles.fontFamilies.special};
   border: 3px solid ${vars.styles.colors.accent4};
   font-weight: 500;
   padding: 8px 5px;
   min-width: 200px;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    opacity: 0.8;
+  }
 `
 
-const StyledPrimaryButton = styled(StyledButton)`
+const StyledPrimaryButton = styled.button`
+  ${buttonStyles}
   background-color: ${vars.styles.colors.accent4};
   color: ${vars.styles.colors.white};
 `
 
-const StyledSecondaryButton = styled(StyledButton)`
+const StyledSecondaryButton = styled.a`
+  ${buttonStyles}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid ${vars.styles.colors.accent4};
   color: ${vars.styles.colors.accent4};
 `
