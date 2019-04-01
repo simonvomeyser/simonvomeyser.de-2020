@@ -11,6 +11,7 @@ import {
   StyledPrimaryButton,
   StyledSecondaryButtonLink,
 } from '../styled-components'
+import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 
 export const query = graphql`
@@ -35,9 +36,13 @@ const AboutMePage = ({ data }) => (
           <StyledPageHeading>
             <FormattedMessage id="niceToMeetYou" />
           </StyledPageHeading>
+          <StyledMobileImage>
+            <Img fluid={data.file.childImageSharp.fluid} />
+          </StyledMobileImage>
           <StyledHeadingQuote>
             <FormattedHTMLMessage id="aboutMeOpener" />
           </StyledHeadingQuote>
+
           <StyledAboutMeFirstText>
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
@@ -57,32 +62,6 @@ const AboutMePage = ({ data }) => (
 )
 export default withIntl(AboutMePage)
 
-const StyledButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-`
-
-const StyledPageHeading = styled.h1`
-  font-size: ${vars.styles.fontSizes.size9};
-  font-weight: 500;
-  font-family: ${vars.styles.fontFamilies.special};
-  color: ${vars.styles.colors.accent4};
-  margin-bottom: 3.5rem;
-  text-align: center;
-`
-const StyledHeadingQuote = styled.h2`
-  font-size: ${vars.styles.fontSizes.size7};
-  font-family: ${vars.styles.fontFamilies.special};
-  color: ${vars.styles.colors.neutral5};
-  text-align: center;
-  margin-bottom: 3rem;
-`
-const StyledAboutMeFirstText = styled.p`
-  line-height: 1.5;
-  padding: 0 1rem;
-  margin-bottom: 3rem;
-`
-
 const StyledBackgroundWrapper = styled.div`
   position: relative;
   margin-top: 2rem;
@@ -96,6 +75,9 @@ StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
   z-index: -1;
   width: 300px;
   left: 0;
+  ${on('onlyMobile')} {
+    width: 90%;
+  }
 `
 
 StyledBackgroundWrapper.Left = styled.div`
@@ -105,8 +87,63 @@ StyledBackgroundWrapper.Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  ${on('onlyMobile')} {
+    width: 100%;
+    padding-right: 0;
+  }
 `
+
 StyledBackgroundWrapper.Right = styled.div`
   z-index: 1;
   width: 40%;
+  ${on('onlyMobile')} {
+    display: none;
+  }
+`
+
+const StyledPageHeading = styled.h1`
+  font-size: ${vars.styles.fontSizes.size9};
+  font-weight: 500;
+  font-family: ${vars.styles.fontFamilies.special};
+  color: ${vars.styles.colors.accent4};
+  margin-bottom: 3.5rem;
+  text-align: center;
+
+  ${on('onlyMobile')} {
+    margin-bottom: 2rem;
+  }
+`
+
+const StyledHeadingQuote = styled.h2`
+  font-size: ${vars.styles.fontSizes.size7};
+  font-family: ${vars.styles.fontFamilies.special};
+  color: ${vars.styles.colors.neutral5};
+  text-align: center;
+  margin-bottom: 3rem;
+`
+
+const StyledAboutMeFirstText = styled.p`
+  line-height: 1.5;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+`
+
+const StyledButtonWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  ${on('onlyMobile')} {
+    > * {
+      margin-bottom: 1rem;
+    }
+  }
+`
+
+const StyledMobileImage = styled.div`
+  display: none;
+
+  ${on('onlyMobile')} {
+    display: block;
+    margin-bottom: 2rem;
+  }
 `
