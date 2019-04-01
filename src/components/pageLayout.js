@@ -5,17 +5,6 @@ import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
 import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
-import posed from 'react-pose'
-
-const PosedPageTransition = posed.div({
-  enter: {
-    opacity: 1,
-  },
-  preEnter: {
-    opacity: 0,
-  },
-  exit: { opacity: 0 },
-})
 
 export default class PageLayout extends Component {
   render() {
