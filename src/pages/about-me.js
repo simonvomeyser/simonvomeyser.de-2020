@@ -7,10 +7,7 @@ import { vars } from '../util/vars'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import ChangeTitle from '../components/ChangeTitle'
-import {
-  StyledPrimaryButton,
-  StyledSecondaryButtonLink,
-} from '../styled-components'
+import { StyledPrimaryButton } from '../styled-components'
 import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 
@@ -43,10 +40,7 @@ const AboutMePage = ({ data }) => (
             <FormattedMessage id="aboutMeFirstText" />
           </StyledAboutMeFirstText>
           <StyledButtonWrapper>
-            <StyledSecondaryButtonLink to="/contact">
-              kontaktier mich
-            </StyledSecondaryButtonLink>
-            <StyledPrimaryButton>mehr über Simon</StyledPrimaryButton>
+            <StyledPrimaryButton>erzähl ruhig etwas mehr!</StyledPrimaryButton>
           </StyledButtonWrapper>
         </StyledBackgroundWrapper.Left>
         <StyledBackgroundWrapper.Right>
@@ -140,7 +134,4 @@ const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  > * {
-    margin-bottom: 1rem;
-  }
 `
