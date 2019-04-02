@@ -7,6 +7,9 @@ import Legal from 'svg/legal.svg'
 import Burger from 'svg/burger.svg'
 import UnitedStates from 'svg/united-states.svg'
 import Germany from 'svg/germany.svg'
+import xing from 'svg/xing.svg'
+import mail from 'svg/mail.svg'
+import twitter from 'svg/twitter.svg'
 
 export const LogoNavigationSvg = LogoNavigation
 export const UserSvg = User
@@ -17,3 +20,6 @@ export const LegalSvg = Legal
 export const BurgerSvg = Burger
 export const UnitedStatesSvg = UnitedStates
 export const GermanySvg = Germany
+export const TwitterSvg = twitter
+export const MailSvg = mail
+export const XingSvg = xing
