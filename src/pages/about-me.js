@@ -171,7 +171,7 @@ const StyledButtonWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const StyledTellMeMoreOkayMessage = styled.span`
+const StyledTellMeMoreOkayMessage = styled.p`
   position: absolute;
   top: 50%;
   left: 50%;
