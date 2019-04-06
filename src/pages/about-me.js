@@ -75,9 +75,30 @@ class AboutMePage extends React.Component {
               <Img fluid={data.file.childImageSharp.fluid} />
             </StyledBackgroundWrapper.Right>
           </StyledBackgroundWrapper>
-          <div id="test">
-            <p>test</p>
-          </div>
+          <PosedTellMeMoreArea
+            pose={
+              this.state.tellMeMoreVisible ? 'tellMeMoreVisible' : 'initial'
+            }
+          >
+            <PosedTellMeMoreAreaChild>
+              <h2>Was gibt es denn so zu erzählen über dich?</h2>
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
+              <p>
+                Ich arbeite seit mittlerweile 8 Jahren in diesem Internetz von
+                dem allen reden und haben Anfang 2018 meinen Master in
+                Medieninformatik abgeschlossen.
+              </p>
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
+              <p>
+                Momentan arbeite ich 2-3 Tage freiberuflich oder zusammen mit
+                großartigen Agenturen, drei Tage die Woche in Teilzeit mit einem
+                tollen Entwicklerteam bei der DEKRA Media GmbH als Senior
+                Projektmanager, Teamleiter und Webentwickler.
+              </p>
+            </PosedTellMeMoreAreaChild>
+          </PosedTellMeMoreArea>
         </PageLayout>
       </Layout>
     )
@@ -177,6 +198,36 @@ const StyledTellMeMoreOkayMessage = styled.p`
   left: 50%;
   pointer-events: none;
 `
+
+const StyledTellMeMoreArea = styled.div`
+  margin-top: 2rem;
+`
+
+const PosedTellMeMoreAreaChild = posed.div({
+  initial: {
+    opacity: 0,
+    y: 150,
+  },
+  tellMeMoreVisible: {
+    opacity: 1,
+    duration: 2000,
+    y: 0,
+  },
+})
+
+const PosedTellMeMoreArea = posed(StyledTellMeMoreArea)({
+  initial: {
+    opacity: 0,
+    display: 'none',
+  },
+  tellMeMoreVisible: {
+    delay: 700,
+    delayChildren: 300,
+    staggerChildren: 500,
+    applyAtStart: { display: 'block' },
+    opacity: 1,
+  },
+})
 
 const PosedTellMeMoreButton = posed(StyledPrimaryButton)({
   initial: {
