@@ -10,6 +10,7 @@ import ChangeTitle from '../components/ChangeTitle'
 import { StyledPrimaryButton } from '../styled-components'
 import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
+import posed from 'react-pose'
 
 export const query = graphql`
   query {
@@ -23,33 +24,66 @@ export const query = graphql`
   }
 `
 
-const AboutMePage = ({ data }) => (
-  <Layout>
-    <ChangeTitle additionalText="navigationAboutMe" />
-    <PageLayout>
-      <StyledBackgroundWrapper>
-        <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
-        <StyledBackgroundWrapper.Left>
-          <StyledPageHeading>
-            <FormattedMessage id="niceToMeetYou" />
-          </StyledPageHeading>
-          <StyledHeadingQuote>
-            <FormattedHTMLMessage id="aboutMeOpener" />
-          </StyledHeadingQuote>
-          <StyledAboutMeFirstText>
-            <FormattedMessage id="aboutMeFirstText" />
-          </StyledAboutMeFirstText>
-          <StyledButtonWrapper>
-            <StyledPrimaryButton>erzähl ruhig etwas mehr!</StyledPrimaryButton>
-          </StyledButtonWrapper>
-        </StyledBackgroundWrapper.Left>
-        <StyledBackgroundWrapper.Right>
-          <Img fluid={data.file.childImageSharp.fluid} />
-        </StyledBackgroundWrapper.Right>
-      </StyledBackgroundWrapper>
-    </PageLayout>
-  </Layout>
-)
+class AboutMePage extends React.Component {
+  state = {
+    tellMeMoreVisible: false,
+  }
+  showSecondText = () => {
+    this.setState({ tellMeMoreVisible: true })
+  }
+  render() {
+    const { data } = this.props
+    return (
+      <Layout>
+        <ChangeTitle additionalText="navigationAboutMe" />
+        <PageLayout>
+          <StyledBackgroundWrapper>
+            <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
+            <StyledBackgroundWrapper.Left>
+              <StyledPageHeading>
+                <FormattedMessage id="niceToMeetYou" />
+              </StyledPageHeading>
+              <StyledHeadingQuote>
+                <FormattedHTMLMessage id="aboutMeOpener" />
+              </StyledHeadingQuote>
+              <StyledAboutMeFirstText>
+                <FormattedMessage id="aboutMeFirstText" />
+              </StyledAboutMeFirstText>
+              <StyledButtonWrapper>
+                <PosedTellMeMoreButton
+                  pose={
+                    this.state.tellMeMoreVisible
+                      ? 'tellMeMoreVisible'
+                      : 'initial'
+                  }
+                  onClick={this.showSecondText}
+                >
+                  erzähl ruhig etwas mehr!
+                </PosedTellMeMoreButton>
+                <PosedTellMeMoreOkayMessage
+                  pose={
+                    this.state.tellMeMoreVisible
+                      ? 'tellMeMoreVisible'
+                      : 'initial'
+                  }
+                >
+                  Klar, kein Problem 🤓
+                </PosedTellMeMoreOkayMessage>
+              </StyledButtonWrapper>
+            </StyledBackgroundWrapper.Left>
+            <StyledBackgroundWrapper.Right>
+              <Img fluid={data.file.childImageSharp.fluid} />
+            </StyledBackgroundWrapper.Right>
+          </StyledBackgroundWrapper>
+          <div id="test">
+            <p>test</p>
+          </div>
+        </PageLayout>
+      </Layout>
+    )
+  }
+}
+
 export default withIntl(AboutMePage)
 
 const StyledBackgroundWrapper = styled.div`
@@ -131,7 +165,39 @@ const StyledAboutMeFirstText = styled.p`
 `
 
 const StyledButtonWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 `
+
+const StyledTellMeMoreOkayMessage = styled.span`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+`
+
+const PosedTellMeMoreButton = posed(StyledPrimaryButton)({
+  initial: {
+    y: 0,
+    opacity: 1,
+  },
+  tellMeMoreVisible: {
+    y: -15,
+    opacity: 0,
+    applyAtEnd: { visibility: 'hidden' },
+  },
+})
+
+const PosedTellMeMoreOkayMessage = posed(StyledTellMeMoreOkayMessage)({
+  initial: {
+    opacity: 0,
+    transform: 'translate(-50%, -30%)',
+  },
+  tellMeMoreVisible: {
+    opacity: 1,
+    transform: 'translate(-50%, -50%)',
+    delay: 500,
+  },
+})
