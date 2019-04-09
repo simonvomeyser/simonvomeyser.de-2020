@@ -40,4 +40,7 @@ export default createGlobalStyle`
     a, button {
       cursor: pointer;
     }
+    b, strong {
+      font-weight: bold;
+    }
 `
