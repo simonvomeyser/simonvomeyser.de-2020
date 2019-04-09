@@ -7,7 +7,11 @@ import { vars } from '../util/vars'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import ChangeTitle from '../components/ChangeTitle'
-import { StyledPrimaryButton } from '../styled-components'
+import {
+  StyledPrimaryButtonLink,
+  StyledSecondaryButtonLink,
+  StyledPrimaryButton,
+} from '../styled-components'
 import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 import posed from 'react-pose'
@@ -81,13 +85,16 @@ class AboutMePage extends React.Component {
             }
           >
             <PosedTellMeMoreAreaChild>
+              <StyledLine />
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
               <h2>Was gibt es denn so zu erzählen über dich?</h2>
             </PosedTellMeMoreAreaChild>
             <PosedTellMeMoreAreaChild>
               <p>
-                Ich arbeite seit mittlerweile 8 Jahren in diesem Internetz von
-                dem allen reden und haben Anfang 2018 meinen Master in
-                Medieninformatik abgeschlossen.
+                Ich arbeite seit mittlerweile <b>8 Jahren </b>in diesem
+                Internetz von dem allen reden und haben Anfang 2018 meinen{' '}
+                <b>Master in Medieninformatik</b> abgeschlossen.
               </p>
             </PosedTellMeMoreAreaChild>
             <PosedTellMeMoreAreaChild>
@@ -97,6 +104,31 @@ class AboutMePage extends React.Component {
                 tollen Entwicklerteam bei der DEKRA Media GmbH als Senior
                 Projektmanager, Teamleiter und Webentwickler.
               </p>
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
+              <p>
+                Neben der Technologie sollten meiner Meinung nach viel öfter die
+                Menschen und das Lösen ihrer Probleme im Fokus stehen. Ich biete
+                daher nicht nur <b>Full Stack Webentwicklung</b>, sondern auch{' '}
+                <b>Anforderungsanalyse, Consulting und Projektmanagement an</b>{' '}
+                . Falls gewünscht alles garniert mit vielen schlechten Witzen.
+              </p>
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
+              <p>
+                Meld dich einfach bei mir falls du Untestützung bei einem
+                spannenden Projekt brauchst! 🙂
+              </p>
+            </PosedTellMeMoreAreaChild>
+            <PosedTellMeMoreAreaChild>
+              <StyledTellMeMoreButtons>
+                <StyledSecondaryButtonLink to="/projects">
+                  schau dir Projekte an{' '}
+                </StyledSecondaryButtonLink>
+                <StyledPrimaryButtonLink to="/contact">
+                  schreib mir einfach
+                </StyledPrimaryButtonLink>
+              </StyledTellMeMoreButtons>
             </PosedTellMeMoreAreaChild>
           </PosedTellMeMoreArea>
         </PageLayout>
@@ -198,9 +230,45 @@ const StyledTellMeMoreOkayMessage = styled.p`
   left: 50%;
   pointer-events: none;
 `
+const StyledLine = styled.div`
+  max-width: 300px;
+  height: 3px;
+  background-color: ${vars.styles.colors.accent4};
+  padding: 0 1rem;
+  margin: 0 auto 2rem auto;
+`
+
+const StyledTellMeMoreButtons = styled.div`
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  a + a {
+    margin-left: 1rem;
+  }
+  ${on('onlyMobile')} {
+    a + a {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+`
 
 const StyledTellMeMoreArea = styled.div`
-  margin-top: 2rem;
+  margin-top: 3rem;
+  h2 {
+    font-size: ${vars.styles.fontSizes.size7};
+    font-family: ${vars.styles.fontFamilies.special};
+    color: ${vars.styles.colors.neutral5};
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
+    line-height: 150%;
+    margin-bottom: 1.5rem;
+  }
 `
 
 const PosedTellMeMoreAreaChild = posed.div({
