@@ -4,6 +4,9 @@ import Link from 'i18n/Link'
 import { on } from 'util/breakpoint'
 
 const buttonStyles = `
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: ${vars.styles.fontSizes.size5};
   font-family: ${vars.styles.fontFamilies.special};
   border: 3px solid ${vars.styles.colors.accent4};
@@ -40,6 +43,7 @@ export const StyledSecondaryButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: none;
   border: 3px solid ${vars.styles.colors.accent4};
   color: ${vars.styles.colors.accent4};
 `
@@ -52,9 +56,7 @@ export const StyledPrimaryButtonLink = styled(Link)`
 
 export const StyledSecondaryButtonLink = styled(Link)`
   ${buttonStyles}
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: none;
   border: 3px solid ${vars.styles.colors.accent4};
   color: ${vars.styles.colors.accent4};
 `
