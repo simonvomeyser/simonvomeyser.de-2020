@@ -39,6 +39,7 @@ export const vars = {
       neutral5: '#4B5156',
       neutral6: '#3F474F',
       neutral7: '#292F34',
+      neutral8: '#FBFBFC',
       accent1: '#EFF5F5',
       accent2: '#BEDEDB',
       accent3: '#9EDAD4',
