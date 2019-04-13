@@ -8,6 +8,7 @@ import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import ChangeTitle from '../components/ChangeTitle'
 import {
+  StyledPageHeading,
   StyledPrimaryButtonLink,
   StyledSecondaryButtonLink,
   StyledPrimaryButton,
@@ -178,19 +179,6 @@ StyledBackgroundWrapper.Right = styled.div`
   width: 40%;
   ${on('onlyMobile')} {
     display: none;
-  }
-`
-
-const StyledPageHeading = styled.h1`
-  font-size: ${vars.styles.fontSizes.size9};
-  font-weight: 500;
-  font-family: ${vars.styles.fontFamilies.special};
-  color: ${vars.styles.colors.accent4};
-  margin-bottom: 3.5rem;
-  text-align: center;
-
-  ${on('onlyMobile')} {
-    margin-bottom: 2rem;
   }
 `
 
