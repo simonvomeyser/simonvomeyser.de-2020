@@ -1,7 +1,7 @@
 ---
 key: cyrcus
 name: Cyrcus
-excerpt: Etwas text mit evtl <b>HTML</b>?
+excerpt: Porttitor cum morbi elit condimentum nostra fringilla.
 logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-cyrcus.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']

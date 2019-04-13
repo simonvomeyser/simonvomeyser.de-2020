@@ -1,7 +1,7 @@
 ---
 key: caa
 name: Cards & Arts
-excerpt: Drupal Portierung einens existierenden Projekts.
+excerpt: Drupal Portierung einens existierenden Projekts mit Bitmade.
 logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-caa.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
