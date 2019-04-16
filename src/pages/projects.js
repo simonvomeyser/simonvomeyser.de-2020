@@ -27,10 +27,11 @@ class SecondPage extends React.Component {
             <p>
               Hier eine kleine Auswahl der Projekte, an denen ich beteiligt war.
               Nicht alle wurden vollständig von mir umgesetzt, aber ich hatte
-              definitv meine Finger im Spiel und habe eine Menge gelerent.
+              definitv meine Finger im Spiel.
             </p>
             <p>
-              Klick die Projekte an um mehr zu erfahren oder benutz die Suche 🙂
+              Klick die Projekte an um mehr zu erfahren oder benutz die Suche,
+              🙂
             </p>
           </StyledSubHeadingText>
           <ProjectTiles projects={projects} />
@@ -41,6 +42,9 @@ class SecondPage extends React.Component {
 }
 
 const StyledSubHeadingText = styled.div`
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2rem;
 `
 
