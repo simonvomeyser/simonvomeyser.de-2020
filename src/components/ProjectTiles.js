@@ -17,12 +17,6 @@ export default class ProjectTiles extends Component {
                   src={node.frontmatter.logo}
                   alt={node.frontmatter.name + ' list image'}
                 />
-                <h2>{node.frontmatter.name}</h2>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.excerpt,
-                  }}
-                />
               </Link>
             </StyledProjectTiles.Item>
           )
@@ -39,9 +33,16 @@ const StyledProjectTiles = styled.ul`
 `
 
 StyledProjectTiles.Item = styled.li`
+  padding-top: 63%;
+  position: relative;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+
   img {
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   h2 {
     font-size: ${vars.styles.fontSizes.size6};
