@@ -7,7 +7,7 @@ const helperFunction = breakpointName => {
     throw new Error(`Breakpoint name ${breakpointName} not defined`)
   }
 
-  return `@media (${rule})`
+  return `@media ${rule}`
 }
 
 // Make clean syntax possible in stlyed components
