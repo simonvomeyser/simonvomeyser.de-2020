@@ -30,6 +30,12 @@ const StyledProjectTiles = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  ${on('onlyTablet')} {
+    grid-template-columns: 1fr 1fr;
+  }
+  ${on('onlyMobile')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 StyledProjectTiles.Item = styled.li`
