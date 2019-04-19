@@ -2,7 +2,7 @@
 key: cyrcus
 name: Cyrcus
 excerpt: Porttitor cum morbi elit condimentum nostra fringilla.
-logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-cyrcus.png
+logo: listicon-cyrcus.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
 ---

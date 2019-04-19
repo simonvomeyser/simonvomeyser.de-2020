@@ -2,7 +2,7 @@
 key: amaro
 name: Amaro
 excerpt: Relaunch der Webseite des Autohauses aus Marienberg mit Mobile.de Schnittstelle
-logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-amaro.png
+logo: listicon-amaro.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
 ---

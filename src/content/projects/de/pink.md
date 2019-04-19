@@ -2,7 +2,7 @@
 key: pink
 name: Pink Werbung
 excerpt: Relaunch der Werbeagentur Webseite mit Wordpress
-logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-pink.png
+logo: listicon-pink.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
 ---

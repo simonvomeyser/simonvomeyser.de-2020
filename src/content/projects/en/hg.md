@@ -2,7 +2,7 @@
 key: hg
 name: Handy Grefrath
 excerpt: Mini Projekt im Notfall Einsatz
-logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544540977/simonvomeyser.de/listicons/listicon-hg.png
+logo: listicon-hg.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
 ---
