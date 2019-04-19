@@ -4,25 +4,34 @@ import { vars } from 'util/vars'
 import { FormattedMessage } from 'react-intl'
 import { on } from 'util/breakpoint'
 import { withIntl, Link } from 'i18n'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 export default class ProjectTiles extends Component {
-  render() {
+  renderList = data => {
+    const images = data.allFile.edges
     return (
       <StyledProjectTiles>
         {this.props.projects.map(({ node }) => {
           return (
             <StyledProjectTiles.Item key={node.frontmatter.key}>
-              <Link to={'/projects/' + node.frontmatter.key}>
-                <img
-                  src={node.frontmatter.logo}
-                  alt={node.frontmatter.name + ' list image'}
-                />
-              </Link>
+              <StyledPreviewImage>
+                <Img fluid={this.getImage(images, node.frontmatter.logo)} />
+              </StyledPreviewImage>
             </StyledProjectTiles.Item>
           )
         })}
       </StyledProjectTiles>
     )
+  }
+  render() {
+    return <StaticQuery query={query} render={this.renderList} />
+  }
+  getImage = (images, key) => {
+    const image = images.filter(({ node }) => {
+      return key.includes(node.name)
+    })
+    return image.length ? image[0].node.childImageSharp.fluid : ''
   }
 }
 
@@ -43,13 +52,6 @@ StyledProjectTiles.Item = styled.li`
   position: relative;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
   h2 {
     font-size: ${vars.styles.fontSizes.size6};
     text-align: center;
@@ -60,5 +62,30 @@ StyledProjectTiles.Item = styled.li`
     font-size: ${vars.styles.fontSizes.size3};
     background: ${vars.styles.colors.neutral8};
     padding: 0.5rem;
+  }
+`
+
+const StyledPreviewImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+`
+
+export const query = graphql`
+  query {
+    allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
   }
 `
