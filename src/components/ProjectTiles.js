@@ -6,6 +6,7 @@ import { on } from 'util/breakpoint'
 import { withIntl, Link } from 'i18n'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import posed from 'react-pose'
 
 export default class ProjectTiles extends Component {
   renderList = data => {
@@ -13,11 +14,23 @@ export default class ProjectTiles extends Component {
     return (
       <StyledProjectTiles>
         {this.props.projects.map(({ node }) => {
+          const currentImage = this.getImage(images, node.frontmatter.logo)
           return (
             <StyledProjectTiles.Item key={node.frontmatter.key}>
               <StyledPreviewImage>
-                <Img fluid={this.getImage(images, node.frontmatter.logo)} />
+                <Img fluid={currentImage} />
               </StyledPreviewImage>
+              <PosedTileContent>
+                <Img fluid={currentImage} />
+                <PosedTileContentDrawer>
+                  <h2>{node.frontmatter.name}</h2>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.excerpt,
+                    }}
+                  />
+                </PosedTileContentDrawer>
+              </PosedTileContent>
             </StyledProjectTiles.Item>
           )
         })}
@@ -51,18 +64,6 @@ StyledProjectTiles.Item = styled.li`
   padding-top: 63%;
   position: relative;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-
-  h2 {
-    font-size: ${vars.styles.fontSizes.size6};
-    text-align: center;
-    color: ${vars.styles.colors.neutral3};
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: ${vars.styles.fontSizes.size3};
-    background: ${vars.styles.colors.neutral8};
-    padding: 0.5rem;
-  }
 `
 
 const StyledPreviewImage = styled.div`
@@ -72,6 +73,63 @@ const StyledPreviewImage = styled.div`
   width: 100%;
   height: auto;
 `
+
+const StyledTileContent = styled.div`
+  position: absolute;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.4);
+
+  h2 {
+    font-size: ${vars.styles.fontSizes.size6};
+    text-align: center;
+    color: ${vars.styles.colors.neutral3};
+    background: ${vars.styles.colors.neutral8};
+    padding: 1rem;
+  }
+  p {
+    font-size: ${vars.styles.fontSizes.size3};
+    background: ${vars.styles.colors.neutral8};
+    padding: 0.5rem;
+  }
+`
+
+const PosedTileContent = posed(StyledTileContent)({
+  hoverable: true,
+  init: {
+    opacity: 0,
+    width: '100%',
+    left: 0,
+    top: 0,
+    height: '120%',
+    'z-index': 1,
+  },
+  hover: {
+    width: '120%',
+    left: '-10%',
+    top: '-10%',
+    'z-index': 2,
+    opacity: 1,
+    height: 'auto',
+    transition: {
+      height: { delay: 200, ease: 'easeOut' },
+      opacity: { ease: 'easeOut', duration: 100 },
+    },
+  },
+})
+
+const PosedTileContentDrawer = posed.div({
+  init: {
+    opacity: 0,
+    y: '-100%',
+  },
+  hover: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      y: { delay: 200, ease: 'easeOut' },
+      opacity: { ease: 'easeOut', delay: 200 },
+    },
+  },
+})
 
 export const query = graphql`
   query {
