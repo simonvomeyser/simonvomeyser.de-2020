@@ -16,6 +16,7 @@ import {
 import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 import posed from 'react-pose'
+import { graphql } from 'gatsby'
 
 export const query = graphql`
   query {
