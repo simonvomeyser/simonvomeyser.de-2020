@@ -23,7 +23,7 @@ export default class PageLayout extends Component {
 }
 
 const StyledWrapper = styled.div`
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
   background-color: ${vars.styles.colors.neutral1};
