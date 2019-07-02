@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { withIntl, Link } from 'i18n'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
-
 import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
+import { Backlink } from '../components/Backlink'
 
 class ProjectPage extends Component {
   render() {
@@ -13,8 +14,9 @@ class ProjectPage extends Component {
 
     return (
       <Layout>
+        <ChangeTitle additionalText={frontmatter.name} />
         <PageLayout>
-          <ChangeTitle additionalText={frontmatter.name} />
+          <Backlink to="/projects">Back</Backlink>
 
           <h1>{frontmatter.name}</h1>
           <p dangerouslySetInnerHTML={{ __html: html }} />
