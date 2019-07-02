@@ -11,7 +11,7 @@ const StyledBacklink = styled(Link)`
 
 export const Backlink = props => {
   return (
-    <StyledBacklink to="/your-mom">
+    <StyledBacklink {...props}>
       <svg
         width="33"
         height="33"
