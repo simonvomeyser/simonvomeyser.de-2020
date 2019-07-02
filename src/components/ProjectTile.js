@@ -16,7 +16,7 @@ export default class ProjectTile extends Component {
   render() {
     const project = this.props.node.frontmatter
     return (
-      <StyledWrapper>
+      <StyledWrapper href={'projects/' + project.key}>
         <StyledPreviewImageWrapper>
           <StyledPreviewImage>
             <Img fluid={this.props.image} />
