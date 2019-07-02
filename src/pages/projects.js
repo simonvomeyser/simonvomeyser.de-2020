@@ -8,7 +8,7 @@ import { StyledPageHeading } from '../styled-components'
 import styled from 'styled-components'
 import ProjectTiles from '../components/ProjectTiles'
 
-class SecondPage extends React.Component {
+class Projects extends React.Component {
   getLocalizedProjects = () => {
     const { locale } = this.props.pageContext
     const allLangProjects = this.props.data.allMarkdownRemark.edges
@@ -48,7 +48,7 @@ const StyledSubHeadingText = styled.div`
   margin-bottom: 2rem;
 `
 
-export default withIntl(SecondPage)
+export default withIntl(Projects)
 
 export const query = graphql`
   {
