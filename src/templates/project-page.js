@@ -3,26 +3,33 @@ import { withIntl, Link } from 'i18n'
 import { graphql } from 'gatsby'
 
 import Layout from 'components/Layout'
+import ChangeTitle from '../components/ChangeTitle'
+import PageLayout from 'components/PageLayout'
 
 class ProjectPage extends Component {
   render() {
     const frontmatter = this.props.pageContext.frontmatter
     const html = this.props.pageContext.html
+
     return (
       <Layout>
-        <h1>{frontmatter.name}</h1>
-        <p dangerouslySetInnerHTML={{ __html: html }} />
-        <ul>
-          {this.getFilteredTechnologies().map(({ node }) => {
-            return (
-              <li key={node.frontmatter.key}>
-                <Link href={'/projects/' + node.frontmatter.key}>
-                  {node.frontmatter.name} ({node.html})
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+        <PageLayout>
+          <ChangeTitle additionalText={frontmatter.name} />
+
+          <h1>{frontmatter.name}</h1>
+          <p dangerouslySetInnerHTML={{ __html: html }} />
+          <ul>
+            {this.getFilteredTechnologies().map(({ node }) => {
+              return (
+                <li key={node.frontmatter.key}>
+                  <Link href={'/projects/' + node.frontmatter.key}>
+                    {node.frontmatter.name} ({node.html})
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </PageLayout>
       </Layout>
     )
   }

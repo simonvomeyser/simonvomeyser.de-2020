@@ -5,12 +5,13 @@ import Helmet from 'react-helmet'
 class ChangeTitle extends Component {
   render() {
     const { intl, additionalText } = this.props
+    const finalAdditionalText = this.props.translate
+      ? intl.formatMessage({ id: additionalText })
+      : additionalText
     return (
       <Helmet
         title={
-          intl.formatMessage({ id: 'title' }) +
-          ' - ' +
-          intl.formatMessage({ id: additionalText })
+          intl.formatMessage({ id: 'title' }) + ' - ' + finalAdditionalText
         }
       />
     )

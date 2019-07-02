@@ -21,7 +21,7 @@ class Projects extends React.Component {
     return (
       <Layout>
         <PageLayout>
-          <ChangeTitle additionalText="navigationProjects" />
+          <ChangeTitle translate additionalText="navigationProjects" />
           <StyledPageHeading>Projects</StyledPageHeading>
           <StyledSubHeadingText>
             <p>

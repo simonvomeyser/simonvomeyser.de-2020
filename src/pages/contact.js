@@ -11,7 +11,7 @@ class ContactPage extends React.Component {
     return (
       <Layout>
         <PageLayout>
-          <ChangeTitle additionalText="navigationContact" />
+          <ChangeTitle translate additionalText="navigationContact" />
           <h1>Contact</h1>
           <p>Write me something :)</p>
           <TestContainer>

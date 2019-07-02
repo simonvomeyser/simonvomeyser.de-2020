@@ -41,7 +41,7 @@ class AboutMePage extends React.Component {
     const { data } = this.props
     return (
       <Layout>
-        <ChangeTitle additionalText="navigationAboutMe" />
+        <ChangeTitle translate additionalText="navigationAboutMe" />
         <PageLayout>
           <StyledBackgroundWrapper>
             <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>

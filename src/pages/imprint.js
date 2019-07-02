@@ -7,7 +7,7 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 const Imprint = () => (
   <Layout>
-    <ChangeTitle additionalText="navigationImprint" />
+    <ChangeTitle translate additionalText="navigationImprint" />
     <h1>
       <FormattedMessage id="imprintTitle" />
     </h1>
