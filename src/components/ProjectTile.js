@@ -1,16 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
-import { FormattedMessage } from 'react-intl'
-import { on } from 'util/breakpoint'
-import { withIntl, Link } from 'i18n'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link } from 'i18n'
 import Img from 'gatsby-image'
-import posed from 'react-pose'
-import {
-  StyledPrimaryButtonLink,
-  StyledSecondaryButtonLink,
-} from '../styled-components'
 
 export default class ProjectTile extends Component {
   render() {
