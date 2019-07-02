@@ -1,6 +1,7 @@
 export const vars = {
   breakpoints: {
     onlyMobile: '(max-width: 786px)',
+    mobile: '(max-width: 786px)',
     onlyTablet: '(min-width: 768px) and (max-width: 960px)',
     tablet: '(max-width: 969px)',
     onlyDesktop: '(min-width: 961px) and (max-width: 1400px)',
