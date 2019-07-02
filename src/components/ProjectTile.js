@@ -25,24 +25,39 @@ export default class ProjectTile extends Component {
         <StyledContent>
           <h2>{project.name}</h2>
           <p dangerouslySetInnerHTML={{ __html: project.excerpt }} />
-          <a href="link">Zeig mir mehr darüber</a>
         </StyledContent>
-        <StyledButtonWrapper />
+        <StyledFooterWrapper>
+          <StyledPrimaryButtonLink smaller noShadow>
+            more info
+          </StyledPrimaryButtonLink>
+        </StyledFooterWrapper>
       </StyledWrapper>
     )
   }
 }
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.a`
   box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
   background: ${vars.styles.colors.neutral8};
   transition: all 0.3s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.2);
   }
 `
-const StyledButtonWrapper = styled.div``
+const StyledFooterWrapper = styled.div`
+  display: none;
+  ${on('tablet')} {
+    padding: 0.75rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+`
 
 const StyledPreviewImage = styled.div`
   position: absolute;
@@ -60,22 +75,16 @@ const StyledPreviewImageWrapper = styled.div`
 `
 
 const StyledContent = styled.div`
-  padding: 1rem;
+  padding: 0.75rem;
   h2 {
-    font-size: ${vars.styles.fontSizes.size4};
+    font-size: ${vars.styles.fontSizes.size6};
     color: ${vars.styles.colors.neutral5};
-    margin-bottom: 1rem;
+    font-family: ${vars.styles.fontFamilies.special};
+    margin-bottom: 0.75rem;
   }
   p {
     font-size: ${vars.styles.fontSizes.size2};
     color: ${vars.styles.colors.neutral3};
     margin-bottom: 1rem;
-  }
-  a {
-    display: block;
-    text-align: right;
-    color: ${vars.styles.colors.neutral5};
-    font-size: ${vars.styles.fontSizes.size2};
-    text-decoration: underline;
   }
 `
