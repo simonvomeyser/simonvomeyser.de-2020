@@ -5,6 +5,8 @@ import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
 import styled from 'styled-components'
+import { StyledPageHeading, StyledSubHeadingText } from '../styled-components'
+import { FormattedMessage } from 'react-intl'
 
 class ContactPage extends React.Component {
   render() {
@@ -12,30 +14,31 @@ class ContactPage extends React.Component {
       <Layout>
         <PageLayout>
           <ChangeTitle translate additionalText="navigationContact" />
-          <h1>Contact</h1>
-          <p>Write me something :)</p>
-          <TestContainer>
-            <TestElement>Element</TestElement>
-          </TestContainer>
+          <StyledPageHeading>
+            <FormattedMessage id="navigationContact" />
+          </StyledPageHeading>
+          <StyledSubHeadingText>
+            <p>
+              Das obligatorische Kontaktformular auf einer Webseite darf
+              natürlich nicht fehelen. Aber seien wir ehrlich: Es macht auch
+              nichts anderes, als mir eine E-Mail an info@simonvomyeser.de zu
+              schicken.
+            </p>
+            <p>
+              Ob du nun den Server für dich arbeiten lassen willst, oder ,or
+              selbst eine E-mail schreibst: Ich bin immer auf der Suche nach
+              Interssanten Projekten, Geschäftskontakten oder einfach coolen
+              Entwicklern mit Humor zum quatschen.
+            </p>
+            <p>
+              Ich biete Projektunterschtützung in der Entwicklung, Consulting
+              und Konzeption, aber meld dich doch einfach :)
+            </p>
+          </StyledSubHeadingText>
         </PageLayout>
       </Layout>
     )
   }
 }
-
-const TestContainer = styled.div`
-  position: relative;
-  border: 1px solid red;
-  padding: 15px;
-  min-height: 400px;
-`
-const TestElement = styled.div`
-  width: 50px;
-  height: 50px;
-  background: goldenrod;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-`
 
 export default withIntl(ContactPage)
