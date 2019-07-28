@@ -6,6 +6,8 @@ import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
 import { Backlink } from '../components/Backlink'
+import { vars } from 'util/vars'
+import { StyledPageHeading } from '../styled-components'
 
 class ProjectPage extends Component {
   render() {
@@ -16,15 +18,28 @@ class ProjectPage extends Component {
       <Layout>
         <ChangeTitle additionalText={frontmatter.name} />
         <PageLayout>
-          <Backlink to="/projects">Back</Backlink>
+          <StyledMarginWrapper>
+            <Backlink to="/projects">Back</Backlink>
+          </StyledMarginWrapper>
+          <StyledMarginWrapper>
+            <StyledPageHeading>{frontmatter.name}</StyledPageHeading>
+          </StyledMarginWrapper>
+          {frontmatter.link ? (
+            <StyledLinkToProject
+              href={frontmatter.link}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {frontmatter.link}
+            </StyledLinkToProject>
+          ) : null}
 
-          <h1>{frontmatter.name}</h1>
           <p dangerouslySetInnerHTML={{ __html: html }} />
           <ul>
             {this.getFilteredTechnologies().map(({ node }) => {
               return (
                 <li key={node.frontmatter.key}>
-                  <Link href={'/projects/' + node.frontmatter.key}>
+                  <Link to={'/projects/' + node.frontmatter.key}>
                     {node.frontmatter.name} ({node.html})
                   </Link>
                 </li>
@@ -54,6 +69,13 @@ class ProjectPage extends Component {
     })
   }
 }
+
+const StyledMarginWrapper = styled.div`
+  margin-bottom: 1rem;
+`
+const StyledLinkToProject = styled.a`
+  font-size: ${vars.styles.fontSizes.size6};
+`
 
 export default withIntl(ProjectPage)
 
