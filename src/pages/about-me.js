@@ -101,10 +101,16 @@ class AboutMePage extends React.Component {
             </PosedTellMeMoreAreaChild>
             <PosedTellMeMoreAreaChild>
               <p>
-                Momentan arbeite ich 2-3 Tage freiberuflich oder zusammen mit
-                großartigen Agenturen, drei Tage die Woche in Teilzeit mit einem
-                tollen Entwicklerteam bei der DEKRA Media GmbH als Senior
-                Projektmanager, Teamleiter und Webentwickler.
+                Momentan arbeite ich als freiberuflicher Webentwickler und das
+                entweder für private Kunden oder im Team mit großartigen
+                Agenturen wie <a href="">Bitmade</a>, <a href="">g31</a> und{' '}
+                <a href="">Pink Werbung</a>
+              </p>
+              <p>
+                Zusätzlich bin ich in Teilzeit bei der DEKRA Media GmbH als
+                Senior Projektmanager und Teamleiter eingestellt. Dort tüftle
+                ich mit einem tollen Team aus Webentwicklern zusammen an
+                Lösungen im Bereich E-Learning.
               </p>
             </PosedTellMeMoreAreaChild>
             <PosedTellMeMoreAreaChild>
