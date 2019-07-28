@@ -16,8 +16,5 @@ export const StyledPageHeading = styled.h1`
   }
 `
 export const StyledSubHeadingText = styled.div`
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 2rem;
 `

@@ -5,26 +5,27 @@ import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
 import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
+import { StyledContainer } from '../styled-components'
 
 export default class PageLayout extends Component {
   render() {
     return (
-      <StyledWrapper>
-        <StyledPageHeader>
-          <NameAndProfession />
-          <LanguageChooser />
-        </StyledPageHeader>
-        <StyledPageBody>{this.props.children}</StyledPageBody>
-        <StyledPageFooter>footer</StyledPageFooter>
-        <RevealFooter />
-      </StyledWrapper>
+      <StyledContainer>
+        <StyledWrapper>
+          <StyledPageHeader>
+            <NameAndProfession />
+            <LanguageChooser />
+          </StyledPageHeader>
+          <StyledPageBody>{this.props.children}</StyledPageBody>
+          <StyledPageFooter>footer</StyledPageFooter>
+          <RevealFooter />
+        </StyledWrapper>
+      </StyledContainer>
     )
   }
 }
 
 const StyledWrapper = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 1rem 2rem;
   background-color: ${vars.styles.colors.neutral1};
 
