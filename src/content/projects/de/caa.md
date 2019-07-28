@@ -2,6 +2,8 @@
 key: caa
 name: Cards & Arts
 excerpt: Drupal Portierung einens existierenden Projekts mit Bitmade.
+link: https://cards-and-arts.de
+test: test
 logo: listicon-caa.png
 technologies: ['vuejs', 'wordpress']
 clients: ['bitmade']
