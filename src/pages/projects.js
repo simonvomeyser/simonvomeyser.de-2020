@@ -6,6 +6,7 @@ import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
 import { StyledPageHeading, StyledSubHeadingText } from '../styled-components'
 import ProjectTiles from '../components/ProjectTiles'
+import { FormattedMessage } from 'react-intl'
 
 class Projects extends React.Component {
   getLocalizedProjects = () => {
@@ -21,7 +22,9 @@ class Projects extends React.Component {
       <Layout>
         <PageLayout>
           <ChangeTitle translate additionalText="navigationProjects" />
-          <StyledPageHeading>Projects</StyledPageHeading>
+          <StyledPageHeading>
+            <FormattedMessage id="navigationProjects" />
+          </StyledPageHeading>
           <StyledSubHeadingText>
             <p>
               Hier eine kleine Auswahl der Projekte, an denen ich beteiligt war.
