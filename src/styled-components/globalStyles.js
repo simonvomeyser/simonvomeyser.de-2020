@@ -43,4 +43,12 @@ export default createGlobalStyle`
     b, strong {
       font-weight: bold;
     }
+    input, textarea {
+      border: none;
+      background: transparent;
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      color: ${vars.styles.colors.black};
+    }
 `
