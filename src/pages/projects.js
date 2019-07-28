@@ -4,8 +4,7 @@ import { withIntl, Link } from 'i18n'
 import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
-import { StyledPageHeading } from '../styled-components'
-import styled from 'styled-components'
+import { StyledPageHeading, StyledSubHeadingText } from '../styled-components'
 import ProjectTiles from '../components/ProjectTiles'
 
 class Projects extends React.Component {
@@ -40,13 +39,6 @@ class Projects extends React.Component {
     )
   }
 }
-
-const StyledSubHeadingText = styled.div`
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-`
 
 export default withIntl(Projects)
 
