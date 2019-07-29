@@ -27,6 +27,12 @@ const buttonStyles = props => `
   ${on('onlyMobile')} {
       width: 100%;
   }
+  :disabled {
+    background: ${vars.styles.colors.neutral6};
+    border-color: ${vars.styles.colors.neutral6};
+    opacity: .5;
+    cursor: default;
+  }
 `
 
 const getHeight = props => {

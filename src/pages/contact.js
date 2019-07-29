@@ -20,21 +20,53 @@ class ContactPage extends React.Component {
     email: '',
     text: '',
     error: '',
-    errorFields: [],
+    errorField: '',
+    isSubmitting: false,
   }
 
   submit = e => {
     e.preventDefault()
+    this.setState({ isSubmitting: true })
 
     if (this.validateForm()) {
-      console.log('object')
     } else {
-      this.setState({ error: 'Etwas ist schief gelaufen.' })
     }
   }
 
   validateForm = () => {
-    return false
+    const { name, email, text } = this.state
+
+    if (!name.trim()) {
+      this.setState({
+        error:
+          'Ich brauch schon einen Namen von dir... oder kennen wir uns schon? 🤓',
+        errorField: 'name',
+        isSubmitting: false,
+      })
+      return false
+    }
+
+    if (!emailIsValid(email.trim())) {
+      this.setState({
+        error:
+          'Das scheint mir keine E-Mail zu sein... wie soll ich dir da antworten 😢',
+        errorField: 'email',
+        isSubmitting: false,
+      })
+      return false
+    }
+
+    if (!text.trim() || text.trim().length < 10) {
+      this.setState({
+        error:
+          'Etwas mehr Text könntest du mir schon schreiben sonst muss ich zu viele blöde Fragen stellen 🥺',
+        errorField: 'text',
+        isSubmitting: false,
+      })
+      return false
+    }
+
+    return true
   }
 
   render() {
@@ -65,40 +97,57 @@ class ContactPage extends React.Component {
               </p>
             </StyledSubHeadingText>
 
-            <ContactForm action="?" onSubmit={this.submit}>
-              <StyledFormInput>
+            <ContactForm action="?" onSubmit={this.submit} noValidate>
+              <StyledFormInput hasError={this.state.errorField === 'name'}>
                 <input
                   name="name"
                   type="text"
                   onChange={event => {
-                    this.setState({ name: event.target.value })
+                    this.setState({
+                      name: event.target.value,
+                      error: '',
+                      errorField: '',
+                    })
                   }}
                 />
               </StyledFormInput>
-              <StyledFormInput>
+              <StyledFormInput hasError={this.state.errorField === 'email'}>
                 <input
                   name="email"
                   type="email"
                   onChange={event => {
-                    this.setState({ name: event.target.value })
+                    this.setState({
+                      email: event.target.value,
+                      error: '',
+                      errorField: '',
+                    })
                   }}
                 />
               </StyledFormInput>
-              <StyledFormInput>
+              <StyledFormInput hasError={this.state.errorField === 'text'}>
                 <textarea
                   name="text"
                   id=""
                   cols="30"
                   rows="10"
                   onChange={event => {
-                    this.setState({ name: event.target.value })
+                    this.setState({
+                      text: event.target.value,
+                      error: '',
+                      errorField: '',
+                    })
                   }}
                 />
               </StyledFormInput>
               {this.state.error ? (
                 <StyledFormError>{this.state.error}</StyledFormError>
               ) : null}
-              <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
+              <StyledPrimaryButton
+                type="submit"
+                disabled={this.state.isSubmitting}
+              >
+                Senden
+              </StyledPrimaryButton>
             </ContactForm>
           </StyledContainer>
         </PageLayout>
@@ -122,4 +171,5 @@ const ContactForm = styled.form`
 const StyledFormError = styled.div`
   margin-bottom: 0.5rem;
   color: red;
+  line-height: 1.4;
 `
