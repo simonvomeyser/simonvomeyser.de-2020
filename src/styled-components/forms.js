@@ -7,6 +7,7 @@ export const StyledFormInput = styled.div`
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 0.5rem;
   padding: 0.5rem;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 `
 
 function getBorder(props) {
