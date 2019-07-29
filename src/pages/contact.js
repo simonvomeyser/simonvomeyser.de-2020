@@ -15,6 +15,28 @@ import {
 import { FormattedMessage } from 'react-intl'
 
 class ContactPage extends React.Component {
+  state = {
+    name: '',
+    email: '',
+    text: '',
+    error: '',
+    errorFields: [],
+  }
+
+  submit = e => {
+    e.preventDefault()
+
+    if (this.validateForm()) {
+      console.log('object')
+    } else {
+      this.setState({ error: 'Etwas ist schief gelaufen.' })
+    }
+  }
+
+  validateForm = () => {
+    return false
+  }
+
   render() {
     return (
       <Layout>
@@ -43,16 +65,39 @@ class ContactPage extends React.Component {
               </p>
             </StyledSubHeadingText>
 
-            <ContactForm action="?">
+            <ContactForm action="?" onSubmit={this.submit}>
               <StyledFormInput>
-                <input name="name" type="text" />
+                <input
+                  name="name"
+                  type="text"
+                  onChange={event => {
+                    this.setState({ name: event.target.value })
+                  }}
+                />
               </StyledFormInput>
               <StyledFormInput>
-                <input name="email" type="email" />
+                <input
+                  name="email"
+                  type="email"
+                  onChange={event => {
+                    this.setState({ name: event.target.value })
+                  }}
+                />
               </StyledFormInput>
               <StyledFormInput>
-                <textarea name="text" id="" cols="30" rows="10" />
+                <textarea
+                  name="text"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  onChange={event => {
+                    this.setState({ name: event.target.value })
+                  }}
+                />
               </StyledFormInput>
+              {this.state.error ? (
+                <StyledFormError>{this.state.error}</StyledFormError>
+              ) : null}
               <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
             </ContactForm>
           </StyledContainer>
@@ -64,8 +109,17 @@ class ContactPage extends React.Component {
 
 export default withIntl(ContactPage)
 
+const emailIsValid = email => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+`
+
+const StyledFormError = styled.div`
+  margin-bottom: 0.5rem;
+  color: red;
 `
