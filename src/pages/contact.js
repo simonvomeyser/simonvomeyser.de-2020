@@ -22,14 +22,25 @@ class ContactPage extends React.Component {
     error: '',
     errorField: '',
     isSubmitting: false,
+    success: '',
   }
 
   submit = e => {
     e.preventDefault()
-    this.setState({ isSubmitting: true })
+    this.setState({ success: '' })
 
     if (this.validateForm()) {
-    } else {
+      this.setState({ isSubmitting: true })
+      // Ajax Request
+      setTimeout(() => {
+        this.setState({
+          success: 'Yeah, ich melde mich dann bei dir 🙂',
+          name: '',
+          email: '',
+          text: '',
+          isSubmitting: false,
+        })
+      }, 2000)
     }
   }
 
@@ -41,7 +52,6 @@ class ContactPage extends React.Component {
         error:
           'Ich brauch einen Namen von dir... oder kennen wir uns schon? 🤓',
         errorField: 'name',
-        isSubmitting: false,
       })
       return false
     }
@@ -51,17 +61,17 @@ class ContactPage extends React.Component {
         error:
           'Das scheint mir keine E-Mail zu sein... wie soll ich dir da antworten 😢',
         errorField: 'email',
-        isSubmitting: false,
       })
       return false
     }
 
     if (!text.trim() || text.trim().length < 10) {
+      console.dir(text)
+      console.log(text.length)
       this.setState({
         error:
           'Etwas mehr Text könntest du mir schon schreiben sonst muss ich zu viele blöde Fragen stellen 🥺',
         errorField: 'text',
-        isSubmitting: false,
       })
       return false
     }
@@ -96,12 +106,12 @@ class ContactPage extends React.Component {
                 und Konzeption, aber meld dich doch einfach :)
               </p>
             </StyledSubHeadingText>
-
             <ContactForm action="?" onSubmit={this.submit} noValidate>
               <StyledFormInput hasError={this.state.errorField === 'name'}>
                 <input
                   name="name"
                   type="text"
+                  value={this.state.name}
                   onChange={event => {
                     this.setState({
                       name: event.target.value,
@@ -115,6 +125,7 @@ class ContactPage extends React.Component {
                 <input
                   name="email"
                   type="email"
+                  value={this.state.email}
                   onChange={event => {
                     this.setState({
                       email: event.target.value,
@@ -127,9 +138,9 @@ class ContactPage extends React.Component {
               <StyledFormInput hasError={this.state.errorField === 'text'}>
                 <textarea
                   name="text"
-                  id=""
                   cols="30"
                   rows="10"
+                  value={this.state.text}
                   onChange={event => {
                     this.setState({
                       text: event.target.value,
@@ -142,11 +153,15 @@ class ContactPage extends React.Component {
               {this.state.error ? (
                 <StyledFormError>{this.state.error}</StyledFormError>
               ) : null}
+              {this.state.success ? (
+                <StyledFormSuccess>{this.state.success}</StyledFormSuccess>
+              ) : null}
+
               <StyledPrimaryButton
                 type="submit"
                 disabled={this.state.isSubmitting}
               >
-                Senden
+                Senden {this.state.isSubmitting ? '...' : null}
               </StyledPrimaryButton>
             </ContactForm>
           </StyledContainer>
@@ -166,6 +181,11 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+`
+const StyledFormSuccess = styled.div`
+  margin-bottom: 0.5rem;
+  color: green;
+  line-height: 1.4;
 `
 
 const StyledFormError = styled.div`
