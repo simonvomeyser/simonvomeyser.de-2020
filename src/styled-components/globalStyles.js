@@ -50,5 +50,6 @@ export default createGlobalStyle`
       width: 100%;
       font-size: 1rem;
       color: ${vars.styles.colors.black};
+      outline: none;
     }
 `
