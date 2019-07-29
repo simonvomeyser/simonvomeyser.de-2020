@@ -39,7 +39,7 @@ class ContactPage extends React.Component {
     if (!name.trim()) {
       this.setState({
         error:
-          'Ich brauch schon einen Namen von dir... oder kennen wir uns schon? 🤓',
+          'Ich brauch einen Namen von dir... oder kennen wir uns schon? 🤓',
         errorField: 'name',
         isSubmitting: false,
       })
