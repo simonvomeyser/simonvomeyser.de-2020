@@ -71,13 +71,6 @@ class Navigation extends Component {
             </ul>
           </nav>
         </StyledNavigationTop>
-        <StyledNavigationBottom>
-          <ul>
-            <PosedLi>
-              <NavigationLink to="/legal" icon={<LegalSvg />} />
-            </PosedLi>
-          </ul>
-        </StyledNavigationBottom>
       </PosedWrapper>
     )
   }
@@ -111,11 +104,6 @@ const StyledNavigationTop = styled.div`
     text-align: center;
   }
 `
-const StyledNavigationBottom = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 const PosedWrapper = posed(StyledWrapper)({
   visible: {
     opacity: 1,
