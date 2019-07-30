@@ -7,6 +7,7 @@ import NameAndProfession from './NameAndProfession'
 import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
 import { StyledContainer } from '../styled-components'
+import { FormattedMessage } from 'react-intl'
 
 export default class PageLayout extends Component {
   render() {
@@ -20,10 +21,10 @@ export default class PageLayout extends Component {
           <StyledPageBody>{this.props.children}</StyledPageBody>
           <StyledPageFooter>
             <Link to="/imprint" activeClassName="active">
-              Impressum
+              <FormattedMessage id="imprintTitle" />
             </Link>
             <Link to="/privacy-policy" activeClassName="active">
-              Datenschutz
+              <FormattedMessage id="privacyPolicyTitleShort" />
             </Link>
           </StyledPageFooter>
           <RevealFooter />

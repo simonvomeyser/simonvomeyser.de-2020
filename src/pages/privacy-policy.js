@@ -12,9 +12,9 @@ const PrivacyPolicy = () => (
     <PageLayout>
       <ChangeTitle translate additionalText="navigationPrivacyPolicy" />
       <StyledPageHeading>
-        <FormattedMessage id="PrivacyPolicyTitle" />
+        <FormattedMessage id="privacyPolicyTitle" />
       </StyledPageHeading>
-      <FormattedHTMLMessage id="PrivacyPolicyContent" />
+      <FormattedHTMLMessage id="privacyPolicyContent" />
     </PageLayout>
   </Layout>
 )
