@@ -67,8 +67,6 @@ class ContactPage extends React.Component {
     }
 
     if (!text.trim() || text.trim().length < 10) {
-      console.dir(text)
-      console.log(text.length)
       this.setState({
         error:
           'Etwas mehr Text könntest du mir schon schreiben sonst muss ich zu viele blöde Fragen stellen 🥺',
