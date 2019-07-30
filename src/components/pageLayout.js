@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Link } from 'i18n'
 import { vars } from 'util/vars'
 import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
@@ -17,7 +18,10 @@ export default class PageLayout extends Component {
             <LanguageChooser />
           </StyledPageHeader>
           <StyledPageBody>{this.props.children}</StyledPageBody>
-          <StyledPageFooter>footer</StyledPageFooter>
+          <StyledPageFooter>
+            <Link to="/imprint">Impressum</Link>
+            <Link to="/data-protection">Datenschutz</Link>
+          </StyledPageFooter>
           <RevealFooter />
         </StyledWrapper>
       </StyledContainer>
@@ -60,6 +64,12 @@ const StyledPageBody = styled.div`
 const StyledPageFooter = styled.div`
   display: flex;
   justify-content: flex-end;
+  font-size: 14px;
+
+  > * {
+    color: ${vars.styles.colors.neutral3};
+    margin-left: 0.5rem;
+  }
 
   ${on('onlyMobile')} {
     display: none;
