@@ -20,7 +20,7 @@ export default class PageLayout extends Component {
           <StyledPageBody>{this.props.children}</StyledPageBody>
           <StyledPageFooter>
             <Link to="/imprint">Impressum</Link>
-            <Link to="/data-protection">Datenschutz</Link>
+            <Link to="/privacy-policy">Datenschutz</Link>
           </StyledPageFooter>
           <RevealFooter />
         </StyledWrapper>

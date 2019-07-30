@@ -7,16 +7,16 @@ import Layout from 'components/Layout'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import { StyledPageHeading } from '../styled-components'
 
-const Imprint = () => (
+const PrivacyPolicy = () => (
   <Layout>
     <PageLayout>
-      <ChangeTitle translate additionalText="navigationImprint" />
+      <ChangeTitle translate additionalText="navigationPrivacyPolicy" />
       <StyledPageHeading>
-        <FormattedMessage id="imprintTitle" />
+        <FormattedMessage id="PrivacyPolicyTitle" />
       </StyledPageHeading>
-      <FormattedHTMLMessage id="imprintContent" />
+      <FormattedHTMLMessage id="PrivacyPolicyContent" />
     </PageLayout>
   </Layout>
 )
 
-export default withIntl(Imprint)
+export default withIntl(PrivacyPolicy)
