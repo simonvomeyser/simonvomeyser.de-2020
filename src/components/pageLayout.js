@@ -19,8 +19,12 @@ export default class PageLayout extends Component {
           </StyledPageHeader>
           <StyledPageBody>{this.props.children}</StyledPageBody>
           <StyledPageFooter>
-            <Link to="/imprint">Impressum</Link>
-            <Link to="/privacy-policy">Datenschutz</Link>
+            <Link to="/imprint" activeClassName="active">
+              Impressum
+            </Link>
+            <Link to="/privacy-policy" activeClassName="active">
+              Datenschutz
+            </Link>
           </StyledPageFooter>
           <RevealFooter />
         </StyledWrapper>
@@ -69,6 +73,9 @@ const StyledPageFooter = styled.div`
   > * {
     color: ${vars.styles.colors.neutral3};
     margin-left: 0.5rem;
+    &.active {
+      color: ${vars.styles.colors.neutral5};
+    }
   }
 
   ${on('onlyMobile')} {
