@@ -17,10 +17,29 @@ export default class FunnyBouncer extends Component {
     return (
       <Wrapper to="/about-me">
         <BounceAnimation>
-          <ArrowDown />
+          {this.state.bounce <= 2 ? (
+            <ArrowDown />
+          ) : (
+            <div>
+              <p>Wop wop, come one, click</p>
+              <p>🙂</p>
+            </div>
+          )}
         </BounceAnimation>
       </Wrapper>
     )
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.timerID = setInterval(() => {
+        this.setState({
+          bounce: this.state.bounce + 1,
+        })
+      }, 3000)
+    }, 3000)
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID)
   }
 }
 
@@ -30,6 +49,10 @@ const Wrapper = styled(Link)`
   justify-content: center;
   align-items: center;
   transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  min-width: 200px;
+
   p {
     font-size: ${vars.styles.fontSizes.size2};
     margin-bottom: 4px;
@@ -40,10 +63,14 @@ const Wrapper = styled(Link)`
     width: 30px;
     height: 30px;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
 `
 
 const BounceAnimation = styled.div`
-  animation: bounce 3s infinite 2s;
+  animation: bounce 3s infinite 3s;
   @keyframes bounce {
     from,
     20%,
