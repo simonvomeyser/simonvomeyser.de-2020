@@ -3,6 +3,7 @@ import { withIntl } from 'i18n'
 import { FormattedMessage } from 'react-intl'
 import Layout from 'components/Layout'
 import BigFrontpageLogo from 'components/BigFrontpageLogo'
+import FunnyBouncer from 'components/FunnyBouncer'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
@@ -28,6 +29,9 @@ class IndexPage extends Component {
                 Simon vom Eyser
               </SplitText>
             </Heading>
+            <FunncyBouncerWrapper>
+              <FunnyBouncer />
+            </FunncyBouncerWrapper>
           </Wrapper>
         </PageTransition>
       </Layout>
@@ -41,15 +45,23 @@ const PageTransition = posed.div({
 })
 
 const Wrapper = styled.div`
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 
   ${on('onlyMobile')} {
     min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   }
+`
+const FunncyBouncerWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 const LogoWrapper = styled.div`

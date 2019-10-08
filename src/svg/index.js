@@ -10,6 +10,7 @@ import germany from 'svg/germany.svg'
 import xing from 'svg/xing.svg'
 import mail from 'svg/mail.svg'
 import twitter from 'svg/twitter.svg'
+import arrowDown from 'svg/arrow-down.svg'
 
 export const LogoNavigationSvg = logoNavigation
 export const UserSvg = user
@@ -23,3 +24,4 @@ export const GermanySvg = germany
 export const TwitterSvg = twitter
 export const MailSvg = mail
 export const XingSvg = xing
+export const ArrowDown = arrowDown
