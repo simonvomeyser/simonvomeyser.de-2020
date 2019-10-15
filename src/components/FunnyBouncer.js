@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
-import posed from 'react-pose'
 import { ArrowDown } from '../svg'
 import Link from 'i18n/Link'
+import FunnyBouncerContent from './FunnyBouncerContent'
+
+const bounceDurationSeconds = 3
 
 export default class FunnyBouncer extends Component {
-  constructor(params) {
+  constructor() {
     super()
     this.state = {
       bounce: 1,
@@ -17,13 +18,10 @@ export default class FunnyBouncer extends Component {
     return (
       <Wrapper to="/about-me">
         <BounceAnimation>
-          {this.state.bounce <= 2 ? (
+          {this.state.bounce === 1 ? (
             <ArrowDown />
           ) : (
-            <div>
-              <p>Wop wop, come one, click</p>
-              <p>🙂</p>
-            </div>
+            <FunnyBouncerContent index={this.state.bounce - 1} />
           )}
         </BounceAnimation>
       </Wrapper>
@@ -35,7 +33,7 @@ export default class FunnyBouncer extends Component {
         this.setState({
           bounce: this.state.bounce + 1,
         })
-      }, 3000)
+      }, bounceDurationSeconds * 1000)
     }, 3000)
   }
   componentWillUnmount() {
@@ -70,30 +68,21 @@ const Wrapper = styled(Link)`
 `
 
 const BounceAnimation = styled.div`
-  animation: bounce 3s infinite 3s;
+  animation: bounce ${bounceDurationSeconds}s infinite 3s;
+  animation-timing-function: ease-in-out;
+
+  &:hover {
+  }
+
   @keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: translate3d(0, 0, 0);
+    0% {
+      transform: translateY(0);
     }
-
-    40%,
-    43% {
-      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      transform: translate3d(0, -150%, 0);
+    25% {
+      transform: translateY(-150%);
     }
-
-    70% {
-      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      transform: translate3d(0, -75%, 0);
-    }
-
-    90% {
-      transform: translate3d(0, 0, 0);
+    55% {
+      transform: translateY(100%);
     }
   }
 `
