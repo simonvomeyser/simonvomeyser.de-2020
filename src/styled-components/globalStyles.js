@@ -52,4 +52,39 @@ export default createGlobalStyle`
       color: ${vars.styles.colors.black};
       outline: none;
     }
+    @keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+
+    14% {
+      transform: scale(1.1);
+    }
+
+    28% {
+      transform: scale(1);
+    }
+
+    42% {
+      transform: scale(1.1);
+    }
+
+    70% {
+      transform: scale(1);
+    }
+  }
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
 `
