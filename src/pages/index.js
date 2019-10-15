@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { withIntl } from 'i18n'
 import Layout from 'components/Layout'
 import BigFrontpageLogo from 'components/BigFrontpageLogo'
-import FunnyBouncer from 'components/FunnyBouncer'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import SplitText from 'react-pose-text'
 import posed from 'react-pose'
 import { StyledPrimaryButtonLink } from '../styled-components'
+import { FormattedMessage } from 'react-intl'
 
 class IndexPage extends Component {
   render() {
@@ -31,7 +31,7 @@ class IndexPage extends Component {
             </Heading>
             <PosedMoreAboutMeWrapper initialPose="hidden">
               <StyledPrimaryButtonLink to="/about-me">
-                learn more about me
+                <FormattedMessage id="landingLearnMore" />
               </StyledPrimaryButtonLink>
             </PosedMoreAboutMeWrapper>
           </Wrapper>

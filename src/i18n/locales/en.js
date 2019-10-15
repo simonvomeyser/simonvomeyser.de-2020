@@ -7,6 +7,7 @@ module.exports = {
     'web, development, freelancer, NRW, Germany, Wordpress, Laravel, React, Vue, projectmanagement, consulting, training',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
+  landingLearnMore: 'learn more about me 🤓',
   imprintTitle: 'Imprint',
   privacyPolicyTitleShort: 'Privacy',
   privacyPolicyTitle: 'Privacy Policy',

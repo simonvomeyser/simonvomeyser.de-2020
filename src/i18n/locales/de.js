@@ -7,6 +7,7 @@ module.exports = {
     'Webentwickler, freiberuflich, NRW, Deutschland, Wordpress, Laravel, React, Vue, Projektmanagement, Consulting, Schulung',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
+  landingLearnMore: '🙂 lies etwas über mich 🤓',
   imprintTitle: 'Impressum',
   privacyPolicyTitle: 'Datenschutzerklärung',
   privacyPolicyTitleShort: 'Datenschutz',
