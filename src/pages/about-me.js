@@ -73,7 +73,7 @@ class AboutMePage extends React.Component {
                       : 'initial'
                   }
                 >
-                  Klar, kein Problem 🤓
+                  <FormattedMessage id="aboutMeCtaAnswer" />
                 </PosedTellMeMoreOkayMessage>
               </StyledButtonWrapper>
             </StyledBackgroundWrapper.Left>
@@ -98,8 +98,6 @@ class AboutMePage extends React.Component {
                 Internetz von dem allen reden und haben Anfang 2018 meinen{' '}
                 <b>Master in Medieninformatik</b> abgeschlossen.
               </p>
-            </PosedTellMeMoreAreaChild>
-            <PosedTellMeMoreAreaChild>
               <p>
                 Momentan arbeite ich als freiberuflicher Webentwickler und das
                 entweder für private Kunden oder im Team mit großartigen
@@ -112,8 +110,6 @@ class AboutMePage extends React.Component {
                 ich mit einem tollen Team aus Webentwicklern zusammen an
                 Lösungen im Bereich E-Learning.
               </p>
-            </PosedTellMeMoreAreaChild>
-            <PosedTellMeMoreAreaChild>
               <p>
                 Neben der Technologie sollten meiner Meinung nach viel öfter die
                 Menschen und das Lösen ihrer Probleme im Fokus stehen. Ich biete
@@ -121,8 +117,6 @@ class AboutMePage extends React.Component {
                 <b>Anforderungsanalyse, Consulting und Projektmanagement an</b>{' '}
                 . Falls gewünscht alles garniert mit vielen schlechten Witzen.
               </p>
-            </PosedTellMeMoreAreaChild>
-            <PosedTellMeMoreAreaChild>
               <p>
                 Meld dich einfach bei mir falls du Untestützung bei einem
                 spannenden Projekt brauchst! 🙂
@@ -250,7 +244,9 @@ const StyledTellMeMoreButtons = styled.div`
 `
 
 const StyledTellMeMoreArea = styled.div`
+  margin: 0 auto;
   margin-top: 3rem;
+  max-width: 800px;
   h2 {
     font-size: ${vars.styles.fontSizes.size7};
     font-family: ${vars.styles.fontFamilies.special};

@@ -34,4 +34,5 @@ module.exports = {
   aboutMeFirstText:
     '.... in a few more words, I use JavaScript, PHP and a lot of coffee every day ☕️. I work with React, Vue, Laravel und Wordpress.',
   aboutMeCta: 'read a little more about me!',
+  aboutMeCtaAnswer: 'no problem 😎',
 }
