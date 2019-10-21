@@ -17,7 +17,7 @@ import {
 import NavigationLink from 'components/NavigatonLink'
 
 export default class NavigationMobile extends Component {
-  constructor(params) {
+  constructor() {
     super()
     this.state = {
       menuOpen: false,
@@ -29,9 +29,8 @@ export default class NavigationMobile extends Component {
     })
   }
   setMenu = (event, { open = false }) => {
-    // event.stopPropagation()
     this.setState(
-      state => {
+      () => {
         return { menuOpen: open }
       },
       () => {
@@ -61,21 +60,21 @@ export default class NavigationMobile extends Component {
                   to="/about-me"
                   logo
                   icon={<UserSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationAboutMe"
                 />
               </li>
               <li>
                 <NavigationLink
                   to="/projects"
                   icon={<ProjectsSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationProjects"
                 />
               </li>
               <li>
                 <NavigationLink
                   to="/contact"
                   icon={<PaperPlaneSvg />}
-                  idOfText="navigationBlog"
+                  idOfText="navigationContact"
                 />
               </li>
               <li>
