@@ -64,7 +64,7 @@ class AboutMePage extends React.Component {
                   }
                   onClick={this.showSecondText}
                 >
-                  erzähl ruhig etwas mehr!
+                  <FormattedMessage id="aboutMeCta" />
                 </PosedTellMeMoreButton>
                 <PosedTellMeMoreOkayMessage
                   pose={
