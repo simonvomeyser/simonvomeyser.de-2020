@@ -14,6 +14,7 @@ import Img from 'gatsby-image'
 import posed from 'react-pose'
 import { graphql } from 'gatsby'
 import SmoothScroll from 'smooth-scroll'
+import { isSearchEngineBot } from '../util/isSearchEngineBot'
 
 export const query = graphql`
   query {
@@ -29,10 +30,14 @@ export const query = graphql`
 
 class AboutMePage extends React.Component {
   state = {
-    tellMeMoreVisible: false,
+    tellMeMoreVisible:
+      isSearchEngineBot() ||
+      sessionStorage.getItem('tellMeMoreVisible') ||
+      false,
   }
   showSecondText = () => {
     this.setState({ tellMeMoreVisible: true }, () => {
+      sessionStorage.setItem('tellMeMoreVisible', true)
       setTimeout(() => {
         const scroll = new SmoothScroll()
         scroll.animateScroll(
