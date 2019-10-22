@@ -37,7 +37,7 @@ export default class PageLayout extends Component {
 const StyledWrapper = styled.div`
   padding: 1rem 2rem;
   background-color: ${vars.styles.colors.neutral1};
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 
   ${on('onlyMobile')} {
