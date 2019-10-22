@@ -67,6 +67,8 @@ class Layout extends Component {
   }
 }
 
+export default injectIntl(Layout)
+
 const StyledWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
@@ -99,5 +101,3 @@ Layout.propTypes = {
 Layout.defaultProps = {
   delayInitialAnimation: false,
 }
-
-export default injectIntl(Layout)
