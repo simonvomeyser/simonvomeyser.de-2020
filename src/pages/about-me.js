@@ -17,6 +17,7 @@ import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 import posed from 'react-pose'
 import { graphql } from 'gatsby'
+import SmoothScroll from 'smooth-scroll'
 
 export const query = graphql`
   query {
@@ -35,7 +36,19 @@ class AboutMePage extends React.Component {
     tellMeMoreVisible: false,
   }
   showSecondText = () => {
-    this.setState({ tellMeMoreVisible: true })
+    this.setState({ tellMeMoreVisible: true }, () => {
+      setTimeout(() => {
+        const scroll = new SmoothScroll()
+        scroll.animateScroll(
+          document.getElementById('tell-me-more-area'),
+          null,
+          {
+            speed: 500,
+            speedAsDuration: true,
+          }
+        )
+      }, 300)
+    })
   }
   render() {
     const { data } = this.props
@@ -82,6 +95,7 @@ class AboutMePage extends React.Component {
             </StyledBackgroundWrapper.Right>
           </StyledBackgroundWrapper>
           <PosedTellMeMoreArea
+            id="tell-me-more-area"
             pose={
               this.state.tellMeMoreVisible ? 'tellMeMoreVisible' : 'initial'
             }
@@ -189,6 +203,7 @@ const StyledHeadingQuote = styled.h2`
   color: ${vars.styles.colors.neutral5};
   text-align: center;
   margin-bottom: 3rem;
+  line-height: 1.3;
 
   ${on('onlyMobile')} {
     margin-bottom: 2rem;
