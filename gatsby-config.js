@@ -1,7 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter',
-  },
   plugins: [
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -25,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
+        name: 'simonvomeyser.de',
         short_name: 'starter',
         start_url: '/',
         background_color: '#663399',
