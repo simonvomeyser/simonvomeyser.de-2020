@@ -1,4 +1,7 @@
 {
-  "extends": ["prettier", "plugin:react/recommended"],
+  "globals": {
+    "__PATH_PREFIX__": true
+  },
+  "extends": ["prettier", "react-app"],
   "parser": "babel-eslint"
 }

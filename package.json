@@ -42,7 +42,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-config-react-app": "^5.0.2",
     "prettier": "^1.15.2",
     "smooth-scroll": "^16.1.0"
   },
