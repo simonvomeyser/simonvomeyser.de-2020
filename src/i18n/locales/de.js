@@ -31,7 +31,7 @@ module.exports = {
   niceToMeetYou: 'Cool dass du hier bist! :)',
   aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas mit Webseiten</i>',
   aboutMeFirstText:
-    '.... etwas genauer genommen arbeite ich mit JavaScript, PHP und einer Menge Kaffe ☕️. Als Frameworks mag ich React, Vue, Laravel und Wordpress.',
+    '.... etwas genauer genommen arbeite ich mit JavaScript, PHP und einer Menge Kaffe ☕️. In Sachen Frameworks mag ich ganz besonders React, Vue und Laravel.',
   aboutMeCta: 'Erzähl ruhig etwas mehr!',
-  aboutMeCtaAnswer: 'Klar, kein Problem 🤓',
+  aboutMeCtaAnswer: 'Okay!',
 }

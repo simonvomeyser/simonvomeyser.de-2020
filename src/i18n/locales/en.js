@@ -30,9 +30,9 @@ module.exports = {
   navigationLegal: 'Imprint & Data',
   myProfession: 'web development',
   niceToMeetYou: 'Awesome to meet you!',
-  aboutMeOpener: 'I am Simon and I do development stuff in the interwebs!',
+  aboutMeOpener:
+    'I am Simon, I do development and planning stuff on the interwebs!',
   aboutMeFirstText:
-    '.... in a few more words, I use JavaScript, PHP and a lot of coffee every day ☕️. I work with React, Vue, Laravel und Wordpress.',
-  aboutMeCta: 'read a little more about me!',
-  aboutMeCtaAnswer: 'no problem 😎',
+    '.... in a few more words, I use JavaScript, PHP and a lot of coffee every day ☕️. I like and love React, Vue and Laravel.',
+  aboutMeCta: 'read even more about me!',
 }
