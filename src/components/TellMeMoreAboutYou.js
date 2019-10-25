@@ -8,6 +8,7 @@ import { vars } from '../util/vars'
 import posed from 'react-pose'
 import { on } from 'util/breakpoint'
 import { withIntl } from 'i18n'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 class TellMeMoreAboutYou extends Component {
   render() {
@@ -19,38 +20,13 @@ class TellMeMoreAboutYou extends Component {
           <PosedTellMeMoreAreaChild>
             <StyledLine />
           </PosedTellMeMoreAreaChild>
+          <PosedTellMeMoreAreaChild />
+          <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
           <PosedTellMeMoreAreaChild>
-            <h2>Was gibt es denn so zu erzählen über dich?</h2>
-          </PosedTellMeMoreAreaChild>
-          <PosedTellMeMoreAreaChild>
-            <p>
-              Ich arbeite seit mittlerweile <b>8 Jahren </b>in diesem Internetz
-              von dem allen reden und haben Anfang 2018 meinen{' '}
-              <b>Master in Medieninformatik</b> abgeschlossen.
-            </p>
-            <p>
-              Momentan arbeite ich als freiberuflicher Webentwickler und das
-              entweder für private Kunden oder im Team mit großartigen Agenturen
-              wie <a href="">Bitmade</a>, <a href="">g31</a> und{' '}
-              <a href="">Pink Werbung</a>
-            </p>
-            <p>
-              Zusätzlich bin ich in Teilzeit bei der DEKRA Media GmbH als Senior
-              Projektmanager und Teamleiter eingestellt. Dort tüftle ich mit
-              einem tollen Team aus Webentwicklern zusammen an Lösungen im
-              Bereich E-Learning.
-            </p>
-            <p>
-              Neben der Technologie sollten meiner Meinung nach viel öfter die
-              Menschen und das Lösen ihrer Probleme im Fokus stehen. Ich biete
-              daher nicht nur <b>Full Stack Webentwicklung</b>, sondern auch{' '}
-              <b>Anforderungsanalyse, Consulting und Projektmanagement an</b> .
-              Falls gewünscht alles garniert mit vielen schlechten Witzen.
-            </p>
-            <p>
-              Meld dich einfach bei mir falls du Untestützung bei einem
-              spannenden Projekt brauchst! 🙂
-            </p>
+            <StyledTextSection>
+              <FormattedHTMLMessage id="aboutMeReadMoreText1" />
+            </StyledTextSection>
+            <StyledLine />
           </PosedTellMeMoreAreaChild>
           <PosedTellMeMoreAreaChild>
             <StyledTellMeMoreButtons>
@@ -83,10 +59,6 @@ const StyledTellMeMoreArea = styled.div`
     text-align: center;
     margin-bottom: 2rem;
   }
-  p {
-    line-height: 150%;
-    margin-bottom: 1.5rem;
-  }
 `
 
 const StyledTellMeMoreButtons = styled.div`
@@ -111,6 +83,46 @@ const StyledLine = styled.div`
   background-color: ${vars.styles.colors.accent4};
   padding: 0 1rem;
   margin: 0 auto 2rem auto;
+`
+const StyledTextSection = styled.div`
+  p {
+    line-height: 150%;
+    margin-bottom: 1.5rem;
+  }
+
+  strong {
+    background: ${vars.styles.colors.accent1};
+    color: ${vars.styles.colors.accent4};
+    padding: 2px 4px;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s color ease-in-out;
+
+    &:after {
+      transition: 0.3s width ease-in-out;
+      background: ${vars.styles.colors.accent3};
+      display: block;
+      content: ' ';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 3px;
+      width: calc(100% + 5px);
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      color: ${vars.styles.colors.accent3};
+
+      &:after {
+        width: calc(100%);
+      }
+    }
+  }
 `
 
 const PosedTellMeMoreAreaChild = posed.div({
