@@ -28,16 +28,6 @@ class TellMeMoreAboutYou extends Component {
             </StyledTextSection>
             <StyledLine />
           </PosedTellMeMoreAreaChild>
-          <PosedTellMeMoreAreaChild>
-            <StyledTellMeMoreButtons>
-              <StyledSecondaryButtonLink to="/projects">
-                schau dir Projekte an{' '}
-              </StyledSecondaryButtonLink>
-              <StyledPrimaryButtonLink to="/contact">
-                schreib mir einfach
-              </StyledPrimaryButtonLink>
-            </StyledTellMeMoreButtons>
-          </PosedTellMeMoreAreaChild>
         </PosedTellMeMoreArea>
       </>
     )
@@ -61,22 +51,6 @@ const StyledTellMeMoreArea = styled.div`
   }
 `
 
-const StyledTellMeMoreButtons = styled.div`
-  padding-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  a + a {
-    margin-left: 1rem;
-  }
-  ${on('onlyMobile')} {
-    a + a {
-      margin-left: 0;
-      margin-top: 1rem;
-    }
-  }
-`
-
 const StyledLine = styled.div`
   max-width: 300px;
   height: 3px;
@@ -84,6 +58,7 @@ const StyledLine = styled.div`
   padding: 0 1rem;
   margin: 0 auto 2rem auto;
 `
+
 const StyledTextSection = styled.div`
   p {
     line-height: 150%;
