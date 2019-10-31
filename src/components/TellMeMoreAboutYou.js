@@ -9,6 +9,7 @@ import posed from 'react-pose'
 import { on } from 'util/breakpoint'
 import { withIntl } from 'i18n'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { LogoSvg } from '../svg'
 
 class TellMeMoreAboutYou extends Component {
   render() {
@@ -26,6 +27,9 @@ class TellMeMoreAboutYou extends Component {
             <StyledTextSection>
               <FormattedHTMLMessage id="aboutMeReadMoreText1" />
             </StyledTextSection>
+            <StyledLogoSeperator>
+              <LogoSvg />
+            </StyledLogoSeperator>
             <StyledLine />
           </PosedTellMeMoreAreaChild>
         </PosedTellMeMoreArea>
@@ -57,6 +61,17 @@ const StyledLine = styled.div`
   background-color: ${vars.styles.colors.accent4};
   padding: 0 1rem;
   margin: 0 auto 2rem auto;
+`
+
+const StyledLogoSeperator = styled.div`
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  width: 30px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 `
 
 const StyledTextSection = styled.div`

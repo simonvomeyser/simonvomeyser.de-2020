@@ -1,4 +1,5 @@
 import logoNavigation from 'svg/logo-navigation.svg'
+import logo from 'svg/logo.svg'
 import user from 'svg/user.svg'
 import projects from 'svg/projects.svg'
 import write from 'svg/write.svg'
@@ -13,6 +14,7 @@ import twitter from 'svg/twitter.svg'
 import arrowDown from 'svg/arrow-down.svg'
 
 export const LogoNavigationSvg = logoNavigation
+export const LogoSvg = logo
 export const UserSvg = user
 export const ProjectsSvg = projects
 export const WriteSvg = write
