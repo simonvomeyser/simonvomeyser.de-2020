@@ -13,6 +13,7 @@ import { LogoSvg } from '../svg'
 
 class TellMeMoreAboutYou extends Component {
   render() {
+    const yearsAsDeveloper = new Date(Date.now()).getFullYear() - 2011
     return (
       <>
         <PosedTellMeMoreArea
@@ -25,7 +26,10 @@ class TellMeMoreAboutYou extends Component {
           <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
           <PosedTellMeMoreAreaChild>
             <StyledTextSection>
-              <FormattedHTMLMessage id="aboutMeReadMoreText1" />
+              <FormattedHTMLMessage
+                id="aboutMeReadMoreText1"
+                values={{ yearsAsDeveloper }}
+              />
             </StyledTextSection>
             <StyledLogoSeperator>
               <LogoSvg />
