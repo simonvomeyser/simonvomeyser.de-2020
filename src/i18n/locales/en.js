@@ -35,4 +35,29 @@ module.exports = {
   aboutMeFirstText:
     '.... in a few more words, I use JavaScript, PHP and a lot of coffee every day ☕️. I like and love React, Vue and Laravel.',
   aboutMeCta: 'read even more about me!',
+  aboutMeCtaAnswer: 'Okay!',
+  aboutMeReadMoreHeading1: '<h2>Here is a little story about me! </h2>',
+  aboutMeReadMoreText1: `
+    <p>
+      I am working in web development since <strong>{yearsAsDeveloper} years</strong> and started my journey by doing MySpace pages for metal bands whose lyrics where rather hard to understand. These days I help to make big(er) web projects come to life as a <strong>freelancing Full Stack Developer</strong> and <strong>Team Leader</strong>
+    </p>
+    <p>
+      I finished my Master's degree in Media Computer Sciences in 2018 with a nerdy final grade of 1.3. I also taught students there as a tutor.
+    </p>
+  `,
+  aboutMeReadMoreHeading2: '<h2>What I am doing right now</h2>',
+  aboutMeReadMoreText2: `
+    <p>
+      In my <strong>part time freelancing</strong> I work on projects spanning from car dealer websites to state governments web apps. I worked alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
+    </p>
+    <p>
+      I also work part time as a <strong>senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in E-Learning and learning managemend solutions. We also course a lot about Internet Explorer in a really agile way.
+    </p>
+    <p>
+      You can find examples of finished products in my <a href="/projects">project section</a>. If you want to contact me or find out more about what I offer feel free to jump to the <a href="/contact">contact page</a>! 
+    </p>
+    <p>
+    See you there :) <br/> Simon
+    </p>
+  `,
 }
