@@ -67,7 +67,7 @@ class AboutMePage extends React.Component {
                 <FormattedHTMLMessage id="aboutMeOpener" />
               </StyledHeadingQuote>
               <StyledAboutMeFirstText>
-                <FormattedMessage id="aboutMeFirstText" />
+                <FormattedHTMLMessage id="aboutMeFirstText" />
               </StyledAboutMeFirstText>
               <StyledButtonWrapper>
                 <PosedTellMeMoreButton

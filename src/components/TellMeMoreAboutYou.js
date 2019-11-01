@@ -22,8 +22,9 @@ class TellMeMoreAboutYou extends Component {
           <PosedTellMeMoreAreaChild>
             <StyledLine />
           </PosedTellMeMoreAreaChild>
-          <PosedTellMeMoreAreaChild />
-          <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
+          <PosedTellMeMoreAreaChild>
+            <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
+          </PosedTellMeMoreAreaChild>
           <PosedTellMeMoreAreaChild>
             <StyledTextSection>
               <FormattedHTMLMessage
@@ -31,10 +32,13 @@ class TellMeMoreAboutYou extends Component {
                 values={{ yearsAsDeveloper }}
               />
             </StyledTextSection>
+            <FormattedHTMLMessage id="aboutMeReadMoreHeading2" />
+            <StyledTextSection>
+              <FormattedHTMLMessage id="aboutMeReadMoreText2" />
+            </StyledTextSection>
             <StyledLogoSeperator>
               <LogoSvg />
             </StyledLogoSeperator>
-            <StyledLine />
           </PosedTellMeMoreAreaChild>
         </PosedTellMeMoreArea>
       </>
@@ -75,12 +79,13 @@ const StyledLogoSeperator = styled.div`
 
   width: 30px;
   margin: 0 auto;
-  margin-bottom: 2rem;
 `
 
 const StyledTextSection = styled.div`
+  margin-bottom: 3rem;
+
   p {
-    line-height: 150%;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
   }
 
