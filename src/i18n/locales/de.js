@@ -29,21 +29,33 @@ module.exports = {
   navigationLegal: 'Impressum & Datenschutz',
   myProfession: 'Webentwicklung',
   niceToMeetYou: 'Cool dass du hier bist! :)',
-  aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas mit Webseiten</i>',
+  aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas im Web</i>',
   aboutMeFirstText:
-    '.... etwas genauer genommen arbeite ich mit JavaScript, PHP und einer Menge Kaffe ☕️. In Sachen Frameworks mag ich ganz besonders React, Vue und Laravel.',
+    '.... etwas genauer realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️. Als Frameworks mag ich ganz besonders React, Vue und Laravel.',
   aboutMeCta: 'Erzähl ruhig etwas mehr!',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2> Dann erzähl ich mal was über mich! </h2>',
   aboutMeReadMoreText1: `
     <p>
-      Ich arbeite seit <strong>{yearsAsDeveloper} Jahren</strong> als Webentwickler. Begonnen habe ich mit einfachen Wordpress Seiten und Myspace CSS Hacks für Metal Bands, deren Texte man echt schwer verstehen konnte. Mittlerweile realisiere ich als freiberuflicher <strong>Full Stack Entwickler</strong> und <strong>Teamleiter</strong> umfangreiche Projekte.
+      Ich arbeite seit <strong>{yearsAsDeveloper} Jahren</strong> als Webentwickler. Begonnen habe ich mein Abenteuer mit MySpace Seiten für Metal Bands, deren Texte man echt schwer verstehen konnte. Mittlerweile realisiere ich als freiberuflicher <strong>Full Stack Entwickler</strong> und <strong>Teamleiter</strong> umfangreiche Projekte.
     </p>
     <p>
       Seit Anfang 2018 habe ich meinen Master in Medieninformatik an der <a href="https://hs-duesseldorf.de/">Hochschule Düsseldorf</a> mit einer streberhaften 1.3 abgeschlossen und dort auch als Tutor unterrichtet.
     </p>
+  `,
+  aboutMeReadMoreHeading2: '<h2>Was ich momentan so tue</h2>',
+  aboutMeReadMoreText2: `
     <p>
-      Meine Masterarbeit habe ich dort über GraphQL, React und die semantische Integration von API-Schnittstellen geschrieben. Ich bin mir bis heute nicht wirklich sicher, was das eigentlich bedeutet.
+      Momentan bin ich <strong>in Teilzeit freiberuflich</strong> tätig und setze dabei verschiedenste Projekte für private Kunden um. Bei größeren Aufgaben arbeite ich häufig und gern mit tollen Agenturen wie <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> uvm. zusammen. 
+    </p>
+    <p>
+      Ebenfalls <strong>in Teilzeit, als Senior Project Manager</strong>, arbeite ich bei der <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>.  Dort leite ich ein kleines Team aus großartigen Entwicklern und wir tüfteln gemeinsam an E-Learning Systemen in mehrjähirgen  Entwicklungen. Auch fluchen wir in gerne agil über den Internet Explorer.
+    </p>
+    <p>
+      Beispiele für fertige Produkte aus beiden Bereichen kannst du dir unter <a href="/projects">Projekte</a> anschauen, mehr über was ich suche und anbiete findest du unter <a href="/contact">Kontakt</a>.
+    </p>
+    <p>
+    Bis später :) <br/> Simon
     </p>
   `,
 }
