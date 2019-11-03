@@ -12,6 +12,7 @@ export const StyledPageHeading = styled.h1`
   text-align: center;
 
   ${on('onlyMobile')} {
+    font-size: ${vars.styles.fontSizes.size8};
     margin-bottom: 1.5rem;
   }
 `

@@ -26,6 +26,7 @@ const buttonStyles = props => `
   }
   ${on('onlyMobile')} {
       width: 100%;
+      font-size: ${vars.styles.fontSizes.size4};
   }
   :disabled {
     background: ${vars.styles.colors.neutral6};
