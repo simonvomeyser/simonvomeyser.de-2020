@@ -9,8 +9,11 @@ import SplitText from 'react-pose-text'
 import posed from 'react-pose'
 import { StyledPrimaryButtonLink } from '../styled-components'
 import { FormattedMessage } from 'react-intl'
+import { ArrowDown } from 'svg'
+import Link from 'i18n/Link'
 
 class IndexPage extends Component {
+  Arr
   render() {
     return (
       <Layout delayInitialAnimation>
@@ -29,11 +32,11 @@ class IndexPage extends Component {
                 Simon vom Eyser
               </SplitText>
             </Heading>
-            <PosedMoreAboutMeWrapper initialPose="hidden">
-              <StyledPrimaryButtonLink to="/about-me">
-                <FormattedMessage id="landingLearnMore" />
-              </StyledPrimaryButtonLink>
-            </PosedMoreAboutMeWrapper>
+            <Link to="/about-me">
+              <PosedMoreAboutMeWrapper initialPose="hidden">
+                <ArrowDown />
+              </PosedMoreAboutMeWrapper>
+            </Link>
           </Wrapper>
         </PageTransition>
       </Layout>
@@ -60,10 +63,27 @@ const Wrapper = styled.div`
   }
 `
 const MoreAboutMeWrapper = styled.div`
-  margin-top: 1rem;
-  animation: pulse 2.3s infinite;
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: translateY(25%) scale3d(1.1, 1.1, 1.1);
+      opacity: 0.5;
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  margin-top: 2rem;
+  animation: pulse 2s infinite;
   animation-delay: 10s;
   animation-timing-function: ease-in-out;
+  svg {
+    width: 40px;
+  }
 `
 
 const PosedMoreAboutMeWrapper = posed(MoreAboutMeWrapper)({
