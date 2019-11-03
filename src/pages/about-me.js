@@ -18,7 +18,14 @@ import { isSearchEngineBot } from '../util/isSearchEngineBot'
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "about-me-1.jpg" }) {
+    fileDesktop: file(relativePath: { eq: "about-me-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    fileMobile: file(relativePath: { eq: "about-me-1-mobile.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 700) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -44,7 +51,7 @@ class AboutMePage extends React.Component {
           speed: 500,
           speedAsDuration: true,
         })
-      }, 300)
+      }, 100)
     })
   }
   render() {
@@ -66,20 +73,17 @@ class AboutMePage extends React.Component {
                 <FormattedHTMLMessage id="aboutMeFirstText" />
               </StyledAboutMeFirstText>
               <StyledButtonWrapper>
-                <PosedTellMeMoreButton
-                  pose={
-                    this.state.tellMeMoreVisible
-                      ? 'tellMeMoreVisible'
-                      : 'initial'
-                  }
-                  onClick={this.showSecondText}
-                >
+                <StyledPrimaryButton onClick={this.showSecondText}>
                   <FormattedMessage id="aboutMeCta" />
-                </PosedTellMeMoreButton>
+                </StyledPrimaryButton>
               </StyledButtonWrapper>
             </StyledBackgroundWrapper.Left>
             <StyledBackgroundWrapper.Right>
-              <Img fluid={data.file.childImageSharp.fluid} />
+              <StyledAboutMeImg
+                fluid={data.fileDesktop.childImageSharp.fluid}
+                desktop
+              />
+              <StyledAboutMeImg fluid={data.fileMobile.childImageSharp.fluid} />
             </StyledBackgroundWrapper.Right>
           </StyledBackgroundWrapper>
           <div id="tell-me-more">
@@ -98,7 +102,9 @@ const StyledBackgroundWrapper = styled.div`
   margin-top: 2rem;
   z-index: ${vars.styles.zIndices.base};
   display: flex;
+
   ${on('onlyMobile')} {
+    flex-wrap: wrap;
     margin-top: 0;
   }
 `
@@ -121,17 +127,20 @@ StyledBackgroundWrapper.Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   ${on('onlyMobile')} {
     width: 100%;
     padding-right: 0;
+    margin-bottom: 1rem;
   }
 `
 
 StyledBackgroundWrapper.Right = styled.div`
   z-index: 1;
   width: 40%;
+
   ${on('onlyMobile')} {
-    display: none;
+    width: 100%;
   }
 `
 
@@ -166,13 +175,10 @@ const StyledButtonWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const PosedTellMeMoreButton = posed(StyledPrimaryButton)({
-  initial: {
-    y: 0,
-    opacity: 1,
-  },
-  tellMeMoreVisible: {
-    y: -15,
-    opacity: 1,
-  },
-})
+const StyledAboutMeImg = styled(Img)`
+  display: ${props => (props.desktop ? 'block' : 'none')};
+
+  ${on('onlyMobile')} {
+    display: ${props => (props.desktop ? 'none' : 'block')};
+  }
+`
