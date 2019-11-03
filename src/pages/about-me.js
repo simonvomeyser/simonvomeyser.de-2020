@@ -7,7 +7,7 @@ import { vars } from '../util/vars'
 import AboutMeBackgroundSvg from 'svg/about-me-background.svg'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import ChangeTitle from '../components/ChangeTitle'
-import TellMeMoreAboutYou from '../components/TellMeMoreAboutYou'
+import AboutMeTellMeMore from '../components/AboutMeTellMeMore'
 import { StyledPageHeading, StyledPrimaryButton } from '../styled-components'
 import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
@@ -40,14 +40,10 @@ class AboutMePage extends React.Component {
       sessionStorage.setItem('tellMeMoreVisible', true)
       setTimeout(() => {
         const scroll = new SmoothScroll()
-        scroll.animateScroll(
-          document.getElementById('tell-me-more-area'),
-          null,
-          {
-            speed: 500,
-            speedAsDuration: true,
-          }
-        )
+        scroll.animateScroll(document.getElementById('tell-me-more'), null, {
+          speed: 500,
+          speedAsDuration: true,
+        })
       }, 300)
     })
   }
@@ -86,8 +82,8 @@ class AboutMePage extends React.Component {
               <Img fluid={data.file.childImageSharp.fluid} />
             </StyledBackgroundWrapper.Right>
           </StyledBackgroundWrapper>
-          <div id="tell-me-more-area">
-            <TellMeMoreAboutYou visible={this.state.tellMeMoreVisible} />
+          <div id="tell-me-more">
+            <AboutMeTellMeMore visible={this.state.tellMeMoreVisible} />
           </div>
         </PageLayout>
       </Layout>
@@ -177,7 +173,6 @@ const PosedTellMeMoreButton = posed(StyledPrimaryButton)({
   },
   tellMeMoreVisible: {
     y: -15,
-    opacity: 0,
-    applyAtEnd: { visibility: 'hidden' },
+    opacity: 1,
   },
 })

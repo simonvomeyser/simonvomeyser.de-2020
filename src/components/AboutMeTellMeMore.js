@@ -11,21 +11,21 @@ import { withIntl } from 'i18n'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import { LogoSvg } from '../svg'
 
-class TellMeMoreAboutYou extends Component {
+class AboutMeTellMeMore extends Component {
   render() {
     const yearsAsDeveloper = new Date(Date.now()).getFullYear() - 2011
     return (
       <>
-        <PosedTellMeMoreArea
+        <PosedFadeInArea
           pose={this.props.visible ? 'tellMeMoreVisible' : 'initial'}
         >
-          <PosedTellMeMoreAreaChild>
+          <PosedFadeInAreaChild>
             <StyledLine />
-          </PosedTellMeMoreAreaChild>
-          <PosedTellMeMoreAreaChild>
+          </PosedFadeInAreaChild>
+          <PosedFadeInAreaChild>
             <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
-          </PosedTellMeMoreAreaChild>
-          <PosedTellMeMoreAreaChild>
+          </PosedFadeInAreaChild>
+          <PosedFadeInAreaChild>
             <StyledTextSection>
               <FormattedHTMLMessage
                 id="aboutMeReadMoreText1"
@@ -39,16 +39,16 @@ class TellMeMoreAboutYou extends Component {
             <StyledLogoSeperator>
               <LogoSvg />
             </StyledLogoSeperator>
-          </PosedTellMeMoreAreaChild>
-        </PosedTellMeMoreArea>
+          </PosedFadeInAreaChild>
+        </PosedFadeInArea>
       </>
     )
   }
 }
 
-export default TellMeMoreAboutYou
+export default AboutMeTellMeMore
 
-const StyledTellMeMoreArea = styled.div`
+const StyledFadeInArea = styled.div`
   margin: 0 auto;
   margin-top: 3rem;
   max-width: 800px;
@@ -124,7 +124,7 @@ const StyledTextSection = styled.div`
   }
 `
 
-const PosedTellMeMoreAreaChild = posed.div({
+const PosedFadeInAreaChild = posed.div({
   initial: {
     opacity: 0,
     y: 150,
@@ -136,7 +136,7 @@ const PosedTellMeMoreAreaChild = posed.div({
   },
 })
 
-const PosedTellMeMoreArea = posed(StyledTellMeMoreArea)({
+const PosedFadeInArea = posed(StyledFadeInArea)({
   initial: {
     opacity: 0,
     display: 'none',
