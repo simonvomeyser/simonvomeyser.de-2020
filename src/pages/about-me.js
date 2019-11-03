@@ -50,6 +50,7 @@ class AboutMePage extends React.Component {
         scroll.animateScroll(document.getElementById('tell-me-more'), null, {
           speed: 500,
           speedAsDuration: true,
+          header: '[data-mobile-navigation-scroll-adjust]',
         })
       }, 100)
     })

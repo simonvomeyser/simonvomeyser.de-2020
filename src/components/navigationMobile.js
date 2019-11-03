@@ -41,7 +41,7 @@ export default class NavigationMobile extends Component {
   render() {
     return (
       <Fragment>
-        <StyledNavigationMobileBar>
+        <StyledNavigationMobileBar data-mobile-navigation-scroll-adjust>
           <StyledBurgerWrapper>
             <BurgerSvg onClick={this.toggleMenu} />
           </StyledBurgerWrapper>{' '}
