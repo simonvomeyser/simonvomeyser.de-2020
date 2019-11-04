@@ -4,6 +4,7 @@ import { withIntl, Link } from 'i18n'
 import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
+import FormInput from 'components/FormInput'
 import styled from 'styled-components'
 import { MailSvg, XingSvg, TwitterSvg } from 'svg'
 import {
@@ -12,7 +13,6 @@ import {
   StyledContainer,
   StyledTextSection,
   StyledPrimaryButton,
-  StyledFormInput,
 } from '../styled-components'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
@@ -94,9 +94,13 @@ class ContactPage extends React.Component {
               </StyledTextSection>
             </StyledSubHeadingText>
             <ContactForm action="?" onSubmit={this.submit} noValidate>
-              <StyledFormInput hasError={this.state.errorField === 'name'}>
+              <FormInput
+                label="name"
+                hasError={this.state.errorField === 'name'}
+              >
                 <input
                   name="name"
+                  placeholder=" "
                   type="text"
                   value={this.state.name}
                   onChange={event => {
@@ -107,11 +111,15 @@ class ContactPage extends React.Component {
                     })
                   }}
                 />
-              </StyledFormInput>
-              <StyledFormInput hasError={this.state.errorField === 'email'}>
+              </FormInput>
+              <FormInput
+                label="email"
+                hasError={this.state.errorField === 'email'}
+              >
                 <input
                   name="email"
                   type="email"
+                  placeholder=" "
                   value={this.state.email}
                   onChange={event => {
                     this.setState({
@@ -121,10 +129,14 @@ class ContactPage extends React.Component {
                     })
                   }}
                 />
-              </StyledFormInput>
-              <StyledFormInput hasError={this.state.errorField === 'text'}>
+              </FormInput>
+              <FormInput
+                label="text"
+                hasError={this.state.errorField === 'text'}
+              >
                 <textarea
                   name="text"
+                  placeholder=" "
                   cols="30"
                   rows="10"
                   value={this.state.text}
@@ -136,7 +148,7 @@ class ContactPage extends React.Component {
                     })
                   }}
                 />
-              </StyledFormInput>
+              </FormInput>
               {this.state.error ? (
                 <StyledFormError>{this.state.error}</StyledFormError>
               ) : null}
