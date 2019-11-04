@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import {
-  StyledPrimaryButtonLink,
-  StyledSecondaryButtonLink,
-} from '../styled-components'
+import { StyledTextSection } from '../styled-components'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
 import posed from 'react-pose'
@@ -79,49 +76,6 @@ const StyledLogoSeperator = styled.div`
 
   width: 30px;
   margin: 0 auto;
-`
-
-const StyledTextSection = styled.div`
-  margin-bottom: 3rem;
-
-  p {
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  strong {
-    background: ${vars.styles.colors.accent1};
-    color: ${vars.styles.colors.accent4};
-    padding: 2px 4px;
-  }
-
-  a {
-    color: inherit;
-    display: inline-block;
-    position: relative;
-    transition: 0.3s color ease-in-out;
-
-    &:after {
-      transition: 0.3s width ease-in-out;
-      background: ${vars.styles.colors.accent3};
-      display: block;
-      content: ' ';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      height: 3px;
-      width: calc(100% + 5px);
-      transform: translateX(-50%);
-    }
-
-    &:hover {
-      color: ${vars.styles.colors.accent3};
-
-      &:after {
-        width: calc(100%);
-      }
-    }
-  }
 `
 
 const PosedFadeInAreaChild = posed.div({

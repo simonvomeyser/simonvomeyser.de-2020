@@ -10,10 +10,11 @@ import {
   StyledPageHeading,
   StyledSubHeadingText,
   StyledContainer,
+  StyledTextSection,
   StyledPrimaryButton,
   StyledFormInput,
 } from '../styled-components'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 class ContactPage extends React.Component {
   state = {
@@ -88,22 +89,9 @@ class ContactPage extends React.Component {
               <FormattedMessage id="navigationContact" />
             </StyledPageHeading>
             <StyledSubHeadingText>
-              <p>
-                Das obligatorische Kontaktformular auf einer Webseite darf
-                natürlich nicht fehelen. Aber seien wir ehrlich: Es macht auch
-                nichts anderes, als mir eine E-Mail an info@simonvomyeser.de zu
-                schicken.
-              </p>
-              <p>
-                Ob du nun den Server für dich arbeiten lassen willst, oder ,or
-                selbst eine E-mail schreibst: Ich bin immer auf der Suche nach
-                Interssanten Projekten, Geschäftskontakten oder einfach coolen
-                Entwicklern mit Humor zum quatschen.
-              </p>
-              <p>
-                Ich biete Projektunterschtützung in der Entwicklung, Consulting
-                und Konzeption, aber meld dich doch einfach :)
-              </p>
+              <StyledTextSection>
+                <FormattedHTMLMessage id="contactFormCopy" />
+              </StyledTextSection>
             </StyledSubHeadingText>
             <ContactForm action="?" onSubmit={this.submit} noValidate>
               <StyledFormInput hasError={this.state.errorField === 'name'}>
