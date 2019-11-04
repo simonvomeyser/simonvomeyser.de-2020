@@ -32,17 +32,14 @@ class IndexPage extends Component {
                 Simon vom Eyser
               </SplitText>
             </Heading>
-            <Link to="/about-me">
-              <PosedMoreAboutMeWrapper initialPose="hidden">
-                <ArrowDown />
-              </PosedMoreAboutMeWrapper>
-            </Link>
           </Wrapper>
         </PageTransition>
       </Layout>
     )
   }
 }
+
+export default withIntl(IndexPage)
 
 const PageTransition = posed.div({
   enter: { opacity: 1, beforeChildren: true },
@@ -62,45 +59,6 @@ const Wrapper = styled.div`
     min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   }
 `
-const MoreAboutMeWrapper = styled.div`
-  @keyframes pulse {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
-
-    50% {
-      transform: translateY(25%) scale3d(1.1, 1.1, 1.1);
-      opacity: 0.5;
-    }
-
-    to {
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  margin-top: 2rem;
-  animation: pulse 2s infinite;
-  animation-delay: 10s;
-  animation-timing-function: ease-in-out;
-  svg {
-    width: 40px;
-  }
-`
-
-const PosedMoreAboutMeWrapper = posed(MoreAboutMeWrapper)({
-  hidden: {
-    opacity: 0,
-    scale: 0.5,
-  },
-  visible: {
-    opacity: 1,
-    delay: 7000,
-    transition: {
-      scale: { type: 'spring', stiffness: 300, duration: 1000 },
-    },
-    scale: 1,
-  },
-})
-
 const LogoWrapper = styled.div`
   svg {
     width: 220px;
@@ -150,5 +108,3 @@ const charPoses = {
   },
   exit: { opacity: 0 },
 }
-
-export default withIntl(IndexPage)
