@@ -18,7 +18,6 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 class ContactPage extends React.Component {
   state = {
-    name: '',
     email: '',
     text: '',
     error: '',
@@ -37,7 +36,6 @@ class ContactPage extends React.Component {
       setTimeout(() => {
         this.setState({
           success: 'Yeah, ich melde mich dann bei dir 🙂',
-          name: '',
           email: '',
           text: '',
           isSubmitting: false,
@@ -47,16 +45,7 @@ class ContactPage extends React.Component {
   }
 
   validateForm = () => {
-    const { name, email, text } = this.state
-
-    if (!name.trim()) {
-      this.setState({
-        error:
-          'Ich brauch einen Namen von dir... oder kennen wir uns schon? 🤓',
-        errorField: 'name',
-      })
-      return false
-    }
+    const { email, text } = this.state
 
     if (!emailIsValid(email.trim())) {
       this.setState({
@@ -94,24 +83,6 @@ class ContactPage extends React.Component {
               </StyledTextSection>
             </StyledSubHeadingText>
             <ContactForm action="?" onSubmit={this.submit} noValidate>
-              <FormInput
-                label="name"
-                hasError={this.state.errorField === 'name'}
-              >
-                <input
-                  name="name"
-                  placeholder=" "
-                  type="text"
-                  value={this.state.name}
-                  onChange={event => {
-                    this.setState({
-                      name: event.target.value,
-                      error: '',
-                      errorField: '',
-                    })
-                  }}
-                />
-              </FormInput>
               <FormInput
                 label="email"
                 hasError={this.state.errorField === 'email'}
