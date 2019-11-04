@@ -13,7 +13,6 @@ import { ArrowDown } from 'svg'
 import Link from 'i18n/Link'
 
 class IndexPage extends Component {
-  Arr
   render() {
     return (
       <Layout delayInitialAnimation>
