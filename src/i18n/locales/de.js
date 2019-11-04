@@ -61,18 +61,11 @@ module.exports = {
   contactFormCopy: `
   <p>
     Das obligatorische Kontaktformular auf einer Webseite darf natürlich nicht fehlen. Aber seien wir ehrlich: Es macht auch
-    nichts anderes, als mir eine E-Mail an <a href="mailto:info@simonvomyeser.de">info@simonvomyeser.de</a> zu
+    nichts anderes, als mir eine E-Mail an <a href="mailto:info@simonvomeyser.de">info@simonvomeyser.de</a> zu
     schicken.
   </p>
   <p>
-    Ob du nun den Server für dich arbeiten lassen willst, oder ,or
-    selbst eine E-mail schreibst: Ich bin immer auf der Suche nach
-    Interssanten Projekten, Geschäftskontakten oder einfach coolen
-    Entwicklern mit Humor zum quatschen.
-  </p>
-  <p>
-    Ich biete Projektunterschtützung in der Entwicklung, Consulting
-    und Konzeption, aber meld dich doch einfach :)
+    Ich biete Projektunterschtützung bei <strong>Konzeption</strong> sowie <strong>Entwicklung</strong> und hab immer Interesse an spannenden Projekten und an coolen Teams, in denen man viel voneinander lernen kann. Meld dich einfach und lass uns quatschen 🙂
   </p>
 
 `,
