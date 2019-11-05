@@ -10,12 +10,13 @@ export default class FormInput extends Component {
     const { children, hasError, label } = this.props
 
     return (
-      <StyledWrapper hasError={hasError}>
+      <StyledWrapper>
         {children}
         <FloatingLabel>
           <FormattedMessage id={label} />
         </FloatingLabel>
-        <PosedErrorIcon pose={hasError ? 'shown' : 'hidden'}>×</PosedErrorIcon>
+        <PosedErrorIcon pose={hasError ? 'show' : 'hide'}>×</PosedErrorIcon>
+        <PosedErrorLine pose={hasError ? 'show' : 'hide'} />
       </StyledWrapper>
     )
   }
@@ -37,34 +38,30 @@ const FloatingLabel = styled.label`
   pointer-events: none;
 `
 
-const StyledErrorIcon = styled.span`
+const StyledErrorIcon = styled.div`
   position: absolute;
   top: 17px;
   right: 18px;
   color: red;
-  font-size: 1.2em;
-  background: ${vars.styles.colors.neutral10};
+  font-size: 34px;
+  content: '×';
 `
 
-const PosedErrorIcon = posed(StyledErrorIcon)({
-  hidden: {
-    visibility: 'hidden',
-    scale: 0.1,
-  },
-  shown: {
-    visibility: 'visible',
-    scale: 1,
-  },
-})
+const StyledErrorLine = styled.div`
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  background: red;
+  height: 3px;
+  width: 100%;
+`
 
 const StyledWrapper = styled.div`
   position: relative;
   border: 1px solid;
-  border-color: ${props =>
-    props.hasError ? 'red' : vars.styles.colors.neutral9};
+  border-color: ${vars.styles.colors.neutral9};
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 1rem;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
   > *:not(:placeholder-shown),
   > *:focus {
@@ -76,3 +73,29 @@ const StyledWrapper = styled.div`
     }
   }
 `
+
+const PosedErrorIcon = posed(StyledErrorIcon)({
+  hide: {
+    scale: 0.1,
+    rotate: 45,
+    opacity: 0,
+  },
+  show: {
+    rotate: 0,
+    opacity: 1,
+    transition: { type: 'spring', stiffness: 500, duration: 750 },
+    scale: 1,
+  },
+})
+
+const PosedErrorLine = posed(StyledErrorLine)({
+  hide: {
+    width: 0,
+    opacity: 0,
+  },
+  show: {
+    width: '100%',
+    opacity: 1,
+    transition: { type: 'spring', damping: 200, duration: 500 },
+  },
+})
