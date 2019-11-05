@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { FormattedMessage } from 'react-intl'
+import posed from 'react-pose'
 
 export default class FormInput extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class FormInput extends Component {
         <FloatingLabel>
           <FormattedMessage id={label} />
         </FloatingLabel>
+        <PosedErrorIcon pose={hasError ? 'shown' : 'hidden'}>×</PosedErrorIcon>
       </StyledWrapper>
     )
   }
@@ -26,7 +28,7 @@ export default class FormInput extends Component {
 const FloatingLabel = styled.label`
   position: absolute;
   z-index: 1;
-  top: 18px;
+  top: 20px;
   left: 0.75rem;
   font-size: 0.75rem;
   color: grey;
@@ -34,6 +36,26 @@ const FloatingLabel = styled.label`
   opacity: 0.75;
   pointer-events: none;
 `
+
+const StyledErrorIcon = styled.span`
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  color: red;
+  font-size: 1.2em;
+  background: ${vars.styles.colors.neutral10};
+`
+
+const PosedErrorIcon = posed(StyledErrorIcon)({
+  hidden: {
+    visibility: 'hidden',
+    scale: 0.1,
+  },
+  shown: {
+    visibility: 'visible',
+    scale: 1,
+  },
+})
 
 const StyledWrapper = styled.div`
   position: relative;

@@ -11,6 +11,7 @@ class ContactForm extends React.Component {
   state = {
     email: '',
     text: '',
+    errors: {},
   }
 
   update = ({ target }) => {
@@ -21,17 +22,26 @@ class ContactForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
+
     console.log('submit')
   }
 
   render() {
-    const { email, text } = this.state
+    const { email, text, errors } = this.state
 
     return (
       <StyledWrapper>
         <form action="" onSubmit={this.handleSubmit}>
-          <ContactInput value={email} update={this.update} />
-          <ContactTextarea value={text} update={this.update} />
+          <ContactInput
+            value={email}
+            update={this.update}
+            hasError={!!errors.name}
+          />
+          <ContactTextarea
+            value={text}
+            update={this.update}
+            hasError={!!errors.text}
+          />
 
           <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
 

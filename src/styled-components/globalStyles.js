@@ -47,10 +47,12 @@ export default createGlobalStyle`
       border: none;
       background: transparent;
       display: block;
+      font-size: 1rem;
       width: 100%;
-      color: ${vars.styles.colors.neutral7};
+      color: ${vars.styles.colors.neutral5};
       outline: none;
       resize: none;
+      line-height: 1.4;
       padding: .75rem;
     }
     @keyframes heartBeat {
