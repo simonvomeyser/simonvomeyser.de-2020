@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "simon-vom-eyser-de",
+  "description": "Simon vom Eyser Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Simon vom Eyser <simon.vom.eyser@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "browser-lang": "0.0.1",
@@ -31,9 +31,6 @@
     "styled-reset": "^1.6.4",
     "yup": "^0.27.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
