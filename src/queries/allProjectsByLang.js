@@ -1,4 +1,4 @@
-const defaultProjectFields =  `
+const defaultProjectFields = `
     totalCount,
     edges {
         node {
@@ -13,10 +13,10 @@ const defaultProjectFields =  `
             html
         }
     }
-`;
+`
 
 module.exports = (projectFields = defaultProjectFields) => {
-    return `
+  return `
         {
             en: allMarkdownRemark( 
                 filter: {fileAbsolutePath: {regex: "/(content/projects/en).*/"}})
@@ -29,5 +29,5 @@ module.exports = (projectFields = defaultProjectFields) => {
                 ${projectFields}
             }
         }
-    `;
+    `
 }
