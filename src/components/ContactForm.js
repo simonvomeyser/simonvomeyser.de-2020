@@ -6,6 +6,7 @@ import { StyledPrimaryButton } from '../styled-components'
 import ContactTextarea from './ContactTextarea'
 import ContactInput from './ContactInput'
 import ContactMessage from './ContactMessage'
+import { isEmail } from '../util/isEmail'
 
 class ContactForm extends React.Component {
   state = {
@@ -15,15 +16,30 @@ class ContactForm extends React.Component {
   }
 
   update = ({ target }) => {
+    const newErrors = this.state.errors
+    newErrors[target.name] = ''
+
     this.setState({
       [target.name]: target.value,
+      errors: newErrors,
     })
   }
 
   handleSubmit = e => {
     e.preventDefault()
+    const { email, text } = this.state
 
-    console.log('submit')
+    const newErrors = {}
+
+    if (!isEmail(email)) {
+      newErrors.email = 'emailError'
+    }
+
+    if (text.length < 10) {
+      newErrors.text = 'textError'
+    }
+
+    this.setState({ errors: newErrors })
   }
 
   render() {
@@ -31,11 +47,11 @@ class ContactForm extends React.Component {
 
     return (
       <StyledWrapper>
-        <form action="" onSubmit={this.handleSubmit}>
+        <form noValidate action="" onSubmit={this.handleSubmit}>
           <ContactInput
             value={email}
             update={this.update}
-            hasError={!!errors.name}
+            hasError={!!errors.email}
           />
           <ContactTextarea
             value={text}
