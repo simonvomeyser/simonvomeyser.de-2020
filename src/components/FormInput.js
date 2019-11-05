@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
+import { FormattedMessage } from 'react-intl'
 
 export default class FormInput extends Component {
   render() {
@@ -10,7 +11,9 @@ export default class FormInput extends Component {
     return (
       <StyledWrapper hasError={hasError}>
         {children}
-        <FloatingLabel> {label} </FloatingLabel>
+        <FloatingLabel>
+          <FormattedMessage id={label} />
+        </FloatingLabel>
       </StyledWrapper>
     )
   }

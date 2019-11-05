@@ -61,11 +61,12 @@ module.exports = {
   `,
   contactFormCopy: `
     <p>
-      Since a contact form seems to be mandatory for every website, here we go... even though this thing will do nothing else than to send an email to <a href="mailto:info@simonvomyeser.de">info@simonvomyeser.de</a>.
+      Since a contact form seems to be mandatory for every website, here we go... even though this thing will do nothing else than to send an email to <a href="mailto:info@simonvomeyser.de">info@simonvomeyser.de</a>.
     </p>
     <p>
       I offer <strong>planning</strong> and <strong>development</strong> for exciting projects and I am always intrested to work with badass teams so we can learn from each other. Just hit me up 🙂
     </p>
-
   `,
+  emailPlaceholder: 'your email',
+  textPlaceholder: 'ask me something',
 }

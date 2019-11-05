@@ -4,7 +4,7 @@ import FormInput from 'components/FormInput'
 export default class ContactInput extends Component {
   render() {
     return (
-      <FormInput label="your email">
+      <FormInput label="emailPlaceholder">
         <input
           name="email"
           type="email"

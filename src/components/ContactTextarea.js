@@ -4,7 +4,7 @@ import FormInput from 'components/FormInput'
 export default class ContactTextarea extends Component {
   render() {
     return (
-      <FormInput label="tell me something">
+      <FormInput label="textPlaceholder">
         <textarea
           name="text"
           placeholder=" "

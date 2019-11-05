@@ -67,6 +67,7 @@ module.exports = {
   <p>
     Ich biete Projektunterschtützung bei <strong>Konzeption</strong> sowie <strong>Entwicklung</strong> und hab immer Interesse an spannenden Projekten und an coolen Teams, in denen man viel voneinander lernen kann. Meld dich einfach und lass uns quatschen 🙂
   </p>
-
-`,
+  `,
+  emailPlaceholder: 'deine E-Mail',
+  textPlaceholder: 'frag mich etwas',
 }
