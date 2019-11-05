@@ -64,7 +64,7 @@ module.exports = {
       Since a contact form seems to be mandatory for every website, here we go... even though this thing will do nothing else than to send an email to <a href="mailto:info@simonvomyeser.de">info@simonvomyeser.de</a>.
     </p>
     <p>
-      I offer <strong>planning</strong> and <strong>development</strong> work for exciting projects and I am always intrested to work with badass teams so we can learn from each other. Just hit me up 🙂
+      I offer <strong>planning</strong> and <strong>development</strong> for exciting projects and I am always intrested to work with badass teams so we can learn from each other. Just hit me up 🙂
     </p>
 
   `,
