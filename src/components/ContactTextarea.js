@@ -6,7 +6,14 @@ export default class ContactTextarea extends Component {
     return (
       <>
         <FormInput label="text">
-          <textarea name="text" placeholder=" " cols="30" rows="10" />
+          <textarea
+            name="text"
+            placeholder=" "
+            cols="30"
+            rows="10"
+            value={this.props.value}
+            onChange={this.props.update}
+          />
         </FormInput>
       </>
     )

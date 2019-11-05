@@ -3,25 +3,43 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { StyledPrimaryButton } from '../styled-components'
 
-import FormInput from 'components/FormInput'
+import ContactTextarea from './ContactTextarea'
+import ContactInput from './ContactInput'
+import ContactMessage from './ContactMessage'
 
-const ContactForm = () => {
-  return (
-    <>
+class ContactForm extends React.Component {
+  state = {
+    email: '',
+    text: '',
+  }
+
+  update = ({ target }) => {
+    this.setState({
+      [target.name]: target.value,
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    console.log('submit')
+  }
+
+  render() {
+    const { email, text } = this.state
+
+    return (
       <StyledWrapper>
-        <form action="">
-          <FormInput label="email">
-            <input name="email" type="email" placeholder=" " />
-          </FormInput>
-          <FormInput label="text">
-            <textarea name="text" placeholder=" " cols="30" rows="10" />
-          </FormInput>
+        <form action="" onSubmit={this.handleSubmit}>
+          <ContactInput value={email} update={this.update} />
+          <ContactTextarea value={text} update={this.update} />
 
           <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
+
+          <ContactMessage />
         </form>
       </StyledWrapper>
-    </>
-  )
+    )
+  }
 }
 
 export default ContactForm

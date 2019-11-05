@@ -6,7 +6,13 @@ export default class ContactInput extends Component {
     return (
       <>
         <FormInput label="email">
-          <input name="email" type="email" placeholder=" " />
+          <input
+            name="email"
+            type="email"
+            value={this.props.value}
+            onChange={this.props.update}
+            placeholder=" "
+          />
         </FormInput>
       </>
     )
