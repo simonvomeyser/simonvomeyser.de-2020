@@ -23,11 +23,12 @@ export default class FormInput extends Component {
 const FloatingLabel = styled.label`
   position: absolute;
   z-index: 1;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 18px;
+  left: 0.75rem;
+  font-size: 0.75rem;
   color: grey;
-  font-size: 14px;
   transition: all 0.3s ease-in-out;
+  opacity: 0.75;
   pointer-events: none;
 `
 
@@ -37,18 +38,16 @@ const StyledWrapper = styled.div`
   border-color: ${props =>
     props.hasError ? 'red' : vars.styles.colors.neutral9};
   background: ${vars.styles.colors.neutral10};
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
+  margin-bottom: 1rem;
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
-  input:not(:placeholder-shown),
-  input:focus,
-  textarea:not(:placeholder-shown),
-  textarea:focus {
+  > *:not(:placeholder-shown),
+  > *:focus {
     + label {
-      font-size: 12px;
+      font-size: 10px;
       opacity: 0.5;
-      transform: translateY(-14px);
+      top: -0.75rem;
+      left: 0;
     }
   }
 `
