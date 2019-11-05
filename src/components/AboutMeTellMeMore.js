@@ -5,8 +5,9 @@ import { vars } from '../util/vars'
 import posed from 'react-pose'
 import { on } from 'util/breakpoint'
 import { withIntl } from 'i18n'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { FormattedHTMLMessage } from 'react-intl'
 import { LogoSvg } from '../svg'
+import SocialLinks from '../components/SocialLinks'
 
 class AboutMeTellMeMore extends Component {
   render() {
@@ -33,9 +34,7 @@ class AboutMeTellMeMore extends Component {
             <StyledTextSection>
               <FormattedHTMLMessage id="aboutMeReadMoreText2" />
             </StyledTextSection>
-            <StyledLogoSeperator>
-              <LogoSvg />
-            </StyledLogoSeperator>
+            <SocialLinks />
           </PosedFadeInAreaChild>
         </PosedFadeInArea>
       </>

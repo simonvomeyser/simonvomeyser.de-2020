@@ -1,12 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { withIntl, Link } from 'i18n'
+import { withIntl } from 'i18n'
 import Layout from 'components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
 import PageLayout from 'components/PageLayout'
 import FormInput from 'components/FormInput'
 import styled from 'styled-components'
-import { MailSvg, XingSvg, TwitterSvg } from 'svg'
+import SocialLinks from '../components/SocialLinks'
+
 import {
   StyledPageHeading,
   StyledSubHeadingText,
@@ -134,30 +134,7 @@ class ContactPage extends React.Component {
                 Senden {this.state.isSubmitting ? '...' : null}
               </StyledPrimaryButton>
             </ContactForm>
-            <StyledIconLinks>
-              <StyledIconLink
-                href="https://twitter.com/simonvomeyser"
-                title="Besuch mich auf Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <TwitterSvg />
-              </StyledIconLink>
-              <StyledIconLink
-                href="mailto:simon.vom.eyser@gmail.com"
-                title="Mail me maybe?"
-              >
-                <MailSvg />
-              </StyledIconLink>
-              <StyledIconLink
-                href="https://www.xing.com/profile/Simon_vomEyser"
-                title="Schreib mir bei Xing :)"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <XingSvg />
-              </StyledIconLink>
-            </StyledIconLinks>
+            <SocialLinks />
           </StyledContainer>
         </PageLayout>
       </Layout>
@@ -186,24 +163,4 @@ const StyledFormError = styled.div`
   margin-bottom: 0.5rem;
   color: red;
   line-height: 1.4;
-`
-
-const StyledIconLinks = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  margin-bottom: 1rem;
-`
-
-const StyledIconLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 50px;
-  height: 100%;
-  margin: 1rem;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  :hover {
-    transform: scale(1.1);
-  }
 `
