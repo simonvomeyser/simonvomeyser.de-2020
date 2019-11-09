@@ -59,3 +59,5 @@ export const vars = {
     },
   },
 }
+
+export const primaryColor = vars.styles.colors.accent4
