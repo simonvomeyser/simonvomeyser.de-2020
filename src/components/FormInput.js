@@ -59,11 +59,11 @@ const FloatingLabel = styled.label`
 
 const StyledErrorIcon = styled.div`
   position: absolute;
-  top: 17px;
+  top: 0.75rem;
+  line-height: 0.85;
   right: 18px;
   color: red;
   font-size: 34px;
-  content: '×';
 `
 
 const StyledErrorLine = styled.div`
@@ -77,15 +77,13 @@ const StyledErrorLine = styled.div`
 
 const PosedErrorIcon = posed(StyledErrorIcon)({
   hide: {
-    scale: 0.1,
-    rotate: 45,
     opacity: 0,
+    y: -10,
   },
   show: {
-    rotate: 0,
     opacity: 1,
-    transition: { type: 'spring', stiffness: 500, duration: 750 },
-    scale: 1,
+    y: 0,
+    transition: { type: 'spring', damping: 200, duration: 300 },
   },
 })
 
@@ -97,6 +95,6 @@ const PosedErrorLine = posed(StyledErrorLine)({
   show: {
     height: '100%',
     opacity: 1,
-    transition: { type: 'spring', damping: 200, duration: 500 },
+    transition: { type: 'spring', damping: 200, duration: 300 },
   },
 })
