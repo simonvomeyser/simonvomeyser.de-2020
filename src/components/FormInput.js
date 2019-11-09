@@ -30,6 +30,7 @@ const StyledWrapper = styled.div`
   position: relative;
   border: 1px solid;
   border-color: ${vars.styles.colors.neutral9};
+  border-right: 3px solid ${vars.styles.colors.accent3};
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 1rem;
 
@@ -68,7 +69,7 @@ const StyledErrorIcon = styled.div`
 const StyledErrorLine = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  right: -3px;
   background: red;
   width: 3px;
   height: 100%;
