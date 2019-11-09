@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 import posed from 'react-pose'
-import { vars, primaryColor } from 'util/vars'
+import { vars, errorColor } from 'util/vars'
 
 export default class FormInput extends Component {
   render() {
@@ -63,7 +63,7 @@ const StyledErrorIcon = styled.div`
   top: 0.75rem;
   line-height: 0.85;
   right: 18px;
-  color: red;
+  color: ${errorColor};
   font-size: 34px;
 `
 
@@ -71,7 +71,7 @@ const StyledErrorLine = styled.div`
   position: absolute;
   top: 0;
   right: -3px;
-  background: red;
+  background: ${errorColor};
   width: 3px;
   height: 100%;
 `
