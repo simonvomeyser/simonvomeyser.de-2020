@@ -26,6 +26,24 @@ export default class FormInput extends Component {
   }
 }
 
+const StyledWrapper = styled.div`
+  position: relative;
+  border: 1px solid;
+  border-color: ${vars.styles.colors.neutral9};
+  background: ${vars.styles.colors.neutral10};
+  margin-bottom: 1rem;
+
+  > *:not(:placeholder-shown),
+  > *:focus {
+    + label {
+      font-size: 10px;
+      opacity: 0.5;
+      top: -0.75rem;
+      left: 0;
+    }
+  }
+`
+
 const FloatingLabel = styled.label`
   position: absolute;
   z-index: 1;
@@ -54,24 +72,6 @@ const StyledErrorLine = styled.div`
   background: red;
   width: 3px;
   height: 100%;
-`
-
-const StyledWrapper = styled.div`
-  position: relative;
-  border: 1px solid;
-  border-color: ${vars.styles.colors.neutral9};
-  background: ${vars.styles.colors.neutral10};
-  margin-bottom: 1rem;
-
-  > *:not(:placeholder-shown),
-  > *:focus {
-    + label {
-      font-size: 10px;
-      opacity: 0.5;
-      top: -0.75rem;
-      left: 0;
-    }
-  }
 `
 
 const PosedErrorIcon = posed(StyledErrorIcon)({
