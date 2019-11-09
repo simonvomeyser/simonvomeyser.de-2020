@@ -7,6 +7,7 @@ import { on } from 'util/breakpoint'
 import { FormattedHTMLMessage } from 'react-intl'
 import { LogoSvg } from '../svg'
 import SocialLinks from '../components/SocialLinks'
+import { StyledContainer } from '../styled-components/Container'
 
 class AboutMeTellMeMore extends Component {
   render() {
@@ -23,15 +24,19 @@ class AboutMeTellMeMore extends Component {
             <FormattedHTMLMessage id="aboutMeReadMoreHeading1" />
           </PosedFadeInAreaChild>
           <PosedFadeInAreaChild>
-            <StyledTextSection>
-              <FormattedHTMLMessage
-                id="aboutMeReadMoreText1"
-                values={{ yearsAsDeveloper }}
-              />
-            </StyledTextSection>
+            <StyledContainer small>
+              <StyledTextSection>
+                <FormattedHTMLMessage
+                  id="aboutMeReadMoreText1"
+                  values={{ yearsAsDeveloper }}
+                />
+              </StyledTextSection>
+            </StyledContainer>
             <FormattedHTMLMessage id="aboutMeReadMoreHeading2" />
             <StyledTextSection>
-              <FormattedHTMLMessage id="aboutMeReadMoreText2" />
+              <StyledContainer small>
+                <FormattedHTMLMessage id="aboutMeReadMoreText2" />
+              </StyledContainer>
             </StyledTextSection>
             <SocialLinks />
           </PosedFadeInAreaChild>
@@ -45,7 +50,7 @@ export default AboutMeTellMeMore
 
 const StyledFadeInArea = styled.div`
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 4rem;
   max-width: 800px;
   h2 {
     font-size: ${vars.styles.fontSizes.size7};
@@ -63,7 +68,7 @@ const StyledLine = styled.div`
   height: 3px;
   background-color: ${vars.styles.colors.accent4};
   padding: 0 1rem;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 3rem auto;
 `
 
 const StyledLogoSeperator = styled.div`
