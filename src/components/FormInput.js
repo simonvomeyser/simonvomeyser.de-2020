@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
   position: relative;
   border: 1px solid;
   border-color: ${vars.styles.colors.neutral9};
-  border-right: 3px solid ${vars.styles.colors.accent2};
+  border-right: 3px solid ${vars.styles.colors.accent3};
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 1rem;
 
