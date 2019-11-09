@@ -49,11 +49,11 @@ const StyledErrorIcon = styled.div`
 
 const StyledErrorLine = styled.div`
   position: absolute;
-  bottom: -2px;
+  top: 0;
   right: 0;
   background: red;
-  height: 3px;
-  width: 100%;
+  width: 3px;
+  height: 100%;
 `
 
 const StyledWrapper = styled.div`
@@ -90,11 +90,11 @@ const PosedErrorIcon = posed(StyledErrorIcon)({
 
 const PosedErrorLine = posed(StyledErrorLine)({
   hide: {
-    width: 0,
+    height: 0,
     opacity: 0,
   },
   show: {
-    width: '100%',
+    height: '100%',
     opacity: 1,
     transition: { type: 'spring', damping: 200, duration: 500 },
   },
