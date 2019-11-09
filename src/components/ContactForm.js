@@ -59,9 +59,13 @@ class ContactForm extends React.Component {
             hasError={!!errors.text}
           />
 
-          <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
+          <StyledMessageWrapper>
+            <ContactMessage />
+          </StyledMessageWrapper>
 
-          <ContactMessage />
+          <StyledButtonWrapper>
+            <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
+          </StyledButtonWrapper>
         </form>
       </StyledWrapper>
     )
@@ -73,5 +77,14 @@ export default ContactForm
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+`
+
+const StyledButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const StyledMessageWrapper = styled.div`
   margin-bottom: 1rem;
 `
