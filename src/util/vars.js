@@ -52,6 +52,10 @@ export const vars = {
       accent4: '#6EB9B3',
       accent5: '#32B0A6',
       accent6: '#048C81',
+      secondaryAccent1: '#F3E4E5',
+      secondaryAccent2: '#EA8185',
+      secondaryAccent3: '#E2787D',
+      secondaryAccent4: '#E15258',
     },
     fontFamilies: {
       default: "'Open Sans', sans-serif",
@@ -61,3 +65,4 @@ export const vars = {
 }
 
 export const primaryColor = vars.styles.colors.accent4
+export const errorColor = vars.styles.colors.secondaryAccent4
