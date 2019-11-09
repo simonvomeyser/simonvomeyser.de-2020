@@ -15,7 +15,6 @@ export default class FormInput extends Component {
         <FloatingLabel>
           <FormattedMessage id={label} />
         </FloatingLabel>
-        <PosedSuccessIcon pose={isValid ? 'show' : 'hide'} />
         <PosedErrorIcon pose={hasError ? 'show' : 'hide'}>×</PosedErrorIcon>
         <PosedErrorLine pose={hasError ? 'show' : 'hide'} />
       </StyledWrapper>
@@ -68,37 +67,6 @@ const StyledErrorIcon = styled.div`
   font-size: 34px;
 `
 
-const StyledSuccessIcon = styled.div`
-  position: absolute;
-  top: 0.75rem;
-  line-height: 0.85;
-  right: 18px;
-  width: 30px;
-  height: 30px;
-  &:before {
-    position: absolute;
-    left: 2px;
-    top: 15px;
-    transform: rotate(45deg);
-    display: block;
-    content: '';
-    width: 10px;
-    height: 3px;
-    background-color: ${primaryColor};
-  }
-  &:after {
-    position: absolute;
-    left: 6px;
-    top: 12px;
-    transform: rotate(-45deg);
-    display: block;
-    content: '';
-    width: 20px;
-    height: 3px;
-    background-color: ${primaryColor};
-  }
-`
-
 const StyledErrorLine = styled.div`
   position: absolute;
   top: 0;
@@ -109,18 +77,6 @@ const StyledErrorLine = styled.div`
 `
 
 const PosedErrorIcon = posed(StyledErrorIcon)({
-  hide: {
-    opacity: 0,
-    y: -10,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', damping: 200, duration: 300 },
-  },
-})
-
-const PosedSuccessIcon = posed(StyledSuccessIcon)({
   hide: {
     opacity: 0,
     y: -10,
