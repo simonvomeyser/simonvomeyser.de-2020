@@ -9,7 +9,7 @@ export default class ContactInput extends Component {
           name="email"
           type="email"
           value={this.props.value}
-          onBlur={this.props.update}
+          onBlur={this.props.validate}
           onChange={this.props.update}
           placeholder=" "
         />

@@ -17,18 +17,19 @@ class ContactForm extends Component {
     errors: {},
     isSubmitting: false,
     isDone: false,
+    isDirty: false,
   }
 
   update = ({ target }) => {
     this.setState({
       [target.name]: target.value,
     })
-    this.validate()
+    this.removeError(target.name)
   }
 
   handleSubmit = e => {
     e.preventDefault()
-    this.setState({ isSubmitting: true })
+    this.setState({ isSubmitting: true, isDirty: true })
 
     if (!this.validate()) {
       this.setState({ isSubmitting: false })
@@ -46,14 +47,30 @@ class ContactForm extends Component {
     }
     return 'emailAndTextRequired'
   }
-  validate = () => {
+  removeError = key => {
+    const newErrors = Object.assign({}, this.state.errors)
+    delete newErrors[key]
+
+    this.setState({ errors: newErrors })
+  }
+  validate = event => {
+    // Don't validate before there was not one click on save
+    if (!this.state.isDirty) {
+      return
+    }
+
     const { email, text } = this.state
+    const key = event ? event.target.name : null
 
     const newErrors = {}
 
-    newErrors.email = !isEmail(email)
+    if (!key || key === 'email') {
+      newErrors.email = !isEmail(email)
+    }
 
-    newErrors.text = !isContactText(text)
+    if (!key || key === 'text') {
+      newErrors.text = !isContactText(text)
+    }
 
     this.setState({ errors: newErrors })
 
@@ -72,11 +89,13 @@ class ContactForm extends Component {
               value={email}
               update={this.update}
               hasError={!!errors.email}
+              validate={this.validate}
             />
             <ContactTextarea
               value={text}
               update={this.update}
               hasError={!!errors.text}
+              validate={this.validate}
             />
 
             <StyledMessageWrapper>

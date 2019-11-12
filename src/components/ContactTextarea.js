@@ -11,7 +11,7 @@ export default class ContactTextarea extends Component {
           cols="30"
           rows="10"
           value={this.props.value}
-          onBlur={this.props.udpate}
+          onBlur={this.props.validate}
           onChange={this.props.update}
         />
       </FormInput>
