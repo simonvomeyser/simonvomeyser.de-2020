@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'util/vars'
 
-export default class NameAndBrand extends Component {
+export default class Spinner extends Component {
   render() {
     return (
       <StyledSpinner>
@@ -21,12 +21,12 @@ const StyledSpinner = styled.div`
   .lds-ellipsis {
     display: inline-block;
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 30px;
   }
   .lds-ellipsis div {
     position: absolute;
-    top: 27px;
+    top: 10px;
     width: 11px;
     height: 11px;
     border-radius: 50%;
