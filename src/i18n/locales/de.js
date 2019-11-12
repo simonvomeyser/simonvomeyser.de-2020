@@ -70,4 +70,10 @@ module.exports = {
   `,
   emailPlaceholder: 'deine E-Mail',
   textPlaceholder: 'frag mich etwas',
+  contactMessageHeading: 'Ups, da ist was schief gelaufen!',
+  emailRequired:
+    'E-Mail muss eine echte E-Mail Adresse sein. Ich wette du bist überrascht.',
+  textRequired: 'Der Text muss etwas länger sein, so  das schaffst du!',
+  emailAndTextRequired:
+    'Ohne E-Mail und genug text kann das Formular nichts für dich tun...',
 }
