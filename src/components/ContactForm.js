@@ -1,49 +1,67 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
 import { StyledPrimaryButton } from '../styled-components'
 
 import ContactTextarea from './ContactTextarea'
 import ContactInput from './ContactInput'
-import ContactMessage from './ContactMessage'
+import Message from './Message'
 import { isEmail } from '../util/isEmail'
+import { FormattedMessage } from 'react-intl'
+import { isContactText } from '../util/isContactText'
 
-class ContactForm extends React.Component {
+class ContactForm extends Component {
   state = {
     email: '',
     text: '',
     errors: {},
+    isSubmitting: false,
+    isLoading: false,
   }
 
   update = ({ target }) => {
-    const newErrors = this.state.errors
-    newErrors[target.name] = ''
-
     this.setState({
       [target.name]: target.value,
-      errors: newErrors,
     })
+    this.validate()
   }
 
   handleSubmit = e => {
     e.preventDefault()
+    this.setState({ isSubmitting: true })
+
+    if (!this.validate()) {
+      this.setState({ isSubmitting: false })
+      return
+    }
+  }
+  getMessageIdToDisplay = () => {
+    const { email: emailError, text: textError } = this.state.errors
+
+    if (emailError && !textError) {
+      return 'emailRequired'
+    }
+    if (!emailError && textError) {
+      return 'textRequired'
+    }
+    return 'emailAndTextRequired'
+  }
+  validate = () => {
     const { email, text } = this.state
 
     const newErrors = {}
 
-    if (!isEmail(email)) {
-      newErrors.email = 'emailError'
-    }
+    newErrors.email = !isEmail(email)
 
-    if (text.length < 10) {
-      newErrors.text = 'textError'
-    }
+    newErrors.text = !isContactText(text)
 
     this.setState({ errors: newErrors })
+
+    return !newErrors.email && !newErrors.text
   }
 
   render() {
-    const { email, text, errors } = this.state
+    const { email, text, errors, isSubmitting } = this.state
+    const idForError = this.getMessageIdToDisplay()
 
     return (
       <StyledWrapper>
@@ -60,11 +78,17 @@ class ContactForm extends React.Component {
           />
 
           <StyledMessageWrapper>
-            <ContactMessage />
+            <Message
+              heading={<FormattedMessage id="contactMessageHeading" />}
+              text={<FormattedMessage id={idForError} />}
+              shown={errors.email || errors.text}
+            />
           </StyledMessageWrapper>
 
           <StyledButtonWrapper>
-            <StyledPrimaryButton type="submit">Senden</StyledPrimaryButton>
+            <StyledPrimaryButton disabled={isSubmitting} type="submit">
+              Senden
+            </StyledPrimaryButton>
           </StyledButtonWrapper>
         </form>
       </StyledWrapper>
