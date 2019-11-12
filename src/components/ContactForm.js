@@ -8,6 +8,7 @@ import Message from './Message'
 import { isEmail } from '../util/isEmail'
 import { FormattedMessage } from 'react-intl'
 import { isContactText } from '../util/isContactText'
+import Spinner from './Spinner'
 
 class ContactForm extends Component {
   state = {
@@ -15,7 +16,7 @@ class ContactForm extends Component {
     text: '',
     errors: {},
     isSubmitting: false,
-    isLoading: false,
+    isDone: false,
   }
 
   update = ({ target }) => {
@@ -60,37 +61,45 @@ class ContactForm extends Component {
   }
 
   render() {
-    const { email, text, errors, isSubmitting } = this.state
+    const { email, text, errors, isSubmitting, isDone } = this.state
     const idForError = this.getMessageIdToDisplay()
 
     return (
       <StyledWrapper>
         <form noValidate action="" onSubmit={this.handleSubmit}>
-          <ContactInput
-            value={email}
-            update={this.update}
-            hasError={!!errors.email}
-          />
-          <ContactTextarea
-            value={text}
-            update={this.update}
-            hasError={!!errors.text}
-          />
-
-          <StyledMessageWrapper>
-            <Message
-              heading={<FormattedMessage id="contactMessageHeading" />}
-              text={<FormattedMessage id={idForError} />}
-              shown={errors.email || errors.text}
-              type="success"
+          <fieldset disabled={isSubmitting || isDone}>
+            <ContactInput
+              value={email}
+              update={this.update}
+              hasError={!!errors.email}
             />
-          </StyledMessageWrapper>
+            <ContactTextarea
+              value={text}
+              update={this.update}
+              hasError={!!errors.text}
+            />
 
-          <StyledButtonWrapper>
-            <StyledPrimaryButton disabled={isSubmitting} type="submit">
-              Senden
-            </StyledPrimaryButton>
-          </StyledButtonWrapper>
+            <StyledMessageWrapper>
+              <Message
+                heading={<FormattedMessage id="contactMessageHeading" />}
+                text={<FormattedMessage id={idForError} />}
+                shown={errors.email || errors.text}
+                type="error"
+              />
+              <Message
+                heading={<FormattedMessage id="contactMessageHeading" />}
+                text={<FormattedMessage id={idForError} />}
+                shown={isDone}
+                type="success"
+              />
+            </StyledMessageWrapper>
+
+            <StyledButtonWrapper hidden={isDone}>
+              <StyledPrimaryButton type="submit">
+                {isSubmitting ? <Spinner /> : <FormattedMessage id="send" />}
+              </StyledPrimaryButton>
+            </StyledButtonWrapper>
+          </fieldset>
         </form>
       </StyledWrapper>
     )
@@ -108,6 +117,8 @@ const StyledWrapper = styled.div`
 const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  transition: opacity 0.28s ease-in-out;
+  opacity: ${({ hidden }) => (hidden ? 0.1 : 1)};
 `
 
 const StyledMessageWrapper = styled.div`

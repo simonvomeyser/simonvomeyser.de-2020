@@ -75,4 +75,5 @@ module.exports = {
     'The text needs to be text. You can do more than a few characters, I believe in you!',
   emailAndTextRequired:
     'Without an email and enough text there is nothing this form can do for you...',
+  send: 'send it!',
 }

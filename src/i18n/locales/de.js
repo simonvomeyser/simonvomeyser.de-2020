@@ -73,7 +73,9 @@ module.exports = {
   contactMessageHeading: 'Ups, da ist was schief gelaufen!',
   emailRequired:
     'E-Mail muss eine echte E-Mail Adresse sein. Ich wette du bist überrascht.',
-  textRequired: 'Der Text muss etwas länger sein, so  das schaffst du!',
+  textRequired:
+    'Der Text muss etwas länger sein, ein Zehntel von einem Tweet wäre toll!',
   emailAndTextRequired:
-    'Ohne E-Mail und genug text kann das Formular nichts für dich tun...',
+    'Ohne E-Mail und genug Text kann das Formular nichts für dich tun...',
+  send: 'weg damit!',
 }
