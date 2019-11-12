@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
   position: relative;
   border: 1px solid;
   border-color: ${vars.styles.colors.neutral9};
-  border-right: 3px solid ${vars.styles.colors.accent3};
+  border-right: 2px solid ${vars.styles.colors.accent3};
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 1rem;
 
@@ -70,9 +70,9 @@ const StyledErrorIcon = styled.div`
 const StyledErrorLine = styled.div`
   position: absolute;
   top: 0;
-  right: -3px;
+  right: -2px;
   background: ${errorColor};
-  width: 3px;
+  width: 2px;
   height: 100%;
 `
 
@@ -84,7 +84,6 @@ const PosedErrorIcon = posed(StyledErrorIcon)({
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', damping: 200, duration: 300 },
   },
 })
 
@@ -96,6 +95,5 @@ const PosedErrorLine = posed(StyledErrorLine)({
   show: {
     height: '100%',
     opacity: 1,
-    transition: { type: 'spring', damping: 200, duration: 300 },
   },
 })
