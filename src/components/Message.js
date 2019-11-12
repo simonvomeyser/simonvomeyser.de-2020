@@ -1,29 +1,38 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars, errorColor } from '../util/vars'
+import { vars, errorColor, primaryColor } from '../util/vars'
 import posed from 'react-pose'
 
 export default class Message extends Component {
   render() {
-    const { shown, heading, text } = this.props
+    const { shown, heading, text, type } = this.props
     return (
-      <PosedWrapper pose={shown ? 'shown' : 'hidden'}>
-        <StyledHeading>{heading}</StyledHeading>
-        <StyledText>{text}</StyledText>
+      <PosedWrapper pose={shown ? 'shown' : 'hidden'} type={type}>
+        <StyledHeading type={type}>{heading}</StyledHeading>
+        <StyledText type={type}>{text}</StyledText>
       </PosedWrapper>
     )
   }
 }
+const errorBorderColor = vars.styles.colors.secondaryAccent3
+const errorBgColor = vars.styles.colors.secondaryAccent1
+const errorTextColor = vars.styles.colors.secondaryAccent2
+
+const successBorderColor = vars.styles.colors.accent3
+const successBgColor = vars.styles.colors.accent1
+const successTextColor = vars.styles.colors.accent4
 
 const StyledWrapper = styled.div`
   position: relative;
   padding: 1rem;
-  border: 2px solid ${vars.styles.colors.secondaryAccent3};
-  background: ${vars.styles.colors.secondaryAccent1};
+  border: 2px solid
+    ${({ type }) => (type == 'error' ? errorBorderColor : successBorderColor)};
+  background: ${({ type }) =>
+    type == 'error' ? errorBgColor : successBgColor};
 `
 
 const StyledHeading = styled.div`
-  color: ${errorColor};
+  color: ${({ type }) => (type == 'error' ? errorColor : primaryColor)};
   font-family: ${vars.styles.fontFamilies.special};
   font-size: ${vars.styles.fontSizes.size5};
   margin-bottom: 0.6rem;
@@ -31,7 +40,7 @@ const StyledHeading = styled.div`
 
 const StyledText = styled.div`
   font-size: ${vars.styles.fontSizes.size2};
-  color: ${vars.styles.colors.secondaryAccent2};
+  color: ${({ type }) => (type == 'error' ? errorTextColor : successTextColor)};
 `
 
 const PosedWrapper = posed(StyledWrapper)({

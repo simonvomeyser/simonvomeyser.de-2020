@@ -82,6 +82,7 @@ class ContactForm extends Component {
               heading={<FormattedMessage id="contactMessageHeading" />}
               text={<FormattedMessage id={idForError} />}
               shown={errors.email || errors.text}
+              type="success"
             />
           </StyledMessageWrapper>
 
