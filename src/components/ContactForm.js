@@ -71,10 +71,14 @@ class ContactForm extends Component {
     this.setState({ errors: newErrors })
   }
   validateAll = () => {
-    this.validateInput('email')
-    this.validateInput('text')
+    const newErrors = {
+      email: !isEmail(this.state.email),
+      text: !isContactText(this.state.text),
+    }
 
-    return !this.state.errors.email && !this.state.errors.text
+    this.setState({ errors: newErrors })
+
+    return !newErrors.email && !newErrors.text
   }
 
   render() {
