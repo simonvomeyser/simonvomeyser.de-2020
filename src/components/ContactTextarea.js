@@ -4,7 +4,11 @@ import FormInput from 'components/FormInput'
 export default class ContactTextarea extends Component {
   render() {
     return (
-      <FormInput label="textPlaceholder" hasError={this.props.hasError}>
+      <FormInput
+        label="textPlaceholder"
+        hasError={this.props.hasError}
+        disabled={this.props.disabled}
+      >
         <textarea
           name="text"
           placeholder=" "

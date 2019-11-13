@@ -7,10 +7,10 @@ import { vars, errorColor } from 'util/vars'
 
 export default class FormInput extends Component {
   render() {
-    const { children, hasError, isValid, label } = this.props
+    const { children, hasError, disabled, label } = this.props
 
     return (
-      <StyledWrapper>
+      <StyledWrapper disabled={disabled}>
         {children}
         <FloatingLabel>
           <FormattedMessage id={label} />
@@ -34,6 +34,8 @@ const StyledWrapper = styled.div`
   border-right: 2px solid ${vars.styles.colors.accent3};
   background: ${vars.styles.colors.neutral10};
   margin-bottom: 1rem;
+  transition: opacity 0.28s ease-in-out;
+  opacity: ${({ disabled }) => (disabled ? 0.4 : 1)};
 
   > *:not(:placeholder-shown),
   > *:focus {
@@ -53,7 +55,7 @@ const FloatingLabel = styled.label`
   left: 0.75rem;
   font-size: 0.75rem;
   color: grey;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0.75;
   pointer-events: none;
 `

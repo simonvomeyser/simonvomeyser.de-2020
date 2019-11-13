@@ -44,8 +44,12 @@ class ContactForm extends Component {
       .catch(this.setToDone) // Let Sentry log errors, don't show them
   }
   setToDone = () => {
-    this.setState({ isDone: true, isSubmitting: false, email: '', text: '' })
+    this.setState({ isDone: true, isSubmitting: false })
+    setTimeout(() => {
+      this.setState({ email: '', text: '' })
+    }, 1000)
   }
+  // Show different errors to inrease usablity
   getMessageIdToDisplay = () => {
     const { email: emailError, text: textError } = this.state.errors
 
@@ -102,12 +106,14 @@ class ContactForm extends Component {
               update={this.update}
               hasError={!!errors.email}
               validate={this.validateInput}
+              disabled={isDone}
             />
             <ContactTextarea
               value={text}
               update={this.update}
               hasError={!!errors.text}
               validate={this.validateInput}
+              disabled={isDone}
             />
 
             <StyledMessageWrapper>
