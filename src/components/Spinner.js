@@ -22,14 +22,14 @@ const StyledSpinner = styled.div`
     display: inline-block;
     position: relative;
     width: 60px;
-    height: 30px;
+    height: 60px;
   }
   > div div {
     position: absolute;
     top: 10px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
+    width: 7px;
+    height: 8px;
+    border-radius: 4px;
     background: ${vars.styles.colors.accent1};
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
