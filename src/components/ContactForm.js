@@ -9,6 +9,7 @@ import { isEmail } from '../util/isEmail'
 import { FormattedMessage } from 'react-intl'
 import { isContactText } from '../util/isContactText'
 import Spinner from './Spinner'
+import axios from 'axios'
 
 class ContactForm extends Component {
   state = {
@@ -34,6 +35,16 @@ class ContactForm extends Component {
       this.setState({ isSubmitting: false })
       return
     }
+
+    const { email, text } = this.state
+
+    axios
+      .post('https://api.simonvomeyser.de', { email, text })
+      .then(this.setToDone)
+      .catch(this.setToDone) // Let Sentry log errors, don't show them
+  }
+  setToDone = () => {
+    this.setState({ isDone: true, isSubmitting: false, email: '', text: '' })
   }
   getMessageIdToDisplay = () => {
     const { email: emailError, text: textError } = this.state.errors
