@@ -53,10 +53,8 @@ class ContactForm extends Component {
 
     this.setState({ errors: newErrors })
   }
-  validateInput = eventOrInputName => {
-    const inputName = eventOrInputName.target
-      ? eventOrInputName.target.name
-      : event
+  validateInput = ({ target }) => {
+    const inputName = target.name
 
     const newErrors = Object.assign(this.state.errors)
 
