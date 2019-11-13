@@ -31,7 +31,7 @@ module.exports = {
   niceToMeetYou: 'Cool dass du hier bist! :)',
   aboutMeOpener: 'Ich bin Simon und ich mache <i>irgendwas im Web</i>',
   aboutMeFirstText:
-    '.... etwas genauer plane, leite und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️',
+    '.... etwas genauer plane und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️',
   aboutMeCta: 'Erzähl ruhig etwas mehr!',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2> Dann erzähl ich mal was über mich! </h2>',
