@@ -101,16 +101,16 @@ class ContactForm extends Component {
 
             <StyledMessageWrapper>
               <Message
-                heading={<FormattedMessage id="contactMessageHeading" />}
+                heading={<FormattedMessage id="contactMessageSuccessHeading" />}
+                text={<FormattedMessage id="contactMessageSuccessText" />}
+                shown={isDone}
+                type="success"
+              />
+              <Message
+                heading={<FormattedMessage id="contactMessageErrorHeading" />}
                 text={<FormattedMessage id={idForError} />}
                 shown={errors.email || errors.text}
                 type="error"
-              />
-              <Message
-                heading={<FormattedMessage id="contactMessageHeading" />}
-                text={<FormattedMessage id={idForError} />}
-                shown={isDone}
-                type="success"
               />
             </StyledMessageWrapper>
 
