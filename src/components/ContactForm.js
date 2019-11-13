@@ -17,7 +17,6 @@ class ContactForm extends Component {
     errors: {},
     isSubmitting: false,
     isDone: false,
-    isDirty: false,
   }
 
   update = ({ target }) => {
@@ -29,7 +28,7 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.setState({ isSubmitting: true, isDirty: true })
+    this.setState({ isSubmitting: true })
 
     if (!this.validateAll()) {
       this.setState({ isSubmitting: false })
