@@ -69,7 +69,7 @@ module.exports = {
   `,
   emailPlaceholder: 'your email',
   textPlaceholder: 'ask me something',
-  contactMessageHeading: 'Oh snap, something went wrong!',
+  contactMessageErrorHeading: 'Oh snap, something went wrong!',
   emailRequired: "Email needs to be a valid email. That's a shocker, right?",
   textRequired:
     'The text needs to be text. You can do more than a few characters, I believe in you!',
