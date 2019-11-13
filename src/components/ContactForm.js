@@ -31,7 +31,7 @@ class ContactForm extends Component {
     e.preventDefault()
     this.setState({ isSubmitting: true, isDirty: true })
 
-    if (!this.validate()) {
+    if (!this.validateAll()) {
       this.setState({ isSubmitting: false })
       return
     }
@@ -47,34 +47,34 @@ class ContactForm extends Component {
     }
     return 'emailAndTextRequired'
   }
-  removeError = key => {
+  removeError = inputName => {
     const newErrors = Object.assign({}, this.state.errors)
-    delete newErrors[key]
+    delete newErrors[inputName]
 
     this.setState({ errors: newErrors })
   }
-  validate = event => {
-    // Don't validate before there was not one click on save
-    if (!this.state.isDirty) {
-      return
+  validateInput = eventOrInputName => {
+    const inputName = eventOrInputName.target
+      ? eventOrInputName.target.name
+      : event
+
+    const newErrors = Object.assign(this.state.errors)
+
+    if (inputName === 'email') {
+      newErrors.email = !isEmail(this.state.email)
     }
 
-    const { email, text } = this.state
-    const key = event ? event.target.name : null
-
-    const newErrors = {}
-
-    if (!key || key === 'email') {
-      newErrors.email = !isEmail(email)
-    }
-
-    if (!key || key === 'text') {
-      newErrors.text = !isContactText(text)
+    if (inputName === 'text') {
+      newErrors.text = !isContactText(this.state.text)
     }
 
     this.setState({ errors: newErrors })
+  }
+  validateAll = () => {
+    this.validateInput('email')
+    this.validateInput('text')
 
-    return !newErrors.email && !newErrors.text
+    return !this.state.errors.email && !this.state.errors.text
   }
 
   render() {
@@ -89,13 +89,13 @@ class ContactForm extends Component {
               value={email}
               update={this.update}
               hasError={!!errors.email}
-              validate={this.validate}
+              validate={this.validateInput}
             />
             <ContactTextarea
               value={text}
               update={this.update}
               hasError={!!errors.text}
-              validate={this.validate}
+              validate={this.validateInput}
             />
 
             <StyledMessageWrapper>
