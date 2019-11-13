@@ -17,13 +17,16 @@ export default class Message extends Component {
 const errorBorderColor = vars.styles.colors.secondaryAccent3
 const errorBgColor = vars.styles.colors.secondaryAccent1
 const errorTextColor = vars.styles.colors.secondaryAccent2
+const errorHeadingColor = errorColor
 
 const successBorderColor = vars.styles.colors.accent3
 const successBgColor = vars.styles.colors.accent1
 const successTextColor = vars.styles.colors.accent4
+const successHeadingColor = vars.styles.colors.accent5
 
 const StyledWrapper = styled.div`
   position: relative;
+  font-family: ${vars.styles.fontFamilies.special};
   padding: 1rem;
   border: 2px solid
     ${({ type }) => (type == 'error' ? errorBorderColor : successBorderColor)};
@@ -32,15 +35,15 @@ const StyledWrapper = styled.div`
 `
 
 const StyledHeading = styled.div`
-  color: ${({ type }) => (type == 'error' ? errorColor : primaryColor)};
-  font-family: ${vars.styles.fontFamilies.special};
-  font-size: ${vars.styles.fontSizes.size6};
-  margin-bottom: 0.6rem;
+  color: ${({ type }) =>
+    type == 'error' ? errorHeadingColor : successHeadingColor};
+  font-size: ${vars.styles.fontSizes.size};
+  margin-bottom: 0.25rem;
 `
 
 const StyledText = styled.div`
-  font-size: ${vars.styles.fontSizes.size3};
-  line-height: 1.6;
+  font-size: ${vars.styles.fontSizes.size4};
+  line-height: 1.5;
   color: ${({ type }) => (type == 'error' ? errorTextColor : successTextColor)};
 `
 
