@@ -76,4 +76,7 @@ module.exports = {
   emailAndTextRequired:
     'Without an email and enough text there is nothing this form can do for you...',
   send: 'send it!',
+  contactMessageSuccessHeading: 'Awesome, it worked!',
+  contactMessageSuccessText:
+    'I will get back to you soon! And if you were only testing this contact form I hope you found it fancy',
 }
