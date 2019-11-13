@@ -81,11 +81,11 @@ const StyledErrorLine = styled.div`
 const PosedErrorIcon = posed(StyledErrorIcon)({
   hide: {
     opacity: 0,
-    y: -10,
+    scale: 0.2,
   },
   show: {
+    scale: 1,
     opacity: 1,
-    y: 0,
   },
 })
 
