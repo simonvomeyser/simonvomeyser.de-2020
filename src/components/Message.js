@@ -34,12 +34,13 @@ const StyledWrapper = styled.div`
 const StyledHeading = styled.div`
   color: ${({ type }) => (type == 'error' ? errorColor : primaryColor)};
   font-family: ${vars.styles.fontFamilies.special};
-  font-size: ${vars.styles.fontSizes.size5};
+  font-size: ${vars.styles.fontSizes.size6};
   margin-bottom: 0.6rem;
 `
 
 const StyledText = styled.div`
-  font-size: ${vars.styles.fontSizes.size2};
+  font-size: ${vars.styles.fontSizes.size3};
+  line-height: 1.6;
   color: ${({ type }) => (type == 'error' ? errorTextColor : successTextColor)};
 `
 
