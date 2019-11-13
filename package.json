@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Simon vom Eyser <simon.vom.eyser@gmail.com>",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-plugin-styled-components": "^1.10.0",
     "browser-lang": "0.0.1",
     "eslint-config-prettier": "^6.4.0",
