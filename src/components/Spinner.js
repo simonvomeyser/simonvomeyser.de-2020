@@ -6,7 +6,7 @@ export default class Spinner extends Component {
   render() {
     return (
       <StyledSpinner>
-        <div class="lds-ellipsis">
+        <div>
           <div />
           <div />
           <div />
@@ -18,13 +18,13 @@ export default class Spinner extends Component {
 }
 
 const StyledSpinner = styled.div`
-  .lds-ellipsis {
+  > div {
     display: inline-block;
     position: relative;
     width: 60px;
     height: 30px;
   }
-  .lds-ellipsis div {
+  > div div {
     position: absolute;
     top: 10px;
     width: 11px;
@@ -33,19 +33,19 @@ const StyledSpinner = styled.div`
     background: ${vars.styles.colors.accent1};
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
-  .lds-ellipsis div:nth-child(1) {
+  > div div:nth-child(1) {
     left: 6px;
     animation: lds-ellipsis1 0.6s infinite;
   }
-  .lds-ellipsis div:nth-child(2) {
+  > div div:nth-child(2) {
     left: 6px;
     animation: lds-ellipsis2 0.6s infinite;
   }
-  .lds-ellipsis div:nth-child(3) {
+  > div div:nth-child(3) {
     left: 26px;
     animation: lds-ellipsis2 0.6s infinite;
   }
-  .lds-ellipsis div:nth-child(4) {
+  > div div:nth-child(4) {
     left: 45px;
     animation: lds-ellipsis3 0.6s infinite;
   }
