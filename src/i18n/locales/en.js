@@ -8,13 +8,12 @@ module.exports = {
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: 'learn more about me 🤓',
-  imprintTitle: 'Imprint',
+  imprintTitle: 'Legal Notice',
   privacyPolicyTitleShort: 'Privacy',
   privacyPolicyTitle: 'Privacy Policy',
   imprintContent: `
   <p>
   English imprint
-  <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </p>
   `,
   privacyPolicyContent: `
@@ -27,7 +26,6 @@ module.exports = {
   navigationProjects: 'Projects',
   navigationContact: 'Contact',
   navigationBlog: 'Blog',
-  navigationLegal: 'Imprint & Data',
   myProfession: 'web development',
   niceToMeetYou: 'Awesome to meet you!',
   aboutMeOpener: 'I am Simon, I do development stuff on the interwebs!',
