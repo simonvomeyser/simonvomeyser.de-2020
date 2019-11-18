@@ -13,7 +13,6 @@ import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 import posed from 'react-pose'
 import { graphql } from 'gatsby'
-import { isSearchEngineBot } from '../util/isSearchEngineBot'
 
 export const query = graphql`
   query {
@@ -36,15 +35,18 @@ export const query = graphql`
 
 class AboutMePage extends React.Component {
   state = {
-    tellMeMoreVisible:
-      isSearchEngineBot() ||
-      sessionStorage.getItem('tellMeMoreVisible') ||
-      false,
+    tellMeMoreVisible: false,
     scroll: null,
   }
   componentDidMount() {
     const SmoothScroll = require('smooth-scroll')
-    this.setState({ scroll: new SmoothScroll() })
+    const scroll = new SmoothScroll()
+
+    isSearchEngineBot = require('../util/isSearchEngineBot')
+    const tellMeMoreVisible =
+      isSearchEngineBot() || sessionStorage.getItem('tellMeMoreVisible')
+
+    this.setState({ scroll, tellMeMoreVisible })
   }
   showSecondText = () => {
     this.setState({ tellMeMoreVisible: true }, () => {
