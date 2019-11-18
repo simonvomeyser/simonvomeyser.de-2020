@@ -10,7 +10,7 @@ import { StyledPageHeading } from '../styled-components'
 const PrivacyPolicy = () => (
   <Layout>
     <PageLayout>
-      <ChangeTitle translate additionalText="navigationPrivacyPolicy" />
+      <ChangeTitle translate additionalText="privacyPolicyTitleShort" />
       <StyledPageHeading>
         <FormattedMessage id="privacyPolicyTitle" />
       </StyledPageHeading>
