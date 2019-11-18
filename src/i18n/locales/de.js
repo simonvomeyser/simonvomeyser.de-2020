@@ -65,7 +65,7 @@ module.exports = {
     schicken.
   </p>
   <p>
-    Ich biete Projektunterschtützung bei <strong>Konzeption</strong> sowie <strong>Entwicklung</strong> und hab immer Interesse an spannenden Projekten und an coolen Teams, in denen man viel voneinander lernen kann. Meld dich einfach und lass uns quatschen 🙂
+    Ich biete Projektunterschtützung bei <strong>Konzeption</strong> und <strong>Entwicklung</strong>. Ich habe auch immer Interesse an spannenden Projekten und an coolen Teams, in denen man viel voneinander lernen kann. Meld dich einfach! 🙂
   </p>
   `,
   emailPlaceholder: 'deine E-Mail',
