@@ -71,16 +71,6 @@ const StyledLine = styled.div`
   margin: 0 auto 3rem auto;
 `
 
-const StyledLogoSeperator = styled.div`
-  svg {
-    width: 100%;
-    height: auto;
-  }
-
-  width: 30px;
-  margin: 0 auto;
-`
-
 const PosedFadeInAreaChild = posed.div({
   initial: {
     opacity: 0,
