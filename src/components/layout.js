@@ -56,14 +56,16 @@ class Layout extends Component {
     )
   }
   shouldAnimate() {
-    const shouldAnimate =
-      localStorage.getItem('hasNavigationAnimationRun') === 'false'
-
-    if (shouldAnimate) {
-      localStorage.setItem('hasNavigationAnimationRun', 'true')
+    if (typeof window === 'undefined') {
+      return true
     }
 
-    return shouldAnimate
+    if (!localStorage.navigationAnimation) {
+      localStorage.navigationAnimation = Date.now()
+      return true
+    }
+
+    return false
   }
 }
 
