@@ -78,5 +78,5 @@ module.exports = {
   send: 'send it!',
   contactMessageSuccessHeading: 'Awesome, it worked!',
   contactMessageSuccessText:
-    'I will get back to you soon! And if you were only testing this contact form I hope you found it fancy',
+    'I will get back to you soon! And if you were only testing this contact form I hope you think it looks fancy ✨',
 }

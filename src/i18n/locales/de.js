@@ -72,13 +72,12 @@ module.exports = {
   textPlaceholder: 'frag mich etwas',
   contactMessageErrorHeading: 'Ups, da ist was schief gelaufen!',
   emailRequired:
-    'E-Mail muss eine echte E-Mail Adresse sein. Ich wette du bist überrascht.',
-  textRequired:
-    'Der Text muss etwas länger sein, ein Zehntel von einem Tweet wäre toll!',
+    'E-Mail muss eine echte E-Mail Adresse sein. Ich wette du bist überrascht!',
+  textRequired: 'Der Text muss etwas länger sein, das schaffst du!',
   emailAndTextRequired:
-    'Ohne E-Mail und genug Text kann das Formular nichts für dich tun...',
+    'Ohne E-Mail und genug Text kann das Formular echt nichts für dich tun...',
   send: 'ab dafür!',
   contactMessageSuccessHeading: 'Yeah, das hat funktioniert!',
   contactMessageSuccessText:
-    'Ich melde mich bei dir. Und falls du nur das Kontaktformular getestet hat hoffe ich du fandest es cool.',
+    'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hat hoffe ich du fandest es fancy ✨',
 }
