@@ -6,15 +6,21 @@ import ChangeTitle from '../components/ChangeTitle'
 import Layout from 'components/Layout'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import { StyledPageHeading } from '../styled-components'
+import { StyledTextSection } from '../styled-components/TextSection'
+import { StyledContainer } from '../styled-components/Container'
+import SocialLinks from '../components/SocialLinks'
 
 const Imprint = () => (
   <Layout>
     <PageLayout>
-      <ChangeTitle translate additionalText="navigationImprint" />
+      <ChangeTitle translate additionalText="imprintTitle" />
       <StyledPageHeading>
         <FormattedMessage id="imprintTitle" />
       </StyledPageHeading>
-      <FormattedHTMLMessage id="imprintContent" />
+      <StyledTextSection>
+        <FormattedHTMLMessage id="imprintContent" />
+      </StyledTextSection>
+      <SocialLinks />
     </PageLayout>
   </Layout>
 )
