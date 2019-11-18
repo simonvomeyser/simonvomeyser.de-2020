@@ -3,11 +3,15 @@ import { vars } from '../util/vars'
 import { on } from 'util/breakpoint'
 
 export const StyledTextSection = styled.div`
-  margin-bottom: 3rem;
-
   p {
     line-height: 1.6;
     margin-bottom: 1.5rem;
+  }
+
+  h2,
+  h2,
+  h3 {
+    margin-bottom: 0.5rem;
   }
 
   strong {
