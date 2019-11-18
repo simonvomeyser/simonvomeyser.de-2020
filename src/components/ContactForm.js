@@ -18,7 +18,7 @@ class ContactForm extends Component {
     errors: {},
     isSubmitting: false,
     isDone: false,
-    apiUrl: 'https://api.simonvomeyser.de/api/contact',
+    apiUrl: 'http://localhost/api/contact',
   }
 
   update = ({ target }) => {
@@ -37,10 +37,10 @@ class ContactForm extends Component {
       return
     }
 
-    const { email, text } = this.state
+    const { email, text, apiUrl } = this.state
 
     axios
-      .post(this.apiUrl, { email, text })
+      .post(apiUrl, { email, text })
       .then(this.setToDone)
       .catch(this.setToDone) // Let Sentry log errors, don't show them
   }
