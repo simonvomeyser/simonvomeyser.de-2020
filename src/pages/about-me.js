@@ -13,7 +13,6 @@ import { on } from 'util/breakpoint'
 import Img from 'gatsby-image'
 import posed from 'react-pose'
 import { graphql } from 'gatsby'
-import SmoothScroll from 'smooth-scroll'
 import { isSearchEngineBot } from '../util/isSearchEngineBot'
 
 export const query = graphql`
@@ -41,17 +40,25 @@ class AboutMePage extends React.Component {
       isSearchEngineBot() ||
       sessionStorage.getItem('tellMeMoreVisible') ||
       false,
+    scroll: null,
+  }
+  componentDidMount() {
+    const SmoothScroll = require('smooth-scroll')
+    this.setState({ scroll: new SmoothScroll() })
   }
   showSecondText = () => {
     this.setState({ tellMeMoreVisible: true }, () => {
       sessionStorage.setItem('tellMeMoreVisible', true)
       setTimeout(() => {
-        const scroll = new SmoothScroll()
-        scroll.animateScroll(document.getElementById('tell-me-more'), null, {
-          speed: 500,
-          speedAsDuration: true,
-          header: '[data-mobile-navigation-scroll-adjust]',
-        })
+        this.state.scroll.animateScroll(
+          document.getElementById('tell-me-more'),
+          null,
+          {
+            speed: 500,
+            speedAsDuration: true,
+            header: '[data-mobile-navigation-scroll-adjust]',
+          }
+        )
       }, 100)
     })
   }
