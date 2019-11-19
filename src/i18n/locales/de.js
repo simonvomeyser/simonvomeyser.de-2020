@@ -201,4 +201,9 @@ module.exports = {
   contactMessageSuccessHeading: 'Yeah, das hat funktioniert!',
   contactMessageSuccessText:
     'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hat hoffe ich du fandest es fancy ✨',
+  pageNotFoundSubHeading:
+    'Computer sagt "Nein!" ... die Seite wurde nicht gefunden',
+  pageNotFoundText:
+    'Die Seite hab ich nicht finden können, das macht mich genau so traurig wie du wahrscheinlich grade bist ',
+  pageNotFoundLink: 'Zurück',
 }

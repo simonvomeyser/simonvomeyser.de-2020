@@ -167,4 +167,8 @@ module.exports = {
   contactMessageSuccessHeading: 'Awesome, it worked!',
   contactMessageSuccessText:
     'I will get back to you soon! And if you were only testing this contact form I hope you think it looks fancy ✨',
+  pageNotFoundSubHeading: 'Computer says "NO" ... page was not found',
+  pageNotFoundText:
+    'The page you were trying to find does not exists. That makes me as sad as it probably makes you 😭',
+  pageNotFoundLink: 'Back',
 }
