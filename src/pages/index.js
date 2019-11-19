@@ -7,32 +7,28 @@ import { vars } from 'util/vars'
 import { on } from 'util/breakpoint'
 import SplitText from 'react-pose-text'
 import posed from 'react-pose'
-import { StyledPrimaryButtonLink } from '../styled-components'
-import { FormattedMessage } from 'react-intl'
-import { ArrowDown } from 'svg'
-import Link from 'i18n/Link'
 
 class IndexPage extends Component {
   render() {
     return (
       <Layout delayInitialAnimation>
-        <PageTransition>
-          <Wrapper>
-            <LogoWrapper>
+        <StyledPageTransition>
+          <StyledWrapper>
+            <StyledLogoWrapper>
               <BigFrontpageLogo />
-            </LogoWrapper>
-            <SuperHeading>
+            </StyledLogoWrapper>
+            <StyledSuperHeading>
               <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
                 web development
               </SplitText>
-            </SuperHeading>
-            <Heading>
+            </StyledSuperHeading>
+            <StyledHeading>
               <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
                 Simon vom Eyser
               </SplitText>
-            </Heading>
-          </Wrapper>
-        </PageTransition>
+            </StyledHeading>
+          </StyledWrapper>
+        </StyledPageTransition>
       </Layout>
     )
   }
@@ -40,12 +36,12 @@ class IndexPage extends Component {
 
 export default withIntl(IndexPage)
 
-const PageTransition = posed.div({
+const StyledPageTransition = posed.div({
   enter: { opacity: 1, beforeChildren: true },
   exit: { opacity: 0, beforeChildren: true },
 })
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -58,7 +54,7 @@ const Wrapper = styled.div`
     min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   }
 `
-const LogoWrapper = styled.div`
+const StyledLogoWrapper = styled.div`
   svg {
     width: 220px;
     height: auto;
@@ -73,7 +69,7 @@ const LogoWrapper = styled.div`
   }
 `
 
-const Heading = styled.h1`
+const StyledHeading = styled.h1`
   font-size: ${vars.styles.fontSizes.size10};
   font-family: ${vars.styles.fontFamilies.special};
   font-weight: 500;
@@ -86,7 +82,7 @@ const Heading = styled.h1`
   }
 `
 
-const SuperHeading = styled.div`
+const StyledSuperHeading = styled.div`
   font-size: ${vars.styles.fontSizes.size8};
   font-weight: 500;
   font-family: ${vars.styles.fontFamilies.special};
