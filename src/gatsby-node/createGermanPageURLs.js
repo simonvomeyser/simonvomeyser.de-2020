@@ -15,7 +15,7 @@ module.exports = createPage => {
     component: privacyPolicyPage,
   })
   createPage({
-    path: '/de/impresssum',
+    path: '/de/impressum',
     context: {
       locale: 'de',
       languages,
