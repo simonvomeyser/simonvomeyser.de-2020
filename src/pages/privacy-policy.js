@@ -7,6 +7,7 @@ import Layout from 'components/Layout'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import { StyledPageHeading } from '../styled-components'
 import SocialLinks from '../components/SocialLinks'
+import { StyledTextSection } from '../styled-components/TextSection'
 
 const PrivacyPolicy = () => (
   <Layout>
@@ -15,7 +16,9 @@ const PrivacyPolicy = () => (
       <StyledPageHeading>
         <FormattedMessage id="privacyPolicyTitle" />
       </StyledPageHeading>
-      <FormattedHTMLMessage id="privacyPolicyContent" />
+      <StyledTextSection>
+        <FormattedHTMLMessage id="privacyPolicyContent" />
+      </StyledTextSection>
       <SocialLinks />
     </PageLayout>
   </Layout>
