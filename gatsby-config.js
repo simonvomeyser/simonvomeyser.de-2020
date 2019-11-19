@@ -24,7 +24,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'simonvomeyser.de',
-        short_name: 'starter',
+        short_name: 'sve.de',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
