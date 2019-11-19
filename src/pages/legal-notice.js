@@ -13,12 +13,12 @@ import SocialLinks from '../components/SocialLinks'
 const Imprint = () => (
   <Layout>
     <PageLayout>
-      <ChangeTitle translate additionalText="imprintTitle" />
+      <ChangeTitle translate additionalText="legalNoticeTitle" />
       <StyledPageHeading>
-        <FormattedMessage id="imprintTitle" />
+        <FormattedMessage id="legalNoticeTitle" />
       </StyledPageHeading>
       <StyledTextSection>
-        <FormattedHTMLMessage id="imprintContent" />
+        <FormattedHTMLMessage id="legalNoticeContent" />
       </StyledTextSection>
       <SocialLinks />
     </PageLayout>

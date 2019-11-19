@@ -8,10 +8,10 @@ module.exports = {
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: 'learn more about me 🤓',
-  imprintTitle: 'Legal Notice',
+  legalNoticeTitle: 'Legal Notice',
   privacyPolicyTitleShort: 'Privacy',
   privacyPolicyTitle: 'Privacy Policy',
-  imprintContent: `
+  legalNoticeContent: `
       <h2>Contact</h2>
       <p>Simon vom Eyser <br>
           Ostwall 234<br>

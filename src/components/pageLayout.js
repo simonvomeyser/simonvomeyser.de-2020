@@ -20,8 +20,8 @@ export default class PageLayout extends Component {
           </StyledPageHeader>
           <StyledPageBody>{this.props.children}</StyledPageBody>
           <StyledPageFooter>
-            <Link to="/imprint" activeClassName="active">
-              <FormattedMessage id="imprintTitle" />
+            <Link to="/legal-notice" activeClassName="active">
+              <FormattedMessage id="legalNoticeTitle" />
             </Link>
             <Link to="/privacy-policy" activeClassName="active">
               <FormattedMessage id="privacyPolicyTitleShort" />
