@@ -38,6 +38,7 @@ const StyledHeading = styled.div`
 const StyledSubHeading = styled.div`
   margin-bottom: 1rem;
   font-size: ${vars.styles.fontSizes.size6};
+  line-height: 1.4;
 `
 const StyledText = styled.div`
   font-size: ${vars.styles.fontSizes.size5};
