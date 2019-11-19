@@ -13,7 +13,7 @@ module.exports = {
   privacyPolicyTitleShort: 'Datenschutz',
   imprintContent: `
       <h2>Kontakt</h2>
-      <p>Angaben gemäß § 5 TMG</p>
+      <p>Angaben gemäß § 5 TMG, Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</p>
       <p>Simon vom Eyser <br>
           Ostwall 234<br>
           47798 Krefeld<br>
