@@ -47,8 +47,8 @@ module.exports = {
           von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
       </p>
       <p>
-        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a>
-          from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        Icons erstellt von <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> und <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a>
+          von <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
       </p>
   `,
   privacyPolicyContent: `
