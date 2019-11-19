@@ -12,12 +12,12 @@ module.exports = {
   privacyPolicyTitle: 'Datenschutzerklärung',
   privacyPolicyTitleShort: 'Datenschutz',
   imprintContent: `
+      <h2>Kontakt</h2>
       <p>Angaben gemäß § 5 TMG</p>
       <p>Simon vom Eyser <br>
           Ostwall 234<br>
           47798 Krefeld<br>
       </p>
-      <h2>Kontakt</h2>
       <p>
           Telefon: +49177 4100666<br>
           E-Mail: <a href="mailto:simon.vom.eyser@gmail.com">simon.vom.eyser@gmail.com</a></p>
