@@ -13,7 +13,6 @@ export const vars = {
       footerRevealHeight: '5rem',
     },
     zIndices: {
-      revealFooter: -10,
       base: 1,
       mobileNavigationList: 10,
       mobileNavigationBar: 20,

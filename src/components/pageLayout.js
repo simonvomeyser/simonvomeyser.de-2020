@@ -4,7 +4,6 @@ import { Link } from 'i18n'
 import { vars } from 'util/vars'
 import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
-import RevealFooter from './RevealFooter'
 import { on } from 'util/breakpoint'
 import { StyledContainer } from '../styled-components'
 import { FormattedMessage } from 'react-intl'
@@ -27,7 +26,6 @@ export default class PageLayout extends Component {
               <FormattedMessage id="privacyPolicyTitleShort" />
             </Link>
           </StyledPageFooter>
-          <RevealFooter />
         </StyledWrapper>
       </StyledContainer>
     )
@@ -42,7 +40,6 @@ const StyledWrapper = styled.div`
 
   ${on('onlyMobile')} {
     padding: 1rem;
-    margin-bottom: ${vars.styles.sizes.footerRevealHeight};
   }
 `
 
@@ -63,7 +60,6 @@ const StyledPageBody = styled.div`
   overflow: hidden;
 
   ${on('onlyMobile')} {
-    margin-bottom: 0;
     padding: 2rem 1rem;
   }
 `
@@ -82,6 +78,6 @@ const StyledPageFooter = styled.div`
   }
 
   ${on('onlyMobile')} {
-    display: none;
+    justify-content: center;
   }
 `
