@@ -17,6 +17,7 @@ export default class ProjectTile extends Component {
           </StyledPreviewImage>
         </StyledPreviewImageWrapper>
         <StyledContent>
+          <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
           <p dangerouslySetInnerHTML={{ __html: project.excerpt }} />
         </StyledContent>
@@ -54,6 +55,10 @@ const StyledPreviewImage = styled.div`
   transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
+`
+const StyledYear = styled.div`
+  font-size: ${vars.styles.fontSizes.size1};
+  color: ${vars.styles.colors.neutral4};
 `
 
 const StyledPreviewImageWrapper = styled.div`
