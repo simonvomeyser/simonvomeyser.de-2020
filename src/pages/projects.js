@@ -7,7 +7,7 @@ import PageLayout from 'components/PageLayout'
 import {
   StyledContainer,
   StyledPageHeading,
-  StyledSubHeadingText,
+  StyledTextSection,
 } from '../styled-components'
 import ProjectTiles from '../components/ProjectTiles'
 import { FormattedMessage } from 'react-intl'
@@ -30,17 +30,19 @@ class Projects extends React.Component {
             <StyledPageHeading>
               <FormattedMessage id="navigationProjects" />
             </StyledPageHeading>
-            <StyledSubHeadingText>
-              <p>
-                Hier eine kleine Auswahl der Projekte, an denen ich beteiligt
-                war. Nicht alle wurden vollständig von mir umgesetzt, aber ich
-                hatte definitv meine Finger im Spiel.
-              </p>
-              <p>
-                Klick die Projekte an um mehr zu erfahren oder benutz die Suche,
-                🙂
-              </p>
-            </StyledSubHeadingText>
+            <StyledContainer small>
+              <StyledTextSection>
+                <p>
+                  Hier eine kleine Auswahl der Projekte, an denen ich beteiligt
+                  war. Nicht alle wurden vollständig von mir umgesetzt, aber ich
+                  hatte definitv meine Finger im Spiel.
+                </p>
+                <p>
+                  Klick die Projekte an um mehr zu erfahren oder benutz die
+                  Suche, 🙂
+                </p>
+              </StyledTextSection>
+            </StyledContainer>
           </StyledContainer>
           <ProjectTiles projects={projects} />
         </PageLayout>
