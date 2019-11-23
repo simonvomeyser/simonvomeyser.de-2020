@@ -1,5 +1,6 @@
 ---
 key: pink
+year: 2019
 name: Pink Werbung
 excerpt: Relaunch der Werbeagentur Webseite mit Wordpress
 logo: listicon-pink.png

@@ -1,5 +1,6 @@
 ---
 key: caa
+year: 2019
 name: Cards & Arts
 excerpt: Drupal Portierung einens existierenden Projekts mit Bitmade.
 link: https://cards-and-arts.de

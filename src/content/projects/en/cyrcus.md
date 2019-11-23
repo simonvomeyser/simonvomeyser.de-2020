@@ -1,5 +1,6 @@
 ---
 key: cyrcus
+year: 2019
 name: Cyrcus
 excerpt: Some String maybe containing HTML <b>right?</b>
 logo: listicon-cyrcus.png

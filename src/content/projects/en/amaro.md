@@ -1,5 +1,6 @@
 ---
 key: amaro
+year: 2019
 name: Amaro
 excerpt: Relaunch der Webseite des Autohauses aus Marienberg mit Mobile.de Schnittstelle
 logo: listicon-amaro.png
