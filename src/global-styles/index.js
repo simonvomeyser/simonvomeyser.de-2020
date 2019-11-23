@@ -1,9 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 import { vars } from 'util/vars'
+import { fonts } from './fonts'
 
 export default createGlobalStyle`
     ${reset}
+    ${fonts}
+
     html {
       box-sizing: border-box;
       font-size: ${vars.styles.fontSizes.base};
