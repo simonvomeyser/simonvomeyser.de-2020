@@ -12,6 +12,7 @@ import xing from 'svg/xing.svg'
 import mail from 'svg/mail.svg'
 import twitter from 'svg/twitter.svg'
 import arrowDown from 'svg/arrow-down.svg'
+import externalLink from 'svg/external-link.svg'
 
 export const LogoNavigationSvg = logoNavigation
 export const LogoSvg = logo
@@ -27,3 +28,4 @@ export const TwitterSvg = twitter
 export const MailSvg = mail
 export const XingSvg = xing
 export const ArrowDown = arrowDown
+export const ExternalLink = externalLink
