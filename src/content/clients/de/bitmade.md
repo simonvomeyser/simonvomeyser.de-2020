@@ -1,5 +1,6 @@
 ---
 key: bitmade
+link: https://amaro.de
 name: Bitmade
 logo: https://res.cloudinary.com/simonvomeyser/image/upload/v1544544667/simonvomeyser.de/clients-bitmade.png
 url: https://bitmade.de/
