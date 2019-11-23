@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { vars } from 'util/vars'
 import { Link } from 'i18n'
 import Img from 'gatsby-image'
+import { ExternalLink as ExternalLinkSvg } from '../svg'
+import ExternalLink from './ExternalLink'
 
 export default class ProjectTile extends Component {
   render() {
@@ -10,11 +12,16 @@ export default class ProjectTile extends Component {
     const projectUrl = '/projects/' + project.key
     return (
       <StyledWrapper>
-        <StyledLink to={projectUrl}>&nbsp;</StyledLink>
+        <StyledLinkToProject to={projectUrl}>&nbsp;</StyledLinkToProject>
         <StyledPreviewImageWrapper>
           <StyledPreviewImage>
             <Img fluid={this.props.image} />
           </StyledPreviewImage>
+          <StyledExternalLinkWrapper>
+            <ExternalLink href={project.link}>
+              <ExternalLinkSvg />
+            </ExternalLink>
+          </StyledExternalLinkWrapper>
         </StyledPreviewImageWrapper>
         <StyledContent>
           <StyledYear>{project.year}</StyledYear>
@@ -26,7 +33,37 @@ export default class ProjectTile extends Component {
   }
 }
 
-const StyledLink = styled(Link)`
+const StyledExternalLinkWrapper = styled.div`
+  display: block;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: ${vars.styles.colors.neutral4};
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+`
+
+// Not used for now, add as a feature later
+const StyledLinkToProject = styled(Link)`
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -43,10 +80,6 @@ const StyledWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-
-  &:hover {
-    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.2);
-  }
 `
 const StyledPreviewImage = styled.div`
   position: absolute;
@@ -58,7 +91,7 @@ const StyledPreviewImage = styled.div`
 `
 const StyledYear = styled.div`
   font-size: ${vars.styles.fontSizes.size1};
-  color: ${vars.styles.colors.neutral4};
+  color: ${vars.styles.colors.neutral3};
 `
 
 const StyledPreviewImageWrapper = styled.div`
@@ -72,12 +105,12 @@ const StyledContent = styled.div`
   h2 {
     font-size: ${vars.styles.fontSizes.size6};
     color: ${vars.styles.colors.neutral5};
-    font-family: ${vars.styles.fontFamilies.special};
     margin-bottom: 0.75rem;
   }
   p {
     font-size: ${vars.styles.fontSizes.size2};
-    color: ${vars.styles.colors.neutral3};
+    font-weight: 300;
+    color: ${vars.styles.colors.neutral4};
     margin-bottom: 1rem;
   }
 `
