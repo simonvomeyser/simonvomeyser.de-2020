@@ -69,6 +69,7 @@ export const query = graphql`
             excerpt
             technologies
             year
+            link
           }
           html
         }
