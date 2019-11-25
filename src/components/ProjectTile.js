@@ -9,6 +9,7 @@ import ExternalLink from './ExternalLink'
 export default class ProjectTile extends Component {
   render() {
     const project = this.props.node.frontmatter
+    const content = this.props.node.html
     return (
       <StyledWrapper>
         <StyledPreviewImageWrapper>
@@ -24,7 +25,7 @@ export default class ProjectTile extends Component {
           </StyledExternalLinkWrapper>
           <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
-          <p dangerouslySetInnerHTML={{ __html: project.excerpt }} />
+          <p dangerouslySetInnerHTML={{ __html: content }} />
         </StyledContent>
       </StyledWrapper>
     )
