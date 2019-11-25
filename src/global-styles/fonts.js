@@ -14,7 +14,6 @@ export const fonts = `
         url('${OpenSans300Woff2}') format('woff2'), /* Super Modern Browsers */
         url('${OpenSans300Woff}') format('woff'), /* Modern Browsers */
         url('../fonts/open-sans-v17-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/open-sans-v17-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
     }
     /* open-sans-regular - latin */
     @font-face {
@@ -27,7 +26,6 @@ export const fonts = `
         url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
         url('../fonts/open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
         url('../fonts/open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/open-sans-v17-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
     }
     /* open-sans-700 - latin */
     @font-face {
@@ -40,6 +38,5 @@ export const fonts = `
         url('../fonts/open-sans-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
         url('../fonts/open-sans-v17-latin-700.woff') format('woff'), /* Modern Browsers */
         url('../fonts/open-sans-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('../fonts/open-sans-v17-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
     }
 `
