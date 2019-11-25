@@ -27,17 +27,6 @@ export default class ProjectTile extends Component {
           <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
           <p dangerouslySetInnerHTML={{ __html: content }} />
-          <StyledTechnologies>
-            <div>
-              <img src={vueImage} alt="" />
-            </div>
-            <div>
-              <img src={vueImage} alt="" />
-            </div>
-            <div>
-              <img src={vueImage} alt="" />
-            </div>
-          </StyledTechnologies>
         </StyledContent>
       </StyledWrapper>
     )
