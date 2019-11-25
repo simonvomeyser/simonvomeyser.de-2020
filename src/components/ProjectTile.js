@@ -96,7 +96,7 @@ const StyledYear = styled.div`
 
 const StyledPreviewImageWrapper = styled.div`
   position: relative;
-  padding-top: 56.666%;
+  padding-top: 50%;
   overflow: hidden;
 `
 
