@@ -17,13 +17,13 @@ export default class ProjectTile extends Component {
           <StyledPreviewImage>
             <Img fluid={this.props.image} />
           </StyledPreviewImage>
+        </StyledPreviewImageWrapper>
+        <StyledContent>
           <StyledExternalLinkWrapper>
             <ExternalLink href={project.link}>
               <ExternalLinkSvg />
             </ExternalLink>
           </StyledExternalLinkWrapper>
-        </StyledPreviewImageWrapper>
-        <StyledContent>
           <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
           <p dangerouslySetInnerHTML={{ __html: project.excerpt }} />
@@ -37,15 +37,16 @@ const StyledExternalLinkWrapper = styled.div`
   display: block;
   position: absolute;
   right: 0.5rem;
-  bottom: 0.5rem;
+  top: 0;
+  transform: translateY(-50%);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: ${vars.styles.colors.neutral4};
+  background-color: ${vars.styles.colors.neutral6};
   transition: 0.3s all ease-in-out;
 
   &:hover {
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: translateY(-50%) scale3d(1.1, 1.1, 1.1);
   }
   a {
     width: 100%;
@@ -101,6 +102,7 @@ const StyledPreviewImageWrapper = styled.div`
 `
 
 const StyledContent = styled.div`
+  position: relative;
   padding: 0.75rem;
   h2 {
     font-size: ${vars.styles.fontSizes.size6};
