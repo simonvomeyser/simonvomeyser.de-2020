@@ -9,10 +9,8 @@ import ExternalLink from './ExternalLink'
 export default class ProjectTile extends Component {
   render() {
     const project = this.props.node.frontmatter
-    const projectUrl = '/projects/' + project.key
     return (
       <StyledWrapper>
-        <StyledLinkToProject to={projectUrl}>&nbsp;</StyledLinkToProject>
         <StyledPreviewImageWrapper>
           <StyledPreviewImage>
             <Img fluid={this.props.image} />
@@ -61,18 +59,6 @@ const StyledExternalLinkWrapper = styled.div`
     height: 18px;
   }
 `
-
-// Not used for now, add as a feature later
-const StyledLinkToProject = styled(Link)`
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`
-
 const StyledWrapper = styled.div`
   position: relative;
   box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
