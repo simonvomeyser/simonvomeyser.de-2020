@@ -1,6 +1,12 @@
 ---
 key: pink
 link: https://amaro.de
-name: Agentur Pink
-url: https://agentur.pink
+year: 2019
+name: Pink Werbung
+excerpt:
+logo: listicon-pink.png
+technologies: ['vuejs', 'wordpress']
+clients: ['pink']
 ---
+
+PINK EN
