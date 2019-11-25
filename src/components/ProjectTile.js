@@ -5,6 +5,7 @@ import { Link } from 'i18n'
 import Img from 'gatsby-image'
 import { ExternalLink as ExternalLinkSvg } from '../svg'
 import ExternalLink from './ExternalLink'
+import vueImage from '../images/technologies/vue.png'
 
 export default class ProjectTile extends Component {
   render() {
@@ -26,6 +27,17 @@ export default class ProjectTile extends Component {
           <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
           <p dangerouslySetInnerHTML={{ __html: content }} />
+          <StyledTechnologies>
+            <div>
+              <img src={vueImage} alt="" />
+            </div>
+            <div>
+              <img src={vueImage} alt="" />
+            </div>
+            <div>
+              <img src={vueImage} alt="" />
+            </div>
+          </StyledTechnologies>
         </StyledContent>
       </StyledWrapper>
     )
@@ -60,6 +72,31 @@ const StyledExternalLinkWrapper = styled.div`
     height: 18px;
   }
 `
+
+const StyledTechnologies = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+  img {
+    width: 1rem;
+  }
+
+  > div {
+    background-color: ${vars.styles.colors.neutral1};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    + div {
+      margin-left: 0.5rem;
+    }
+  }
+`
+
 const StyledWrapper = styled.div`
   position: relative;
   box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
