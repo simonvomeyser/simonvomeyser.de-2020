@@ -57,6 +57,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(content/projects).*/" } }
+      sort: { fields: frontmatter___year, order: DESC }
     ) {
       totalCount
       edges {
