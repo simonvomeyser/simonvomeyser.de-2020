@@ -2,6 +2,7 @@
 key: cyrcus
 link: https://amaro.de
 year: 2015
+month: 1
 name: Cyrcus
 excerpt:
 logo: listicon-cyrcus.png
