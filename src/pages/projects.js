@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { withIntl, Link } from 'i18n'
-import Layout from 'components/Layout'
+import { withIntl, Link } from 'src/i18n'
+import Layout from 'src/components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
-import PageLayout from 'components/PageLayout'
+import PageLayout from 'src/components/PageLayout'
 import {
   StyledContainer,
   StyledPageHeading,
@@ -57,7 +57,10 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(content/projects).*/" } }
-      sort: { fields: [frontmatter___year, frontmatter___month], order: DESC }
+      sort: {
+        fields: [frontmatter___year, frontmatter___month]
+        order: [ASC, DESC]
+      }
     ) {
       totalCount
       edges {

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { withIntl, Link } from 'i18n'
+import { withIntl, Link } from 'src/i18n'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import Layout from 'components/Layout'
+import Layout from 'src/components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
-import PageLayout from 'components/PageLayout'
+import PageLayout from 'src/components/PageLayout'
 import { Backlink } from '../components/Backlink'
-import { vars } from 'util/vars'
+import { vars } from 'src/util/vars'
 import { StyledPageHeading } from '../styled-components'
 
 class ProjectPage extends Component {

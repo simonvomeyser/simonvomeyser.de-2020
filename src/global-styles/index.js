@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
-import { vars } from 'util/vars'
+import { vars } from 'src/util/vars'
 import { fonts } from './fonts'
 
 export default createGlobalStyle`

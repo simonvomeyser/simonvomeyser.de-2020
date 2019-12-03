@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { on } from 'util/breakpoint'
+import { on } from 'src/util/breakpoint'
 import { StaticQuery, graphql } from 'gatsby'
 import ProjectTile from './ProjectTile'
 

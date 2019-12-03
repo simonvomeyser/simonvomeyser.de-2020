@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 import posed from 'react-pose'
-import { vars, errorColor } from 'util/vars'
+import { vars, errorColor } from 'src/util/vars'
 
 export default class FormInput extends Component {
   render() {

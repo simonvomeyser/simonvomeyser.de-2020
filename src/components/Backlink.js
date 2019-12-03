@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Link from 'i18n/Link'
+import Link from 'src/i18n/Link'
 
 const StyledBacklink = styled(Link)`
   svg {

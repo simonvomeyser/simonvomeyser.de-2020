@@ -1,8 +1,8 @@
 import React from 'react'
-import { withIntl } from 'i18n'
-import Layout from 'components/Layout'
+import { withIntl } from 'src/i18n'
+import Layout from 'src/components/Layout'
 import ChangeTitle from '../components/ChangeTitle'
-import PageLayout from 'components/PageLayout'
+import PageLayout from 'src/components/PageLayout'
 import SocialLinks from '../components/SocialLinks'
 
 import {

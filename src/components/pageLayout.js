@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Link } from 'i18n'
-import { vars } from 'util/vars'
+import { Link } from 'src/i18n'
+import { vars } from 'src/util/vars'
 import LanguageChooser from './LanguageChooser'
 import NameAndProfession from './NameAndProfession'
-import { on } from 'util/breakpoint'
+import { on } from 'src/util/breakpoint'
 import { StyledContainer } from '../styled-components'
 import { FormattedMessage } from 'react-intl'
 

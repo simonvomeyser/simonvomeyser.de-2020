@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
+import { vars } from 'src/util/vars'
 
 export default class Spinner extends Component {
   render() {

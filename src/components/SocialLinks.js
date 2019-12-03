@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import styled from 'styled-components'
-import { MailSvg, XingSvg, TwitterSvg } from 'svg'
+import { MailSvg, XingSvg, TwitterSvg } from 'src/svg'
 
 export default class SocialLinks extends Component {
   render() {

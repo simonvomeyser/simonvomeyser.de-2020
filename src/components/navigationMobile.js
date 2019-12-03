@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
-import { on } from 'util/breakpoint'
-import { rgba, anim } from 'util/mixins'
-import LanguageChooser from 'components/LanguageChooser'
-import { navigate } from 'i18n/navigate'
+import { vars } from 'src/util/vars'
+import { on } from 'src/util/breakpoint'
+import { rgba, anim } from 'src/util/mixins'
+import LanguageChooser from 'src/components/LanguageChooser'
+import { navigate } from 'src/i18n/navigate'
 
 import {
   LogoNavigationSvg,
@@ -13,8 +13,8 @@ import {
   BurgerSvg,
   WriteSvg,
   PaperPlaneSvg,
-} from 'svg'
-import NavigationLink from 'components/NavigatonLink'
+} from 'src/svg'
+import NavigationLink from 'src/components/NavigatonLink'
 
 export default class NavigationMobile extends Component {
   constructor() {

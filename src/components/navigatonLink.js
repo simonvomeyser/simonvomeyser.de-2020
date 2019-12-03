@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Link from 'i18n/Link'
+import Link from 'src/i18n/Link'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
+import { vars } from 'src/util/vars'
 import { FormattedMessage } from 'react-intl'
-import { on } from 'util/breakpoint'
-import { rgba } from 'util/mixins'
+import { on } from 'src/util/breakpoint'
+import { rgba } from 'src/util/mixins'
 
 export default class NavigatonLink extends Component {
   render() {

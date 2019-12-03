@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
+import { vars } from 'src/util/vars'
 import { FormattedMessage } from 'react-intl'
 
 export default class NameAndBrand extends Component {

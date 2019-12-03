@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { vars } from 'util/vars'
-import { on } from 'util/breakpoint'
+import { vars } from 'src/util/vars'
+import { on } from 'src/util/breakpoint'
 import PropTypes from 'prop-types'
 import posed from 'react-pose'
 import {
@@ -11,8 +11,8 @@ import {
   WriteSvg,
   PaperPlaneSvg,
   LegalSvg,
-} from 'svg'
-import NavigationLink from 'components/NavigatonLink'
+} from 'src/svg'
+import NavigationLink from 'src/components/NavigatonLink'
 
 class Navigation extends Component {
   static propTypes = {

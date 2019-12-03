@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { GermanySvg, UnitedStatesSvg } from 'svg'
-import { on } from 'util/breakpoint'
+import { GermanySvg, UnitedStatesSvg } from 'src/svg'
+import { on } from 'src/util/breakpoint'
 import { navigate } from '../i18n/navigate'
 
 class LanguageChooser extends Component {

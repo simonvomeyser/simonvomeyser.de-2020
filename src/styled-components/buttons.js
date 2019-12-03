@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { vars } from '../util/vars'
-import Link from 'i18n/Link'
-import { on } from 'util/breakpoint'
+import Link from 'src/i18n/Link'
+import { on } from 'src/util/breakpoint'
 
 const buttonStyles = props => `
   display: flex;

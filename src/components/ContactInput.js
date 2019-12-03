@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FormInput from 'components/FormInput'
+import FormInput from 'src/components/FormInput'
 
 export default class ContactInput extends Component {
   render() {

@@ -1,9 +1,9 @@
 import React from 'react'
-import { withIntl, Link } from 'i18n'
+import { withIntl, Link } from 'src/i18n'
 
-import PageLayout from 'components/PageLayout'
+import PageLayout from 'src/components/PageLayout'
 import ChangeTitle from '../components/ChangeTitle'
-import Layout from 'components/Layout'
+import Layout from 'src/components/Layout'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import { StyledPageHeading } from '../styled-components'
 import { StyledTextSection } from '../styled-components/TextSection'

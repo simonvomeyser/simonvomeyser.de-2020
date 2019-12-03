@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
-    'gatsby-plugin-resolve-src',
+    'gatsby-plugin-root-import',
+    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -9,7 +10,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
