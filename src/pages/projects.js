@@ -59,7 +59,7 @@ export const query = graphql`
       filter: { fileAbsolutePath: { regex: "/(content/projects).*/" } }
       sort: {
         fields: [frontmatter___year, frontmatter___month]
-        order: [ASC, DESC]
+        order: [DESC, DESC]
       }
     ) {
       totalCount
