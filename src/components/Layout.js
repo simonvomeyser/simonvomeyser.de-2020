@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import Navigation from 'src/components/Navigation'
-import NavigationMobile from 'src/components/NavigationMobile'
 import GlobalStyles from '../global-styles'
 import styled from 'styled-components'
 import { vars } from 'src/util/vars'
@@ -40,17 +39,19 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         </Helmet>
-        <Navigation
-          shouldAnimate={shouldAnimate}
-          delayInitialAnimation={this.props.delayInitialAnimation}
-        />
-        <NavigationMobile />
+
+        <div>
+          <Navigation
+              shouldAnimate={shouldAnimate}
+              delayInitialAnimation={this.props.delayInitialAnimation}
+          />
+        </div>
         <PosedWrapper
-          delayInitialAnimation={this.props.delayInitialAnimation}
-          initialPose={shouldAnimate ? 'hidden' : 'visible'}
-          pose="visible"
-        >
-          {children}
+            delayInitialAnimation={this.props.delayInitialAnimation}
+            initialPose={shouldAnimate ? 'hidden' : 'visible'}
+            pose="visible"
+          >
+            {children}
         </PosedWrapper>
       </Fragment>
     )
