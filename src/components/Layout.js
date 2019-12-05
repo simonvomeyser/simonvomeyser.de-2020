@@ -44,13 +44,13 @@ class Layout extends Component {
           shouldAnimate={shouldAnimate}
           delayInitialAnimation={this.props.delayInitialAnimation}
         />
-        <PosedWrapper
+        <PosedContentWrapper
           delayInitialAnimation={this.props.delayInitialAnimation}
           initialPose={shouldAnimate ? 'hidden' : 'visible'}
           pose="visible"
         >
           {children}
-        </PosedWrapper>
+        </PosedContentWrapper>
       </Fragment>
     )
   }
@@ -70,7 +70,7 @@ class Layout extends Component {
 
 export default injectIntl(Layout)
 
-const StyledWrapper = styled.div`
+const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
 
@@ -81,7 +81,7 @@ const StyledWrapper = styled.div`
   }
 `
 
-const PosedWrapper = posed(StyledWrapper)({
+const PosedContentWrapper = posed(StyledContentWrapper)({
   visible: {
     paddingLeft: 70,
     delay: ({ delayInitialAnimation }) => {
