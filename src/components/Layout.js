@@ -39,18 +39,19 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         </Helmet>
-
-        <Navigation
-          shouldAnimate={shouldAnimate}
-          delayInitialAnimation={this.props.delayInitialAnimation}
-        />
-        <PosedContentWrapper
-          delayInitialAnimation={this.props.delayInitialAnimation}
-          initialPose={shouldAnimate ? 'hidden' : 'visible'}
-          pose="visible"
-        >
-          {children}
-        </PosedContentWrapper>
+        <PosedFadeInWrapper initialPose="invisible" pose="visible">
+          <Navigation
+            shouldAnimate={shouldAnimate}
+            delayInitialAnimation={this.props.delayInitialAnimation}
+          />
+          <PosedContentWrapper
+            delayInitialAnimation={this.props.delayInitialAnimation}
+            initialPose={shouldAnimate ? 'hidden' : 'visible'}
+            pose="visible"
+          >
+            {children}
+          </PosedContentWrapper>
+        </PosedFadeInWrapper>
       </Fragment>
     )
   }
@@ -70,6 +71,10 @@ class Layout extends Component {
 
 export default injectIntl(Layout)
 
+const StyledFadeInWrapper = styled.div`
+  opacity: 0;
+`
+
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
@@ -80,6 +85,16 @@ const StyledContentWrapper = styled.div`
     padding-top: ${vars.styles.sizes.navigationMobileHeight};
   }
 `
+
+const PosedFadeInWrapper = posed(StyledFadeInWrapper)({
+  invisible: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { duration: 1000 },
+  },
+})
 
 const PosedContentWrapper = posed(StyledContentWrapper)({
   visible: {
