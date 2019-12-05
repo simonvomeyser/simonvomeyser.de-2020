@@ -40,18 +40,16 @@ class Layout extends Component {
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         </Helmet>
 
-        <div>
-          <Navigation
-              shouldAnimate={shouldAnimate}
-              delayInitialAnimation={this.props.delayInitialAnimation}
-          />
-        </div>
+        <Navigation
+          shouldAnimate={shouldAnimate}
+          delayInitialAnimation={this.props.delayInitialAnimation}
+        />
         <PosedWrapper
-            delayInitialAnimation={this.props.delayInitialAnimation}
-            initialPose={shouldAnimate ? 'hidden' : 'visible'}
-            pose="visible"
-          >
-            {children}
+          delayInitialAnimation={this.props.delayInitialAnimation}
+          initialPose={shouldAnimate ? 'hidden' : 'visible'}
+          pose="visible"
+        >
+          {children}
         </PosedWrapper>
       </Fragment>
     )
