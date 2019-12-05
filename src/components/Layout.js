@@ -11,7 +11,7 @@ import posed, { PoseGroup } from 'react-pose'
 
 class Layout extends Component {
   render() {
-    const { animate, children, data, intl } = this.props
+    const { delayInitialAnimation, children, intl } = this.props
     const shouldAnimate = this.shouldAnimate()
 
     return (
@@ -39,13 +39,16 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         </Helmet>
-        <PosedFadeInWrapper initialPose="invisible" pose="visible">
+        <PosedFadeInWrapper
+          initialPose={shouldAnimate ? 'hidden' : 'visible'}
+          pose="visible"
+        >
           <Navigation
             shouldAnimate={shouldAnimate}
-            delayInitialAnimation={this.props.delayInitialAnimation}
+            delayInitialAnimation={delayInitialAnimation}
           />
           <PosedContentWrapper
-            delayInitialAnimation={this.props.delayInitialAnimation}
+            delayInitialAnimation={delayInitialAnimation}
             initialPose={shouldAnimate ? 'hidden' : 'visible'}
             pose="visible"
           >
@@ -56,15 +59,19 @@ class Layout extends Component {
     )
   }
   shouldAnimate() {
+    console.log('should animatie')
     if (typeof window === 'undefined') {
+      console.log('window undef')
       return true
     }
 
     if (!localStorage.navigationAnimation) {
+      console.log('local storag undef')
       localStorage.navigationAnimation = Date.now()
       return true
     }
 
+    console.log('false')
     return false
   }
 }
@@ -87,7 +94,7 @@ const StyledContentWrapper = styled.div`
 `
 
 const PosedFadeInWrapper = posed(StyledFadeInWrapper)({
-  invisible: {
+  hidden: {
     opacity: 0,
   },
   visible: {
