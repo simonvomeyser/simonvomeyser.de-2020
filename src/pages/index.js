@@ -12,34 +12,27 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout delayInitialAnimation>
-        <StyledPageTransition>
-          <StyledWrapper>
-            <StyledLogoWrapper>
-              <BigFrontpageLogo />
-            </StyledLogoWrapper>
-            <StyledSuperHeading>
-              <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                web development
-              </SplitText>
-            </StyledSuperHeading>
-            <StyledHeading>
-              <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                Simon vom Eyser
-              </SplitText>
-            </StyledHeading>
-          </StyledWrapper>
-        </StyledPageTransition>
+        <StyledWrapper>
+          <StyledLogoWrapper>
+            <BigFrontpageLogo />
+          </StyledLogoWrapper>
+          <StyledSuperHeading>
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              web development
+            </SplitText>
+          </StyledSuperHeading>
+          <StyledHeading>
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              Simon vom Eyser
+            </SplitText>
+          </StyledHeading>
+        </StyledWrapper>
       </Layout>
     )
   }
 }
 
 export default withIntl(IndexPage)
-
-const StyledPageTransition = posed.div({
-  enter: { opacity: 1, beforeChildren: true },
-  exit: { opacity: 0, beforeChildren: true },
-})
 
 const StyledWrapper = styled.div`
   position: relative;
