@@ -39,48 +39,35 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/itg5rkc.css" />
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
         </Helmet>
-        <PosedFadeInWrapper
+        <Navigation
+          shouldAnimate={shouldAnimate}
+          delayInitialAnimation={delayInitialAnimation}
+        />
+        <PosedContentWrapper
+          delayInitialAnimation={delayInitialAnimation}
           initialPose={shouldAnimate ? 'hidden' : 'visible'}
           pose="visible"
         >
-          <Navigation
-            shouldAnimate={shouldAnimate}
-            delayInitialAnimation={delayInitialAnimation}
-          />
-          <PosedContentWrapper
-            delayInitialAnimation={delayInitialAnimation}
-            initialPose={shouldAnimate ? 'hidden' : 'visible'}
-            pose="visible"
-          >
-            {children}
-          </PosedContentWrapper>
-        </PosedFadeInWrapper>
+          {children}
+        </PosedContentWrapper>
       </Fragment>
     )
   }
   shouldAnimate() {
-    console.log('should animatie')
     if (typeof window === 'undefined') {
-      console.log('window undef')
       return true
     }
 
     if (!localStorage.navigationAnimation) {
-      console.log('local storag undef')
       localStorage.navigationAnimation = Date.now()
       return true
     }
 
-    console.log('false')
     return false
   }
 }
 
 export default injectIntl(Layout)
-
-const StyledFadeInWrapper = styled.div`
-  opacity: 0;
-`
 
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
@@ -92,17 +79,6 @@ const StyledContentWrapper = styled.div`
     padding-top: ${vars.styles.sizes.navigationMobileHeight};
   }
 `
-
-const PosedFadeInWrapper = posed(StyledFadeInWrapper)({
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: { duration: 1000 },
-  },
-})
-
 const PosedContentWrapper = posed(StyledContentWrapper)({
   visible: {
     paddingLeft: 70,

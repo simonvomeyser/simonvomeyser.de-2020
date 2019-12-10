@@ -19,6 +19,8 @@ export default createGlobalStyle`
     body {
         margin: 0;
         background-color: ${vars.styles.colors.neutral1};
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
     }
     a, a:hover, a:focus, a:visited, a:active {
         text-decoration: none;
@@ -58,26 +60,33 @@ export default createGlobalStyle`
       line-height: 1.4;
       padding: .75rem;
     }
+
     @keyframes heartBeat {
-    0% {
-      transform: scale(1);
+      0% {
+        transform: scale(1);
+      }
+
+      14% {
+        transform: scale(1.1);
+      }
+
+      28% {
+        transform: scale(1);
+      }
+
+      42% {
+        transform: scale(1.1);
+      }
+
+      70% {
+        transform: scale(1);
+      }
     }
 
-    14% {
-      transform: scale(1.1);
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        25% {opacity: 0;}
+        100% {opacity: 1;}
     }
-
-    28% {
-      transform: scale(1);
-    }
-
-    42% {
-      transform: scale(1.1);
-    }
-
-    70% {
-      transform: scale(1);
-    }
-  }
 
 `
