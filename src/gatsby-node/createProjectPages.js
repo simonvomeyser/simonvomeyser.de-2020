@@ -8,6 +8,8 @@ module.exports = (createPage, result) => {
   const germanProjects = result.data.de.edges
 
   if (germanProjects.length !== englishProjects.length) {
+    console.log(germanProjects.length)
+    console.log(englishProjects.length)
     return Promise.reject('A project is not translated, this will cause errors')
   }
 
