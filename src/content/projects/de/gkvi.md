@@ -6,8 +6,10 @@ month: 5
 name: GKVI Informatik
 excerpt:
 logo: listicon-gkvi.png
-technologies: ['wordpress', 'jquery']
+technologies: ['drupal', 'jquery']
 clients: ['awwwesome']
 ---
 
-GKVI Content DE
+Umfangreiches Projekt umgesetzt zusammen mit der <a href="https://www.awwwesome.agency/" target="_blank" rel="noopener noreferrer">Digtalagentur awwwesome</a> und einem Design Team.
+
+Exakt zugeschnitten auf die Wünsche des IT-Dienstleisters für gesetzliche Krankenkassen: Interessantes Frotnend, Jobs, News und die Integration von Ausschreibungen über eine Schnittstelle.
