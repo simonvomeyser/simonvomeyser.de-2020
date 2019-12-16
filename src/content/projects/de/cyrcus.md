@@ -10,4 +10,6 @@ technologies: ['jquery', 'wordpress']
 clients: []
 ---
 
-Cyrcus Content DE
+Mein erstes etwas umfangreicheseres Wordpress Projekt, die Hompage der Metal Band Cyrcus.
+
+Die Seite hat einen Webshop sowie verwaltbare News und Tourdates. Auch eine Facebook Schnittstelle zum Darstellen der Bilder wurden integriert.
