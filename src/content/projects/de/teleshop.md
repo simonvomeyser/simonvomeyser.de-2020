@@ -10,4 +10,6 @@ technologies: ['laravel', 'nova', 'tailwind']
 clients: ['pink']
 ---
 
-teleshop Content DE
+Interessantes Projekt basierend of Laravel, Laravel Nova und dem Frontend Framework Tailwind CSS.
+
+Die Homepage des Telekom Shops benutzt ausserdem einen web scraper um bestimmte Inhalte von anderen Seiten zu präsentieren, die nicht durch eine API erreichbar waren.
