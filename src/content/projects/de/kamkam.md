@@ -10,4 +10,6 @@ technologies: ['react', 'gatsby']
 clients: []
 ---
 
-kamkam Content DE
+Kleine React/Gatsby Seite für das Video Produktions Team von KAMKAM Video.
+
+Das grundlegende Design, die SVG Animationen und die Referenzen Seite wurden zusammen in weniger als einem Tag umgesetzt. Gatsby rockt.

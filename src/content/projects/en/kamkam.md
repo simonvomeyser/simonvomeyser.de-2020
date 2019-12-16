@@ -10,4 +10,6 @@ technologies: ['react', 'gatsby']
 clients: []
 ---
 
-kamkam Content EN
+Small React/Gatsby landing page for the video production team of KAMKAM Video.
+
+The basic design, SVG animations and references where all done in a single sprint taking less than a day. Gatsby rocks!
