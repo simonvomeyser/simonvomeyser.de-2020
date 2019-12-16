@@ -12,4 +12,4 @@ clients: []
 
 Die Webseite die du dir grad anschaust präsentiert sich selbst. Webseiten-ception sozusagen. Was wohl passiert wenn man auf den Link klickt?
 
-Als Technologie habe ich React und Gatsby verwendet, gehosted wird die Seite auf Netlify. Der Code ist übrigens <a href="#">open source auf GitHub</a>
+Als Technologie habe ich React und Gatsby verwendet, gehosted wird die Seite auf Netlify. Der Code ist übrigens <a href="#"  target="_blank" rel="noopener noreferrer">open source auf GitHub</a>
