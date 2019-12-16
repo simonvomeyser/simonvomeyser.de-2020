@@ -10,4 +10,6 @@ technologies: ['vuejs', 'wordpress', 'lumen']
 clients: ['pink']
 ---
 
-PINK EN
+Big relaunch of the crazy agency's website containing a lot of features like filterable projects, a funny teampage, a social media stream and a hidden snake game.
+
+Done mostly with VUE.js and Wordpress, a few Features were implemented using a Laravel API.
