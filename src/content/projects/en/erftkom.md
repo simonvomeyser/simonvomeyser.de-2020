@@ -10,4 +10,6 @@ technologies: ['laravel-mix']
 clients: ['pink']
 ---
 
-Erftkom Content EN
+Implementation of four static pages that should all have a rather similar design.
+
+I found a way to create these pages using only one codebase. All four use a Laravel API for their contact forms and Newsletter with Cleverreach integration.

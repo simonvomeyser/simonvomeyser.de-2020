@@ -10,4 +10,6 @@ technologies: ['laravel-mix']
 clients: ['pink']
 ---
 
-Erftkom Content DE
+Umsetzung von vier statischen Seiten die alle nach sehr ähnlichem Design umgesetzt werden sollten.
+
+Ich habe hier einen Weg gefunden, alle Seiten gleichzeitig aus einer Codebasis zu erstellen. Im Hintergrund nutzen die Seiten eine Laravel API für Kontaktformulare und Newsletter mit Cleverreach Integration.
