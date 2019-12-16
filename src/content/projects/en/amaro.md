@@ -10,4 +10,6 @@ technologies: ['vuejs', 'wordpress', 'lumen']
 clients: ['pink']
 ---
 
-Amaro Content EN
+A car dealer website created in colloboration with the advertisement agency PINK
+
+This page is connected to the car dealer mobile.de and also offers the feature to manage cars right in the backend. The car search is implemented with vue.js and a Laravel API, the content management is done by a Wordrpess installation
