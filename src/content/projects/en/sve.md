@@ -12,4 +12,4 @@ clients: []
 
 The very page you are looking at. Websiteception. I wonder what happens when you click the link.
 
-Build with React and Gatsby, hosted on Netlify. The code is completly open source for developers who are interested.
+Build with React and Gatsby, hosted on Netlify. The code is completly <a href="#">open source</a> for developers who are interested.
