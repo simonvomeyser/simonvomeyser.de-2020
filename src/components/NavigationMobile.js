@@ -77,13 +77,6 @@ export default class NavigationMobile extends Component {
                   idOfText="navigationContact"
                 />
               </li>
-              <li>
-                <NavigationLink
-                  to="/blog"
-                  icon={<WriteSvg />}
-                  idOfText="navigationBlog"
-                />
-              </li>
             </ul>
           </nav>
         </StyledNavigationMobileList>
