@@ -135,7 +135,7 @@ module.exports = {
   aboutMeReadMoreHeading2: '<h2>What I am doing right now</h2>',
   aboutMeReadMoreText2: `
     <p>
-      In my <strong>part time freelancing</strong> I work on projects spanning from car dealer websites to state governments web apps. I worked alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
+      In my <strong>part time freelancing</strong> I work on various projects that spark my intrest and joy. I do this alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
     </p>
     <p>
       I also work part time as a <strong>senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in E-Learning and learning managemend solutions. We also curse a lot about Internet Explorer in a really agile way.
