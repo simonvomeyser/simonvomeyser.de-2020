@@ -10,6 +10,6 @@ technologies: ['vuejs', 'wordpress', 'lumen']
 clients: ['pink']
 ---
 
-A car dealer website created in colloboration with the advertisement agency PINK
+A car dealer website created in colloboration with the advertisement agency PINK. This page is connected to the car dealer mobile.de, makes them searchable right on the page and also offers the feature to manage cars in the backend.
 
-This page is connected to the car dealer mobile.de and also offers the feature to manage cars right in the backend. The car search is implemented with vue.js and a Laravel API, the content management is done by a Wordrpess installation
+I did the complete Frontend/Backend work here using Vue.js and a Laravel API, the content management is entrusted to a good old Wordpress.
