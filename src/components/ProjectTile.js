@@ -104,9 +104,10 @@ const StyledPreviewImage = styled.div`
   height: auto;
 `
 const StyledYear = styled.div`
-  font-size: ${vars.styles.fontSizes.size2};
-  color: ${vars.styles.colors.neutral4};
+  font-size: ${vars.styles.fontSizes.size1};
+  color: ${vars.styles.colors.neutral3};
   font-family: ${vars.styles.fontFamilies.special};
+  margin-bottom: 0.1rem;
 `
 
 const StyledPreviewImageWrapper = styled.div`
@@ -119,14 +120,19 @@ const StyledContent = styled.div`
   position: relative;
   padding: 0.75rem;
   h2 {
-    font-size: ${vars.styles.fontSizes.size6};
+    font-size: ${vars.styles.fontSizes.size5};
     color: ${vars.styles.colors.black};
     margin-bottom: 0.75rem;
   }
   p {
     font-size: ${vars.styles.fontSizes.size2};
     font-weight: 300;
-    color: ${vars.styles.colors.black};
+    line-height: 1.5;
+    color: ${vars.styles.colors.neutral4};
     margin-bottom: 1rem;
+  }
+  a {
+    color: ${vars.styles.colors.neutral5};
+    text-decoration: underline;
   }
 `
