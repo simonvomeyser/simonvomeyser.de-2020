@@ -1,15 +1,15 @@
 ---
 key: pink
-link: https://amaro.de
+link: https://agentur.pink
 year: 2019
 month: 1
 name: Pink Werbung
 excerpt:
 logo: listicon-pink.png
-technologies: ['vuejs', 'wordpress']
+technologies: ['vuejs', 'wordpress', 'lumen']
 clients: ['pink']
 ---
 
-Großer Relaunch der Agenturwebseite von PINK. Die Seite enthält eine Menge Details wie filterbare Projekte, eine etwas andere Teamseeite, einen social Media Stream und ein verstecktes Snake Spiel.
+Großer Relaunch der Webseite der verrückt genialen Agentur PINK. Die Seite enthält eine Menge coole Details wie eine etwas andere Teamseeite, einen Social Media Stream, filterbare Projekte und ein verstecktes Snake Spiel.
 
-Umgesetzt wurde das Projekt größtenteils mit VUE.js und Wordpress, an einigen Stellen kam eine Laravel API zum Einsatz.
+Umgesetzt wurde das Projekt größtenteils mit VUE.js und Wordpress nach dem Design von PINK. An einzwei Stellen kam eine Laravel API zum Einsatz.

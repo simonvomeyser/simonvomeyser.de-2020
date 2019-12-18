@@ -12,4 +12,4 @@ clients: ['pink']
 
 Big relaunch of the crazy agency's website containing a lot of features like filterable projects, a funny teampage, a social media stream and a hidden snake game.
 
-Done mostly with VUE.js and Wordpress, a few Features were implemented using a Laravel API.
+I implemented the complete frontend and backend, the design was provided by the agency. I mostly used VUE.js and Wordpress here, a few features use a unified Laravel API.
