@@ -31,48 +31,41 @@ class Navigation extends Component {
         delayInitialAnimation={this.props.delayInitialAnimation}
       >
         <div>
-        <StyledNavigationTop>
-          <nav>
-            <ul>
-              <PosedLogoLi>
-                <NavigationLink
-                  to="/"
-                  isPageLogo
-                  icon={<LogoNavigationSvg />}
-                />
-              </PosedLogoLi>
-              <PosedLi>
-                <NavigationLink
-                  to="/about-me"
-                  logo
-                  icon={<UserSvg />}
-                  idOfText="navigationAboutMe"
-                />
-              </PosedLi>
-              <PosedLi>
-                <NavigationLink
-                  to="/projects"
-                  icon={<ProjectsSvg />}
-                  idOfText="navigationProjects"
-                />
-              </PosedLi>
-              <PosedLi>
-                <NavigationLink
-                  to="/contact"
-                  icon={<PaperPlaneSvg />}
-                  idOfText="navigationContact"
-                />
-              </PosedLi>
-              <PosedLi>
-                <NavigationLink
-                  to="/blog"
-                  icon={<WriteSvg />}
-                  idOfText="navigationBlog"
-                />
-              </PosedLi>
-            </ul>
-          </nav>
-        </StyledNavigationTop>
+          <StyledNavigationTop>
+            <nav>
+              <ul>
+                <PosedLogoLi>
+                  <NavigationLink
+                    to="/"
+                    isPageLogo
+                    icon={<LogoNavigationSvg />}
+                  />
+                </PosedLogoLi>
+                <PosedLi>
+                  <NavigationLink
+                    to="/about-me"
+                    logo
+                    icon={<UserSvg />}
+                    idOfText="navigationAboutMe"
+                  />
+                </PosedLi>
+                <PosedLi>
+                  <NavigationLink
+                    to="/projects"
+                    icon={<ProjectsSvg />}
+                    idOfText="navigationProjects"
+                  />
+                </PosedLi>
+                <PosedLi>
+                  <NavigationLink
+                    to="/contact"
+                    icon={<PaperPlaneSvg />}
+                    idOfText="navigationContact"
+                  />
+                </PosedLi>
+              </ul>
+            </nav>
+          </StyledNavigationTop>
         </div>
       </PosedWrapper>
     )
