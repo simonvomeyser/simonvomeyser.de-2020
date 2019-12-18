@@ -179,6 +179,10 @@ module.exports = {
     Bis später :) <br/> Simon
     </p>
   `,
+  projectsCopy: `
+    <p>Tada! Hier kannst du {numberOfProjects} von über {numberOfAllProjects} der Projekte ansehen, an denen ich mittlerweile beteiligt war. Mal sehen wann ich Zeit finde weitere zu beschreiben.</p>
+    <p>In den Erklärungen habe ich versucht so wenig wie möglich zu schwadronieren, daher melde dich ruhig falls du Fragen hast 🙂</p>
+  `,
   contactFormCopy: `
   <p>
     Das obligatorische Kontaktformular auf einer Webseite darf natürlich nicht fehlen. Aber seien wir ehrlich: Es macht auch

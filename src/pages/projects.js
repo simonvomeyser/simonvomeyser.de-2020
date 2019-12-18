@@ -10,7 +10,7 @@ import {
   StyledTextSection,
 } from '../styled-components'
 import ProjectTiles from '../components/ProjectTiles'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 class Projects extends React.Component {
   getLocalizedProjects = () => {
@@ -22,6 +22,8 @@ class Projects extends React.Component {
   }
   render() {
     const projects = this.getLocalizedProjects()
+    const numberOfProjects = projects.length
+    const numberOfAllProjects = numberOfProjects + 40
     return (
       <Layout>
         <PageLayout>
@@ -32,15 +34,10 @@ class Projects extends React.Component {
             </StyledPageHeading>
             <StyledContainer small>
               <StyledTextSection>
-                <p>
-                  Hier eine kleine Auswahl der Projekte, an denen ich beteiligt
-                  war. Nicht alle wurden vollständig von mir umgesetzt, aber ich
-                  hatte definitv meine Finger im Spiel.
-                </p>
-                <p>
-                  Klick die Projekte an um mehr zu erfahren oder benutz die
-                  Suche, 🙂
-                </p>
+                <FormattedHTMLMessage
+                  id="projectsCopy"
+                  values={{ numberOfProjects, numberOfAllProjects }}
+                />
               </StyledTextSection>
             </StyledContainer>
           </StyledContainer>

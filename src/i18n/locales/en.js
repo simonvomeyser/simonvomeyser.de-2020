@@ -147,6 +147,10 @@ module.exports = {
     See you there :) <br/> Simon
     </p>
   `,
+  projectsCopy: `
+    <p>Tada! Here you will find {numberOfProjects} of over {numberOfAllProjects} projects I was involed in. I hope I will find time in the feature to show a few more of them.</p>
+    <p>I tried to ramble as little as possible while describing the projects. Just hit me up if you have any questions. 🙂</p>
+  `,
   contactFormCopy: `
     <p>
       Since a contact form seems to be mandatory for every website, here we go... but to be honest this thing will do nothing else than to send an email to <a href="mailto:info@simonvomeyser.de">info@simonvomeyser.de</a>.
