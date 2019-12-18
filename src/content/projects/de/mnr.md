@@ -12,4 +12,4 @@ clients: ['pixelfeinkost']
 
 Tolles Projekt für die Bundesregierung Rheinland Pfalz. Die Seite kombiniert die APIs von über sechs Organisationen mit dem Thema Nachhaltigkeit in einer deutschlandweiten Karte.
 
-Umgesetzt zusammen mit <a href="https://pixelfeinkost.de/" target="_blank" rel="noopener noreferrer">pixelfeinkost</a> und mit den Technologien VUE.js und Wordpress.
+Umgesetzt zusammen mit <a href="https://pixelfeinkost.de/" target="_blank" rel="noopener noreferrer">pixelfeinkost</a> und mit den Technologien Vue.js und Wordpress.
