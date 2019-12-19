@@ -141,7 +141,7 @@ module.exports = {
       I also work part time as a <strong>senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
     </p>
     <p>
-      You can find examples of finished products in my <a href="/projects">project section</a>. If you want to contact me or find out more about what I offer feel free to jump to the <a href="/contact">contact page</a>! 
+      You can find examples of finished products in my {projectLink}. If you want to contact me or find out more about what I offer feel free to jump to the {contactLink}! 
     </p>
     <p>
     See you there :) <br/> Simon
