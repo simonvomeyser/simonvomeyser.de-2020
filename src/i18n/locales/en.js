@@ -121,7 +121,7 @@ module.exports = {
   aboutMeOpener: 'I am Simon, I do development stuff on the interwebs!',
   aboutMeFirstText:
     '.... in a few more words I plan and realize projects by using JavaScript, PHP and a lot of coffee ☕️',
-  aboutMeCta: 'read even more about me!',
+  aboutMeCta: 'wait.. there is more?',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2>Here is a little story about me! </h2>',
   aboutMeReadMoreText1: `
