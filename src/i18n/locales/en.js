@@ -138,7 +138,7 @@ module.exports = {
       In my <strong>part time freelancing</strong> I work on various projects that <i>spark my intrest and joy</i>. I do this alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
     </p>
     <p>
-      I also work part time as a <strong>senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
+      I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
     </p>
     <p>
       You can find examples of finished products in my {projectLink}. If you want to contact me or find out more about what I offer feel free to jump to the {contactLink}! 
