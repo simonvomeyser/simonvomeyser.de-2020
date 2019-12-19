@@ -172,9 +172,11 @@ module.exports = {
     <p>
       Ebenfalls <strong>in Teilzeit, als Senior Project Manager</strong>, arbeite ich bei der <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>.  Dort leite ich ein kleines Team aus großartigen Entwicklern und wir tüfteln gemeinsam an E-Learning Systemen in mehrjähirgen  Entwicklungen. Auch fluchen wir in gerne agil über den Internet Explorer.
     </p>
-    <p>
+  `,
+  aboutMeReadMoreText3: `
       Beispiele für fertige Produkte aus beiden Bereichen kannst du dir unter {projectLink} anschauen, mehr über was ich suche und anbiete findest du unter {contactLink}.
-    </p>
+  `,
+  aboutMeReadMoreText4: `
     <p>
     Bis später :) <br/> Simon
     </p>

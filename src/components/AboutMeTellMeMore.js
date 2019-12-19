@@ -4,14 +4,25 @@ import styled from 'styled-components'
 import { vars } from '../util/vars'
 import posed from 'react-pose'
 import { on } from 'src/util/breakpoint'
-import { FormattedHTMLMessage } from 'react-intl'
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import { LogoSvg } from '../svg'
 import SocialLinks from '../components/SocialLinks'
 import { StyledContainer } from '../styled-components/Container'
+import Link from 'src/i18n/Link'
 
 class AboutMeTellMeMore extends Component {
   render() {
     const yearsAsDeveloper = new Date(Date.now()).getFullYear() - 2011
+    const projectLink = (
+      <Link to="/projects">
+        <FormattedMessage id="navigationProjects" />
+      </Link>
+    )
+    const contactLink = (
+      <Link to="/contact">
+        <FormattedMessage id="navigationContact" />
+      </Link>
+    )
     return (
       <>
         <PosedFadeInArea
@@ -36,6 +47,13 @@ class AboutMeTellMeMore extends Component {
             <StyledTextSection>
               <StyledContainer small>
                 <FormattedHTMLMessage id="aboutMeReadMoreText2" />
+                <p>
+                  <FormattedMessage
+                    id="aboutMeReadMoreText3"
+                    values={{ projectLink, contactLink }}
+                  />
+                </p>
+                <FormattedHTMLMessage id="aboutMeReadMoreText4" />
               </StyledContainer>
             </StyledTextSection>
             <SocialLinks />

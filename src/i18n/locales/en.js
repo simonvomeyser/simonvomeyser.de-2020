@@ -140,12 +140,14 @@ module.exports = {
     <p>
       I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
     </p>
-    <p>
+  `,
+  aboutMeReadMoreText3: `
       You can find examples of finished products in my {projectLink}. If you want to contact me or find out more about what I offer feel free to jump to the {contactLink}! 
-    </p>
-    <p>
-    See you there :) <br/> Simon
-    </p>
+  `,
+  aboutMeReadMoreText4: `
+      <p>
+      See you there :) <br/> Simon
+      </p>
   `,
   projectsCopy: `
     <p>Tada! Here you will find {numberOfProjects} of over {numberOfAllProjects} projects I was involed in. I hope I will find time in the feature to show a few more of them.</p>
