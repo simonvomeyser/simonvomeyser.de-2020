@@ -182,8 +182,8 @@ module.exports = {
     </p>
   `,
   projectsCopy: `
-    <p>Tada! Hier kannst du {numberOfProjects} von über {numberOfAllProjects} der Projekte ansehen, an denen ich mittlerweile beteiligt war. Mal sehen wann ich Zeit finde weitere zu beschreiben.</p>
-    <p>In den Erklärungen habe ich versucht so wenig wie möglich zu schwadronieren, daher melde dich ruhig falls du Fragen hast 🙂</p>
+    <p>Hier kannst du {numberOfProjects} von über {numberOfAllProjects} der Projekte ansehen, an denen ich mittlerweile beteiligt war. Hoffentlich finde ich bald dide Zeit, weitere zu beschreiben.</p>
+    <p>In den Erklärungen habe ich versucht so wenig wie möglich zu schwadronieren. Melde dich ruhig, falls du Fragen hast 🙂</p>
   `,
   contactFormCopy: `
   <p>
