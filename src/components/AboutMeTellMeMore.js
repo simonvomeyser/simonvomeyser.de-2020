@@ -77,7 +77,7 @@ const StyledFadeInArea = styled.div`
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 `
 
