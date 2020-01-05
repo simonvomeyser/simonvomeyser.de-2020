@@ -149,7 +149,7 @@ module.exports = {
   navigationImprint: 'Impressum',
   navigationPrivacyPolicy: '',
   myProfession: 'Webentwicklung',
-  niceToMeetYou: 'Cool dass du hier bist!',
+  niceToMeetYou: 'Cool, dass du hier bist!',
   aboutMeOpener: 'Ich bin Simon und mache <i>irgendwas im Internet</i>',
   aboutMeFirstText:
     '.... etwas genauer plane und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️',
