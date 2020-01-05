@@ -121,12 +121,12 @@ module.exports = {
   aboutMeOpener: 'I am Simon, I do development stuff on the interwebs!',
   aboutMeFirstText:
     '.... in a few more words I plan and realize projects by using JavaScript, PHP and a lot of coffee ☕️',
-  aboutMeCta: 'wait.. there is more?',
+  aboutMeCta: 'Tell me more!',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2>Here is a little story about me! </h2>',
   aboutMeReadMoreText1: `
     <p>
-      I've been working in web development since <strong>{yearsAsDeveloper} years</strong> and started my journey by doing MySpace pages for metal bands whose lyrics where rather hard to understand. These days I help to make big(er) web projects come to life as a <strong>freelancing Full Stack Developer</strong> and <strong>Team Leader</strong>
+      I've been working in web development since <strong>{yearsAsDeveloper} years</strong> and I love what I do. I started this journey by creating MySpace pages for metal bands whose lyrics where rather hard to understand. These days I help to make big(er) web projects come to life as a <strong>freelancing Full Stack Developer</strong> and <strong>Team Leader</strong>
     </p>
     <p>
       I finished my Master's degree in Media Computer Sciences at the <a href="https://hs-duesseldorf.de/">University of Applied Sciences Düsseldorf</a> in 2018. I also taught students there as a tutor... or at least I tried to be the least confused person in the room.
@@ -138,7 +138,7 @@ module.exports = {
       In my <strong>part time freelancing</strong> I work on various projects that <i>spark my intrest and joy</i>. I do this alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
     </p>
     <p>
-      I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers and we specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
+      I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
     </p>
   `,
   aboutMeReadMoreText3: `
