@@ -149,7 +149,7 @@ module.exports = {
   navigationImprint: 'Impressum',
   navigationPrivacyPolicy: '',
   myProfession: 'Webentwicklung',
-  niceToMeetYou: 'Cool, dass du hier bist!',
+  niceToMeetYou: 'Cool dich zu treffen!',
   aboutMeOpener: 'Ich bin Simon und mache <i>irgendwas im Internet</i>',
   aboutMeFirstText:
     '.... etwas genauer plane und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️',
@@ -161,7 +161,7 @@ module.exports = {
       Ich arbeite seit <strong>{yearsAsDeveloper} Jahren</strong> als Webentwickler und mag den Beruf verdammt gerne. Begonnen hat mein Abenteuer mit MySpace Seiten für Metal Bands, deren Texte man echt schwer verstehen konnte. Mittlerweile realisiere ich als freiberuflicher <strong>Full Stack Entwickler</strong> und <strong>Projektmanager</strong> umfangreiche Projekte.
     </p>
     <p>
-      Seit Anfang 2018 habe ich meinen Master in Medieninformatik an der <a href="https://hs-duesseldorf.de/">Hochschule Düsseldorf</a> abgeschlossen und habe dort auch als Tutor unterrichtet... oder zumindest mit den Studenten gemeinsam versucht die Komplettlösung zu verstehen.
+      Anfang 2018 habe ich meinen Master in Medieninformatik an der <a href="https://hs-duesseldorf.de/">Hochschule Düsseldorf</a> abgeschlossen und habe dort auch als Tutor unterrichtet... oder zumindest mit den Studenten gemeinsam versucht die Komplettlösung zu verstehen.
     </p>
   `,
   aboutMeReadMoreHeading2: '<h2>Was ich momentan so tue</h2>',
