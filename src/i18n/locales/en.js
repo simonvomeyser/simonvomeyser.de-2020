@@ -150,8 +150,8 @@ module.exports = {
       </p>
   `,
   projectsCopy: `
-    <p>You will find {numberOfProjects} of the about {numberOfAllProjects} projects I was involved in here. I hope to find the time to showcase a few more of them soon.</p>
-    <p>I tried to ramble as little as possible while describing the projects, just hit me up if you have any questions. 🙂</p>
+    <p>You will find {numberOfProjects} of the about {numberOfAllProjects} projects I was involved in here. Hoping to find the time to show you a few more of them soon!</p>
+    <p>I tried to ramble as little as possible while describing the projects but wrote a little bit about technologiy and features. Just hit me up if you have any questions. 🙂</p>
   `,
   contactFormCopy: `
     <p>
