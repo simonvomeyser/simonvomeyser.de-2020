@@ -12,4 +12,4 @@ clients: ['awwwesome']
 
 Umfangreiches Projekt umgesetzt zusammen mit der <a href="https://www.awwwesome.agency/" target="_blank" rel="noopener noreferrer">Digtalagentur awwwesome</a> und einem Design Team.
 
-Exakt zugeschnitten auf die Wünsche des IT-Dienstleisters für gesetzliche Krankenkassen: Interessantes Frotnend, Jobs, News und die Integration von Ausschreibungen über eine Schnittstelle.
+Exakt zugeschnitten auf die Wünsche des IT-Dienstleisters für die gesetzliche Krankenkassen: Interessantes und einzigartiges Frontend, Jobangebote, einen Blog und die Integration von Ausschreibungen über eine Schnittstelle.

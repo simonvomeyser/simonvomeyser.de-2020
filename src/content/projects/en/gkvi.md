@@ -10,6 +10,6 @@ technologies: ['drupal', 'jquery']
 clients: ['awwwesome']
 ---
 
-Larger project implemented together with the <a href="https://www.awwwesome.agency/" target="_blank" rel="noopener noreferrer">digital agency awwwsome</a> and a design team.
+Large project implemented together with the cool digital agency <a href="https://www.awwwesome.agency/" target="_blank" rel="noopener noreferrer">awwwsome</a> and a design team.
 
-This page was exactly tailored to the the wishes of the big IT company: Interesting frontend, News, Jobs and integration of proposals via an API.
+This page was exactly tailored to the the wishes of the big IT company providing services to statutory health insurances: An interesting frontend, news, jobs offers and integration of proposals via an API.
