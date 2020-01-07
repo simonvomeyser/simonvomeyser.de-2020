@@ -10,6 +10,6 @@ technologies: ['react', 'gatsby']
 clients: []
 ---
 
-Die Webseite die du dir grad anschaust präsentiert sich selbst. Site-ception sozusagen. Was wohl passiert wenn man auf den Link klickt?
+Diese Webseite schaust du dir grade an... Webseiten-ception sozusagen. Hier ist echt alles selbst gemacht, ich habe mich sogar mal am Design versucht. Entschuldigung dafür.
 
-Hier ist echt alles von mir: Frontend, Backend und ich hab mich sogar am Design versucht. Als Technologie habe ich React und Gatsby verwendet, gehosted wird das Ding auf Netlify. Der Code ist übrigens <a href="#"  target="_blank" rel="noopener noreferrer">open source</a>. Vielleicht findest du ja Commits in denen ich fluche.
+Als Technologie habe ich React und Gatsby verwendet, die Seite ist zweisprachig und gehosted wird das Ding auf Netlify. Der Code ist übrigens <a href="#"  target="_blank" rel="noopener noreferrer">open source</a>. Vielleicht findest du da ja Commits in denen ich fluche.
