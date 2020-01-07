@@ -2,7 +2,7 @@
 key: kamkam
 link: https://kamkamvideo.de
 year: 2019
-month: 10
+month: 9
 name: KamKam Video
 excerpt:
 logo: listicon-kamkam.png
@@ -10,6 +10,6 @@ technologies: ['react', 'gatsby']
 clients: []
 ---
 
-Small React/Gatsby landing page for the video production team of KAMKAM Video.
+Small landing page for professional video production team of KAMKAM Video.
 
-The basic design, SVG animations and references where all done in a single sprint taking less than a day. Gatsby rocks!
+Technology-wise I made use of some React/Gatsby magic. The implementation, basic design and animations where all done by me in a relatively short time-frame and in direct communication with the customer. Gatsby just rocks!
