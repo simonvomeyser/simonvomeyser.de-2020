@@ -167,7 +167,7 @@ module.exports = {
   aboutMeReadMoreHeading2: '<h2>Was ich momentan so tue</h2>',
   aboutMeReadMoreText2: `
     <p>
-      Momentan bin ich <strong>in Teilzeit freiberuflich</strong> tätig und setze dabei verschiedenste Projekte um. Bei größeren Aufgaben arbeite ich häufig und gern mit tollen Agenturen wie <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> uvm. zusammen. 
+      Momentan bin ich <strong>in Teilzeit freiberuflich</strong> tätig und schlüpfe dabei in verschiedene Rollen. Bei größeren Projekten arbeite ich häufig und gern mit tollen Agenturen wie <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> uvm. zusammen. 
     </p>
     <p>
       Ebenfalls <strong>in Teilzeit, als Senior Project Manager</strong>, arbeite ich bei der <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>.  Dort leite ich ein kleines Team aus großartigen Entwicklern und wir tüfteln gemeinsam an E-Learning Systemen in mehrjähirgen Entwicklungen. Auch fluchen wir in gerne agil über den Internet Explorer.
