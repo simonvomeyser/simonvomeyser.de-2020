@@ -3,13 +3,13 @@ key: mnr
 link: https://muellnichtrum.rlp.de
 year: 2019
 month: 10
-name: Müll nicht rum.
+name: Müll nicht rum
 excerpt:
 logo: listicon-mnr.png
 technologies: ['wordpress', 'jquery']
 clients: ['pixelfeinkost']
 ---
 
-Great project for the Rheinland Pfalz state government. This page combines more than 6 APIs of environmental organizations into one map to promote cup reuse and reduce waste.
+Great project for the Rhineland-Palatinate state government. This page combines APIs of environmental organizations into one interactive map to reduce waste.
 
-Implemented together with <a href="https://pixelfeinkost.de/" target="_blank" rel="noopener noreferrer">pixelfeinkost</a> and with the Frameworks Vue.js and Wordpress.
+Implemented in awesome teamwork with <a href="https://pixelfeinkost.de/" target="_blank" rel="noopener noreferrer">pixelfeinkost</a> doing both frontend and backend work. The page uses Vue.js for it's interactive parts and Wordpress for content management.
