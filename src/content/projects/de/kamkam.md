@@ -10,6 +10,6 @@ technologies: ['react', 'gatsby']
 clients: []
 ---
 
-Kleine React/Gatsby Seite für das Video Produktions Team von KAMKAM Video.
+Kleine Landingpage für das auf Filmproduktion und Imagefilme spezialisierte Team von KAMKAM Video.
 
-Das grundlegende Design, die SVG Animationen und die Referenzen Seite wurden zusammen in weniger als einem Tag umgesetzt. Gatsby rockt.
+Die technische Basis bildet eine statische React/Gatsby Installation. Das grundlegende Design, die SVG Animationen und die Unterseiten wurden von mir in Zusammenarbeit mit dem Kunden in relativ kurzer Zeit umgesetzt. Gatsby ist einfach großartig für solche Projekte.
