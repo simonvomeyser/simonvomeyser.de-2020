@@ -206,7 +206,7 @@ module.exports = {
   send: 'ab dafür!',
   contactMessageSuccessHeading: 'Yeah, das hat funktioniert!',
   contactMessageSuccessText:
-    'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hat hoffe ich du fandest es fancy ✨',
+    'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hat hoffe ich du hattest eine Menge Spaß  ✨',
   pageNotFoundSubHeading:
     'Computer sagt "Nein!" ... die Seite wurde nicht gefunden',
   pageNotFoundText:
