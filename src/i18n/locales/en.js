@@ -129,7 +129,7 @@ module.exports = {
       I've been working in web development since <strong>{yearsAsDeveloper} years</strong> and I love what I do. I started this journey by creating MySpace pages for metal bands whose lyrics where rather hard to understand. These days I help to make big(er) web projects come to life as a <strong>freelancing Full Stack Developer</strong> and <strong>Team Leader</strong>
     </p>
     <p>
-      I finished my Master's degree in Media Computer Sciences at the <a href="https://hs-duesseldorf.de/">University of Applied Sciences Düsseldorf</a> in 2018. I also taught students there as a tutor... or at least I tried to be the least confused person in the room.
+      I finished my Master's degree in Media Computer Sciences in <a href="https://hs-duesseldorf.de/">Düsseldorf</a> in 2018. I also taught students there as a tutor... or at least I tried to be the least confused person in the room.
     </p>
   `,
   aboutMeReadMoreHeading2: '<h2>What I am doing right now</h2>',
