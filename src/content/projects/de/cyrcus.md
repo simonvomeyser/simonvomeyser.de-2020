@@ -10,7 +10,7 @@ technologies: ['jquery', 'wordpress']
 clients: []
 ---
 
-Mein erstes etwas umfangreicheseres Wordpress Projekt, die Hompage der Metal Band Cyrcus. Man versteht hin und wieder die Texte, versprochen!
+Mein erstes etwas umfangreicheres Wordpress Projekt, die Hompage der Metal Band Cyrcus. Man versteht hin und wieder die Texte, versprochen!
 
 Die Seite enthählt einen kompletten Webshop sowie verwaltbare News und Tourdates. Auch eine Facebook Schnittstelle zum Darstellen der Bilder wurden integriert.
 
