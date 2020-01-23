@@ -10,6 +10,6 @@ technologies: ['vuejs', 'wordpress', 'lumen']
 clients: ['pink']
 ---
 
-Projekt in Zusammenarbeit mit der Werbegantur PINK für das Authaus Amaro. Die Seite besitzt eine Mobile.de Schnittstelle durch die man Inserate direkt durchsuchen kann. Auch kann man angebotene Autos im Backend verwalten.
+Projekt in Zusammenarbeit mit der Werbegantur PINK für das Authaus Amaro. Die Seite besitzt eine Mobile.de Schnittstelle durch die man Inserate direkt durchsuchen kann. Man kann angebotene Autos ebenfalls im Backend verwalten.
 
 Das Frontend ist mit Vue.js implementiert und kommuniziert über eine Laravel API, die redationellen Aufgaben übernimmt ein stabiles Wordpress System.
