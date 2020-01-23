@@ -29,6 +29,7 @@ export default class NavigationMobile extends Component {
     })
   }
   setMenu = (event, { open = false }) => {
+    console.log('object')
     this.setState(
       () => {
         return { menuOpen: open }
@@ -54,7 +55,7 @@ export default class NavigationMobile extends Component {
         </StyledNavigationMobileBar>
         <StyledNavigationMobileList menuOpen={this.state.menuOpen}>
           <nav>
-            <ul>
+            <ul onClick={this.toggleMenu}>
               <li>
                 <NavigationLink
                   to="/about-me"
