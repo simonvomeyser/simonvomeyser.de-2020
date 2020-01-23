@@ -210,6 +210,6 @@ module.exports = {
   pageNotFoundSubHeading:
     'Computer sagt "Nein!" ... die Seite wurde nicht gefunden',
   pageNotFoundText:
-    'Die Seite hab ich nicht finden können, das macht mich genau so traurig wie du wahrscheinlich grade bist ',
+    'Die Seite hab ich nicht finden können, das macht mich genau so traurig wie du wahrscheinlich gerade bist ',
   pageNotFoundLink: 'Zurück',
 }
