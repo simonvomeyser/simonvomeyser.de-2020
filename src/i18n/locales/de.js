@@ -164,7 +164,7 @@ module.exports = {
       Anfang 2018 habe ich meinen Master in Medieninformatik an der <a href="https://hs-duesseldorf.de/">Hochschule Düsseldorf</a> abgeschlossen und habe dort auch als Tutor unterrichtet... oder zumindest mit den Studenten gemeinsam versucht die Komplettlösung zu verstehen.
     </p>
   `,
-  aboutMeReadMoreHeading2: '<h2>Was ich momentan so tue</h2>',
+  aboutMeReadMoreHeading2: '<h2>Was ich momentan so mache</h2>',
   aboutMeReadMoreText2: `
     <p>
       Momentan bin ich <strong>in Teilzeit freiberuflich</strong> tätig und schlüpfe dabei in verschiedene Rollen. Bei größeren Projekten arbeite ich häufig und gern mit tollen Agenturen wie <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> uvm. zusammen. 
