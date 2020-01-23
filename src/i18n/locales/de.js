@@ -152,7 +152,7 @@ module.exports = {
   niceToMeetYou: 'Cool dich zu treffen!',
   aboutMeOpener: 'Ich bin Simon und mache <i>irgendwas im Internet</i>',
   aboutMeFirstText:
-    '.... etwas genauer plane und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffe ☕️',
+    '.... etwas genauer plane und realisiere ich Projekte mit JavaScript, PHP und einer Menge Kaffee ☕️',
   aboutMeCta: 'Erzähl etwas mehr!',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2>Eine kleine Geschichte über mich</h2>',
@@ -206,7 +206,7 @@ module.exports = {
   send: 'ab dafür!',
   contactMessageSuccessHeading: 'Yeah, das hat funktioniert!',
   contactMessageSuccessText:
-    'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hat hoffe ich du hattest eine Menge Spaß  ✨',
+    'Ich melde mich bei dir. Und falls du das Kontaktformular nur getestet hast hoffe ich du hattest eine Menge Spaß  ✨',
   pageNotFoundSubHeading:
     'Computer sagt "Nein!" ... die Seite wurde nicht gefunden',
   pageNotFoundText:
