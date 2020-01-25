@@ -7,12 +7,12 @@ import { vars, errorColor } from 'src/util/vars'
 
 export default class FormInput extends Component {
   render() {
-    const { children, hasError, disabled, label } = this.props
+    const { children, hasError, disabled, label, value } = this.props
 
     return (
       <StyledWrapper disabled={disabled}>
         {children}
-        <FloatingLabel>
+        <FloatingLabel shrinked={!!value}>
           <FormattedMessage id={label} />
         </FloatingLabel>
         <PosedErrorIcon pose={hasError ? 'show' : 'hide'}>×</PosedErrorIcon>
@@ -24,6 +24,7 @@ export default class FormInput extends Component {
     hasError: PropTypes.bool,
     isValid: PropTypes.bool,
     label: PropTypes.string,
+    value: PropTypes.string,
   }
 }
 
@@ -37,26 +38,23 @@ const StyledWrapper = styled.div`
   transition: opacity 0.28s ease-in-out;
   opacity: ${({ disabled }) => (disabled ? 0.4 : 1)};
 
-  > *:not(:placeholder-shown),
   > *:focus {
     + label {
-      font-size: 10px;
-      opacity: 0.5;
-      top: -0.75rem;
-      left: 0;
+      opacity: 0.6;
     }
   }
 `
 
 const FloatingLabel = styled.label`
+  font-size: 10px;
   position: absolute;
   z-index: 1;
-  top: 20px;
-  left: 0.75rem;
-  font-size: 0.75rem;
+  top: ${props => (props.shrinked ? '-0.75rem' : '20px')};
+  left: ${props => (props.shrinked ? 0 : '0.75rem')};
+  font-size: ${props => (props.shrinked ? '10px' : '16px')};
   color: grey;
-  transition: all 0.4s ease-in-out;
-  opacity: 0.75;
+  transition: all 0.2s ease-in-out;
+  opacity: ${props => (props.shrinked ? 0.6 : 0.8)};
   pointer-events: none;
 `
 

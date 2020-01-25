@@ -8,10 +8,10 @@ export default class ContactTextarea extends Component {
         label="textPlaceholder"
         hasError={this.props.hasError}
         disabled={this.props.disabled}
+        value={this.props.value}
       >
         <textarea
           name="text"
-          placeholder=" "
           cols="30"
           rows="10"
           value={this.props.value}

@@ -8,6 +8,7 @@ export default class ContactInput extends Component {
         label="emailPlaceholder"
         hasError={this.props.hasError}
         disabled={this.props.disabled}
+        value={this.props.value}
       >
         <input
           name="email"
@@ -15,7 +16,6 @@ export default class ContactInput extends Component {
           value={this.props.value}
           onBlur={this.props.validate}
           onChange={this.props.update}
-          placeholder=" "
         />
       </FormInput>
     )
