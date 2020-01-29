@@ -29,7 +29,6 @@ export default class NavigationMobile extends Component {
     })
   }
   setMenu = (event, { open = false }) => {
-    console.log('object')
     this.setState(
       () => {
         return { menuOpen: open }
@@ -94,7 +93,7 @@ const StyledBurgerWrapper = styled.div`
 `
 const StyledLogoWrapper = styled.div`
   position: absolute;
-  top: 50%;
+  top: 1.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   svg {
@@ -104,49 +103,32 @@ const StyledLogoWrapper = styled.div`
 `
 
 const StyledNavigationMobileList = styled.div`
-  display: none;
-  position: fixed;
-  left: 0;
-  z-index: ${vars.styles.zIndices.mobileNavigationList};
-  top: ${props =>
-    props.menuOpen ? vars.styles.sizes.navigationMobileHeight : '-100vh'};
+  display: ${props => (props.menuOpen ? 'block' : 'none')};
   width: 100%;
-  height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
   background: ${rgba(vars.styles.colors.neutral6, 0.9)};
   ${anim()};
 
-  nav {
-    height: 100%;
-  }
   ul {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 100%;
+    align-items: center;
   }
   li {
     flex: 1;
   }
   a {
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-  ${on('onlyMobile')} {
-    display: block;
   }
 `
 
 const StyledNavigationMobileBar = styled.div`
   display: none;
   z-index: ${vars.styles.zIndices.mobileNavigationBar};
-  position: fixed;
   background-color: ${vars.styles.colors.neutral6};
-  left: 0;
-  top: 0;
   width: 100%;
   height: ${vars.styles.sizes.navigationMobileHeight};
   justify-content: space-between;

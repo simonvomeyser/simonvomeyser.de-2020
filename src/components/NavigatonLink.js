@@ -43,11 +43,7 @@ const StyledLink = styled(Link)`
     }
     ${on('onlyMobile')} {
       background: ${rgba(vars.styles.colors.white, 0.2)};
-      border-bottom: none;
     }
-  }
-  ${on('onlyMobile')} {
-    border-bottom: 1px solid ${vars.styles.colors.neutral4};
   }
 `
 
@@ -79,7 +75,8 @@ const StyledIcon = styled.div`
 
   ${on('onlyMobile')} {
     svg {
-      width: 2rem;
+      width: auto;
+      height: 1.5rem;
     }
     margin-bottom: 1rem;
   }

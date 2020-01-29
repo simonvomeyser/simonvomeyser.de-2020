@@ -77,7 +77,6 @@ const StyledContentWrapper = styled.div`
   ${on('onlyMobile')} {
     padding-left: 0 !important; /* Needed for pose not to work mobile */
     min-height: calc(100vh - ${vars.styles.sizes.navigationMobileHeight});
-    padding-top: ${vars.styles.sizes.navigationMobileHeight};
   }
 `
 const PosedContentWrapper = posed(StyledContentWrapper)({
