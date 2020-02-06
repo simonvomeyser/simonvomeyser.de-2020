@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
-import { rgba, anim } from 'src/util/mixins'
 import LanguageChooser from 'src/components/LanguageChooser'
 import { navigate } from 'src/i18n/navigate'
 

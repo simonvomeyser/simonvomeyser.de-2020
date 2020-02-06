@@ -3,14 +3,7 @@ import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { rgba } from 'src/util/mixins'
 
-import {
-  LogoNavigationSvg,
-  UserSvg,
-  ProjectsSvg,
-  BurgerSvg,
-  WriteSvg,
-  PaperPlaneSvg,
-} from 'src/svg'
+import { UserSvg, ProjectsSvg, PaperPlaneSvg } from 'src/svg'
 import NavigationLink from 'src/components/NavigatonLink'
 import posed from 'react-pose'
 
