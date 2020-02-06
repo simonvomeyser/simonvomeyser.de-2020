@@ -6,15 +6,8 @@ import { rgba, anim } from 'src/util/mixins'
 import LanguageChooser from 'src/components/LanguageChooser'
 import { navigate } from 'src/i18n/navigate'
 
-import {
-  LogoNavigationSvg,
-  UserSvg,
-  ProjectsSvg,
-  BurgerSvg,
-  WriteSvg,
-  PaperPlaneSvg,
-} from 'src/svg'
-import NavigationLink from 'src/components/NavigatonLink'
+import { LogoNavigationSvg, BurgerSvg } from 'src/svg'
+import NavigationMobileList from './NavigationMobileList'
 
 export default class NavigationMobile extends Component {
   constructor() {
@@ -40,7 +33,7 @@ export default class NavigationMobile extends Component {
   }
   render() {
     return (
-      <Fragment>
+      <StyledWrapper>
         <StyledNavigationMobileBar data-mobile-navigation-scroll-adjust>
           <StyledBurgerWrapper>
             <BurgerSvg onClick={this.toggleMenu} />
@@ -52,38 +45,21 @@ export default class NavigationMobile extends Component {
           </StyledLogoWrapper>
           <LanguageChooser />
         </StyledNavigationMobileBar>
-        <StyledNavigationMobileList menuOpen={this.state.menuOpen}>
-          <nav>
-            <ul onClick={this.toggleMenu}>
-              <li>
-                <NavigationLink
-                  to="/about-me"
-                  logo
-                  icon={<UserSvg />}
-                  idOfText="navigationAboutMe"
-                />
-              </li>
-              <li>
-                <NavigationLink
-                  to="/projects"
-                  icon={<ProjectsSvg />}
-                  idOfText="navigationProjects"
-                />
-              </li>
-              <li>
-                <NavigationLink
-                  to="/contact"
-                  icon={<PaperPlaneSvg />}
-                  idOfText="navigationContact"
-                />
-              </li>
-            </ul>
-          </nav>
-        </StyledNavigationMobileList>
-      </Fragment>
+        <NavigationMobileList
+          open={this.state.menuOpen}
+          toggleMenu={this.toggleMenu}
+        />
+      </StyledWrapper>
     )
   }
 }
+
+const StyledWrapper = styled.div`
+  display: none;
+  ${on('onlyMobile')} {
+    display: block;
+  }
+`
 
 const StyledBurgerWrapper = styled.div`
   svg {
@@ -102,31 +78,8 @@ const StyledLogoWrapper = styled.div`
   }
 `
 
-const StyledNavigationMobileList = styled.div`
-  display: ${props => (props.menuOpen ? 'block' : 'none')};
-  width: 100%;
-  background: ${rgba(vars.styles.colors.neutral6, 0.9)};
-  ${anim()};
-
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  li {
-    flex: 1;
-  }
-  a {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
 const StyledNavigationMobileBar = styled.div`
-  display: none;
+  display: flex;
   z-index: ${vars.styles.zIndices.mobileNavigationBar};
   background-color: ${vars.styles.colors.neutral6};
   width: 100%;
@@ -135,8 +88,4 @@ const StyledNavigationMobileBar = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-
-  ${on('onlyMobile')} {
-    display: flex;
-  }
 `
