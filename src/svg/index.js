@@ -21,7 +21,6 @@ export const ProjectsSvg = projects
 export const WriteSvg = write
 export const PaperPlaneSvg = paperplane
 export const LegalSvg = legal
-export const BurgerSvg = burger
 export const UnitedStatesSvg = unitedstates
 export const GermanySvg = germany
 export const TwitterSvg = twitter

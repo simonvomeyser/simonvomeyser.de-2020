@@ -4,9 +4,10 @@ import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import LanguageChooser from 'src/components/LanguageChooser'
 import { navigate } from 'src/i18n/navigate'
-
-import { LogoNavigationSvg, BurgerSvg } from 'src/svg'
 import NavigationMobileList from './NavigationMobileList'
+import NavigationMobileBurger from './NavigationMobileBurger'
+
+import { LogoNavigationSvg } from 'src/svg'
 
 export default class NavigationMobile extends Component {
   constructor() {
@@ -35,7 +36,10 @@ export default class NavigationMobile extends Component {
       <StyledWrapper>
         <StyledNavigationMobileBar data-mobile-navigation-scroll-adjust>
           <StyledBurgerWrapper>
-            <BurgerSvg onClick={this.toggleMenu} />
+            <NavigationMobileBurger
+              open={this.state.menuOpen}
+              toggleMenu={this.toggleMenu}
+            />
           </StyledBurgerWrapper>{' '}
           <StyledLogoWrapper>
             <LogoNavigationSvg
