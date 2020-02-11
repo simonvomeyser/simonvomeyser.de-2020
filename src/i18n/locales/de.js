@@ -182,8 +182,8 @@ module.exports = {
     </p>
   `,
   projectsCopy: `
-    <p>Hier kannst du {numberOfProjects} von {numberOfAllProjects} Projekten ansehen, an denen ich mittlerweile beteiligt war. Hoffentlich finde ich bald die Zeit, weitere zu beschreiben.</p>
-    <p>In den Erklärungen habe ich versucht so wenig wie möglich zu schwadronieren, trotzdem musste ich dann doch etwas über Technologie und Features erzählen. Melde dich ruhig, falls du Fragen hast 🙂</p>
+    <p>Hier kannst du einige der mittlerweile über {numberOfAllProjects} Projekten ansehen, an denen ich beteiligt war. Ich arbeite am liebsten mit <strong>Laravel</strong>, <strong>React</strong> und <strong>Vue.js</strong>, als CMS verwende ich hin und wieder Wordpress.</p>
+    <p>Melde dich ruhig, falls du Fragen zu Details hast 🙂</p>
   `,
   contactFormCopy: `
   <p>

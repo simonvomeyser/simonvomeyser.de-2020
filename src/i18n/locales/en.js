@@ -150,8 +150,8 @@ module.exports = {
       </p>
   `,
   projectsCopy: `
-    <p>You will find {numberOfProjects} of the about {numberOfAllProjects} projects I was involved in here. Hoping to find the time to show you a few more of them soon!</p>
-    <p>I tried to ramble as little as possible while describing the projects but wrote a little bit about technologiy and features. Just hit me up if you have any questions. 🙂</p>
+    <p>You will find a few of the about {numberOfAllProjects} projects I was involved in here. I love working with <strong>Laravel</strong>, <strong>React</strong> and <strong>Vue.js</strong>. I also use Wordpress when a CMS is needed.</p>
+    <p>Just hit me up if you have any questions or you want to know more details. 🙂</p>
   `,
   contactFormCopy: `
     <p>
