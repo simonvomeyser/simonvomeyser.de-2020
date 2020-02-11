@@ -21,6 +21,11 @@ const StyledWrapper = styled.button`
   flex-direction: column;
   background: transparent;
   border: none;
+  transition: opacity 0.3s ease-in-out;
+  &:focus {
+    opacity: 0.75;
+    outline: 0;
+  }
   span {
     display: block;
     width: 30px;
