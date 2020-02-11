@@ -10,6 +10,6 @@ technologies: ['laravel-mix']
 clients: ['pink']
 ---
 
-Umsetzung von vier statischen Seiten die alle nach sehr ähnlichem Design umgesetzt werden sollten.
+Realisierung von Frontent und Backend für vier statischen Seiten, die alle nach sehr ähnlichem Design umgesetzt werden sollten. Die Seiten sollten sich nur in Texten, Farben und Bildern unterscheiden.
 
-Ich habe hier einen Weg gefunden, alle Seiten gleichzeitig aus einer Codebasis zu erstellen. Im Hintergrund nutzen die Seiten eine Laravel API für Kontaktformulare und Newsletter mit Cleverreach Integration.
+Ich habe hier einen Weg gefunden, alle Seiten gleichzeitig aus einer Codebasis zu erstellen. So müssen Änderungen des Kunden ein einziges Mal durchgeführt werden. Im Hintergrund nutzen die Seiten eine Laravel API für Kontaktformulare und einen Newsletter mit direkter Integration zum Anbieter Cleverreach.
