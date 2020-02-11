@@ -22,9 +22,10 @@ const StyledWrapper = styled.button`
   background: transparent;
   border: none;
   transition: opacity 0.3s ease-in-out;
-  &:focus {
+  &:focus,
+  &:active {
     opacity: 0.75;
-    outline: 0;
+    outline: none;
   }
   span {
     display: block;
