@@ -138,7 +138,7 @@ module.exports = {
       When I am <strong>part-time freelancing</strong>, I work on various projects that <i>spark my intrest and joy</i>. I do this alone and as a teamplayer with badass agencies like <a href="https://bitmade.de/" target="_blank" rel="noopener noreferrer">Bitmade</a>, <a href="https://g31design.com/" target="_blank" rel="noopener noreferrer">g31</a>, <a href="https://agentur.pink/" target="_blank" rel="noopener noreferrer">Pink Werbung</a> and many more.
     </p>
     <p>
-      I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers specialized in e-learning and learning management solutions. We also curse a lot about Internet Explorer in a really agile way.
+      I also work <strong> part time as a senior project manager</strong> at the company <a href="https://www.dekra-media.de" target="_blank" rel="noopener noreferrer">DEKRA Media GmbH</a>. Over there I am leading a small team of awesome developers specialized in e-learning and web solutions. We also curse a lot about Internet Explorer in a really agile way.
     </p>
   `,
   aboutMeReadMoreText3: `
