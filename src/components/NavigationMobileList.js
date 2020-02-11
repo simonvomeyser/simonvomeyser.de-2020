@@ -68,7 +68,7 @@ const PosedListElement = posed('li')({
     y: 0,
   },
   hidden: {
-    y: -30,
+    y: -20,
     opacity: 0,
     applyAtStart: { display: 'none' },
   },
