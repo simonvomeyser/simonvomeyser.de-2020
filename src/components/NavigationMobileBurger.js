@@ -42,10 +42,10 @@ const PosedBurgerBarTop = posed('span')({
     rotate: 45,
     transition: {
       y: {
-        delay: 100,
+        delay: 50,
       },
       rotate: {
-        delay: 350,
+        delay: 250,
         type: 'spring',
         stiffness: 400,
         damping: 18,
@@ -73,10 +73,10 @@ const PosedBurgerBarBottom = posed('span')({
     rotate: -45,
     transition: {
       y: {
-        delay: 100,
+        delay: 50,
       },
       rotate: {
-        delay: 350,
+        delay: 250,
         type: 'spring',
         stiffness: 400,
         damping: 18,
