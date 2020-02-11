@@ -120,7 +120,7 @@ module.exports = {
   niceToMeetYou: 'Awesome to meet you!',
   aboutMeOpener: 'I am Simon, I do development stuff on the interwebs!',
   aboutMeFirstText:
-    '.... in a few more words I plan and realize projects by using JavaScript, PHP and a lot of coffee ☕️',
+    '.... In other words: I plan and realize projects by using JavaScript, PHP and a lot of coffee ☕️',
   aboutMeCta: 'Tell me more!',
   aboutMeCtaAnswer: 'Okay!',
   aboutMeReadMoreHeading1: '<h2>Here is a little story about me! </h2>',
@@ -129,7 +129,7 @@ module.exports = {
       I've been working in web development since <strong>{yearsAsDeveloper} years</strong> and I love what I do. I started this journey by creating MySpace pages for metal bands whose lyrics where rather hard to understand. These days I help to make big(ger) web projects come to life as a <strong>freelancing Full Stack Developer</strong> and <strong>Team Leader</strong>
     </p>
     <p>
-      I finished my Master's degree in Media Computer Sciences in <a href="https://hs-duesseldorf.de/">Düsseldorf</a> in 2018. I also taught students there as a tutor... or at least I tried to be the least confused person in the room.
+      I finished my Master's degree in Media Computer Sciences in <a href="https://hs-duesseldorf.de/">Düsseldorf</a> in 2018. I also taught students there... or at least I tried to be the least confused person in the room.
     </p>
   `,
   aboutMeReadMoreHeading2: '<h2>What I am doing right now</h2>',
