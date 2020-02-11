@@ -142,7 +142,7 @@ module.exports = {
     </p>
   `,
   aboutMeReadMoreText3: `
-      You can find examples of finished products in my {projectLink}. If you want to contact me or find out more about what I offer feel free to jump to the {contactLink}! 
+      You can find examples of finished products on my {projectLink} page. You want to ask me something or find out more about what I offer? Awesome! Jump right to the {contactLink} page! 
   `,
   aboutMeReadMoreText4: `
       <p>
