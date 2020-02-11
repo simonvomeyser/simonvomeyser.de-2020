@@ -3,7 +3,7 @@ key: kartograf
 link: https://der-kartograf.de
 year: 2018
 month: 3
-name: Der Kartograf - mobil
+name: Der Kartograf
 excerpt:
 logo: listicon-kartograf.png
 technologies: ['react']
