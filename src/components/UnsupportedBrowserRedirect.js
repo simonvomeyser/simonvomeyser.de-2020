@@ -1,9 +1,9 @@
 import React from 'react'
 import { isSearchEngineBot } from '../util/isSearchEngineBot'
-import { isUnsupportedBrowser } from '../util/isUnsupportedBrowser'
+import { isSupportedBrowser } from '../util/isSupportedBrowser'
 
 export default function UnsupportedBrowserRedirect() {
-  if (!isSearchEngineBot() && isUnsupportedBrowser()) {
+  if (!isSearchEngineBot() && !isSupportedBrowser()) {
     window.location.href = 'https://legacy.simonvomeyser.de'
   }
   return null

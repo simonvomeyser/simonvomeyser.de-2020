@@ -1,4 +1,4 @@
-export const isUnsupportedBrowser = () => {
+export const isSupportedBrowser = () => {
   if (typeof window === 'undefined') {
     return false
   }
