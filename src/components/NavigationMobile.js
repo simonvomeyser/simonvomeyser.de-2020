@@ -34,7 +34,7 @@ export default class NavigationMobile extends Component {
   render() {
     return (
       <StyledWrapper>
-        <StyledNavigationMobileBar data-mobile-navigation-scroll-adjust>
+        <StyledNavigationMobileBar>
           <StyledBurgerWrapper>
             <NavigationMobileBurger
               open={this.state.menuOpen}
