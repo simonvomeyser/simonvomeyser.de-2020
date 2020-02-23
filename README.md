@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://simonvomeyser.de">
-    <img alt="Simon trying his best to look friendly and professional" src="https://github.com/simonvomeyser/simonvomeyser.de/blob/master/src/images/about-me-1-mobile.jpg?raw=true" />
+    <img width="360" alt="Simon trying his best to look friendly and professional" src="https://github.com/simonvomeyser/simonvomeyser.de/blob/master/screenshot.png?raw=true" />
   </a>
 </p>
 <h1 align="center">
