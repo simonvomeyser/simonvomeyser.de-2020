@@ -8,6 +8,7 @@ import NavigationMobileList from './NavigationMobileList'
 import NavigationMobileBurger from './NavigationMobileBurger'
 
 import { LogoNavigationSvg } from 'src/svg'
+import { Link } from '../i18n'
 
 export default class NavigationMobile extends Component {
   constructor() {
@@ -41,10 +42,11 @@ export default class NavigationMobile extends Component {
               toggleMenu={this.toggleMenu}
             />
           </StyledBurgerWrapper>
-          <StyledLogoWrapper>
-            <LogoNavigationSvg
-              onClick={event => this.setMenu(event, { open: false })}
-            />
+          <StyledLogoWrapper
+            to="/"
+            onClick={event => this.setMenu(event, { open: false })}
+          >
+            <LogoNavigationSvg />
           </StyledLogoWrapper>
           <LanguageChooser />
         </StyledNavigationMobileBar>
@@ -70,7 +72,7 @@ const StyledBurgerWrapper = styled.div`
     cursor: pointer;
   }
 `
-const StyledLogoWrapper = styled.div`
+const StyledLogoWrapper = styled(Link)`
   position: absolute;
   top: 1.5rem;
   left: 50%;
