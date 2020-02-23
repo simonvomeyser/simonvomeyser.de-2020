@@ -1,6 +1,6 @@
 export const isSupportedBrowser = () => {
   if (typeof window === 'undefined') {
-    return false
+    return true
   }
 
   const Bowser = require('bowser')
