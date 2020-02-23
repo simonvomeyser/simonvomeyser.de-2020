@@ -40,7 +40,7 @@ export default class NavigationMobile extends Component {
               open={this.state.menuOpen}
               toggleMenu={this.toggleMenu}
             />
-          </StyledBurgerWrapper>{' '}
+          </StyledBurgerWrapper>
           <StyledLogoWrapper>
             <LogoNavigationSvg
               onClick={event => this.setMenu(event, { open: false })}
