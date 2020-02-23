@@ -41,7 +41,7 @@ export default function NavigationMobileList(props) {
 }
 
 const StyledWrapper = styled.div`
-  display: block;
+  height: 0;
   width: 100%;
   background: ${rgba(vars.styles.colors.neutral6, 0.9)};
 
