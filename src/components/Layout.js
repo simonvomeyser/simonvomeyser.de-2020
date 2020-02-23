@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
+import UnsupportedBrowserRedirect from './UnsupportedBrowserRedirect'
 
 class Layout extends Component {
   render() {
@@ -16,6 +17,7 @@ class Layout extends Component {
 
     return (
       <Fragment>
+        <UnsupportedBrowserRedirect />
         <GlobalStyles />
         <Helmet
           title={

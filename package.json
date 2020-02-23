@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "bowser": "^2.9.0",
     "browser-lang": "0.0.1",
     "eslint-config-prettier": "^6.4.0",
     "gatsby": "^2.18.6",
