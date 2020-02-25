@@ -18,7 +18,7 @@ class ContactForm extends Component {
     errors: {},
     isSubmitting: false,
     isDone: false,
-    apiUrl: 'https://api.simonvomeyser.de/api/contact',
+    apiUrl: 'https://api.simonvomeyser.com/api/contact',
   }
 
   update = ({ target }) => {
