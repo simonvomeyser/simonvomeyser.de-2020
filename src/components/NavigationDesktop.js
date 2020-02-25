@@ -74,7 +74,6 @@ class Navigation extends Component {
 
 const StyledWrapper = styled.div`
   position: fixed;
-  opacity: 0;
   background-color: ${vars.styles.colors.neutral6};
   left: 0;
   top: 0;
@@ -103,7 +102,6 @@ const StyledNavigationTop = styled.div`
 `
 const PosedWrapper = posed(StyledWrapper)({
   visible: {
-    opacity: 1,
     x: '0%',
     staggerChildren: 100,
     delay: ({ delayInitialAnimation }) => {
@@ -114,7 +112,7 @@ const PosedWrapper = posed(StyledWrapper)({
     },
     transition: { type: 'spring', damping: 20 },
   },
-  hidden: { opacity: 0, x: '-100%' },
+  hidden: { x: '-100%' },
 })
 
 const PosedLogoLi = posed.li({

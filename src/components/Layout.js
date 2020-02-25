@@ -42,17 +42,22 @@ class Layout extends Component {
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
           <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
-        <Navigation
-          shouldAnimate={shouldAnimate}
-          delayInitialAnimation={delayInitialAnimation}
-        />
-        <PosedContentWrapper
-          delayInitialAnimation={delayInitialAnimation}
+        <PosedWrapper
           initialPose={shouldAnimate ? 'hidden' : 'visible'}
           pose="visible"
         >
-          {children}
-        </PosedContentWrapper>
+          <Navigation
+            shouldAnimate={shouldAnimate}
+            delayInitialAnimation={delayInitialAnimation}
+          />
+          <PosedContentWrapper
+            delayInitialAnimation={delayInitialAnimation}
+            initialPose={shouldAnimate ? 'hidden' : 'visible'}
+            pose="visible"
+          >
+            {children}
+          </PosedContentWrapper>
+        </PosedWrapper>
       </Fragment>
     )
   }
@@ -72,10 +77,24 @@ class Layout extends Component {
 
 export default injectIntl(Layout)
 
+const StyledWrapper = styled.div`
+  opacity: 0;
+  background-color: ${vars.styles.colors.neutral1};
+`
+
+const PosedWrapper = posed(StyledWrapper)({
+  visible: {
+    opacity: 1,
+    delay: 200,
+  },
+  hidden: {
+    opacity: 0,
+  },
+})
+
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
-  opacity: 0;
 
   ${on('onlyMobile')} {
     padding-left: 0 !important; /* Needed for pose not to work mobile */
@@ -85,14 +104,12 @@ const StyledContentWrapper = styled.div`
 const PosedContentWrapper = posed(StyledContentWrapper)({
   visible: {
     paddingLeft: 70,
-    opacity: 1,
     delay: ({ delayInitialAnimation }) => {
       return delayInitialAnimation ? 3500 : 500
     },
     transition: { type: 'spring', damping: 20 },
   },
   hidden: {
-    opacity: 0,
     paddingLeft: 0,
   },
 })
