@@ -74,6 +74,7 @@ class Navigation extends Component {
 
 const StyledWrapper = styled.div`
   position: fixed;
+  opacity: 0;
   background-color: ${vars.styles.colors.neutral6};
   left: 0;
   top: 0;

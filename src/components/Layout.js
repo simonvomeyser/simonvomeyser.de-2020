@@ -75,6 +75,7 @@ export default injectIntl(Layout)
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
+  opacity: 0;
 
   ${on('onlyMobile')} {
     padding-left: 0 !important; /* Needed for pose not to work mobile */
@@ -84,12 +85,14 @@ const StyledContentWrapper = styled.div`
 const PosedContentWrapper = posed(StyledContentWrapper)({
   visible: {
     paddingLeft: 70,
+    opacity: 1,
     delay: ({ delayInitialAnimation }) => {
       return delayInitialAnimation ? 3500 : 500
     },
     transition: { type: 'spring', damping: 20 },
   },
   hidden: {
+    opacity: 0,
     paddingLeft: 0,
   },
 })
