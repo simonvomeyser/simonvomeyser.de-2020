@@ -1,19 +1,11 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { vars } from 'src/util/vars'
-import { on } from 'src/util/breakpoint'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import posed from 'react-pose'
-import NavigationMobile from 'src/components/NavigationMobile'
-import {
-  LogoNavigationSvg,
-  UserSvg,
-  ProjectsSvg,
-  WriteSvg,
-  PaperPlaneSvg,
-  LegalSvg,
-} from 'src/svg'
 import NavigationLink from 'src/components/NavigatonLink'
+import { LogoNavigationSvg, PaperPlaneSvg, ProjectsSvg, UserSvg } from 'src/svg'
+import { on } from 'src/util/breakpoint'
+import { vars } from 'src/util/vars'
+import styled from 'styled-components'
 
 class Navigation extends Component {
   static propTypes = {
