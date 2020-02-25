@@ -9,7 +9,7 @@ import posed from 'react-pose'
 
 export default function NavigationMobileList(props) {
   return (
-    <PosedWrapper pose={props.open ? 'visible' : 'hidden'}>
+    <PosedWrapper pose={props.open ? 'open' : 'closed'}>
       <nav>
         <ul onClick={props.toggleMenu}>
           <PosedListElement>
@@ -62,12 +62,12 @@ const StyledWrapper = styled.div`
   }
 `
 const PosedListElement = posed('li')({
-  visible: {
+  open: {
     applyAtStart: { display: 'block' },
     opacity: 1,
     y: 0,
   },
-  hidden: {
+  closed: {
     y: -20,
     opacity: 0,
     applyAtStart: { display: 'none' },
@@ -75,12 +75,12 @@ const PosedListElement = posed('li')({
 })
 
 const PosedWrapper = posed(StyledWrapper)({
-  visible: {
+  open: {
     height: '106px',
     staggerChildren: 100,
     delayChildren: () => {
       return 100
     },
   },
-  hidden: { height: 0 },
+  closed: { height: 0 },
 })
