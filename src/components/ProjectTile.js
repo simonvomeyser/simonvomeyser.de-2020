@@ -124,7 +124,7 @@ const StyledContent = styled.div`
     color: ${vars.styles.colors.black};
     margin-bottom: 0.75rem;
   }
-  p {
+  div {
     font-size: ${vars.styles.fontSizes.size2};
     font-weight: 300;
     line-height: 1.5;
