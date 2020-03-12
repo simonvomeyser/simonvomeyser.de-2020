@@ -4,6 +4,7 @@ import { isSupportedBrowser } from '../util/isSupportedBrowser'
 
 export default function UnsupportedBrowserRedirect() {
   if (typeof window !== 'undefined') {
+    console.clear();
     console.log(`%c ________________________________________
            MMM.           .MMM
            MMMMMMMMMMMMMMMMMMM
