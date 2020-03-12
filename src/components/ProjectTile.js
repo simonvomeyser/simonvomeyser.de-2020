@@ -26,7 +26,7 @@ export default class ProjectTile extends Component {
           </StyledExternalLinkWrapper>
           <StyledYear>{project.year}</StyledYear>
           <h2>{project.name}</h2>
-          <p dangerouslySetInnerHTML={{ __html: content }} />
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </StyledContent>
       </StyledWrapper>
     )
