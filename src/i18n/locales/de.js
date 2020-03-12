@@ -1,10 +1,10 @@
 module.exports = {
   title: 'Simon vom Eyser',
-  titleAddtionOnIndex: 'Webentwicklung',
+  titleAddtionOnIndex: 'Webentwicklung mit JavaScript und PHP',
   description:
-    'Freiberuflicher Webentwickler aus NRW, Deutschland. Ich zaubere mit Wordpress, Laravel, React und Vue.js',
+    'Freiberuflicher Fullstack Webzauberer aus NRW (Krefeld), Deutschland. Laravel, React, Vue.js und eine Menge Kaffee sind mein Spezialgebiet.',
   keywords:
-    'Webentwickler, freiberuflich, NRW, Deutschland, Wordpress, Laravel, React, Vue, Projektmanagement, Consulting, Schulung',
+    'Webentwickler, freiberuflich, NRW, Deutschland, Krefeld, Wordpress, Laravel, React, Vue, Projektmanagement, Consulting, Schulung',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: '🙂 lies etwas über mich 🤓',

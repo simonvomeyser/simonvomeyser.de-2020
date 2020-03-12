@@ -1,10 +1,10 @@
 module.exports = {
   title: 'Simon vom Eyser',
-  titleAddtionOnIndex: 'web development',
+  titleAddtionOnIndex: 'web development with JavaScript and PHP',
   description:
-    'Freelancing webworker based in NRW, Deutschland. I realize web projects and a little magic with Laravel, React and Vue.js',
+    'Freelancing fullstack webwizard based in NRW (Krefeld), Germany. Laravel, React, Vue.js and coffee make me happy!',
   keywords:
-    'web, development, freelancer, NRW, Germany, Wordpress, Laravel, React, Vue, projectmanagement, consulting, training',
+    'web, development, freelancer, NRW, Germany, Krefeld, Wordpress, Laravel, React, Vue, projectmanagement, consulting, training',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: 'learn more about me 🤓',
