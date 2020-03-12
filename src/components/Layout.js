@@ -9,6 +9,7 @@ import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
 import UnsupportedBrowserRedirect from './UnsupportedBrowserRedirect'
+import ConsoleJoke from './ConsoleJoke';
 
 class Layout extends Component {
   render() {
@@ -58,10 +59,12 @@ class Layout extends Component {
             {children}
           </PosedContentWrapper>
         </PosedWrapper>
+        <ConsoleJoke></ConsoleJoke>
       </Fragment>
     )
   }
   shouldAnimate() {
+
     if (typeof window === 'undefined') {
       return true
     }
