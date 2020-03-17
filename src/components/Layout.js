@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
-import UnsupportedBrowserRedirect from './UnsupportedBrowserRedirect'
+import UnsupportedBrowser from './UnsupportedBrowser'
 import ConsoleJoke from './ConsoleJoke';
 
 class Layout extends Component {
@@ -18,8 +18,6 @@ class Layout extends Component {
 
     return (
       <Fragment>
-        <UnsupportedBrowserRedirect />
-        <GlobalStyles />
         <Helmet
           title={
             intl.formatMessage({ id: 'title' }) +
@@ -43,23 +41,26 @@ class Layout extends Component {
           <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
           <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
-        <PosedWrapper
-          initialPose={shouldAnimate ? 'hidden' : 'visible'}
-          pose="visible"
-        >
-          <Navigation
-            shouldAnimate={shouldAnimate}
-            delayInitialAnimation={delayInitialAnimation}
-          />
-          <PosedContentWrapper
-            delayInitialAnimation={delayInitialAnimation}
+        <GlobalStyles />
+        <UnsupportedBrowser>
+          <PosedWrapper
             initialPose={shouldAnimate ? 'hidden' : 'visible'}
             pose="visible"
           >
-            {children}
-          </PosedContentWrapper>
-        </PosedWrapper>
-        <ConsoleJoke></ConsoleJoke>
+            <Navigation
+              shouldAnimate={shouldAnimate}
+              delayInitialAnimation={delayInitialAnimation}
+            />
+            <PosedContentWrapper
+              delayInitialAnimation={delayInitialAnimation}
+              initialPose={shouldAnimate ? 'hidden' : 'visible'}
+              pose="visible"
+            >
+              {children}
+            </PosedContentWrapper>
+          </PosedWrapper>
+          <ConsoleJoke></ConsoleJoke>
+        </UnsupportedBrowser>
       </Fragment>
     )
   }

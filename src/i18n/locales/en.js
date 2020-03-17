@@ -177,4 +177,18 @@ module.exports = {
   pageNotFoundText:
     'The page you were trying to find does not exists. That makes me as sad as it probably makes you 😭',
   pageNotFoundLink: 'Back',
+  oldBrowserHeading: 'Oh no, an old browser...',
+  oldBrowserCopy: `
+  <p>
+  My page thinks you are using a browser that definitely has seen better days.
+If you want to know what I am up to and you are interested in the modern web, consider <a href="https://browser-update.org/update-browser.html" target="_blank" rel="noopener noreferrer">updating it</a>.
+</p>
+<p>
+  If you think my website is mean, treating your browser unfairly, or if you need help feel free to <a href="mailto:simon.vom.eyser@gmail.com">contact me</a>. We can still be friends!
+</p>
+<p>
+  All the best, <br />
+Simon
+</p>
+  `
 }

@@ -212,4 +212,18 @@ module.exports = {
   pageNotFoundText:
     'Die Seite hab ich nicht finden können, das macht mich genau so traurig wie du wahrscheinlich gerade bist ',
   pageNotFoundLink: 'Zurück',
+  oldBrowserHeading: 'Oje, ein echt alter Browser...',
+  oldBrowserCopy: `
+  <p>
+    Meine Webseite ist der Meinung, dein Browser ist zu sehr in die Jahre gekommen. Wenn du dir anschauen willst, was ich so machen, flotter im Internet rodeln und dabei noch sicherer sein möchtest   <a href="https://browser-update.org/update-browser.html" target="_blank" rel="noopener noreferrer">update deinen Browser</a>.
+  </p>
+  <p>
+    Wenn du meine Webseite gemein findest oder einfach nur Hilfe brauchst <a href="mailto:simon.vom.eyser@gmail.com">melde dich einfach</a>! 
+  </p>
+  <p>
+    Bis dann! <br />
+    Simon
+  </p>
+  `
+
 }
