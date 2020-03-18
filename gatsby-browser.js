@@ -1,19 +1,8 @@
-import React from 'react'
-import ConsoleJoke from './src/components/ConsoleJoke'
-import InitialPageFade from './src/components/InitialPageFade';
+import customWrapRootElement from './src/gatsby-node/wrapRootElement';
 
 export const onClientEntry = () => {
   localStorage.setItem('startedAt', Date.now())
   localStorage.setItem('hasNavigationAnimationRun', false)
 }
 
-export const wrapRootElement = ({ element, props }) => {
-  return (
-    <>
-      <InitialPageFade>
-        {element}
-      </InitialPageFade>
-      <ConsoleJoke />
-    </>
-  )
-}
+export const wrapRootElement = customWrapRootElement;
