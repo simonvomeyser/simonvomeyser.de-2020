@@ -15,9 +15,7 @@ export default createGlobalStyle`
       box-sizing: inherit;
     }
     body {
-        margin: 0;
-        animation-name: fadeIn;
-        animation-duration: 1.5s;
+      margin: 0;
     }
     a, a:hover, a:focus, a:visited, a:active {
         text-decoration: none;
@@ -57,11 +55,4 @@ export default createGlobalStyle`
       line-height: 1.4;
       padding: .75rem;
     }
-
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        25% {opacity: 0;}
-        100% {opacity: 1;}
-    }
-
 `
