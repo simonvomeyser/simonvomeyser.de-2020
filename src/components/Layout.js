@@ -37,7 +37,6 @@ class Layout extends Component {
         >
           <html lang={intl.locale} />
           <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
-          <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
           <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
         <GlobalStyles />
