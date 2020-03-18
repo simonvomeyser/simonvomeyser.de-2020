@@ -2,6 +2,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
     `gatsby-plugin-styled-components`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    `gatsby-transformer-remark`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // // To learn more, visit: https://gatsby.app/offline
+    // 'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -10,7 +17,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,8 +24,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -32,10 +36,6 @@ module.exports = {
         icon: 'src/images/fav-icon.png', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
