@@ -9,7 +9,6 @@ import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
 import UnsupportedBrowser from './UnsupportedBrowser'
-import ConsoleJoke from './ConsoleJoke';
 
 class Layout extends Component {
   render() {
@@ -59,7 +58,6 @@ class Layout extends Component {
               {children}
             </PosedContentWrapper>
           </PosedWrapper>
-          <ConsoleJoke></ConsoleJoke>
         </UnsupportedBrowser>
       </Fragment>
     )

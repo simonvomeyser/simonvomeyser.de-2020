@@ -2,10 +2,9 @@ import React from 'react'
 import { isSearchEngineBot } from '../util/isSearchEngineBot'
 import { isSupportedBrowser } from '../util/isSupportedBrowser'
 
-export default function UnsupportedBrowserRedirect() {
-  if (typeof window !== 'undefined') {
-    console.clear();
-    console.log(`%c ________________________________________
+export default function ConsoleJoke() {
+   if (typeof window !== 'undefined') {
+      console.log(`%c ________________________________________
            MMM.           .MMM
            MMMMMMMMMMMMMMMMMMM
            MMMMMMMMMMMMMMMMMMM      _____________________________________________________
@@ -29,6 +28,6 @@ export default function UnsupportedBrowserRedirect() {
              :~==~==~==~==~~
                 ||     ||`, "font-family:monospace")
 
-  }
-  return null
+   }
+   return null
 }
