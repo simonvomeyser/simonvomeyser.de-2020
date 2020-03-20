@@ -60,11 +60,11 @@ const FloatingLabel = styled.label`
 
 const StyledErrorIcon = styled.div`
   position: absolute;
-  top: 0.75rem;
+  top: 1px;
+  right: 2px;
   line-height: 0.85;
-  right: 18px;
   color: ${errorColor};
-  font-size: 34px;
+  font-size: 14px;
 `
 
 const StyledErrorLine = styled.div`
