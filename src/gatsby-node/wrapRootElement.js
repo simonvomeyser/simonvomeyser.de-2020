@@ -1,17 +1,18 @@
 import React from 'react'
 import ConsoleJoke from '../components/ConsoleJoke'
 import InitialPageFade from '../components/InitialPageFade';
-import LanguageContext from '../i18n/LanguageContext'
+import { LanguageProvider } from '../i18n/languageContext'
 
 export default ({ element, props }) => {
+
   return (
     <>
-      <LanguageContext.Provider value="en">
+      <LanguageProvider>
         <InitialPageFade>
           {element}
         </InitialPageFade>
         <ConsoleJoke />
-      </LanguageContext.Provider>
+      </LanguageProvider>
     </>
   )
 }
