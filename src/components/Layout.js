@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import Navigation from 'src/components/Navigation'
-import GlobalStyles from '../global-styles'
 import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
@@ -39,7 +38,6 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
           <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
-        <GlobalStyles />
         <UnsupportedBrowser>
           <PosedWrapper
             initialPose={shouldAnimate ? 'hidden' : 'visible'}
