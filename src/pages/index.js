@@ -10,10 +10,7 @@ import posed from 'react-pose'
 import languageContext from '../i18n/languageContext'
 
 class IndexPage extends Component {
-  static contextType = languageContext;
   render() {
-    console.log(this.context);
-
     return (
       <Layout delayInitialAnimation>
         <StyledWrapper>
