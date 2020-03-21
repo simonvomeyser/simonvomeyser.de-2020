@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import languageContext from './languageContext'
 
-const I18nLink = ({ to, children, ...rest }, { language }) => {
-  const { locale } = language
-  const toWithLang = locale ? `/${language.locale}${to}` : `${to}`
+const I18nLink = ({ to, children, ...rest }) => {
+  const [language] = useContext(languageContext);
+  const toWithLang = `/${language}${to}`;
   return (
     <Link to={toWithLang} {...rest}>
       {children}

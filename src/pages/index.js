@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 import { withIntl } from 'src/i18n'
 import Layout from 'src/components/Layout'
 import BigFrontpageLogo from 'src/components/BigFrontpageLogo'
@@ -8,32 +8,35 @@ import { on } from 'src/util/breakpoint'
 import SplitText from 'react-pose-text'
 import posed from 'react-pose'
 import languageContext from '../i18n/languageContext'
+import { FormattedMessage } from 'react-intl'
 
-class IndexPage extends Component {
-  render() {
-    return (
-      <Layout delayInitialAnimation>
-        <StyledWrapper>
-          <StyledLogoWrapper>
-            <BigFrontpageLogo />
-          </StyledLogoWrapper>
-          <StyledSuperHeading>
-            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-              web development
+export default function () {
+  const { language, setLanguage } = useContext(languageContext);
+
+  return (
+    <Layout delayInitialAnimation>
+      <StyledWrapper>
+        current lang {language} < br />
+        <button onClick={() => setLanguage('de')}>change it</button>
+        <FormattedMessage id="landingLearnMore" />
+
+        <StyledLogoWrapper>
+          <BigFrontpageLogo />
+        </StyledLogoWrapper>
+        <StyledSuperHeading>
+          <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+            web development
             </SplitText>
-          </StyledSuperHeading>
-          <StyledHeading>
-            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-              Simon vom Eyser
+        </StyledSuperHeading>
+        <StyledHeading>
+          <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+            Simon vom Eyser
             </SplitText>
-          </StyledHeading>
-        </StyledWrapper>
-      </Layout>
-    )
-  }
+        </StyledHeading>
+      </StyledWrapper>
+    </Layout>
+  )
 }
-
-export default withIntl(IndexPage)
 
 const StyledWrapper = styled.div`
   position: relative;

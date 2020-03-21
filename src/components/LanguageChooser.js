@@ -13,13 +13,13 @@ class LanguageChooser extends Component {
   constructor(props, context) {
     super()
 
-    const { language } = context
+    // const { language } = context
 
-    this.state = {
-      value: language.locale || language.detected,
-      language,
-      options: ['de', 'en'],
-    }
+    // this.state = {
+    //   value: language.locale || language.detected,
+    //   language,
+    //   options: ['de', 'en'],
+    // }
   }
 
   selectLanguage = selectedLangCode => {
@@ -43,6 +43,7 @@ class LanguageChooser extends Component {
   }
 
   render() {
+    return null;
     if (!this.state.value) {
       return null
     }
