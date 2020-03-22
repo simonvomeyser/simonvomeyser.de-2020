@@ -9,13 +9,10 @@ const languageContext = React.createContext();
 export const LanguageProvider = props => {
 
     const [language, setLanguage] = useState('en');
-    const storedLocale =
-        typeof window === 'undefined' ? 'en' : localStorage.language
     const messages = {
         en: require(`./locales/en.js`),
         de: require(`./locales/de.js`),
     }
-
     return (
         <languageContext.Provider value={{
             language,
