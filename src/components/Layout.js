@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
-import UnsupportedBrowser from './UnsupportedBrowser'
+import OnlySupportedBrowsers from './OnlySupportedBrowsers'
 
 class Layout extends Component {
   render() {
@@ -38,7 +38,7 @@ class Layout extends Component {
           <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
           <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
-        <UnsupportedBrowser>
+        <OnlySupportedBrowsers>
           <PosedWrapper
             initialPose={shouldAnimate ? 'hidden' : 'visible'}
             pose="visible"
@@ -55,7 +55,7 @@ class Layout extends Component {
               {children}
             </PosedContentWrapper>
           </PosedWrapper>
-        </UnsupportedBrowser>
+        </OnlySupportedBrowsers>
       </Fragment>
     )
   }

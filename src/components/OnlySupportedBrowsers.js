@@ -12,7 +12,7 @@ import SocialLinks from '../components/SocialLinks'
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 
-export default function UnsupportedBrowser({ children }) {
+export default function OnlySupportedBrowsers({ children }) {
   if (!isSearchEngineBot() && !isSupportedBrowser()) {
     return <UnsupportedPage />
   }
