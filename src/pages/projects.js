@@ -1,48 +1,47 @@
 import { graphql } from 'gatsby'
-import React from 'react'
+import React, { useContext } from 'react'
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import PageLayout from 'src/components/PageLayout'
 import ChangeTitle from '../components/ChangeTitle'
 import ProjectTiles from '../components/ProjectTiles'
 import { StyledContainer, StyledPageHeading, StyledTextSection } from '../styled-components'
+import languageContext from '../i18n/languageContext'
 
-class Projects extends React.Component {
-  getLocalizedProjects = () => {
-    const { locale } = this.props.pageContext
-    const allLangProjects = this.props.data.allMarkdownRemark.edges
+export default function Projects({ data }) {
+  const { language } = useContext(languageContext)
+
+  const projects = getLocalizedProjects(language, data)
+  const numberOfProjects = projects.length
+  const numberOfAllProjects = numberOfProjects + 40
+
+  return (
+    <PageLayout>
+      <ChangeTitle translate additionalText="navigationProjects" />
+      <StyledContainer>
+        <StyledPageHeading>
+          <FormattedMessage id="navigationProjects" />
+        </StyledPageHeading>
+        <StyledContainer small>
+          <StyledTextSection>
+            <FormattedHTMLMessage
+              id="projectsCopy"
+              values={{ numberOfProjects, numberOfAllProjects }}
+            />
+          </StyledTextSection>
+        </StyledContainer>
+      </StyledContainer>
+      <ProjectTiles projects={projects} />
+    </PageLayout>
+  )
+
+  function getLocalizedProjects(language, data) {
+    const allLangProjects = data.allMarkdownRemark.edges
     return allLangProjects.filter(project => {
-      return project.node.fileAbsolutePath.includes(`projects/${locale}`)
+      return project.node.fileAbsolutePath.includes(`projects/${language}`)
     })
   }
-  render() {
-    const projects = this.getLocalizedProjects()
-    const numberOfProjects = projects.length
-    const numberOfAllProjects = numberOfProjects + 40
-    return (
-      <>
-        <PageLayout>
-          <ChangeTitle translate additionalText="navigationProjects" />
-          <StyledContainer>
-            <StyledPageHeading>
-              <FormattedMessage id="navigationProjects" />
-            </StyledPageHeading>
-            <StyledContainer small>
-              <StyledTextSection>
-                <FormattedHTMLMessage
-                  id="projectsCopy"
-                  values={{ numberOfProjects, numberOfAllProjects }}
-                />
-              </StyledTextSection>
-            </StyledContainer>
-          </StyledContainer>
-          <ProjectTiles projects={projects} />
-        </PageLayout>
-      </>
-    )
-  }
-}
 
-export default Projects
+}
 
 export const query = graphql`
   {
