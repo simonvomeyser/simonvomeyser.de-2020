@@ -1,4 +1,4 @@
-import { languages } from './index'
+import { languages, defaultLanguage } from './index'
 import browserLang from 'browser-lang'
 import { isSSR } from '../util/isSSR';
 
