@@ -18,16 +18,13 @@ const createTwoPagesWithTranslatedPath = (page, actions) => {
 
     languages.forEach(({ value: language }) => {
 
-      const translatedPath = getTranslatedPath(page.path, language)
-
-      const localePage = {
+      createPage({
         ...page,
-        path: translatedPath,
+        path: getTranslatedPath(page.path, language),
         context: {
-          language: language,
-        },
-      }
-      createPage(localePage)
+          language
+        }
+      })
     })
 
     resolve()
