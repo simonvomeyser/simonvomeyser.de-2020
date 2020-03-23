@@ -1,17 +1,15 @@
-import React from 'react'
-import Layout from 'src/components/Layout'
-import PageLayout from 'src/components/PageLayout'
-import styled from 'styled-components'
-import { vars } from '../util/vars'
-import AboutMeBackgroundSvg from 'src/svg/about-me-background.svg'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
-import ChangeTitle from '../components/ChangeTitle'
-import AboutMeTellMeMore from '../components/AboutMeTellMeMore'
-import { StyledPageHeading, StyledPrimaryButton } from '../styled-components'
-import { on } from 'src/util/breakpoint'
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-import { isSearchEngineBot } from '../util/isSearchEngineBot'
+import Img from 'gatsby-image'
+import React, { useEffect, useState } from 'react'
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
+import PageLayout from 'src/components/PageLayout'
+import AboutMeBackgroundSvg from 'src/svg/about-me-background.svg'
+import { on } from 'src/util/breakpoint'
+import styled from 'styled-components'
+import AboutMeTellMeMore from '../components/AboutMeTellMeMore'
+import ChangeTitle from '../components/ChangeTitle'
+import { StyledPageHeading, StyledPrimaryButton } from '../styled-components'
+import { vars } from '../util/vars'
 
 export const query = graphql`
   query {
@@ -32,78 +30,68 @@ export const query = graphql`
   }
 `
 
-class AboutMePage extends React.Component {
-  state = {
-    tellMeMoreVisible: false,
-    scroll: null,
-  }
-  componentDidMount() {
+export default function AboutMePage({ data }) {
+  const [isTellMoreVisible, setIsTellMoreVisble] = useState(false)
+  const [scroll, setScroll] = useState(null)
+
+  useEffect(() => {
     const SmoothScroll = require('smooth-scroll')
-    const scroll = new SmoothScroll()
+    setScroll(new SmoothScroll)
+  }, [])
 
-    const tellMeMoreVisible =
-      isSearchEngineBot() || sessionStorage.tellMeMoreVisible
+  function showSecondText() {
+    setIsTellMoreVisble(true);
 
-    this.setState({ scroll, tellMeMoreVisible })
+    setTimeout(() => {
+      scroll.animateScroll(
+        document.getElementById('tell-me-more'),
+        null,
+        {
+          speed: 500,
+          speedAsDuration: true,
+          header: '[data-mobile-navigation-scroll-adjust]',
+        }
+      )
+    }, 100)
   }
-  showSecondText = () => {
-    this.setState({ tellMeMoreVisible: true }, () => {
-      sessionStorage.tellMeMoreVisible = true
-      setTimeout(() => {
-        this.state.scroll.animateScroll(
-          document.getElementById('tell-me-more'),
-          null,
-          {
-            speed: 500,
-            speedAsDuration: true,
-            header: '[data-mobile-navigation-scroll-adjust]',
-          }
-        )
-      }, 100)
-    })
-  }
-  render() {
-    const { data } = this.props
-    return (
-      <>
-        <ChangeTitle translate additionalText="navigationAboutMe" />
-        <PageLayout>
-          <StyledBackgroundWrapper>
-            <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
-            <StyledBackgroundWrapper.Left>
-              <StyledPageHeading>
-                <FormattedMessage id="niceToMeetYou" />
-              </StyledPageHeading>
-              <StyledHeadingQuote>
-                <FormattedHTMLMessage id="aboutMeOpener" />
-              </StyledHeadingQuote>
-              <StyledAboutMeFirstText>
-                <FormattedHTMLMessage id="aboutMeFirstText" />
-              </StyledAboutMeFirstText>
-              <StyledButtonWrapper>
-                <StyledPrimaryButton onClick={this.showSecondText}>
-                  <FormattedMessage id="aboutMeCta" />
-                </StyledPrimaryButton>
-              </StyledButtonWrapper>
-            </StyledBackgroundWrapper.Left>
-            <StyledBackgroundWrapper.Right>
-              <StyledAboutMeImg
-                fluid={data.fileDesktop.childImageSharp.fluid}
-                desktop
-              />
-              <StyledAboutMeImg fluid={data.fileMobile.childImageSharp.fluid} />
-            </StyledBackgroundWrapper.Right>
-          </StyledBackgroundWrapper>
-          <div id="tell-me-more">
-            <AboutMeTellMeMore visible={this.state.tellMeMoreVisible} />
-          </div>
-        </PageLayout>
-      </>
-    )
-  }
+  return (
+    <>
+      <ChangeTitle translate additionalText="navigationAboutMe" />
+      <PageLayout>
+        <StyledBackgroundWrapper>
+          <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
+          <StyledBackgroundWrapper.Left>
+            <StyledPageHeading>
+              <FormattedMessage id="niceToMeetYou" />
+            </StyledPageHeading>
+            <StyledHeadingQuote>
+              <FormattedHTMLMessage id="aboutMeOpener" />
+            </StyledHeadingQuote>
+            <StyledAboutMeFirstText>
+              <FormattedHTMLMessage id="aboutMeFirstText" />
+            </StyledAboutMeFirstText>
+            <StyledButtonWrapper>
+              <StyledPrimaryButton onClick={showSecondText}>
+                <FormattedMessage id="aboutMeCta" />
+              </StyledPrimaryButton>
+            </StyledButtonWrapper>
+          </StyledBackgroundWrapper.Left>
+          <StyledBackgroundWrapper.Right>
+            <StyledAboutMeImg
+              fluid={data.fileDesktop.childImageSharp.fluid}
+              desktop
+            />
+            <StyledAboutMeImg fluid={data.fileMobile.childImageSharp.fluid} />
+          </StyledBackgroundWrapper.Right>
+        </StyledBackgroundWrapper>
+        <div id="tell-me-more">
+          <AboutMeTellMeMore visible={isTellMoreVisible} />
+        </div>
+      </PageLayout>
+    </>
+  )
 }
 
-export default AboutMePage
 
 const StyledBackgroundWrapper = styled.div`
   position: relative;
