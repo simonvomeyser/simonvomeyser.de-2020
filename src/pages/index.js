@@ -1,21 +1,13 @@
-import React, { useContext } from 'react'
-import BigFrontpageLogo from 'src/components/BigFrontpageLogo'
-import styled from 'styled-components'
-import { vars } from 'src/util/vars'
-import { on } from 'src/util/breakpoint'
+import React from 'react'
 import SplitText from 'react-pose-text'
-import languageContext from '../i18n/languageContext'
-import { FormattedMessage } from 'react-intl'
+import BigFrontpageLogo from 'src/components/BigFrontpageLogo'
+import { on } from 'src/util/breakpoint'
+import { vars } from 'src/util/vars'
+import styled from 'styled-components'
 
 export default function () {
-  const { language, setLanguage } = useContext(languageContext);
-
   return (
     <StyledWrapper>
-      current lang {language} < br />
-      <button onClick={() => setLanguage('de')}>change it</button>
-      <FormattedMessage id="landingLearnMore" />
-
       <StyledLogoWrapper>
         <BigFrontpageLogo />
       </StyledLogoWrapper>
