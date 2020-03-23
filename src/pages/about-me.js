@@ -1,5 +1,4 @@
 import React from 'react'
-import { withIntl } from 'src/i18n'
 import Layout from 'src/components/Layout'
 import PageLayout from 'src/components/PageLayout'
 import styled from 'styled-components'
@@ -11,7 +10,6 @@ import AboutMeTellMeMore from '../components/AboutMeTellMeMore'
 import { StyledPageHeading, StyledPrimaryButton } from '../styled-components'
 import { on } from 'src/util/breakpoint'
 import Img from 'gatsby-image'
-import posed from 'react-pose'
 import { graphql } from 'gatsby'
 import { isSearchEngineBot } from '../util/isSearchEngineBot'
 
@@ -105,7 +103,7 @@ class AboutMePage extends React.Component {
   }
 }
 
-export default withIntl(AboutMePage)
+export default AboutMePage
 
 const StyledBackgroundWrapper = styled.div`
   position: relative;

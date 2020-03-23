@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { IntlProvider, addLocaleData } from 'react-intl'
 import { localeData } from './locales'
+import { defaultLanguage } from './index'
 
 addLocaleData(localeData)
 
 const languageContext = React.createContext();
 
-export const LanguageProvider = props => {
+export const LanguageProvider = ({ language: propsLanguage, children }) => {
 
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState(propsLanguage);
     const messages = {
         en: require(`./locales/en.js`),
         de: require(`./locales/de.js`),
@@ -20,7 +21,7 @@ export const LanguageProvider = props => {
         }}>
             <IntlProvider locale={language} messages={messages[language]}>
                 <>
-                    {props.children}
+                    {children}
                 </>
             </IntlProvider>
         </languageContext.Provider>
