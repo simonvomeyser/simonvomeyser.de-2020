@@ -9,54 +9,33 @@ import NavigationMobileBurger from './NavigationMobileBurger'
 
 import { LogoNavigationSvg } from 'src/svg'
 import { Link } from '../i18n'
+import { useState } from 'react'
 
-export default class NavigationMobile extends Component {
-  constructor() {
-    super()
-    this.state = {
-      menuOpen: false,
-    }
+export default function NavigationMobile() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen)
   }
-  toggleMenu = () => {
-    this.setState(state => {
-      return { menuOpen: !state.menuOpen }
-    })
-  }
-  setMenu = (event, { open = false }) => {
-    this.setState(
-      () => {
-        return { menuOpen: open }
-      },
-      () => {
-        navigate('/')
-      }
-    )
-  }
-  render() {
-    return (
-      <StyledWrapper>
-        <StyledNavigationMobileBar>
-          <StyledBurgerWrapper>
-            <NavigationMobileBurger
-              open={this.state.menuOpen}
-              toggleMenu={this.toggleMenu}
-            />
-          </StyledBurgerWrapper>
-          <StyledLogoWrapper
-            to="/"
-            onClick={event => this.setMenu(event, { open: false })}
-          >
-            <LogoNavigationSvg />
-          </StyledLogoWrapper>
-          <LanguageChooser />
-        </StyledNavigationMobileBar>
-        <NavigationMobileList
-          open={this.state.menuOpen}
-          toggleMenu={this.toggleMenu}
-        />
-      </StyledWrapper>
-    )
-  }
+  return (
+    <StyledWrapper>
+      <StyledNavigationMobileBar>
+        <StyledBurgerWrapper>
+          <NavigationMobileBurger
+            open={isMenuOpen}
+            toggleMenu={toggleMenu}
+          />
+        </StyledBurgerWrapper>
+        <StyledLogoWrapper to="/" onClick={() => setIsMenuOpen(false)}>
+          <LogoNavigationSvg />
+        </StyledLogoWrapper>
+        <LanguageChooser />
+      </StyledNavigationMobileBar>
+      <NavigationMobileList
+        open={isMenuOpen}
+        toggleMenu={toggleMenu}
+      />
+    </StyledWrapper>
+  )
 }
 
 const StyledWrapper = styled.div`

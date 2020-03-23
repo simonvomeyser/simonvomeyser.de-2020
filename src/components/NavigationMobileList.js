@@ -7,11 +7,11 @@ import { UserSvg, ProjectsSvg, PaperPlaneSvg } from 'src/svg'
 import NavigationLink from 'src/components/NavigatonLink'
 import posed from 'react-pose'
 
-export default function NavigationMobileList(props) {
+export default function NavigationMobileList({ open, toggleMenu }) {
   return (
-    <PosedWrapper pose={props.open ? 'open' : 'closed'}>
+    <PosedWrapper pose={open ? 'open' : 'closed'}>
       <nav>
-        <ul onClick={props.toggleMenu}>
+        <ul onClick={toggleMenu}>
           <PosedListElement>
             <NavigationLink
               to="/about-me"
