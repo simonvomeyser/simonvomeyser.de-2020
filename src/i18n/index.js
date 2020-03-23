@@ -1,5 +1,6 @@
 import Link from './Link'
 import withIntl from './withIntl'
-import { languages, localeData } from './locales'
+import { detectLanguage } from './detectLanguage'
+import { languages, localeData, defaultLanguage } from './locales'
 
-export { Link, withIntl, languages, localeData }
+export { Link, withIntl, languages, localeData, defaultLanguage, detectLanguage }

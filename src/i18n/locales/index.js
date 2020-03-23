@@ -11,4 +11,5 @@ module.exports = {
     { value: 'en', text: 'English' },
     { value: 'de', text: 'Deutsch' },
   ],
+  defaultLanguage: 'de'
 }

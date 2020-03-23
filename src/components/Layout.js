@@ -34,7 +34,6 @@ class Layout extends Component {
             },
           ]}
         >
-          <html lang={intl.locale} />
         </Helmet>
         <OnlySupportedBrowsers>
           <PosedWrapper
