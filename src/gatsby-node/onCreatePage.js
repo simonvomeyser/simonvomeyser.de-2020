@@ -32,7 +32,6 @@ const createTwoPagesWithTranslatedURL = (page, actions) => {
         path: `/${translatedPath}/`,
         context: {
           language: language,
-          hasTranslatedURL: true,
         },
       }
       createPage(localePage)
