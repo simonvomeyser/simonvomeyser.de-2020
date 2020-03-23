@@ -65,7 +65,7 @@ class AboutMePage extends React.Component {
   render() {
     const { data } = this.props
     return (
-      <Layout>
+      <>
         <ChangeTitle translate additionalText="navigationAboutMe" />
         <PageLayout>
           <StyledBackgroundWrapper>
@@ -98,7 +98,7 @@ class AboutMePage extends React.Component {
             <AboutMeTellMeMore visible={this.state.tellMeMoreVisible} />
           </div>
         </PageLayout>
-      </Layout>
+      </>
     )
   }
 }

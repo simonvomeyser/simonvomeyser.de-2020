@@ -44,6 +44,7 @@ export default injectIntl(Layout)
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
   min-height: 100vh;
+  background-color: ${vars.styles.colors.neutral1};
 
   ${on('onlyMobile')} {
     padding-left: 0 !important; /* Needed for pose not to work mobile */
