@@ -1,15 +1,13 @@
 import React from 'react'
-import Layout from 'src/components/Layout'
-import { withIntl } from 'src/i18n'
-import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 import { on } from 'src/util/breakpoint'
 import { vars } from 'src/util/vars'
-import { primaryColor } from '../util/vars'
-import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
 import { StyledPrimaryButtonLink } from '../styled-components/buttons'
+import { primaryColor } from '../util/vars'
 
-const NotFoundPage = () => (
-  <Layout>
+export default function NotFoundPage() {
+  return (
     <StyledWrapper>
       <StyledHeading>404</StyledHeading>
       <StyledSubHeading>
@@ -24,9 +22,8 @@ const NotFoundPage = () => (
         </StyledPrimaryButtonLink>
       </StyledLink>
     </StyledWrapper>
-  </Layout>
-)
-export default withIntl(NotFoundPage)
+  )
+}
 
 const StyledHeading = styled.div`
   color: ${primaryColor};

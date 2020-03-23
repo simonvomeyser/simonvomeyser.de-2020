@@ -1,16 +1,10 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import { withIntl, Link } from 'src/i18n'
-import Layout from 'src/components/Layout'
-import ChangeTitle from '../components/ChangeTitle'
+import React from 'react'
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import PageLayout from 'src/components/PageLayout'
-import {
-  StyledContainer,
-  StyledPageHeading,
-  StyledTextSection,
-} from '../styled-components'
+import ChangeTitle from '../components/ChangeTitle'
 import ProjectTiles from '../components/ProjectTiles'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { StyledContainer, StyledPageHeading, StyledTextSection } from '../styled-components'
 
 class Projects extends React.Component {
   getLocalizedProjects = () => {
@@ -25,7 +19,7 @@ class Projects extends React.Component {
     const numberOfProjects = projects.length
     const numberOfAllProjects = numberOfProjects + 40
     return (
-      <Layout>
+      <>
         <PageLayout>
           <ChangeTitle translate additionalText="navigationProjects" />
           <StyledContainer>
@@ -43,12 +37,12 @@ class Projects extends React.Component {
           </StyledContainer>
           <ProjectTiles projects={projects} />
         </PageLayout>
-      </Layout>
+      </>
     )
   }
 }
 
-export default withIntl(Projects)
+export default Projects
 
 export const query = graphql`
   {

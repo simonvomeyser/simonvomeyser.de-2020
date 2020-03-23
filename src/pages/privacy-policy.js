@@ -1,27 +1,24 @@
 import React from 'react'
-import { withIntl, Link } from 'src/i18n'
-
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import PageLayout from 'src/components/PageLayout'
 import ChangeTitle from '../components/ChangeTitle'
-import Layout from 'src/components/Layout'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
-import { StyledPageHeading } from '../styled-components'
 import SocialLinks from '../components/SocialLinks'
+import { StyledPageHeading } from '../styled-components'
 import { StyledTextSection } from '../styled-components/TextSection'
 
-const PrivacyPolicy = () => (
-  <Layout>
-    <PageLayout>
-      <ChangeTitle translate additionalText="privacyPolicyTitleShort" />
-      <StyledPageHeading>
-        <FormattedMessage id="privacyPolicyTitle" />
-      </StyledPageHeading>
-      <StyledTextSection>
-        <FormattedHTMLMessage id="privacyPolicyContent" />
-      </StyledTextSection>
-      <SocialLinks />
-    </PageLayout>
-  </Layout>
-)
-
-export default withIntl(PrivacyPolicy)
+export default function PrivacyPolicy() {
+  return (
+    <>
+      <PageLayout>
+        <ChangeTitle translate additionalText="privacyPolicyTitleShort" />
+        <StyledPageHeading>
+          <FormattedMessage id="privacyPolicyTitle" />
+        </StyledPageHeading>
+        <StyledTextSection>
+          <FormattedHTMLMessage id="privacyPolicyContent" />
+        </StyledTextSection>
+        <SocialLinks />
+      </PageLayout>
+    </>
+  )
+}
