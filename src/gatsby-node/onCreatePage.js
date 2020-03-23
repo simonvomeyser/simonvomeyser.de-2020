@@ -1,6 +1,5 @@
 const { languages } = require('../i18n/locales')
-const isTranslatedPath = require('../i18n/translatedPathHelper').isTranslatedPath
-const getTranslatedPath = require('../i18n/translatedPathHelper').getTranslatedPath
+const { isTranslatedPath, getTranslatedPath } = require('../i18n/translatedPathHelper')
 
 module.exports = ({ page, actions }) => {
 
@@ -23,7 +22,7 @@ const createTwoPagesWithTranslatedPath = (page, actions) => {
 
       const localePage = {
         ...page,
-        path: `/${translatedPath}/`,
+        path: translatedPath,
         context: {
           language: language,
         },

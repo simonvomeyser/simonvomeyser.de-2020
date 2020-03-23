@@ -17,7 +17,7 @@ exports.getTranslatedPath = (path, language) => {
     return translations
   }
 
-  return translations[language]
+  return `/${translations[language]}/`
 }
 
 function purifyPath(path) {
