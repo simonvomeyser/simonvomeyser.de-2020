@@ -1,86 +1,45 @@
-import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
 import { GermanySvg, UnitedStatesSvg } from 'src/svg'
-import { on } from 'src/util/breakpoint'
-import { navigate } from '../i18n/navigate'
+import languageContext from '../i18n/languageContext'
+import { navigate } from 'gatsby'
+import LanguageButton from './LanguageButton'
 
-class LanguageChooser extends Component {
-  static contextTypes = {
-    language: PropTypes.object,
-  }
+const { isTranslatedPath, getTranslatedPath } = require('../i18n/translatedPathHelper')
 
-  constructor(props, context) {
-    super()
+export default function LanguageChooser(props) {
 
-    // const { language } = context
+  const { language, setLanguage } = useContext(languageContext)
 
-    // this.state = {
-    //   value: language.locale || language.detected,
-    //   language,
-    //   options: ['de', 'en'],
-    // }
-  }
+  const { pathname } = location;
 
-  selectLanguage = selectedLangCode => {
-    const { originalPath } = this.state.language
-
+  const selectLanguage = clickedLangCode => {
     // Clicking the already active flag changes language to other language
     // Implemented because mobile there is only one flag
-    const userClickedOnActiveFlag = selectedLangCode === this.state.value
-    const otherLangCode = this.state.options.filter(
-      langCodeOption => langCodeOption !== selectedLangCode
-    )[0]
-    const langCodeToChangeTo = userClickedOnActiveFlag
-      ? otherLangCode
-      : selectedLangCode
+    const clickedActiveFlag = clickedLangCode === language;
+    const otherLangCode = clickedLangCode === 'de' ? 'en' : 'de';
+    const langCodeToChangeTo = clickedActiveFlag ? otherLangCode : clickedLangCode
 
-    this.setState({ value: langCodeToChangeTo }, () => {
-      localStorage.setItem('language', langCodeToChangeTo)
-      // todo use router to redirect
-      navigate(originalPath, langCodeToChangeTo)
-    })
-  }
+    setLanguage(langCodeToChangeTo)
 
-  render() {
-    return null;
-    if (!this.state.value) {
-      return null
+    if (isTranslatedPath(pathname)) {
+      navigate(getTranslatedPath(pathname, langCodeToChangeTo))
     }
-
-    return (
-      <div>
-        <LanguageButton
-          active={this.state.value === 'en'}
-          onClick={() => this.selectLanguage('en')}
-        >
-          <UnitedStatesSvg />
-        </LanguageButton>
-        <LanguageButton
-          active={this.state.value === 'de'}
-          onClick={() => this.selectLanguage('de')}
-        >
-          <GermanySvg />
-        </LanguageButton>
-      </div>
-    )
   }
+
+  return (
+    <div>
+      <LanguageButton
+        active={language === 'en'}
+        onClick={() => selectLanguage('en')}
+        Icon={UnitedStatesSvg}
+      />
+      <LanguageButton
+        active={language === 'de'}
+        onClick={() => selectLanguage('de')}
+        Icon={GermanySvg}
+      />
+    </div>
+  )
+
 }
 
-const LanguageButton = styled.button`
-  border: 0;
-  background: none;
-  cursor: pointer;
-  svg {
-    width: 25px;
-    height: 25px;
-  }
-  opacity: ${({ active }) => active ? '1' : '0.5'};
-  transition: opacity 0.3s ease-in-out;
-
-  ${on('onlyMobile')} {
-    display: ${({ active }) => active ? 'inline-block' : 'none'};
-  }
-`
-
-export default styled(LanguageChooser)``
