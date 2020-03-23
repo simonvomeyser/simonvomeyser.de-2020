@@ -10,7 +10,6 @@ export default function LanguageChooser(props) {
 
   const { language, setLanguage } = useContext(languageContext)
 
-  const { pathname } = location;
 
   const selectLanguage = clickedLangCode => {
     // Clicking the already active flag changes language to other language
@@ -18,6 +17,7 @@ export default function LanguageChooser(props) {
     const clickedActiveFlag = clickedLangCode === language;
     const otherLangCode = clickedLangCode === 'de' ? 'en' : 'de';
     const langCodeToChangeTo = clickedActiveFlag ? otherLangCode : clickedLangCode
+    const { pathname } = location;
 
     setLanguage(langCodeToChangeTo)
 
