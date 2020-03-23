@@ -1,23 +1,17 @@
-const path = require('path');
 const { languages } = require('../i18n/locales')
-const paths = require('../i18n/locales/paths')
+const isTranslatedPath = require('../i18n/translatedPathHelper').isTranslatedPath
+const getTranslatedPath = require('../i18n/translatedPathHelper').getTranslatedPath
 
 module.exports = ({ page, actions }) => {
 
-  if (page.path.includes('404') || page.path === '/') {
-    return Promise.resolve()
+  if (isTranslatedPath(page.path)) {
+    return createTwoPagesWithTranslatedPath(page, actions);
   }
-
-  return createTwoPagesWithTranslatedURL(page, actions);
-
+  return Promise.resolve()
 }
 
-const createTwoPagesWithTranslatedURL = (page, actions) => {
+const createTwoPagesWithTranslatedPath = (page, actions) => {
   const { createPage, deletePage } = actions
-
-  // create for all languages a page with TRANSLATED url
-  // Wrap this page into the SetLanguage HOC with the currently active page
-
 
   return new Promise((resolve) => {
 
@@ -25,7 +19,7 @@ const createTwoPagesWithTranslatedURL = (page, actions) => {
 
     languages.forEach(({ value: language }) => {
 
-      const translatedPath = paths[page.path][language];
+      const translatedPath = getTranslatedPath(page.path, language)
 
       const localePage = {
         ...page,
@@ -36,7 +30,7 @@ const createTwoPagesWithTranslatedURL = (page, actions) => {
       }
       createPage(localePage)
     })
+
     resolve()
   })
-
 }

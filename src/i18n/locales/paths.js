@@ -1,21 +1,21 @@
 module.exports = {
-    '/about-me/': {
+    'about-me': {
         'de': 'ueber-mich',
         'en': 'about-me'
     },
-    '/contact/': {
+    'contact': {
         'de': 'kontakt',
         'en': 'contact'
     },
-    '/projects/': {
+    'projects': {
         'de': 'projekte',
         'en': 'projects'
     },
-    '/legal-notice/': {
+    'legal-notice': {
         'de': 'impressum',
         'en': 'legal-notice'
     },
-    '/privacy-policy/': {
+    'privacy-policy': {
         'de': 'datenschutzerklaerung',
         'en': 'privacy-policy'
     }
