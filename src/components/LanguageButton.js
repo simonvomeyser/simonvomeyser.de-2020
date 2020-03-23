@@ -8,7 +8,6 @@ export default function LanguageButton({ active, onClick, Icon }) {
   return (
     <StyledLanguageButton active={active} onClick={onClick}>
       <Icon />
-      {active ? <StyledActiveDot /> : null}
     </StyledLanguageButton>
   )
 }
@@ -37,13 +36,3 @@ const StyledLanguageButton = styled.button`
   }
   
 `
-
-const StyledActiveDot = styled.div`
-  position: absolute;
-  bottom: 2px;
-  right: 2px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: ${vars.styles.colors.accent5};
-`;
