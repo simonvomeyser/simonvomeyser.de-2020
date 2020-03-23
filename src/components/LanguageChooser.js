@@ -75,11 +75,11 @@ const LanguageButton = styled.button`
     width: 25px;
     height: 25px;
   }
-  opacity: ${props => (props.active ? '1' : '0.5')};
+  opacity: ${({ active }) => active ? '1' : '0.5'};
   transition: opacity 0.3s ease-in-out;
 
   ${on('onlyMobile')} {
-    display: ${props => (props.active ? 'inline-block' : 'none')};
+    display: ${({ active }) => active ? 'inline-block' : 'none'};
   }
 `
 
