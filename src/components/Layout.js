@@ -35,8 +35,6 @@ class Layout extends Component {
           ]}
         >
           <html lang={intl.locale} />
-          <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
-          <link rel="stylesheet" type="text/css" href="/fonts.css" />
         </Helmet>
         <OnlySupportedBrowsers>
           <PosedWrapper
