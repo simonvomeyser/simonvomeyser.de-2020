@@ -2,19 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import posed from 'react-pose'
 
-export default class BigFrontpageLogo extends Component {
-  static propTypes = {
-    shouldAnimate: PropTypes.bool,
-  }
-  render() {
-    return (
-      <PosedSvg initialPose="hidden" pose="shown">
-        <PosedTriangle1 />
-        <PosedTriangle2 />
-        <PosedTriangle3 />
-      </PosedSvg>
-    )
-  }
+export default function BigFrontpageLogo() {
+  return (
+    <PosedSvg initialPose="hidden" pose="shown">
+      <PosedTriangle1 />
+      <PosedTriangle2 />
+      <PosedTriangle3 />
+    </PosedSvg>
+  )
 }
 
 const Svg = React.forwardRef((props, ref) => {
