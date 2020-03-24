@@ -25,7 +25,7 @@ export default function NavigationMobile() {
             toggleMenu={toggleMenu}
           />
         </StyledBurgerWrapper>
-        <StyledLogoLink to="/" onClick={() => setIsMenuOpen(false)}>
+        <StyledLogoLink to="/">
           <LogoNavigationSvg />
         </StyledLogoLink>
         <LanguageChooser />

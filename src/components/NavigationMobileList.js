@@ -11,7 +11,7 @@ export default function NavigationMobileList({ open, toggleMenu }) {
   return (
     <PosedWrapper pose={open ? 'open' : 'closed'}>
       <nav>
-        <ul onClick={toggleMenu}>
+        <ul>
           <PosedListElement>
             <NavigationLink
               to="/about-me"
