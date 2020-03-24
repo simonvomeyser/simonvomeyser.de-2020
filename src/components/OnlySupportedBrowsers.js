@@ -16,7 +16,7 @@ export default function OnlySupportedBrowsers({ children }) {
   if (!isSearchEngineBot() && !isSupportedBrowser()) {
     return <UnsupportedPage />
   }
-  return (children)
+  return (<>{children}</>)
 }
 
 const UnsupportedPage = () => {
