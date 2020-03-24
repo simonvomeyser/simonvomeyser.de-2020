@@ -78,9 +78,13 @@ const PosedWrapper = posed(StyledWrapper)({
   open: {
     height: '106px',
     staggerChildren: 100,
+    applyAtStart: { display: 'block' },
     delayChildren: () => {
       return 100
     },
   },
-  closed: { height: 0 },
+  closed: {
+    height: 0,
+    applyAtStart: { display: 'none' },
+  },
 })
