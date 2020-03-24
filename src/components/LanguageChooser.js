@@ -3,12 +3,14 @@ import { GermanySvg, UnitedStatesSvg } from 'src/svg'
 import languageContext from '../i18n/languageContext'
 import { navigate } from 'gatsby'
 import LanguageButton from './LanguageButton'
+import pageContext from '../gatsby-node/pageContext'
 
 const { isTranslatedPath, getTranslatedPath } = require('../i18n/translatedPathHelper')
 
 export default function LanguageChooser(props) {
 
   const { language, setLanguage } = useContext(languageContext)
+  const { path: currentPagePath } = useContext(pageContext);
 
 
   const selectLanguage = clickedLangCode => {
@@ -17,12 +19,11 @@ export default function LanguageChooser(props) {
     const clickedActiveFlag = clickedLangCode === language;
     const otherLangCode = clickedLangCode === 'de' ? 'en' : 'de';
     const langCodeToChangeTo = clickedActiveFlag ? otherLangCode : clickedLangCode
-    const { pathname } = location;
 
     setLanguage(langCodeToChangeTo)
 
-    if (isTranslatedPath(pathname)) {
-      navigate(getTranslatedPath(pathname, langCodeToChangeTo))
+    if (isTranslatedPath(currentPagePath)) {
+      navigate(getTranslatedPath(currentPagePath, langCodeToChangeTo))
     }
   }
 
