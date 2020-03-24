@@ -1,57 +1,57 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 import posed from 'react-pose'
 import NavigationLink from 'src/components/NavigatonLink'
 import { LogoNavigationSvg, PaperPlaneSvg, ProjectsSvg, UserSvg } from 'src/svg'
 import { on } from 'src/util/breakpoint'
 import { vars } from 'src/util/vars'
 import styled from 'styled-components'
+import pageContext from '../gatsby-node/pageContext'
 
-class Navigation extends Component {
+export default function Navigation() {
 
-  render() {
-    return (
-      <PosedWrapper>
-        <div>
-          <StyledNavigationTop>
-            <nav>
-              <ul>
-                <PosedLogoLi>
-                  <NavigationLink
-                    to="/"
-                    isPageLogo
-                    icon={<LogoNavigationSvg />}
-                  />
-                </PosedLogoLi>
-                <PosedLi>
-                  <NavigationLink
-                    to="/about-me"
-                    logo
-                    icon={<UserSvg />}
-                    idOfText="navigationAboutMe"
-                  />
-                </PosedLi>
-                <PosedLi>
-                  <NavigationLink
-                    to="/projects"
-                    icon={<ProjectsSvg />}
-                    idOfText="navigationProjects"
-                  />
-                </PosedLi>
-                <PosedLi>
-                  <NavigationLink
-                    to="/contact"
-                    icon={<PaperPlaneSvg />}
-                    idOfText="navigationContact"
-                  />
-                </PosedLi>
-              </ul>
-            </nav>
-          </StyledNavigationTop>
-        </div>
-      </PosedWrapper>
-    )
-  }
+  const { isFrontpage } = useContext(pageContext)
+
+  return (
+    <PosedWrapper withParent={isFrontpage}>
+      <div>
+        <StyledNavigationTop>
+          <nav>
+            <ul>
+              <PosedLogoLi>
+                <NavigationLink
+                  to="/"
+                  isPageLogo
+                  icon={<LogoNavigationSvg />}
+                />
+              </PosedLogoLi>
+              <PosedLi>
+                <NavigationLink
+                  to="/about-me"
+                  logo
+                  icon={<UserSvg />}
+                  idOfText="navigationAboutMe"
+                />
+              </PosedLi>
+              <PosedLi>
+                <NavigationLink
+                  to="/projects"
+                  icon={<ProjectsSvg />}
+                  idOfText="navigationProjects"
+                />
+              </PosedLi>
+              <PosedLi>
+                <NavigationLink
+                  to="/contact"
+                  icon={<PaperPlaneSvg />}
+                  idOfText="navigationContact"
+                />
+              </PosedLi>
+            </ul>
+          </nav>
+        </StyledNavigationTop>
+      </div>
+    </PosedWrapper>
+  )
 }
 
 const StyledWrapper = styled.div`
@@ -87,7 +87,7 @@ const PosedWrapper = posed(StyledWrapper)({
     x: '0%',
     staggerChildren: 100,
     delayChildren: ({ delay }) => {
-      return delay + 200;
+      return delay + 400;
     },
     transition: { type: 'spring', damping: 20 },
   },
@@ -116,5 +116,3 @@ const PosedLi = posed.li({
   },
   pageInvisible: { x: '-100%', opacity: 0 },
 })
-
-export default Navigation

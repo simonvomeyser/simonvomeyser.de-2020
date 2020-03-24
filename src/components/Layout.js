@@ -8,8 +8,13 @@ import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
 import posed, { PoseGroup } from 'react-pose'
 import OnlySupportedBrowsers from './OnlySupportedBrowsers'
+import { useContext } from 'react'
+import pageContext from '../gatsby-node/pageContext'
 
 function Layout({ children, intl }) {
+
+  const { isFrontpage } = useContext(pageContext)
+
   return (
     <>
       <Helmet
@@ -28,7 +33,7 @@ function Layout({ children, intl }) {
       />
       <OnlySupportedBrowsers>
         <Navigation />
-        <PosedContentWrapper>
+        <PosedContentWrapper withParent={isFrontpage}>
           {children}
         </PosedContentWrapper>
       </OnlySupportedBrowsers>
