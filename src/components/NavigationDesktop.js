@@ -87,7 +87,7 @@ const PosedWrapper = posed(StyledWrapper)({
     x: '0%',
     staggerChildren: 100,
     delayChildren: ({ isFrontpage }) => {
-      return isFrontpage ? 3300 : 600;
+      return isFrontpage ? 3300 : 1300;
     },
     delay: ({ isFrontpage }) => {
       return isFrontpage ? 3000 : 1000;
