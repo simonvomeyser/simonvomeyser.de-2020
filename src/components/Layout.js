@@ -33,7 +33,7 @@ function Layout({ children, intl }) {
       />
       <OnlySupportedBrowsers>
         <Navigation />
-        <PosedContentWrapper withParent={isFrontpage}>
+        <PosedContentWrapper isFrontpage={isFrontpage}>
           {children}
         </PosedContentWrapper>
       </OnlySupportedBrowsers>
@@ -57,6 +57,9 @@ const PosedContentWrapper = posed(StyledContentWrapper)({
   pageFadedIn: {
     paddingLeft: 70,
     transition: { type: 'spring', damping: 20 },
+    delay: ({ isFrontpage }) => {
+      return isFrontpage ? 3000 : 1000;
+    },
   },
   pageInvisible: {
     paddingLeft: 0,

@@ -12,7 +12,7 @@ export default function Navigation() {
   const { isFrontpage } = useContext(pageContext)
 
   return (
-    <PosedWrapper withParent={isFrontpage}>
+    <PosedWrapper isFrontpage={isFrontpage}>
       <div>
         <StyledNavigationTop>
           <nav>
@@ -86,8 +86,11 @@ const PosedWrapper = posed(StyledWrapper)({
   pageFadedIn: {
     x: '0%',
     staggerChildren: 100,
-    delayChildren: ({ delay }) => {
-      return delay + 400;
+    delayChildren: ({ isFrontpage }) => {
+      return isFrontpage ? 3300 : 600;
+    },
+    delay: ({ isFrontpage }) => {
+      return isFrontpage ? 3000 : 1000;
     },
     transition: { type: 'spring', damping: 20 },
   },
