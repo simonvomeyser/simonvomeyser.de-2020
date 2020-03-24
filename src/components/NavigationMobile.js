@@ -25,9 +25,9 @@ export default function NavigationMobile() {
             toggleMenu={toggleMenu}
           />
         </StyledBurgerWrapper>
-        <StyledLogoWrapper to="/" onClick={() => setIsMenuOpen(false)}>
+        <StyledLogoLink to="/" onClick={() => setIsMenuOpen(false)}>
           <LogoNavigationSvg />
-        </StyledLogoWrapper>
+        </StyledLogoLink>
         <LanguageChooser />
       </StyledNavigationMobileBar>
       <NavigationMobileList
@@ -51,7 +51,7 @@ const StyledBurgerWrapper = styled.div`
     cursor: pointer;
   }
 `
-const StyledLogoWrapper = styled(Link)`
+const StyledLogoLink = styled(Link)`
   position: absolute;
   top: 1.5rem;
   left: 50%;
