@@ -15,8 +15,7 @@ const StyledWrapper = styled.div`
 const PosedWrapper = posed(StyledWrapper)({
    pageFadedIn: {
       opacity: 1,
-      transition: { duration: 700 },
-      delayChildren: 3000
+      transition: { duration: 500 },
    },
    pageInvisble: {
       opacity: 0,
