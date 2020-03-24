@@ -1,8 +1,7 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { detectLanguage } from '../i18n'
-import { LanguageProvider } from '../i18n/languageContext'
 import Layout from '../components/Layout';
+import { detectLanguage } from '../i18n';
+import { LanguageProvider } from '../i18n/languageContext';
 import { PageContextProvider } from './pageContext';
 
 export default function wrapPageElement({ element, props }) {
