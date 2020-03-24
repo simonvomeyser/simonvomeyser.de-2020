@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import { vars } from '../util/vars'
 import posed from 'react-pose'
 
-export default function NavigationMobileBurger(props) {
+export default function NavigationMobileBurger({ toggleMenu, open }) {
+  const pose = open ? 'open' : 'closed';
   return (
-    <StyledWrapper onClick={props.toggleMenu}>
-      <PosedBurgerBarTop pose={props.open ? 'open' : 'closed'} />
-      <PosedBurgerBarCenter pose={props.open ? 'open' : 'closed'} />
-      <PosedBurgerBarBottom pose={props.open ? 'open' : 'closed'} />
+    <StyledWrapper onClick={toggleMenu}>
+      <PosedBurgerBarTop pose={pose} />
+      <PosedBurgerBarCenter pose={pose} />
+      <PosedBurgerBarBottom pose={pose} />
     </StyledWrapper>
   )
 }
