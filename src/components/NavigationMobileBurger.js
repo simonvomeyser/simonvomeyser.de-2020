@@ -43,6 +43,11 @@ const PosedBurgerBarTop = posed('span')({
   closed: {
     y: 0,
     rotate: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 500,
+      damping: 10,
+    }
   },
   open: {
     y: 8,
@@ -64,6 +69,7 @@ const PosedBurgerBarTop = posed('span')({
 const PosedBurgerBarCenter = posed('span')({
   closed: {
     width: 30,
+    delay: 200
   },
   open: {
     width: 0,
@@ -74,6 +80,12 @@ const PosedBurgerBarBottom = posed('span')({
   closed: {
     y: 0,
     rotate: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 500,
+      damping: 10,
+    }
+
   },
   open: {
     y: -8,
