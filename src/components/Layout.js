@@ -27,13 +27,10 @@ function Layout({ children, intl }) {
         ]}
       />
       <OnlySupportedBrowsers>
-        <Navigation
-          shouldAnimate={false}
-          delayInitialAnimation={false}
-        />
-        <StyledContentWrapper>
+        <Navigation />
+        <PosedContentWrapper>
           {children}
-        </StyledContentWrapper>
+        </PosedContentWrapper>
       </OnlySupportedBrowsers>
     </>
   )
@@ -52,14 +49,11 @@ const StyledContentWrapper = styled.div`
   }
 `
 const PosedContentWrapper = posed(StyledContentWrapper)({
-  visible: {
+  pageFadedIn: {
     paddingLeft: 70,
-    delay: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3500 : 500
-    },
     transition: { type: 'spring', damping: 20 },
   },
-  hidden: {
+  pageInvisible: {
     paddingLeft: 0,
   },
 })

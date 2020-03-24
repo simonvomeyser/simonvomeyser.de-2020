@@ -8,20 +8,10 @@ import { vars } from 'src/util/vars'
 import styled from 'styled-components'
 
 class Navigation extends Component {
-  static propTypes = {
-    animate: PropTypes.bool,
-  }
-  static defaultProps = {
-    animate: false,
-  }
 
   render() {
     return (
-      <PosedWrapper
-        initialPose={this.props.shouldAnimate ? 'hidden' : 'visible'}
-        pose="visible"
-        delayInitialAnimation={this.props.delayInitialAnimation}
-      >
+      <PosedWrapper>
         <div>
           <StyledNavigationTop>
             <nav>
@@ -93,22 +83,19 @@ const StyledNavigationTop = styled.div`
   }
 `
 const PosedWrapper = posed(StyledWrapper)({
-  visible: {
+  pageFadedIn: {
     x: '0%',
     staggerChildren: 100,
-    delay: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3500 : 500
-    },
-    delayChildren: ({ delayInitialAnimation }) => {
-      return delayInitialAnimation ? 3800 : 800
+    delayChildren: ({ delay }) => {
+      return delay + 200;
     },
     transition: { type: 'spring', damping: 20 },
   },
-  hidden: { x: '-100%' },
+  pageInvisible: { x: '-100%' },
 })
 
 const PosedLogoLi = posed.li({
-  visible: {
+  pageFadedIn: {
     scale: 1,
     opacity: 1,
     transition: {
@@ -116,26 +103,18 @@ const PosedLogoLi = posed.li({
       default: { ease: 'linear', duration: 400 },
     },
   },
-  hidden: { scale: 0.2, opacity: 0 },
+  pageInvisible: { scale: 0.2, opacity: 0 },
 })
 
 const PosedLi = posed.li({
-  visible: {
+  pageFadedIn: {
     x: '0%',
     opacity: 1,
     transition: {
       default: { type: 'spring', stiffness: 150, duration: 400, damping: 13 },
     },
   },
-  hidden: { x: '-100%', opacity: 0 },
+  pageInvisible: { x: '-100%', opacity: 0 },
 })
-
-Navigation.propTypes = {
-  delayInitialAnimation: PropTypes.bool,
-}
-
-Navigation.defaultProps = {
-  delayInitialAnimation: false,
-}
 
 export default Navigation
