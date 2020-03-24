@@ -8,7 +8,7 @@ My personal freelancer website
 </h1>
 
 - Build with React (⚛️) and Gatsby (💘)
-- Hosted on <a href="https://www.netlify.com/">Netlify</>
+- Hosted on <a href="https://www.netlify.com/">Netlify</a>
 - Animations done with awesome [React Pose](https://popmotion.io/pose/) now _*Framer Motion*_
 
 
