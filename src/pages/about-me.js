@@ -1,5 +1,3 @@
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import React, { useEffect, useState } from 'react'
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import PageLayout from 'src/components/PageLayout'
@@ -10,27 +8,9 @@ import AboutMeTellMeMore from '../components/AboutMeTellMeMore'
 import ChangeTitle from '../components/ChangeTitle'
 import { StyledPageHeading, StyledPrimaryButton } from '../styled-components'
 import { vars } from '../util/vars'
+import AboutMeImage from '../components/AboutMeImage'
 
-export const query = graphql`
-  query {
-    fileDesktop: file(relativePath: { eq: "about-me-1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    fileMobile: file(relativePath: { eq: "about-me-1-mobile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-  }
-`
-
-export default function AboutMePage({ data }) {
+export default function AboutMePage() {
   const [isTellMoreVisible, setIsTellMoreVisble] = useState(false)
   const [scroll, setScroll] = useState(null)
 
@@ -55,45 +35,39 @@ export default function AboutMePage({ data }) {
     }, 100)
   }
   return (
-    <>
+    <PageLayout>
       <ChangeTitle translate additionalText="navigationAboutMe" />
-      <PageLayout>
-        <StyledBackgroundWrapper>
-          <StyledBackgroundWrapper.Image> </StyledBackgroundWrapper.Image>
-          <StyledBackgroundWrapper.Left>
-            <StyledPageHeading>
-              <FormattedMessage id="niceToMeetYou" />
-            </StyledPageHeading>
-            <StyledHeadingQuote>
-              <FormattedHTMLMessage id="aboutMeOpener" />
-            </StyledHeadingQuote>
-            <StyledAboutMeFirstText>
-              <FormattedHTMLMessage id="aboutMeFirstText" />
-            </StyledAboutMeFirstText>
-            <StyledButtonWrapper>
-              <StyledPrimaryButton onClick={showSecondText}>
-                <FormattedMessage id="aboutMeCta" />
-              </StyledPrimaryButton>
-            </StyledButtonWrapper>
-          </StyledBackgroundWrapper.Left>
-          <StyledBackgroundWrapper.Right>
-            <StyledAboutMeImg
-              fluid={data.fileDesktop.childImageSharp.fluid}
-              desktop
-            />
-            <StyledAboutMeImg fluid={data.fileMobile.childImageSharp.fluid} />
-          </StyledBackgroundWrapper.Right>
-        </StyledBackgroundWrapper>
-        <div id="tell-me-more">
-          <AboutMeTellMeMore visible={isTellMoreVisible} />
-        </div>
-      </PageLayout>
-    </>
+      <StyledWrapper>
+        <StyledQuoteBg />
+        <StyledLeft>
+          <StyledPageHeading>
+            <FormattedMessage id="niceToMeetYou" />
+          </StyledPageHeading>
+          <StyledHeading>
+            <FormattedHTMLMessage id="aboutMeOpener" />
+          </StyledHeading>
+          <StyledAboutMeFirstText>
+            <FormattedHTMLMessage id="aboutMeFirstText" />
+          </StyledAboutMeFirstText>
+          <StyledButtonWrapper>
+            <StyledPrimaryButton onClick={showSecondText}>
+              <FormattedMessage id="aboutMeCta" />
+            </StyledPrimaryButton>
+          </StyledButtonWrapper>
+        </StyledLeft>
+        <StyledRight>
+          <AboutMeImage />
+        </StyledRight>
+      </StyledWrapper>
+      <div id="tell-me-more">
+        <AboutMeTellMeMore visible={isTellMoreVisible} />
+      </div>
+    </PageLayout>
   )
 }
 
 
-const StyledBackgroundWrapper = styled.div`
+const StyledWrapper = styled.div`
   position: relative;
   margin-top: 2rem;
   z-index: ${vars.styles.zIndices.base};
@@ -105,7 +79,7 @@ const StyledBackgroundWrapper = styled.div`
   }
 `
 
-StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
+const StyledQuoteBg = styled(AboutMeBackgroundSvg)`
   position: absolute;
   top: -4rem;
   z-index: -1;
@@ -116,7 +90,7 @@ StyledBackgroundWrapper.Image = styled(AboutMeBackgroundSvg)`
   }
 `
 
-StyledBackgroundWrapper.Left = styled.div`
+const StyledLeft = styled.div`
   z-index: 1;
   width: 60%;
   padding-right: 2rem;
@@ -131,7 +105,7 @@ StyledBackgroundWrapper.Left = styled.div`
   }
 `
 
-StyledBackgroundWrapper.Right = styled.div`
+const StyledRight = styled.div`
   z-index: 1;
   width: 40%;
 
@@ -140,7 +114,7 @@ StyledBackgroundWrapper.Right = styled.div`
   }
 `
 
-const StyledHeadingQuote = styled.h2`
+const StyledHeading = styled.h2`
   font-size: ${vars.styles.fontSizes.size7};
   font-family: ${vars.styles.fontFamilies.special};
   color: ${vars.styles.colors.neutral5};
@@ -171,10 +145,3 @@ const StyledButtonWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const StyledAboutMeImg = styled(Img)`
-  display: ${props => (props.desktop ? 'block' : 'none')};
-
-  ${on('onlyMobile')} {
-    display: ${props => (props.desktop ? 'none' : 'block')};
-  }
-`
