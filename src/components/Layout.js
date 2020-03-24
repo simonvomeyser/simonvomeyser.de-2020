@@ -1,15 +1,13 @@
-import React, { Fragment, Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useContext } from 'react'
 import Helmet from 'react-helmet'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { injectIntl } from 'react-intl'
+import posed from 'react-pose'
 import Navigation from 'src/components/Navigation'
-import styled from 'styled-components'
-import { vars } from 'src/util/vars'
 import { on } from 'src/util/breakpoint'
-import posed, { PoseGroup } from 'react-pose'
-import OnlySupportedBrowsers from './OnlySupportedBrowsers'
-import { useContext } from 'react'
+import { vars } from 'src/util/vars'
+import styled from 'styled-components'
 import pageContext from '../gatsby-node/pageContext'
+import OnlySupportedBrowsers from './OnlySupportedBrowsers'
 
 function Layout({ children, intl }) {
 
