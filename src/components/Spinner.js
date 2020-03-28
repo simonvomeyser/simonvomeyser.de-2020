@@ -18,6 +18,7 @@ export default class Spinner extends Component {
 }
 
 const StyledSpinner = styled.div`
+  height: 30px;
   > div {
     display: inline-block;
     position: relative;
