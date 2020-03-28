@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { IntlProvider, addLocaleData } from 'react-intl'
+import { IntlProvider, addLocaleData, intlShape } from 'react-intl'
 import { localeData } from './locales'
 import { defaultLanguage } from './index'
 import { useEffect } from 'react';
+import { isSSR } from '../util/isSSR';
 
 const languageContext = React.createContext();
 const allMessages = {
@@ -16,10 +17,17 @@ export const LanguageProvider = ({ language: propsLanguage, children }) => {
     const [language, setLanguage] = useState(propsLanguage);
     const messages = allMessages[language];
 
+    const setAndStoreLanguage = (language) => {
+        if (!isSSR()) {
+            localStorage.setItem('language', language)
+        }
+        setLanguage(language)
+    }
+
     return (
         <languageContext.Provider value={{
             language,
-            setLanguage
+            setLanguage: setAndStoreLanguage
         }}>
             <IntlProvider locale={language} messages={messages}>
                 <>

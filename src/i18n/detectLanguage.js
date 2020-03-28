@@ -9,7 +9,7 @@ export const detectLanguage = () => {
   if (isSSR()) {
     return defaultLanguage
   } else {
-    return window.localStorage.getItem('language') ||
+    return localStorage.getItem('language') ||
       browserLang({
         languages: langKeys,
         fallback: defaultLanguage,
