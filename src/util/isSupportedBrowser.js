@@ -8,14 +8,13 @@ export const isSupportedBrowser = () => {
   const Bowser = require('bowser')
   const browser = Bowser.getParser(window.navigator.userAgent)
   return browser.satisfies({
-    // Don't support any IE - using flexbox and grid extensively
-    windows: {
-      'internet explorer': '>11',
-    },
     mobile: {
       safari: '>=9',
       'android browser': '>4.4',
     },
+    // Don't support any IE, the target group should use a modern browser
+    ie: '>11',
+    // Add browsers upporting grid from these version
     chrome: '>=29',
     firefox: '>28',
     opera: '>=17',
