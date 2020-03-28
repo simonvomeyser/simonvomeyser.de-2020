@@ -1,5 +1,7 @@
+import { isSSR } from './isSSR'
+
 export const isSupportedBrowser = () => {
-  if (typeof window === 'undefined') {
+  if (isSSR()) {
     return true
   }
 
