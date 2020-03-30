@@ -4,8 +4,7 @@ import InitialPageFade from '../components/InitialPageFade';
 import GlobalStyles from '../global-styles'
 import Helmet from 'react-helmet';
 
-export default ({ element, props }) => {
-
+export default ({ element }) => {
   return (
     <>
       <Helmet>
