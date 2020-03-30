@@ -13,7 +13,7 @@ function Layout({ children, intl }) {
   const { isFrontpage } = useContext(pageContext)
 
   return (
-    <>
+    <div id="layout-root">
       <Helmet
         title={intl.formatMessage({ id: 'defaultMetaTitle' })
         }
@@ -32,7 +32,7 @@ function Layout({ children, intl }) {
       <PosedContentWrapper isFrontpage={isFrontpage}>
         {children}
       </PosedContentWrapper>
-    </>
+    </div>
   )
 }
 
