@@ -4,7 +4,7 @@ import { isSupportedBrowser } from '../util/isSupportedBrowser'
 
 export default function UnsupportedBrowserRedirect() {
   if (!isSearchEngineBot() && !isSupportedBrowser()) {
-    window.location.href = 'https://legacy.simonvomeyser.de'
+    window.location = 'https://legacy.simonvomeyser.de'
   }
   return null
 }
