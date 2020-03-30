@@ -15,8 +15,9 @@ import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 export default function OnlySupportedBrowsers({ children }) {
   if (!isSearchEngineBot() && !isSupportedBrowser()) {
     return <UnsupportedPage />
+  } else {
+    return <>{children}</>
   }
-  return (<>{children}</>)
 }
 
 const UnsupportedPage = () => {
