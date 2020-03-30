@@ -7,7 +7,6 @@ import { on } from 'src/util/breakpoint'
 import { vars } from 'src/util/vars'
 import styled from 'styled-components'
 import pageContext from '../gatsby-node/pageContext'
-import OnlySupportedBrowsers from './OnlySupportedBrowsers'
 
 function Layout({ children, intl }) {
 
@@ -29,12 +28,10 @@ function Layout({ children, intl }) {
           },
         ]}
       />
-      <OnlySupportedBrowsers>
-        <Navigation />
-        <PosedContentWrapper isFrontpage={isFrontpage}>
-          {children}
-        </PosedContentWrapper>
-      </OnlySupportedBrowsers>
+      <Navigation />
+      <PosedContentWrapper isFrontpage={isFrontpage}>
+        {children}
+      </PosedContentWrapper>
     </>
   )
 }
