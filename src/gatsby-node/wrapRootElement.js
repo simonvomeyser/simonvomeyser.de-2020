@@ -3,10 +3,12 @@ import ConsoleJoke from '../components/ConsoleJoke'
 import InitialPageFade from '../components/InitialPageFade';
 import GlobalStyles from '../global-styles'
 import Helmet from 'react-helmet';
+import UnsupportedBrowserRedirect from '../components/UnsupportedBrowserRedirect';
 
 export default ({ element }) => {
   return (
     <>
+      <UnsupportedBrowserRedirect />
       <Helmet>
         <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
         <link rel="stylesheet" type="text/css" href="/fonts.css" />
