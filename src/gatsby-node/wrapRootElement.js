@@ -10,8 +10,8 @@ export default ({ element }) => {
     <>
       <UnsupportedBrowserRedirect />
       <Helmet>
-        <link rel="stylesheet" href="https://use.typekit.net/rnq7erj.css" />
-        <link rel="stylesheet" type="text/css" href="/fonts.css" />
+        <link rel="stylesheet" async href="https://use.typekit.net/rnq7erj.css" />
+        <link rel="stylesheet" async type="text/css" href="/fonts.css" />
       </Helmet>
       <GlobalStyles />
       <ConsoleJoke />
