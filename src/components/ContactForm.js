@@ -10,15 +10,19 @@ import { FormattedMessage } from 'react-intl'
 import { isContactText } from '../util/isContactText'
 import Spinner from './Spinner'
 import axios from 'axios'
+import languageContext from '../i18n/languageContext'
+import { API_URL } from "gatsby-env-variables"
 
 class ContactForm extends Component {
+  static contextType = languageContext;
+
   state = {
     email: '',
     text: '',
     errors: {},
     isSubmitting: false,
     isDone: false,
-    apiUrl: 'https://api.simonvomeyser.com/api/contact',
+    apiUrl: API_URL + '/contact',
   }
 
   update = ({ target }) => {
@@ -38,9 +42,10 @@ class ContactForm extends Component {
     }
 
     const { email, text, apiUrl } = this.state
+    const { language } = this.context;
 
     axios
-      .post(apiUrl, { email, text })
+      .post(apiUrl, { email, text, locale: language })
       .then(this.setToDone)
       .catch(this.setToDone) // Let Sentry log errors, don't show them
   }
