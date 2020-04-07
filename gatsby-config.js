@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    'gatsby-env-variables',
     'gatsby-plugin-root-import',
     `gatsby-plugin-styled-components`,
     'gatsby-transformer-sharp',
