@@ -3,7 +3,6 @@ const ENV = require("gatsby-env-variables").ENV;
 module.exports = {
   plugins: [
     'gatsby-env-variables',
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-root-import',
     `gatsby-plugin-styled-components`,
     'gatsby-transformer-sharp',
