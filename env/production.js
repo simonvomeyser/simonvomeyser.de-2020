@@ -1,4 +1,4 @@
 module.exports = {
-    API_URL: 'https://api.simonvomeyser.de/api',
+    API_URL: 'https://api.simonvomeyser.com/api',
     ENV: 'production'
 }
