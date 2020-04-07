@@ -6,7 +6,7 @@ import posed from 'react-pose'
 export default function NavigationMobileBurger({ toggleMenu, open }) {
   const pose = open ? 'open' : 'closed';
   return (
-    <StyledWrapper onClick={toggleMenu}>
+    <StyledWrapper onClick={toggleMenu} aria-label="Navigation">
       <PosedBurgerBarTop pose={pose} />
       <PosedBurgerBarCenter pose={pose} />
       <PosedBurgerBarBottom pose={pose} />

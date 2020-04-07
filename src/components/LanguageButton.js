@@ -3,10 +3,10 @@ import { on } from 'src/util/breakpoint'
 import styled from 'styled-components'
 import { vars } from '../util/vars'
 
-export default function LanguageButton({ active, onClick, Icon }) {
+export default function LanguageButton({ active, onClick, Icon, label }) {
 
   return (
-    <StyledLanguageButton active={active} onClick={onClick}>
+    <StyledLanguageButton active={active} onClick={onClick} aria-label={label}>
       <Icon />
     </StyledLanguageButton>
   )

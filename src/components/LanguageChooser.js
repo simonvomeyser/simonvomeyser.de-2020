@@ -33,11 +33,13 @@ export default function LanguageChooser(props) {
         active={language === 'en'}
         onClick={() => selectLanguage('en')}
         Icon={UnitedStatesSvg}
+        label="en"
       />
       <LanguageButton
         active={language === 'de'}
         onClick={() => selectLanguage('de')}
         Icon={GermanySvg}
+        label="de"
       />
     </div>
   )
