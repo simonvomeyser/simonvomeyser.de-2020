@@ -15,7 +15,6 @@ export default class FormInput extends Component {
         <FloatingLabel shrinked={!!value}>
           <FormattedMessage id={label} />
         </FloatingLabel>
-        <PosedErrorIcon pose={hasError ? 'show' : 'hide'}>×</PosedErrorIcon>
         <PosedErrorLine pose={hasError ? 'show' : 'hide'} />
       </StyledWrapper>
     )
@@ -58,15 +57,6 @@ const FloatingLabel = styled.label`
   pointer-events: none;
 `
 
-const StyledErrorIcon = styled.div`
-  position: absolute;
-  top: 1px;
-  right: 2px;
-  line-height: 0.85;
-  color: ${errorColor};
-  font-size: 14px;
-`
-
 const StyledErrorLine = styled.div`
   position: absolute;
   top: 0;
@@ -75,17 +65,6 @@ const StyledErrorLine = styled.div`
   width: 2px;
   height: 100%;
 `
-
-const PosedErrorIcon = posed(StyledErrorIcon)({
-  hide: {
-    opacity: 0,
-    scale: 0.2,
-  },
-  show: {
-    scale: 1,
-    opacity: 1,
-  },
-})
 
 const PosedErrorLine = posed(StyledErrorLine)({
   hide: {
