@@ -15,3 +15,22 @@ My personal freelancer website
 The code is completely open sourced here, feel free to dig into the history of me trying to finish this project in-between projects for my clients. 
 
 I promise I tried to keep the profanities to a minimum... 
+
+ ## Installation
+ 
+To install this page clone the repository first.
+``` bash
+git clone git@github.com:simonvomeyser/simonvomeyser.de.git
+```
+
+Next you need to install the NPM dependencies.
+``` bash
+npm install
+```
+
+And finally we need to kickstart your development
+``` bash
+npm run dev
+```
+
+Now you can replace my profile photo with a photo of Nicolas Cage. Feel free to send me a Pull Request 😀
