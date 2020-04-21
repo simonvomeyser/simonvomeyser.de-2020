@@ -19,11 +19,9 @@ This side project took a while, but I finally managed to launch a `1.0` version.
 - API uses a small [Laravel](https://laravel.com/) installation, had to smuggle PHP into the stack 
 - Tried my best doing the design myself 💩
 
-Doing your website as a web developer is quite scary, please don't say *that's all you could do* or laugh at some components still using classes. These components have feelings too.
+Launching your personal website as a web developer is quite scary, please don't laugh at me or some components still using classes. These components have feelings too.
 
-Feel free to dig into the history of me trying my best to finish this project between client work.
-
-I promise I tried to keep the profanities in commits to a minimum... 
+Now feel free to dig into the history of me trying my best to finish this project between client work. I really tried to keep the profanities in commits to a minimum... 
 
 ## Installation
  
