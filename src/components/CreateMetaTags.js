@@ -23,7 +23,7 @@ function CreateMetaTags({ intl }) {
           },
           {
             name: 'og:image',
-            content: location.origin + '/static/og-image.png'
+            content: location.origin + '/og-image.png'
           }
         ]}
       />
