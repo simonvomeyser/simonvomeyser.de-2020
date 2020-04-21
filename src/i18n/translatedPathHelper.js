@@ -36,3 +36,5 @@ function getPathKey(path) {
   return matchingPathKey;
 
 }
+
+exports.getPathKey = getPathKey;
