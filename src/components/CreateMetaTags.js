@@ -26,6 +26,14 @@ function CreateMetaTags({ intl }) {
             content: 'website'
           },
           {
+            name: 'og:title',
+            content: title
+          },
+          {
+            name: 'og:description',
+            content: description
+          },
+          {
             name: 'og:image',
             content: ogImage
           },
