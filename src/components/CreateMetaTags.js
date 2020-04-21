@@ -1,30 +1,42 @@
-import React, { useContext } from 'react'
-import Helmet from 'react-helmet'
-import pageContext from '../gatsby-node/pageContext'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { injectIntl } from 'react-intl';
 import CreateLanguageMetaTags from './CreateLanguageMetaTags';
-import { injectIntl } from 'react-intl'
 
 function CreateMetaTags({ intl }) {
-  const { location } = useContext(pageContext);
+  const title = intl.formatMessage({ id: 'defaultMetaTitle' });
+  const description = intl.formatMessage({ id: 'defaultMetaDescription' });
+  const ogImage = 'https://simonvomeyser.de/og-image.png';
 
   return (
     <>
       <Helmet
-        title={intl.formatMessage({ id: 'defaultMetaTitle' })
-        }
+        title={title}
         meta={[
           {
             name: 'description',
-            content: intl.formatMessage({ id: 'defaultMetaDescription' }),
+            content: description
           },
           {
             name: 'keywords',
             content: intl.formatMessage({ id: 'metaKeywords' }),
           },
           {
+            name: 'og:type',
+            content: 'website'
+          },
+          {
             name: 'og:image',
-            content: 'https://simonvomeyser.de/og-image.png'
-          }
+            content: ogImage
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+          },
+          {
+            name: 'twitter:image',
+            content: ogImage
+          },
         ]}
       />
       <CreateLanguageMetaTags />
