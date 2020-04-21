@@ -1,5 +1,3 @@
-const ENV = require("gatsby-env-variables").ENV;
-
 module.exports = {
   plugins: [
     'gatsby-env-variables',
@@ -13,9 +11,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sentry",
       options: {
-        dsn: "https://f90a16bb1aa0472caa4206bd83cc1888@o200670.ingest.sentry.io/5192447",
-        environment: ENV,
-        enabled: (() => "production" == ENV)()
+        dsn: "https://f90a16bb1aa0472caa4206bd83cc1888@o200670.ingest.sentry.io/5192447"
       }
     },
     {
