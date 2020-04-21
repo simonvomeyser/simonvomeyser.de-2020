@@ -7,28 +7,37 @@
 My personal freelancer website
 </h1>
 
-- Build with React (⚛️) and Gatsby (💘)
-- Hosted on <a href="https://www.netlify.com/">Netlify</a>
-- Animations done with awesome [React Pose](https://popmotion.io/pose/) now _*Framer Motion*_
+This side project took a while, but I finally managed to launch a `1.0` version. I wanted to have a place to showcase things I worked on.
 
+## About this Project:
 
-The code is completely open sourced here, feel free to dig into the history of me trying to finish this project in-between projects for my clients. 
+- Build with React and Gatsby (💘)
+- Used [React Intl](https://github.com/formatjs/react-intl/) for the two language setup
+- Animations done with awesome [React Pose](https://popmotion.io/pose/) now [Framer Motion](https://www.framer.com/motion/) 
+- Hosted by the almighty [Netlify](https://www.netlify.com/)
+- Recently moved the domain to [Cloudflare](https://www.cloudflare.com/) for asset caching and other reasons I don't understand yet
+- API uses a small [Laravel](https://laravel.com/) installation, had to smuggle PHP into the stack 
+- Tried my best doing the design myself 💩
 
-I promise I tried to keep the profanities to a minimum... 
+Doing your website as a web developer is quite scary, please don't say *that's all you could do* or laugh at some components still using classes. These components have feelings too.
 
- ## Installation
+Feel free to dig into the history of me trying my best to finish this project between client work.
+
+I promise I tried to keep the profanities in commits to a minimum... 
+
+## Installation
  
 To install this page clone the repository first.
 ``` bash
 git clone git@github.com:simonvomeyser/simonvomeyser.de.git
 ```
 
-Next you need to install the NPM dependencies.
+Next, you need to install the NPM dependencies.
 ``` bash
 npm install
 ```
 
-And finally we need to kickstart your development
+And finally, we need to kickstart your development
 ``` bash
 npm run dev
 ```
