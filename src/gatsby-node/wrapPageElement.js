@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import { detectLanguage } from '../i18n';
 import { LanguageProvider } from '../i18n/languageContext';
 import { PageContextProvider } from './pageContext';
-import CreateLanguageMetaTags from '../components/CreateLanguageMetaTags';
+import CreateMetaTags from '../components/CreateMetaTags';
 
 export default function wrapPageElement({ element, props }) {
   const { language: pageContextLanguage } = props.pageContext;
@@ -13,7 +13,7 @@ export default function wrapPageElement({ element, props }) {
     <>
       <PageContextProvider pageData={props}>
         <LanguageProvider language={language}>
-          <CreateLanguageMetaTags />
+          <CreateMetaTags />
           <Layout>
             {element}
           </Layout>

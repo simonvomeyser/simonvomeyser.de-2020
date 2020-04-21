@@ -1,6 +1,4 @@
 import React, { useContext } from 'react'
-import Helmet from 'react-helmet'
-import { injectIntl } from 'react-intl'
 import posed from 'react-pose'
 import Navigation from 'src/components/Navigation'
 import { on } from 'src/util/breakpoint'
@@ -8,26 +6,12 @@ import { vars } from 'src/util/vars'
 import styled from 'styled-components'
 import pageContext from '../gatsby-node/pageContext'
 
-function Layout({ children, intl }) {
+export default function Layout({ children, intl }) {
 
   const { isFrontpage } = useContext(pageContext)
 
   return (
     <>
-      <Helmet
-        title={intl.formatMessage({ id: 'defaultMetaTitle' })
-        }
-        meta={[
-          {
-            name: 'description',
-            content: intl.formatMessage({ id: 'defaultMetaDescription' }),
-          },
-          {
-            name: 'keywords',
-            content: intl.formatMessage({ id: 'metaKeywords' }),
-          },
-        ]}
-      />
       <Navigation />
       <PosedContentWrapper isFrontpage={isFrontpage}>
         {children}
@@ -35,8 +19,6 @@ function Layout({ children, intl }) {
     </>
   )
 }
-
-export default injectIntl(Layout)
 
 const StyledContentWrapper = styled.div`
   padding-left: ${vars.styles.sizes.navigationWidth};
