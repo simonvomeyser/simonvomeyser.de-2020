@@ -23,7 +23,7 @@ function CreateMetaTags({ intl }) {
           },
           {
             name: 'og:image',
-            content: location.origin + '/og-image.png'
+            content: 'https://simonvomeyser.de/og-image.png'
           }
         ]}
       />
