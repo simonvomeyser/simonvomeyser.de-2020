@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { vars } from 'src/util/vars'
-import { Link } from 'src/i18n'
 import Img from 'gatsby-image'
 import { ExternalLink as ExternalLinkSvg } from '../svg'
 import ExternalLink from './ExternalLink'
-import vueImage from '../images/technologies/vue.png'
 
 export default class ProjectTile extends Component {
   render() {
