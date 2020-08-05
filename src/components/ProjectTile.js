@@ -45,6 +45,7 @@ const StyledExternalLinkWrapper = styled.div`
 
   &:hover {
     transform: translateY(-50%) scale3d(1.1, 1.1, 1.1);
+    background-color: ${vars.styles.colors.accent4};
   }
   a {
     width: 100%;
