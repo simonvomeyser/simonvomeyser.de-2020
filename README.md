@@ -3,6 +3,9 @@
     <img alt="Simon trying his best to look friendly and professional" src="https://github.com/simonvomeyser/simonvomeyser.de/blob/master/screenshot.png?raw=true" />
   </a>
 </p>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2f23c622-a5af-4b39-8e78-fdb5c67549d4/deploy-status)](https://app.netlify.com/sites/simonvomeyserde/deploys)
+
 <h1 align="center">
 My personal freelancer website
 </h1>
