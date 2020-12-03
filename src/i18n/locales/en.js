@@ -4,7 +4,7 @@ module.exports = {
   defaultMetaDescription:
     'Freelancing fullstack webwizard based in NRW (Krefeld), Germany. Laravel, React, Vue.js and coffee make me happy!',
   metaKeywords:
-    'web, development, freelancer, NRW, Germany, Krefeld, Wordpress, Laravel, React, Vue, projectmanagement, consulting, training',
+    'web, development, freelancer, NRW, Germany, Krefeld, Laravel, React, Vue, projectmanagement, consulting, training',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: 'learn more about me 🤓',
@@ -150,7 +150,7 @@ module.exports = {
       </p>
   `,
   projectsCopy: `
-    <p>You will find a few of the about {numberOfAllProjects} projects I was involved in here. I love working with <strong>Laravel</strong>, <strong>React</strong> and <strong>Vue.js</strong>. I also use Wordpress when a CMS is needed.</p>
+    <p>You will find a few of the about {numberOfAllProjects} projects I was involved in here. I love working with <strong>Laravel</strong>, <strong>React</strong> and <strong>Vue.js</strong>. </p>
     <p>Just hit me up if you have any questions or you want to know more details. 🙂</p>
   `,
   contactFormCopy: `

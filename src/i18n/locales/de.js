@@ -4,7 +4,7 @@ module.exports = {
   defaultMetaDescription:
     'Freiberuflicher Fullstack Webzauberer aus NRW (Krefeld). Laravel, React, Vue.js und viel Kaffee sind mein Spezialgebiet.',
   metaKeywords:
-    'Webentwickler, freiberuflich, NRW, Deutschland, Krefeld, Wordpress, Laravel, React, Vue, Projektmanagement, Consulting, Schulung',
+    'Webentwickler, freiberuflich, NRW, Deutschland, Krefeld, Laravel, React, Vue, Projektmanagement, Consulting, Schulung',
   landingTitle1: 'Simon vom Eyser',
   landingTitle2: 'web development',
   landingLearnMore: '🙂 lies etwas über mich 🤓',
@@ -182,7 +182,7 @@ module.exports = {
     </p>
   `,
   projectsCopy: `
-    <p>Hier kannst du einige der mittlerweile über {numberOfAllProjects} Projekten ansehen, an denen ich beteiligt war. Ich arbeite am liebsten mit <strong>Laravel</strong>, <strong>React</strong> und <strong>Vue.js</strong>, als CMS verwende ich hin und wieder Wordpress.</p>
+    <p>Hier kannst du einige der mittlerweile über {numberOfAllProjects} Projekten ansehen, an denen ich beteiligt war. Ich arbeite am liebsten mit <strong>Laravel</strong>, <strong>React</strong> und <strong>Vue.js</strong>.</p>
     <p>Melde dich ruhig, falls du Fragen zu Details hast 🙂</p>
   `,
   contactFormCopy: `
