@@ -18,5 +18,9 @@ module.exports = {
     'privacy-policy': {
         'de': 'datenschutzerklaerung',
         'en': 'privacy-policy'
-    }
+    },
+    'conditions': {
+        'de': 'agb',
+        'en': 'conditions'
+    },
 }
