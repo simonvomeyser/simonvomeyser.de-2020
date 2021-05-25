@@ -19,7 +19,7 @@ module.exports = {
           47798 Krefeld
       </p>
       <p>
-          Telefon: +49177 4100666<br>
+          Telefon: +49157 33915334<br>
           E-Mail: <a href="mailto:simon.vom.eyser@gmail.com">simon.vom.eyser@gmail.com</a></p>
       <h2>Umsatzsteuer-ID:</h2>
       <p>
