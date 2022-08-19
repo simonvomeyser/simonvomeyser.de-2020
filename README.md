@@ -1,3 +1,6 @@
+⚠️ I relaunched this website in 2022 with `next.js` and `typescript` [here](https://github.com/simonvomeyser/simonvomeyser.de-2022)
+
+
 <p align="center">
   <a href="https://simonvomeyser.de">
     <img alt="Simon trying his best to look friendly and professional" src="https://github.com/simonvomeyser/simonvomeyser.de/blob/master/screenshot.png?raw=true" />
